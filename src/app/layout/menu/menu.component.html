@@ -1,0 +1,56 @@
+<nav class="uk-navbar-container uk-navbar" uk-navbar>
+    <div class="uk-container">
+        <div class="uk-navbar-left uk-hidden@m">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
+        </div>
+        
+        <div class="uk-navbar-center uk-visible@m">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a routerLink="/" class="texto "><img class="uk-border-rounded" style="height: auto; width: 150px;" src="/img/logo-partners.png"></a>
+                </li>
+                <li>
+                    <a class="" routerLink="/acerca">Sobre o programa de parceiros Angola Cables</a>
+                </li>
+                <li class=" uk-flex uk-flex-middle">
+                    <div class="uk-flex uk-flex-middle">
+                      <a routerLink="/login"> <button (click)="login()"  class="uk-button uk-button-primary uk-border-rounded">
+                            
+                            Entrar</button></a> 
+                    </div>
+                </li>
+
+
+                <li class=" uk-flex uk-flex-middle">
+                    <div class="uk-flex uk-flex-middle">
+                       <a routerLink=""> <button (click)="logout()" class="uk-button uk-button-primary uk-border-rounded">
+                            
+                            Sair</button></a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right uk-visible@m"></div>
+    </div>
+</nav>
+
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+            <li>
+                <a class=""><img style="height: auto; width: 100px;" src="/img/logo.png"></a>
+            </li>
+            <li>
+                <a class="" routerLink="/ubuntu">Sobre o Programa</a>
+            </li>
+            <li>
+                <a class="" routerLink="/ubuntu">Tornar-se Parceiro</a>
+            </li>
+
+            
+            
+        </ul>
+    </div>
+</div>

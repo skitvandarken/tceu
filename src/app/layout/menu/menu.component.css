@@ -1,0 +1,42 @@
+
+.uk-navbar-container {
+    z-index: 1000; /* Ensure it overlays other elements */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    ; /* Background color for the navbar */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for padding-bottom on larger screens */
+@media (min-width: 960px) {
+    .uk-navbar-container {
+        padding-bottom: 5%; /* Apply padding only for desktop view */
+    }
+}
+
+.uk-navbar-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.uk-offcanvas-bar {
+    background-color: #fff; /* Background color for the offcanvas bar */
+}
+
+.texto{
+    color: #fff ;
+}
+
+.texto:hover{
+    color: #d0d0d0 ;
+}
+
+
+.icone-branco{
+    color: white;
+}
