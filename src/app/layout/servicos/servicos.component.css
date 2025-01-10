@@ -1,0 +1,15 @@
+.fundo-cards{
+    background: linear-gradient(45deg, rgb(0, 48, 120), rgb(0, 97, 187), rgb(0, 85, 164));
+}
+.texto{
+    color:white !important;
+}
+
+.texto-2{
+    font-size: 20px !important;
+    font-weight: 400 ;
+}
+
+.texto-azul{
+    color: rgb(0, 81, 168);
+}

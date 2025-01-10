@@ -1,0 +1,56 @@
+.card{
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.botao :hover{
+    background-color: rgb(0, 81, 168);
+    transition: 100ms;
+    cursor: pointer !important;
+}
+
+.texto-azul{
+    color: rgb(18, 72, 130) !important;
+    font-weight: 700;
+
+}
+
+
+.icon-blue {
+    color: blue !important;
+}
+
+.fa-solid{
+    color: rgb(18, 72, 130);
+}
+
+.fundo-lista{
+    background-color: rgb(18, 72, 130);
+    border-radius: 10px;
+   
+}
+
+.texto-li{
+    color: white !important;
+}
+
+.texto-li:hover{
+    color: rgb(208, 208, 208) !important;
+}
+
+.fundo-expansion{
+    background-image: url('/img/fundo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.uk-icon{
+    color: rgb(18, 72, 130);
+    stroke: rgb(18, 72, 130) !important;
+
+
+}
+

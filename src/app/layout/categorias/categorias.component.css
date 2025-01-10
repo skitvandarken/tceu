@@ -1,0 +1,62 @@
+.texto{
+    color:white !important;
+}
+
+.selos{
+    width: auto;
+    height: auto;
+}
+
+
+.fundo-connectivity{
+    background-image: url('/img/megafone.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(18, 72, 130);
+    background-blend-mode: multiply;
+    padding-top:  20px;
+
+}
+
+
+.fundo-datacenter{
+    background-image: url('/img/agente.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(18, 72, 130);
+    background-blend-mode: multiply;
+    padding-top:  20px;
+
+}
+
+.fundo-cloud{
+    background-image: url('/img/reseller-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: multiply;
+    padding-top:  20px;
+
+}
+
+.fundo-grid{
+    background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
+    
+
+}
+
+.icone{
+    color: white !important;
+}
+
+
+.linha {
+    line-height: 25px;
+}
