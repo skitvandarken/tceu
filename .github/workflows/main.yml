@@ -1,0 +1,30 @@
+name: Deploy Angular App to Web Disk
+on:
+  push:
+    branches:
+      - main  # Dispara ao fazer push na branch main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22' # Versão compatível com Angular
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Angular App
+        run: npm run build -- --configuration production
+      - name: Deploy via WebDAV
+        env:
+          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
+          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
+        run: |
+          BUILD_DIR="dist/partner/browser"
+          WEBDISK_URL="https://partner-demo-acsa.fluxo-host.com:2078"
+          for file in $(find $BUILD_DIR -type f); do
+            REMOTE_PATH="${WEBDISK_URL}/${file#"$BUILD_DIR/"}"
+            curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH"
+          done
