@@ -23,7 +23,7 @@ jobs:
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           BUILD_DIR="dist/part/browser"
-          WEBDISK_URL="https://partner-demo-acsa.fluxo-host.com:2078"
+          WEBDISK_URL="https://parceiros-demo-acsa.fluxo-host.com:2078"
           for file in $(find $BUILD_DIR -type f); do
             REMOTE_PATH="${WEBDISK_URL}/${file#"$BUILD_DIR/"}"
             curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH"
