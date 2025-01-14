@@ -22,7 +22,7 @@ jobs:
           WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
-          BUILD_DIR="dist/partner/browser"
+          BUILD_DIR="dist/part/browser"
           WEBDISK_URL="https://partner-demo-acsa.fluxo-host.com:2078"
           for file in $(find $BUILD_DIR -type f); do
             REMOTE_PATH="${WEBDISK_URL}/${file#"$BUILD_DIR/"}"
