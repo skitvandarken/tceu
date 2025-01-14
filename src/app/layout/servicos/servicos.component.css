@@ -1,6 +1,63 @@
-.fundo-cards{
-    background: linear-gradient(45deg, rgb(0, 48, 120), rgb(0, 97, 187), rgb(0, 85, 164));
+.fundo-circuito{
+    background-image: url('/img/produtos/circuito.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+.fundo-remote{
+    background-image: url('/img/produtos/remote-peering.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-acloud{
+    background-image: url('/img/produtos/acloud.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-gdi{
+    background-image: url('/img/produtos/gdi.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-iptransit{
+    background-image: url('/img/produtos/ip-transit.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-ipgamer{
+    background-image: url('/img/produtos/ip-gamer.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fundo-ipx{
+    background-image: url('/img/produtos/ip-exchange.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fundo-managed{
+    background-image: url('/img/produtos/managed-services.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .texto{
     color:white !important;
 }
