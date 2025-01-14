@@ -57,6 +57,51 @@
     background-size: cover;
 }
 
+.fundo-sdwan{
+    background-image: url('/img/produtos/sdwan.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-antiddos{
+    background-image: url('/img/produtos/anti-ddos.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-clouds2br{
+    background-image: url('/img/produtos/circuito.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fundo-backups2{
+    background-image: url('/img/produtos/backups2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fundo-dia{
+    background-image: url('/img/produtos/dia.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo-angonap{
+    background-image: url('/img/produtos/angonap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 
 .texto{
     color:white !important;
