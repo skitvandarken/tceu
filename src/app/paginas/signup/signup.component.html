@@ -2,25 +2,41 @@
 
 <div class="uk-section uk-section-muted uk-padding-large">
   <div class="uk-container uk-margin-large-top">
-    <h1 class="uk-heading-divider">Registe-se para se tornar um parceiro Angola Cables ou TelCables.</h1>
+    <h1 class="uk-heading-divider">
+      Registe-se para se tornar um parceiro Angola Cables ou TelCables.
+    </h1>
     <p class="uk-text-lead"></p>
   </div>
 
   <div class="uk-margin-large-top uk-container">
-    <form [formGroup]="partnershipForm" (ngSubmit)="submitForm()" class="uk-form-stacked">
+    <form
+      [formGroup]="partnershipForm"
+      (ngSubmit)="submitForm()"
+      class="uk-form-stacked"
+    >
       <div class="uk-grid-small" uk-grid>
         <!-- First Name and Last Name in 2 columns -->
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
             <label for="firstName" class="uk-form-label">Primeiro Nome:</label>
-            <input id="firstName" formControlName="firstName" type="text" class="uk-input" />
+            <input
+              id="firstName"
+              formControlName="firstName"
+              type="text"
+              class="uk-input"
+            />
           </div>
         </div>
 
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
             <label for="lastName" class="uk-form-label">Último Nome:</label>
-            <input id="lastName" formControlName="lastName" type="text" class="uk-input" />
+            <input
+              id="lastName"
+              formControlName="lastName"
+              type="text"
+              class="uk-input"
+            />
           </div>
         </div>
 
@@ -28,32 +44,60 @@
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
             <label for="email" class="uk-form-label">E-mail:</label>
-            <input id="email" formControlName="email" type="email" class="uk-input" />
+            <input
+              id="email"
+              formControlName="email"
+              type="email"
+              class="uk-input"
+            />
           </div>
         </div>
 
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
             <label for="phone" class="uk-form-label">Telefone:</label>
-            <input id="phone" formControlName="phone" type="text" class="uk-input" />
+            <input
+              id="phone"
+              formControlName="phone"
+              type="text"
+              class="uk-input"
+            />
           </div>
         </div>
 
         <!-- Partnership Type (Radio buttons) will span full width -->
         <div class="uk-width-1-1">
           <div class="uk-margin">
-            <label class="uk-form-label uk-margin-medium-top uk-margin-small-bottom">Escolha o tipo de parceria:</label>
+            <label
+              class="uk-form-label uk-margin-medium-top uk-margin-small-bottom"
+              >Escolha o tipo de parceria:</label
+            >
             <div class="uk-form-controls">
               <label class="uk-margin-small-right">
-                <input type="radio" value="businessIndicator" formControlName="partnershipType" class="uk-radio" />
+                <input
+                  type="radio"
+                  value="businessIndicator"
+                  formControlName="partnershipType"
+                  class="uk-radio"
+                />
                 Indicadores de Negócio
               </label>
               <label class="uk-margin-small-right">
-                <input type="radio" value="authorizedAgent" formControlName="partnershipType" class="uk-radio" />
+                <input
+                  type="radio"
+                  value="authorizedAgent"
+                  formControlName="partnershipType"
+                  class="uk-radio"
+                />
                 Agente de Vendas Autorizados
               </label>
               <label>
-                <input type="radio" value="reseller" formControlName="partnershipType" class="uk-radio" />
+                <input
+                  type="radio"
+                  value="reseller"
+                  formControlName="partnershipType"
+                  class="uk-radio"
+                />
                 Agente Revendedor
               </label>
             </div>
@@ -61,47 +105,124 @@
         </div>
 
         <!-- Business Indicator details (conditional) -->
-        <div *ngIf="selectedPartnership === 'businessIndicator'" class="uk-width-1-1">
-          <h3 class="uk-heading-divider">Detalhes do Parceiro de Indicadores de Negócio</h3>
-          <div class="uk-margin">
-            <label for="referralCount" class="uk-form-label">Com qual subsidiária deseja trabalhar?</label>
-            <select id="referralCount" formControlName="referralCount" class="uk-select uk-form-width-large">
-                <option value="" disabled selected>Selecione uma opção</option>
-                <option value="subsidiaria1">África Austral e Oriental (TelCables South Africa)
-                </option>
-                <option value="subsidiaria2">África Subsariana (Angola Cables)
-                </option>
-                <option value="subsidiaria3">África Ocidental (TelCables Nigéria)</option>
-                <option value="subsidiaria3">América do Norte (TelCables USA)</option>
-                <option value="subsidiaria3">América Latina (TelCables Brasil)
-                </option>
-                <option value="subsidiaria3">Europa (TelCables Europa)
+        <div
+          *ngIf="selectedPartnership === 'businessIndicator'"
+          class="uk-margin-large-top uk-width-1-1 uk-grid-small"
+          uk-grid
+        >
+          <h3 class="uk-heading-divider">
+            Detalhes do Parceiro de Indicadores de Negócio
+          </h3>
 
-                </option>
-
-
+          <div class="uk-width-1-2@s">
+            <label for="referralCount" class="uk-form-label"
+              >Com qual subsidiária deseja trabalhar?</label
+            >
+            <select
+              id="referralCount"
+              formControlName="referralCount"
+              class="uk-select uk-form-width-large"
+            >
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="subsidiaria1">
+                África Austral e Oriental (TelCables South Africa)
+              </option>
+              <option value="subsidiaria2">
+                África Subsariana (Angola Cables)
+              </option>
+              <option value="subsidiaria3">
+                África Ocidental (TelCables Nigéria)
+              </option>
+              <option value="subsidiaria3">
+                América do Norte (TelCables USA)
+              </option>
+              <option value="subsidiaria3">
+                América Latina (TelCables Brasil)
+              </option>
+              <option value="subsidiaria3">Europa (TelCables Europa)</option>
             </select>
-        </div>
+          </div>
+
+          <div class="uk-width-1-2@s">
+            <div class="uk-margin">
+              <label for="lastName" class="uk-form-label"
+                >Nome do potencial cliente:</label
+              >
+              <input
+                id="lastName"
+                formControlName="lastName"
+                type="text"
+                class="uk-input"
+              />
+            </div>
+          </div>
+
           <div class="uk-margin">
-            <label for="keyIndustries" class="uk-form-label">Indústrias-chave:</label>
-            <input id="keyIndustries" formControlName="keyIndustries" type="text" class="uk-input" />
+            <label for="referralCount" class="uk-form-label"
+              >Número de colaboradores?</label
+            >
+            <select
+              id="referralCount"
+              formControlName="referralCount"
+              class="uk-select uk-form-width-medium"
+            >
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="subsidiaria1">0 – 50 colaboradores</option>
+              <option value="subsidiaria2">50 – 200 colaboradores</option>
+              <option value="subsidiaria3">200 – 500 colaboradores</option>
+              <option value="subsidiaria3">500 – 1000 colaboradores</option>
+              <option value="subsidiaria3">Acima de 1000</option>
+            </select>
+
+            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                <label><input class="uk-checkbox" type="checkbox"> Eu confirmo que as informações acima estão correctas e aceito os termos do programa de parceria. <br>Consultar <a href="#">Termos & Condições</a></label>
+            </div>
+            
           </div>
         </div>
 
         <!-- Authorized Agent details (conditional) -->
-        <div *ngIf="selectedPartnership === 'authorizedAgent'" class=" uk-margin-medium-top uk-width-1-1">
-          <h3 class="uk-heading-divider">Detalhes do Agente de Vendas Autorizados</h3>
+        <div
+          *ngIf="selectedPartnership === 'authorizedAgent'"
+          class="uk-margin-medium-top uk-width-1-1"
+        >
+          <h3 class="uk-heading-divider">
+            Detalhes do Agente de Vendas Autorizados
+          </h3>
           <div class="uk-margin">
-            <label for="region" class="uk-form-label">Com qual subsidiária deseja trabalhar:</label>
-            <input id="region" formControlName="region" type="text" class="uk-input" />
+            <label for="region" class="uk-form-label"
+              >Com qual subsidiária deseja trabalhar:</label
+            >
+            <input
+              id="region"
+              formControlName="region"
+              type="text"
+              class="uk-input"
+            />
           </div>
           <div class="uk-margin">
-            <label for="region" class="uk-form-label">Nome da sua empresa:</label>
-            <input id="region" formControlName="region" type="text" class="uk-input" />
+            <label
+              for="region"
+              class="uk-form-label uk-select uk-form-width-medium"
+              >Nome da sua empresa:</label
+            >
+            <input
+              id="region"
+              formControlName="region"
+              type="text"
+              class="uk-input"
+            />
           </div>
           <div class="uk-margin">
-            <label for="experienceYears" class="uk-form-label">Anos de Experiência:</label>
-            <input id="experienceYears" formControlName="experienceYears" type="text" class="uk-input" />
+            <label for="experienceYears" class="uk-form-label"
+              >Anos de Experiência:</label
+            >
+            <input
+              id="experienceYears"
+              formControlName="experienceYears"
+              type="text"
+              class="uk-input"
+            />
           </div>
         </div>
 
@@ -110,22 +231,38 @@
           <h3 class="uk-heading-divider">Detalhes do Agente Revendedor</h3>
           <div class="uk-margin">
             <label for="storeName" class="uk-form-label">Nome da Loja:</label>
-            <input id="storeName" formControlName="storeName" type="text" class="uk-input" />
+            <input
+              id="storeName"
+              formControlName="storeName"
+              type="text"
+              class="uk-input"
+            />
           </div>
           <div class="uk-margin">
-            <label for="productSpecialty" class="uk-form-label">Especialidade de Produtos:</label>
-            <input id="productSpecialty" formControlName="productSpecialty" type="text" class="uk-input" />
+            <label for="productSpecialty" class="uk-form-label"
+              >Especialidade de Produtos:</label
+            >
+            <input
+              id="productSpecialty"
+              formControlName="productSpecialty"
+              type="text"
+              class="uk-input"
+            />
           </div>
         </div>
 
         <!-- Submit Button -->
         <div class="uk-width-1-1">
-          <button type="submit" class="uk-button uk-button-primary uk-border-rounded">SOLICITAR </button>
+          <button
+            type="submit"
+            class="uk-button uk-button-primary uk-border-rounded"
+          >
+            SOLICITAR
+          </button>
         </div>
       </div>
     </form>
   </div>
 </div>
-
 
 <app-rodape></app-rodape>
