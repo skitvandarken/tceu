@@ -5,10 +5,11 @@
     top: 0;
     width: 100%;
     ; /* Background color for the navbar */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 1); /* Optional shadow for better visibility */
     display: flex;
     justify-content: center;
     align-items: center;
+    height: max-content;
 }
 
 /* Media query for padding-bottom on larger screens */

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 @Component({
   selector: 'app-signup',
-  imports: [MenuComponent, CommonModule, ReactiveFormsModule],
+  imports: [MenuComponent, CommonModule, ReactiveFormsModule, RodapeComponent],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })

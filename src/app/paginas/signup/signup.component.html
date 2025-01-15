@@ -42,7 +42,7 @@
         <!-- Partnership Type (Radio buttons) will span full width -->
         <div class="uk-width-1-1">
           <div class="uk-margin">
-            <label class="uk-form-label">Escolha o tipo de parceria:</label>
+            <label class="uk-form-label uk-margin-medium-top uk-margin-small-bottom">Escolha o tipo de parceria:</label>
             <div class="uk-form-controls">
               <label class="uk-margin-small-right">
                 <input type="radio" value="businessIndicator" formControlName="partnershipType" class="uk-radio" />
@@ -64,9 +64,24 @@
         <div *ngIf="selectedPartnership === 'businessIndicator'" class="uk-width-1-1">
           <h3 class="uk-heading-divider">Detalhes do Parceiro de Indicadores de Negócio</h3>
           <div class="uk-margin">
-            <label for="referralCount" class="uk-form-label">Número de Referências:</label>
-            <input id="referralCount" formControlName="referralCount" type="text" class="uk-input" />
-          </div>
+            <label for="referralCount" class="uk-form-label">Com qual subsidiária deseja trabalhar?</label>
+            <select id="referralCount" formControlName="referralCount" class="uk-select uk-form-width-large">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="subsidiaria1">África Austral e Oriental (TelCables South Africa)
+                </option>
+                <option value="subsidiaria2">África Subsariana (Angola Cables)
+                </option>
+                <option value="subsidiaria3">África Ocidental (TelCables Nigéria)</option>
+                <option value="subsidiaria3">América do Norte (TelCables USA)</option>
+                <option value="subsidiaria3">América Latina (TelCables Brasil)
+                </option>
+                <option value="subsidiaria3">Europa (TelCables Europa)
+
+                </option>
+
+
+            </select>
+        </div>
           <div class="uk-margin">
             <label for="keyIndustries" class="uk-form-label">Indústrias-chave:</label>
             <input id="keyIndustries" formControlName="keyIndustries" type="text" class="uk-input" />
@@ -74,7 +89,7 @@
         </div>
 
         <!-- Authorized Agent details (conditional) -->
-        <div *ngIf="selectedPartnership === 'authorizedAgent'" class="uk-width-1-1">
+        <div *ngIf="selectedPartnership === 'authorizedAgent'" class=" uk-margin-medium-top uk-width-1-1">
           <h3 class="uk-heading-divider">Detalhes do Agente de Vendas Autorizados</h3>
           <div class="uk-margin">
             <label for="region" class="uk-form-label">Com qual subsidiária deseja trabalhar:</label>
@@ -105,9 +120,12 @@
 
         <!-- Submit Button -->
         <div class="uk-width-1-1">
-          <button type="submit" class="uk-button uk-button-primary">Enviar</button>
+          <button type="submit" class="uk-button uk-button-primary uk-border-rounded">SOLICITAR </button>
         </div>
       </div>
     </form>
   </div>
 </div>
+
+
+<app-rodape></app-rodape>
