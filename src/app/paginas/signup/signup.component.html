@@ -1,0 +1,113 @@
+<app-menu></app-menu>
+
+<div class="uk-section uk-section-muted uk-padding-large">
+  <div class="uk-container uk-margin-large-top">
+    <h1 class="uk-heading-divider">Registe-se para se tornar um parceiro Angola Cables ou TelCables.</h1>
+    <p class="uk-text-lead"></p>
+  </div>
+
+  <div class="uk-margin-large-top uk-container">
+    <form [formGroup]="partnershipForm" (ngSubmit)="submitForm()" class="uk-form-stacked">
+      <div class="uk-grid-small" uk-grid>
+        <!-- First Name and Last Name in 2 columns -->
+        <div class="uk-width-1-2@s">
+          <div class="uk-margin">
+            <label for="firstName" class="uk-form-label">Primeiro Nome:</label>
+            <input id="firstName" formControlName="firstName" type="text" class="uk-input" />
+          </div>
+        </div>
+
+        <div class="uk-width-1-2@s">
+          <div class="uk-margin">
+            <label for="lastName" class="uk-form-label">Último Nome:</label>
+            <input id="lastName" formControlName="lastName" type="text" class="uk-input" />
+          </div>
+        </div>
+
+        <!-- Email and Phone Number in 2 columns -->
+        <div class="uk-width-1-2@s">
+          <div class="uk-margin">
+            <label for="email" class="uk-form-label">E-mail:</label>
+            <input id="email" formControlName="email" type="email" class="uk-input" />
+          </div>
+        </div>
+
+        <div class="uk-width-1-2@s">
+          <div class="uk-margin">
+            <label for="phone" class="uk-form-label">Telefone:</label>
+            <input id="phone" formControlName="phone" type="text" class="uk-input" />
+          </div>
+        </div>
+
+        <!-- Partnership Type (Radio buttons) will span full width -->
+        <div class="uk-width-1-1">
+          <div class="uk-margin">
+            <label class="uk-form-label">Escolha o tipo de parceria:</label>
+            <div class="uk-form-controls">
+              <label class="uk-margin-small-right">
+                <input type="radio" value="businessIndicator" formControlName="partnershipType" class="uk-radio" />
+                Indicadores de Negócio
+              </label>
+              <label class="uk-margin-small-right">
+                <input type="radio" value="authorizedAgent" formControlName="partnershipType" class="uk-radio" />
+                Agente de Vendas Autorizados
+              </label>
+              <label>
+                <input type="radio" value="reseller" formControlName="partnershipType" class="uk-radio" />
+                Agente Revendedor
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Indicator details (conditional) -->
+        <div *ngIf="selectedPartnership === 'businessIndicator'" class="uk-width-1-1">
+          <h3 class="uk-heading-divider">Detalhes do Parceiro de Indicadores de Negócio</h3>
+          <div class="uk-margin">
+            <label for="referralCount" class="uk-form-label">Número de Referências:</label>
+            <input id="referralCount" formControlName="referralCount" type="text" class="uk-input" />
+          </div>
+          <div class="uk-margin">
+            <label for="keyIndustries" class="uk-form-label">Indústrias-chave:</label>
+            <input id="keyIndustries" formControlName="keyIndustries" type="text" class="uk-input" />
+          </div>
+        </div>
+
+        <!-- Authorized Agent details (conditional) -->
+        <div *ngIf="selectedPartnership === 'authorizedAgent'" class="uk-width-1-1">
+          <h3 class="uk-heading-divider">Detalhes do Agente de Vendas Autorizados</h3>
+          <div class="uk-margin">
+            <label for="region" class="uk-form-label">Com qual subsidiária deseja trabalhar:</label>
+            <input id="region" formControlName="region" type="text" class="uk-input" />
+          </div>
+          <div class="uk-margin">
+            <label for="region" class="uk-form-label">Nome da sua empresa:</label>
+            <input id="region" formControlName="region" type="text" class="uk-input" />
+          </div>
+          <div class="uk-margin">
+            <label for="experienceYears" class="uk-form-label">Anos de Experiência:</label>
+            <input id="experienceYears" formControlName="experienceYears" type="text" class="uk-input" />
+          </div>
+        </div>
+
+        <!-- Reseller details (conditional) -->
+        <div *ngIf="selectedPartnership === 'reseller'" class="uk-width-1-1">
+          <h3 class="uk-heading-divider">Detalhes do Agente Revendedor</h3>
+          <div class="uk-margin">
+            <label for="storeName" class="uk-form-label">Nome da Loja:</label>
+            <input id="storeName" formControlName="storeName" type="text" class="uk-input" />
+          </div>
+          <div class="uk-margin">
+            <label for="productSpecialty" class="uk-form-label">Especialidade de Produtos:</label>
+            <input id="productSpecialty" formControlName="productSpecialty" type="text" class="uk-input" />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="uk-width-1-1">
+          <button type="submit" class="uk-button uk-button-primary">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

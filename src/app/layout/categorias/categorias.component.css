@@ -1,5 +1,8 @@
 .texto{
     color:white !important;
+    text-align: justify;
+    word-spacing: normal !important;
+    kerning: 2px;
 }
 
 .selos{
