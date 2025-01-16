@@ -19,3 +19,28 @@
 .uk-input{
     border-radius: 10px;
 }
+
+
+.autocomplete-list {
+   
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    
+    background-color:rgb(224, 224, 224);
+  }
+  .autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .autocomplete-item:hover {
+    background-color: #30518f;
+    color: white;
+  }
+
+
+  label{
+    font-size: 1.2em;
+  }

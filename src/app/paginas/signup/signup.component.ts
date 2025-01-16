@@ -6,11 +6,14 @@ import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 @Component({
   selector: 'app-signup',
-  imports: [MenuComponent, CommonModule, ReactiveFormsModule, RodapeComponent],
+  imports: [MenuComponent, CommonModule, ReactiveFormsModule, RodapeComponent, ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+
+
+
 
   partnershipForm: FormGroup;
   selectedPartnership: string = '';
