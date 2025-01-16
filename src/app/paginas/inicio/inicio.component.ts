@@ -8,10 +8,11 @@ import { AngolacablesComponent } from '../../layout/angolacables/angolacables.co
 import { ServicosComponent } from '../../layout/servicos/servicos.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { SliderComponent } from '../../layout/slider/slider.component';
+import { ContactoComponent } from '../../layout/contacto/contacto.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, BeneficiosComponent, CategoriasComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent],
+  imports: [MenuComponent, BeneficiosComponent, CategoriasComponent, ContactoComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
