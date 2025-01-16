@@ -18,11 +18,18 @@ import { ContactoComponent } from '../../layout/contacto/contacto.component';
 })
 export class InicioComponent implements OnInit {
 
+  
+
   constructor(private auth: AuthService, private router: Router) {
 
   }
 
  ngOnInit(): void {
+
+  const videoElement = document.getElementById('promoVideo') as HTMLVideoElement;
+    if (videoElement) {
+      videoElement.muted = true; // Forçar o vídeo a ser mudo
+    }
    
   this.auth.isAuthenticated$.subscribe(isAutheticated => {
     if (isAutheticated) {
