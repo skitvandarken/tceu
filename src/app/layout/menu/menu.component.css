@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: max-content;
+    height: 20px;
 }
 
 /* Media query for padding-bottom on larger screens */
@@ -23,10 +23,12 @@
     display: flex;
     justify-content: center;
     flex: 1;
+    
 }
 
 .uk-offcanvas-bar {
     background-color: #fff; /* Background color for the offcanvas bar */
+    
 }
 
 .texto{
