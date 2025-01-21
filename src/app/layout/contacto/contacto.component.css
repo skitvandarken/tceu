@@ -1,11 +1,11 @@
 .texto {
-    font-family: "Roboto", serif !important;
+    font-family: "Sora", sans-serif;
     color: white !important;   
 }
 
 .fundo-formulario{
-    background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
-    border-radius: 20px;
+    background: linear-gradient(180deg, rgb(18, 72, 130) , rgb(0, 6, 27), rgb(0, 25, 49));
+    border-radius: 10px;
 }
 
 
