@@ -2,7 +2,7 @@
     color:white !important;
     text-align: justify;
     word-spacing: normal !important;
-    kerning: 2px;
+  
 }
 
 .selos{
@@ -33,7 +33,6 @@
     background-size: cover;
     background-color: rgb(18, 72, 130);
     background-blend-mode: multiply;
-    padding-top:  20px;
 
 }
 
