@@ -1,7 +1,7 @@
 .texto{
     color:white !important;
     text-align: justify;
-    word-spacing: normal !important;
+    line-height: 1.5;    word-spacing: normal !important;
   
 }
 
