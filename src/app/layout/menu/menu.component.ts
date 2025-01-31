@@ -3,16 +3,31 @@ import { RouterLink } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
-  imports: [RouterLink, CommonModule, ],
+  imports: [RouterLink, CommonModule, TranslateModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
+
 })
+
+
+
+
 export class MenuComponent implements OnInit {
 
-   constructor(public auth: AuthService, private router: Router) {
+
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
+
+   constructor(public auth: AuthService, private router: Router, private  translate: TranslateService) {
+
+    
   
     }
   

@@ -12,49 +12,25 @@
     </div>
 
     <div
-      class=" uk-container uk-width-1-2@m uk-margin-medium-top uk-margin-medium-bottom"
+      class="uk-container uk-width-1-2@m uk-margin-medium-top uk-margin-medium-bottom"
     >
       <h2 class="uk-margin-medium-left" style="color: rgb(18, 72, 130); font-weight: 700">
-        Participe na presença global da Angola Cables
-      </h2>
+        {{ 'participe_presenca_global' | translate }}     
+       </h2>
 
       <p
-        class=" uk-margin-medium-left "
+        class="uk-margin-medium-left"
         style="color: rgb(18, 72, 130); font-size: 22px"
         uk-parallax="opacity: 0,1; y: 0, x:-100; scale: 1,1; end: 50vh + 50%;"
       >
-        Juntos vamos alcançar mercados e promover a nossa rede em soluções de
-        transmissão, Internet e ICT, no Brasil, EUA, América Latina (LATAM),
-        Europa, África e Médio-Oriente.
+        {{ 'alcance_mercados' | translate }}
         <br /><br />
 
-        O nosso programa é a oportunidade perfeita para empresas de
-        telecomunicações, operadoras e provedores de serviços de internet que
-        desejam crescer em volume de negócios e expandir em alcance.
+        {{ 'oportunidade_perfeita' | translate }}
       </p>
     </div>
   </div>
 </div>
-<!-- 
-<div
-  class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-border-rounded"
-  style="background-image: url('img/fundo.png')"
->
-  <div
-    class="uk-container uk-width-1-1@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-margin-medium-top"
-  >
-    <h2 class="" style="color: rgb(18, 72, 130); font-weight: 700">
-      Expanda sua presença global com o nosso programa de parceiros.
-      <br />Alcance mercados como EUA, América Latina (LATAM), Europa e África.
-    </h2>
-    <p class=" " style="color: rgb(18, 72, 130)">
-      O nosso programa é a oportunidade perfeita empresas de telecomunicações,
-      operadoras e provedores de serviços de internet que desejam crescer em
-      volume de negócios e expandir em alcance.
-    </p>
-  </div>
-</div>
--->
 
 <div class="fundo-div">
   <div class="uk-container">
@@ -70,14 +46,10 @@
           class="uk-container uk-width-1-2@m uk-margin-medium-top uk-margin-medium-bottom"
         >
           <h2 style="font-weight: bold" class="texto-div uk-text-left">
-            Porquê tornar-se <br />
-            AC Partner?
+            {{ 'porque_tornar_se_parceiro' | translate }}
           </h2>
           <p style="font-size: 22px" class="texto-div uk-text-left">
-            O programa Parceiros do Grupo Angola Cables foi criado para apoiar o
-            crescimento dos nossos parceiros e ajudá-los a alcançar o sucesso
-            com as melhores soluções de conectividade e interconexão. Nosso compromisso é oferecer suporte contínuo, recursos de alto nível e um ambiente colaborativo, ajudando a potenciar o seu negócio.
-
+            {{ 'programa_parceiros' | translate }}
           </p>
         </div>
         <!--Lado direito-->
@@ -94,7 +66,7 @@
               class="promo-video uk-border-rounded"
             >
               <source src="vid/angola-cables-new.mp4" type="video/mp4" />
-              Seu não navegador não suporta o vídeo em falta.
+              Seu navegador não suporta o vídeo em falta.
             </video>
           </div>
         </div>
@@ -111,8 +83,6 @@
           tabindex="-1"
           uk-slideshow="autoplay : true; animation: push; autoplay-interval: 2000"
         >
-         
-
           <a
             class="uk-position-center-left uk-position-small uk-hidden-hover"
             href
@@ -128,182 +98,165 @@
         </div>
       </div>
 
-
-      
-
       <div
         class="uk-child-width-1-2@m uk-grid-small uk-child-width-1-1@s uk-grid-match uk-grid uk-text-left"
-
-        
       >
         <!-- Lado esquerdo-->
-       
-        
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
           <div>
             <h3 style="font-weight: bold" class="uk-text-center texto-div">
-              Confiança. Transparência. Competitividade 
+              {{ 'confiança_transparência_competitividade' | translate }}
             </h3>
           </div>
-         
 
           <!-- Slider Container -->
           <div class="uk-slider-container uk-margin-medium-right">
-              <ul class="uk-slider-items uk-child-width-1-3@s uk-grid uk-container uk-margin-small-right">
-                  <!-- Slide 1 -->
-                  <li>
-                      <div class="uk-text-center">
-                          <img
-                              style="height: 100px"
-                              src="img/world-interconected-angola-cables.png"
-                              alt="21ª operadora mais conectada do mundo"
-                          />
-                          <p class="texto-div uk-text-center">
-                            21ª operadora mais conectada do mundo
-                          </p>
-                      </div>
-                  </li>
-                  <!-- Slide 2 -->
-                  <li>
-                      <div class="uk-text-center">
-                          <img
-                              style="height: 100px"
-                              src="img/first-interconected-angola-cables.png"
-                              alt="1ª operadora mais conectada de África"
-                          />
-                          <p class="texto-div">
-                            1ª operadora mais conectada de África
-                          </p>
-                      </div>
-                  </li>
-                  <!-- Slide 3 -->
-                  <li>
-                      <div class="uk-text-center">
-                          <img
-                              style="height: 100px"
-                              src="img/selocplp-pt-2024.png"
-                              alt="Operadora mais conectada da CPLP"
-                          />
-                          <p class="texto-div">
-                            Operadora mais conectada da CPLP
-                          </p>
-                      </div>
-                  </li>
-                  
-              </ul>
+            <ul class="uk-slider-items uk-child-width-1-3@s uk-grid uk-container uk-margin-small-right">
+              <!-- Slide 1 -->
+              <li>
+                <div class="uk-text-center">
+                  <img
+                    style="height: 100px"
+                    src="img/world-interconected-angola-cables.png"
+                    alt="{{ 'operadora_conectada_mundo' | translate }}"
+                  />
+                  <p class="texto-div uk-text-center">
+                    {{ 'operadora_conectada_mundo' | translate }}
+                  </p>
+                </div>
+              </li>
+              <!-- Slide 2 -->
+              <li>
+                <div class="uk-text-center">
+                  <img
+                    style="height: 100px"
+                    src="img/first-interconected-angola-cables.png"
+                    alt="{{ 'operadora_conectada_africa' | translate }}"
+                  />
+                  <p class="texto-div">
+                    {{ 'operadora_conectada_africa' | translate }}
+                  </p>
+                </div>
+              </li>
+              <!-- Slide 3 -->
+              <li>
+                <div class="uk-text-center">
+                  <img
+                    style="height: 100px"
+                    src="img/selocplp-pt-2024.png"
+                    alt="{{ 'operadora_conectada_cplp' | translate }}"
+                  />
+                  <p class="texto-div">
+                    {{ 'operadora_conectada_cplp' | translate }}
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
-      
-      
-      </div>
-        
+        </div>
+
         <!--Lado direito-->
-        <div class="uk-width-1-2@m ">
-
-         
-        
-
+        <div class="uk-width-1-2@m">
           <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
             <div class="uk-margin-medium-bottom">
               <h3 style="font-weight: bold" class="uk-text-center texto-div">
-                As Nossas Certificações
+                {{ 'nossas_certificacoes' | translate }}
               </h3>
             </div>
 
             <!-- Slider Container -->
-            <div class="uk-slider-container ">
-                <ul class="uk-slider-items uk-child-width-1-3@s uk-grid uk-container">
-                    <!-- Slide 1 -->
-                    <li>
-                        <div class="uk-text-center">
-                            <img
-                                style="height: 100px"
-                                src="img/iso/iso1.png"
-                                alt="21ª operadora mais conectada do mundo"
-                            />
-                            <p class="texto-div uk-text-center">
-                               ISO 9001
-                            </p>
-                        </div>
-                    </li>
-                    <!-- Slide 2 -->
-                    <li>
-                        <div class="uk-text-center">
-                            <img
-                                style="height: 100px"
-                                src="img/iso/iso2.png"
-                                alt="1ª operadora mais conectada de África"
-                            />
-                            <p class="texto-div">
-                                ISO 27001
-                            </p>
-                        </div>
-                    </li>
-                    <!-- Slide 3 -->
-                    <li>
-                        <div class="uk-text-center">
-                            <img
-                                style="height: 100px"
-                                src="img/iso/iso3.png"
-                                alt="Operadora mais conectada da CPLP"
-                            />
-                            <p class="texto-div">
-                               ISO 20000
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                      <div class="uk-text-center">
-                          <img
-                              style="height: 100px"
-                              src="img/iso/iso4.png"
-                              alt="Operadora mais conectada da CPLP"
-                          />
-                          <p class="texto-div">
-                             ISO 27018
-                          </p>
-                      </div>
-                  </li>
-                  <li>
-                    <div class="uk-text-center">
-                        <img
-                            style="height: 100px"
-                            src="img/iso/iso5.png"
-                            alt="Operadora mais conectada da CPLP"
-                        />
-                        <p class="texto-div">
-                          ISO 27701
-                        </p>
-                    </div>
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items uk-child-width-1-3@s uk-grid uk-container">
+                <!-- Slide 1 -->
+                <li>
+                  <div class="uk-text-center">
+                    <img
+                      style="height: 100px"
+                      src="img/iso/iso1.png"
+                      alt="{{ 'iso_9001' | translate }}"
+                    />
+                    <p class="texto-div uk-text-center">
+                      {{ 'iso_9001' | translate }}
+                    </p>
+                  </div>
+                </li>
+                <!-- Slide 2 -->
+                <li>
+                  <div class="uk-text-center">
+                    <img
+                      style="height: 100px"
+                      src="img/iso/iso2.png"
+                      alt="{{ 'iso_27001' | translate }}"
+                    />
+                    <p class="texto-div">
+                      {{ 'iso_27001' | translate }}
+                    </p>
+                  </div>
+                </li>
+                <!-- Slide 3 -->
+                <li>
+                  <div class="uk-text-center">
+                    <img
+                      style="height: 100px"
+                      src="img/iso/iso3.png"
+                      alt="{{ 'iso_20000' | translate }}"
+                    />
+                    <p class="texto-div">
+                      {{ 'iso_20000' | translate }}
+                    </p>
+                  </div>
                 </li>
                 <li>
                   <div class="uk-text-center">
-                      <img
-                          style="height: 100px"
-                          src="img/iso/iso6.png"
-                          alt="Operadora mais conectada da CPLP"
-                      />
-                      <p class="texto-div">
-                          SOC TYPE II
-                      </p>
-                  </div>
-              </li>
-              <li>
-                <div class="uk-text-center">
                     <img
-                        style="height: 100px"
-                        src="img/iso/iso7.png"
-                        alt="Operadora mais conectada da CPLP"
+                      style="height: 100px"
+                      src="img/iso/iso4.png"
+                      alt="{{ 'iso_27018' | translate }}"
                     />
                     <p class="texto-div">
-                       37001
+                      {{ 'iso_27018' | translate }}
                     </p>
-                </div>
-            </li>
-                </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-text-center">
+                    <img
+                      style="height: 100px"
+                      src="img/iso/iso5.png"
+                      alt="{{ 'iso_27701' | translate }}"
+                    />
+                    <p class="texto-div">
+                      {{ 'iso_27701' | translate }}
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-text-center">
+                    <img
+                      style="height: 100px"
+                      src="img/iso/iso6.png"
+                      alt="{{ 'soc_type_ii' | translate }}"
+                    />
+                    <p class="texto-div">
+                      {{ 'soc_type_ii' | translate }}
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-text-center">
+                    <img
+                      style="height: 100px"
+                      src="img/iso/iso7.png"
+                      alt="{{ '37001' | translate }}"
+                    />
+                    <p class="texto-div">
+                      {{ '37001' | translate }}
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
-        
+
             <!-- Navigation Arrows -->
             <div class="uk-visible@s uk-margin-large-left">
               <a style="font-weight: bold" class=" uk-position-center-left-out uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
