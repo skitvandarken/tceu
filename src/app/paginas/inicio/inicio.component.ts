@@ -13,7 +13,7 @@ import { TesteComponent } from '../../layout/teste/teste.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, BeneficiosComponent, CategoriasComponent, ContactoComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, TesteComponent],
+  imports: [MenuComponent, BeneficiosComponent, CategoriasComponent, ContactoComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

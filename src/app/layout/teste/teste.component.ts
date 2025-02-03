@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import {TranslatePipe} from "@ngx-translate/core";
 import {TranslateService} from "@ngx-translate/core";
 
 
 @Component({
   selector: 'app-teste',
-  imports: [TranslateDirective, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './teste.component.html',
   styleUrl: './teste.component.css',
   standalone: true

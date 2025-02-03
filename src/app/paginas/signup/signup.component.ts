@@ -3,10 +3,11 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-signup',
-  imports: [MenuComponent, CommonModule, ReactiveFormsModule, RodapeComponent, ],
+  imports: [MenuComponent, CommonModule, ReactiveFormsModule, RodapeComponent, TranslatePipe],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
@@ -18,7 +19,13 @@ export class SignupComponent {
   partnershipForm: FormGroup;
   selectedPartnership: string = '';
 
-  constructor(private fb: FormBuilder) {
+      useLanguage(language: string): void {
+          this.translate.use(language);
+      }
+      
+      
+
+  constructor(private fb: FormBuilder, private translate: TranslateService) {
     this.partnershipForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],

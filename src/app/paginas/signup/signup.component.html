@@ -12,7 +12,9 @@
     <div class="uk-flex uk-flex-middle uk-flex-center">
         <div class="uk-card uk-card-body ">
           <h1 style="font-weight: bold;" class="uk-text-left">
-            Registe-se para se tornar um parceiro Angola Cables ou TelCables.
+
+            {{ 'registro_parceiro_titulo' | translate}}
+
           </h1>
         </div>
     </div>
@@ -33,7 +35,7 @@
         <!-- First Name and Last Name in 2 columns -->
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
-            <label for="firstName" class="uk-form-label"><b>Primeiro Nome:</b></label>
+            <label for="firstName" class="uk-form-label"><b> {{ 'primeiro_nome' | translate }} </b></label>
             <input
               id="firstName"
               formControlName="firstName"
@@ -45,7 +47,7 @@
 
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
-            <label for="lastName" class="uk-form-label"><b>Último Nome:</b></label>
+            <label for="lastName" class="uk-form-label"><b> {{ 'ultimo_nome' | translate }}</b></label>
             <input
               id="lastName"
               formControlName="lastName"
@@ -58,7 +60,7 @@
         <!-- Email and Phone Number in 2 columns -->
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
-            <label for="email" class="uk-form-label"><b>E-mail:</b></label>
+            <label for="email" class="uk-form-label"><b> {{'seu_email' | translate}} </b></label>
             <input
               id="email"
               formControlName="email"
@@ -70,7 +72,7 @@
 
         <div class="uk-width-1-2@s">
           <div class="uk-margin">
-            <label for="phone" class="uk-form-label"><b>Telefone:</b></label>
+            <label for="phone" class="uk-form-label"> <b> {{'telefone' | translate}} </b> </label>
             <input
               id="phone"
               formControlName="phone"
@@ -85,7 +87,7 @@
           <div class="uk-margin">
             <label
               class="uk-form-label uk-margin-medium-top uk-margin-small-bottom"
-              ><b>Escolha o tipo de parceria:</b></label
+              ><b> {{ 'escolha_parceria' | translate}} </b></label
             >
             <div class="uk-form-controls">
               <label class="uk-margin-small-right">
@@ -95,7 +97,9 @@
                   formControlName="partnershipType"
                   class="uk-radio"
                 />
-                Indicadores de Negócio
+
+                {{ 'indicadores_negocio_form'  | translate}}
+
               </label>
               <label class="uk-margin-small-right">
                 <input
@@ -104,7 +108,9 @@
                   formControlName="partnershipType"
                   class="uk-radio"
                 />
-                Agente de Vendas Autorizados
+
+                {{  'agentes_vendas_form' | translate }}
+                	
               </label>
               <label>
                 <input
@@ -113,7 +119,9 @@
                   formControlName="partnershipType"
                   class="uk-radio"
                 />
-                Agente Revendedor
+                
+                {{ 'revendedor_titulo_form' | translate }}
+
               </label>
             </div>
           </div>
@@ -126,19 +134,19 @@
           uk-grid
         >
           <div class="uk-width-1-1">
-            <h3 class="uk-heading-divider"><b>Detalhes do Indicador de Negócio</b></h3>
+            <h3 class="uk-heading-divider"><b> {{ 'indicador_detalhes' | translate }} </b></h3>
           </div>
 
           <div class="uk-width-1-2@s">
             <label for="subsidiariaEscolhida" class="uk-form-label"
-              >Com qual subsidiária deseja trabalhar?</label
+              > {{'indicador_subsidiaria' | translate }} </label
             >
             <select
               id="subsidiariaEscolhida"
               formControlName="subsidiariaEscolhida"
               class="uk-select uk-form-width-large uk-border-rounded"
             >
-              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="" disabled selected></option>
               <option value="telCablesza">
                 África Austral e Oriental (TelCables South Africa)
               </option>
@@ -161,7 +169,7 @@
           <div class="uk-width-1-2@s">
             <div class="uk-margin">
               <label for="potCliente" class="uk-form-label"
-                ><b>Nome do potencial cliente:</b></label
+                ><b> {{'nome_potencial_cliente' | translate }} </b></label
               >
               <input
                 id="potCliente"
@@ -174,19 +182,19 @@
 
           <div class="uk-margin">
             <label for="numColab" class="uk-form-label"
-              ><b>Número de colaboradores?</b></label
+              ><b> {{'numero_colaboradores' | translate }} </b></label
             >
             <select
               id="numColab"
               formControlName="numColab"
               class="uk-select uk-form-width-medium uk-border-rounded"
             >
-              <option value="" disabled selected>Selecione uma opção</option>
-              <option value="numColabcinquenta">0 – 50 colaboradores</option>
-              <option value="numColabduzento">50 – 200 colaboradores</option>
-              <option value="numColabtquinhento">200 – 500 colaboradores</option>
-              <option value="numColabumil">500 – 1000 colaboradores</option>
-              <option value="numColabmais">Acima de 1000</option>
+              <option value="" disabled selected></option>
+              <option value="numColabcinquenta">0 – 50</option>
+              <option value="numColabduzento">50 – 200</option>
+              <option value="numColabtquinhento">200 – 500</option>
+              <option value="numColabumil">500 – 1000</option>
+              <option value="numColabmais">+ 1000</option>
             </select>
 
             <!-- Submit Button -->
@@ -195,17 +203,15 @@
                 class="uk-margin-medium-top uk-margin uk-grid-small uk-child-width-auto uk-grid"
               >
                 <label
-                  ><input class="uk-checkbox" type="checkbox" /> Eu confirmo que
-                  as informações acima estão correctas e aceito os termos do
-                  programa de parceria. <br />Consultar
-                  <a href="#"><b>Termos & Condições</b></a></label
+                  ><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate  }} <br />
+                  <a href="#"><b> {{ 'consultar_termos' | translate }}</b></a></label
                 >
               </div>
               <button
                 type="submit"
                 class="uk-button uk-button-primary uk-border-rounded"
               >
-                SOLICITAR
+                {{'solicitar' | translate }}
               </button>
             </div>
           </div>
@@ -218,19 +224,19 @@
           uk-grid
         >
           <div class="uk-width-1-1">
-            <h3 class="uk-heading-divider"><b>Detalhes do Agente Revendedor</b></h3>
+            <h3 class="uk-heading-divider"><b> {{'detalhes_agente_revendedor' | translate }} </b></h3>
           </div>
 
           <div class="uk-width-1-2@s">
             <label for="subsidiariaEscolhida" class="uk-form-label"
-              ><b>Com qual subsidiária deseja trabalhar?</b></label
+              ><b> {{'subsidiaria_trabalhar' | translate }} </b></label
             >
             <select
               id="subsidiariaEscolhida"
               formControlName="subsidiariaEscolhida"
               class="uk-select uk-form-width-large uk-border-rounded"
             >
-              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="" disabled selected></option>
               <option value="subsidiaria1">
                 África Austral e Oriental (TelCables South Africa)
               </option>
@@ -252,29 +258,29 @@
 
           <div class="uk-width-1-2@s">
             <label for="tipoEmpresa" class="uk-form-label"
-              ><b>Tipo de negócio da sua empresa</b></label
+              ><b>{{'tipo_negocio_empresa' | translate}}</b></label
             >
             <select
               id="tipoEmpresa"
               formControlName="tipoEmpresa"
               class="uk-select uk-form-width-large uk-border-rounded"
             >
-              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="" disabled selected></option>
               <option value="cloudComputing">
-                Serviços de TI e Núvens (Cloud Computing)
+                {{'servicos_ti_nuvens' | translate}}
               </option>
               <option value="digitalMedia">
-                Conteúdo e Mídia Digital (Digital Media)
+                {{'conteudo_midia_digital' | translate}}
               </option>
-              <option value="empresaSoftware">Empresas de Software</option>
-              <option value="outros">Outro</option>
+              <option value="empresaSoftware">{{'empresas_software' | translate }}</option>
+              <option value="outros">{{'outro' | translate }}</option>
             </select>
           </div>
 
           <div class="uk-width-1-2@s">
             <div class="uk-margin">
               <label for="lastName" class="uk-form-label"
-                ><b>Nome da sua empresa:</b></label
+                ><b>{{'nome_empresa' | translate}}</b></label
               >
               <input
                 id="nomeEmpresa"
@@ -286,25 +292,24 @@
 
             <div class="uk-margin">
               <label for="numColab" class="uk-form-label"
-              ><b>Número de colaboradores?</b></label
+              ><b>{{ 'numero_colaboradores' | translate }}</b></label
             >
             <select
               id="numColab"
               formControlName="numColab"
               class="uk-select uk-form-width-medium uk-border-rounded"
             >
-              <option value="" disabled selected>Selecione uma opção</option>
-              <option value="numColabcinquenta">0 – 50 colaboradores</option>
-              <option value="numColabduzento">50 – 200 colaboradores</option>
-              <option value="numColabtquinhento">200 – 500 colaboradores</option>
-              <option value="numColabumil">500 – 1000 colaboradores</option>
-              <option value="numColabmais">Acima de 1000</option>
+              <option value="" disabled selected></option>
+              <option value="numColabcinquenta">0 – 50 </option>
+              <option value="numColabduzento">50 – 200 </option>
+              <option value="numColabtquinhento">200 – 500 </option>
+              <option value="numColabumil">500 – 1000 </option>
+              <option value="numColabmais">+ 1000</option>
             </select>
             </div>
             <div class="uk-margin">
               <label for="volVendas" class="uk-form-label"
-                > <b>Qual é o volume médio de vendas mensais que a sua empresa
-                consegue atingir? </b></label
+                > <b>{{'volume_vendas_mensais' | translate }} </b></label
               >
               <input
                 id="volVendas"
@@ -315,8 +320,7 @@
             </div>
             <div class="uk-margin">
               <label for="volVendas" class="uk-form-label"
-                ><b>A sua empresa uma equipa de vendas? Se sim, qual o número de
-                colaboradores dedicados a este processo? </b></label
+                ><b>{{'equipa_vendas' | translate }}</b></label
               >
               <input
                 id="equipaVendas"
@@ -331,17 +335,15 @@
           <div class="uk-width-1-1">
             <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
               <label
-                ><input class="uk-checkbox" type="checkbox" /><b> Eu confirmo que
-                as informações acima estão correctas e aceito os termos do
-                programa de parceria.</b> <br />Consultar
-                <a href="#"><b>Termos & Condições</b></a></label
+                ><input class="uk-checkbox" type="checkbox" /><b> {{'confirmar_informacoes' | translate }} </b> <br />
+                <a href="#"><b> {{'consultar_termos' | translate }} </b></a></label
               >
             </div>
             <button
               type="submit"
               class="uk-button uk-button-primary uk-border-rounded"
             >
-              SOLICITAR
+              {{'solicitar' | translate}}
             </button>
           </div>
         </div>
@@ -354,20 +356,20 @@
         >
           <div class="uk-width-1-1">
             <h3 class="uk-heading-divider">
-              <b>Detalhes do Agente de Vendas Autorizado</b>
+              <b> {{'detalhes_agente_vendas_autorizado' | translate}} </b>
             </h3>
           </div>
 
           <div class="uk-width-1-2@s">
             <label for="subsidiariaEscolhida" class="uk-form-label"
-              ><b>Com qual subsidiária deseja trabalhar?</b></label
+              ><b> {{'subsidiaria_trabalhar' | translate }} </b></label
             >
             <select
               id="subsidiariaEscolhida"
               formControlName="subsidiariaEscolhida"
               class="uk-select uk-form-width-large uk-border-rounded"
             >
-              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="" disabled selected></option>
               <option value="subsidiaria1">
                 África Austral e Oriental (TelCables South Africa)
               </option>
@@ -392,7 +394,7 @@
           <div class="uk-width-1-2@s">
             <div class="uk-margin">
               <label for="lastName" class="uk-form-label"
-                ><b>Nome da empresa:</b></label
+                ><b> {{'nome_empresa_revendedor' | translate }} </b></label
               >
               <input
                 id="nomeEmpresa"
@@ -406,14 +408,14 @@
 
         <div class="uk-margin">
           <label class="uk-border-rounded uk-form-label" for="form-horizontal-select"
-            ><b>País da sede da empresa </b></label
+            ><b> {{'pais_sede_empresa' | translate}} </b></label
           >
           <div class="uk-form-controls">
             <select
               class="uk-select uk-form-width-medium"
               id="form-horizontal-select"
             >
-              <option value="">Selecione um país</option>
+              <option value=""></option>
               <option value="AF">Afeganistão</option>
               <option value="AL">Albânia</option>
               <option value="DE">Alemanha</option>
@@ -641,42 +643,42 @@
 
         <div class="uk-width-1-1"> 
           <label for="servicoInteresse" class="uk-form-label"
-            ><b>Qual serviço está interessado em revender?</b>
+            ><b>{{ 'servico_interesse_revender'| translate }}</b>
           </label>
           <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
             <label
               ><input class="uk-checkbox" type="checkbox" />
-              Conectividade</label
+              {{'conectividade' | translate}} </label
             >
             <label
-              ><input class="uk-checkbox" type="checkbox" /> Acesso à Internet
+              ><input class="uk-checkbox" type="checkbox" /> {{'acesso_a_internet' | translate }}
             </label>
             <label
-              ><input class="uk-checkbox" type="checkbox" /> Data Center
+              ><input class="uk-checkbox" type="checkbox" /> {{'data_center' | translate}}
             </label>
-            <label><input class="uk-checkbox" type="checkbox" /> Cloud</label>
+            <label><input class="uk-checkbox" type="checkbox" /> {{'cloud' | translate }} </label>
             <label
-              ><input class="uk-checkbox" type="checkbox" /> Segurança</label
+              ><input class="uk-checkbox" type="checkbox" /> {{'seguranca' | translate}}</label
             >
             <label
               ><input class="uk-checkbox" type="checkbox" />
-              Virtualização</label
+              {{'virtualização' | translate}}</label
             >
           </div>
         </div>
 
         <div class="uk-width-1-1 uk-margin-medium-top">
           <div class="uk-width-1-2@s">
-          <label class="uk-form-label"><b> Já é um cliente Angola Cables</b> </label>
-          <label><input class="uk-radio" type="radio" name="radio2" > Sim</label>
-          <label><input class="uk-radio" type="radio" name="radio2"> Não</label>
+          <label class="uk-form-label"><b>{{'cliente_angola_cables'}}</b> </label>
+          <label><input class="uk-radio" type="radio" name="radio2" > {{'sim'}}</label>
+          <label><input class="uk-radio" type="radio" name="radio2"> {{'nao'}}</label>
           </div>
       </div>
 
       <div class="uk-width-1-2@s uk-margin-medium-top">
         <div class="uk-margin">
           <label for="anosOperacoes" class="uk-form-label "
-            ><b>Há quantos anos a sua empresa está em operação? </b></label
+            ><b>{{'anos_operacao'}} </b></label
           >
           <input
             id="anosOperacoes"
@@ -690,19 +692,19 @@
 
           <div class="uk-margin">
             <label for="numeroColaboradores" class="uk-form-label"
-            ><b>Número de colaboradores?</b></label
+            ><b>{{'numero_colaboradores'}}</b></label
           >
           <select
             id="numeroColabores"
             formControlName="numeroColaboradores"
             class="uk-select uk-form-width-medium uk-border-rounded"
           >
-            <option value="" disabled selected>Selecione uma opção</option>
-            <option value="numColabcinquenta">0 – 50 colaboradores</option>
-            <option value="numColabduzento">50 – 200 colaboradores</option>
-            <option value="numColabtquinhento">200 – 500 colaboradores</option>
-            <option value="numColabumil">500 – 1000 colaboradores</option>
-            <option value="numColabmais">Acima de 1000</option>
+            <option value="" disabled selected></option>
+            <option value="numColabcinquenta">0 – 50</option>
+            <option value="numColabduzento">50 – 200 </option>
+            <option value="numColabtquinhento">200 – 500</option>
+            <option value="numColabumil">500 – 1000</option>
+            <option value="numColabmais">+ 1000</option>
           </select>
 
           </div>
@@ -710,7 +712,7 @@
             <div class="uk-width-1-2@s">
               <div class="uk-margin">
                 <label for="receitaAnual" class="uk-form-label "
-                  ><b>Qual é em média a receita anual da sua empresa?</b>  </label
+                  ><b> {{'receita_anual' | translate}} </b>  </label
                 >
                 <input
                   id="receitaAnual"
@@ -723,7 +725,7 @@
 
               <div class="uk-width-1-1">
                
-                <label class="uk-form-label"><b> Você possui uma infraestrutura capaz de lidar com o suporte ao cliente e pós-venda para os produtos da Angola Cables? </b></label>
+                <label class="uk-form-label"><b> {{'infraestrutura_suporte' | translate }} </b></label>
                 <label><input id="yes" class="uk-radio" type="radio" name="sim" > Sim </label>
                 <label><input id="no" class="uk-radio" type="radio" name="nao"> Não</label>
             </div>
@@ -733,17 +735,15 @@
             <div class="uk-width-1-1 uk-margin-medium-top">
               <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
                 <label
-                  ><input class="uk-checkbox" type="checkbox" /> Eu confirmo que
-                  as informações acima estão correctas e aceito os termos do
-                  programa de parceria. <br />Consultar
-                  <a href="#">Termos & Condições </a></label
+                  ><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }} <br />
+                  <a href="#">{{'consultar_termos' | translate}} </a></label
                 >
               </div>
               <button
                 type="submit"
                 class="uk-button uk-button-primary uk-border-rounded"
               >
-                SOLICITAR
+                {{'solicitar'}}
               </button>
             </div>
           </div>
