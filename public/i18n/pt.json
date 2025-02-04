@@ -219,12 +219,13 @@
   "revendedor_detalhes_form": "Detalhes do Agente Revendedor",
   "subsidiaria_revendedor_form": "Com qual subsidiária deseja trabalhar?",
 
-  "nome_empresa_revendedor": "Nome da empresa:"
+  "nome_empresa_revendedor": "Nome da empresa:",
 
 
 
-
-
+"form_indicador": "Formulário de cadastro \nde Indicador de Negócios",
+"form_agente": "Formulário de cadastro de \nde Venda Autorizado",
+"form_revendedor": "Formulário de cadastro \nde Agente Revendedor"
 
 
 

@@ -13,6 +13,7 @@ export class ServicosComponent {
 
   
     
+
       useLanguage(language: string): void {
         this.translate.use(language);
     }

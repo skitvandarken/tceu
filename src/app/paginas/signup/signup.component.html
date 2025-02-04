@@ -413,7 +413,7 @@
           <div class="uk-form-controls">
             <select
               class="uk-select uk-form-width-medium"
-              id="form-horizontal-select"
+              id="paisForm"
             >
               <option value=""></option>
               <option value="AF">Afeganistão</option>
@@ -662,23 +662,23 @@
             >
             <label
               ><input class="uk-checkbox" type="checkbox" />
-              {{'virtualização' | translate}}</label
+              {{'virtualizacao' | translate}}</label
             >
           </div>
         </div>
 
         <div class="uk-width-1-1 uk-margin-medium-top">
           <div class="uk-width-1-2@s">
-          <label class="uk-form-label"><b>{{'cliente_angola_cables'}}</b> </label>
-          <label><input class="uk-radio" type="radio" name="radio2" > {{'sim'}}</label>
-          <label><input class="uk-radio" type="radio" name="radio2"> {{'nao'}}</label>
+          <label class="uk-form-label"><b>{{'cliente_angola_cables' | translate}}</b> </label>
+          <label><input class="uk-radio" type="radio" name="radio2" > {{'sim'  | translate}}</label>
+          <label><input class="uk-radio" type="radio" name="radio2"> {{'nao' | translate}}</label>
           </div>
       </div>
 
       <div class="uk-width-1-2@s uk-margin-medium-top">
         <div class="uk-margin">
           <label for="anosOperacoes" class="uk-form-label "
-            ><b>{{'anos_operacao'}} </b></label
+            ><b>{{'anos_operacao' | translate}} </b></label
           >
           <input
             id="anosOperacoes"
@@ -691,12 +691,12 @@
       </div>
 
           <div class="uk-margin">
-            <label for="numeroColaboradores" class="uk-form-label"
-            ><b>{{'numero_colaboradores'}}</b></label
+            <label for="numColab" class="uk-form-label"
+            ><b>{{'numero_colaboradores' | translate}}</b></label
           >
           <select
-            id="numeroColabores"
-            formControlName="numeroColaboradores"
+            id="numColab"
+            formControlName="numColab"
             class="uk-select uk-form-width-medium uk-border-rounded"
           >
             <option value="" disabled selected></option>
@@ -726,8 +726,8 @@
               <div class="uk-width-1-1">
                
                 <label class="uk-form-label"><b> {{'infraestrutura_suporte' | translate }} </b></label>
-                <label><input id="yes" class="uk-radio" type="radio" name="sim" > Sim </label>
-                <label><input id="no" class="uk-radio" type="radio" name="nao"> Não</label>
+                <label><input id="yes" class="uk-radio" type="radio" name="sim" > {{'sim' | translate}} </label>
+                <label><input id="no" class="uk-radio" type="radio" name="nao"> {{'nao' | translate }}</label>
             </div>
             
             

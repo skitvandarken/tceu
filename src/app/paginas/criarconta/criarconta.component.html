@@ -1,0 +1,46 @@
+<app-menu></app-menu>
+
+<div class="uk-container uk-padding-medium">
+    <div class="uk-child-width-expand@s uk-text-center uk-margin-large-top uk-grid-match-height" uk-grid>
+      <div>
+          <div class="uk-card-body uk-text-right">    
+            <img src="img/ac-partner.png">
+          </div>
+      </div>
+      <div class="uk-flex uk-flex-middle uk-flex-center">
+          <div class="uk-card uk-card-body ">
+            <h1 style="font-weight: bold;" class="uk-text-left">
+  
+              {{ 'registro_parceiro_titulo' | translate}}
+  
+            </h1>
+          </div>
+      </div>
+  </div>
+  </div>
+  
+  <div class="uk-container">
+<h2> {{'escolha_parceria' | translate }} </h2>
+<div  class=" uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-large-bottom uk-grid-match" uk-grid>
+    <div>
+        <div class="fundo-1 uk-card uk-card-default uk-card-body uk-border-rounded uk-flex uk-flex-middle uk-flex-center">
+            <h2 routerLink="/indicador" style="color: white;"> > {{'indicador_negocios_titulo' | translate}} </h2>
+        </div>
+    </div>
+    <div>
+        <div class="fundo-2 uk-card uk-card-default uk-card-body uk-border-rounded uk-flex uk-flex-middle uk-flex-center">
+            <h2 routerLink="/agente" style="color: white;"> > {{'agente_vendas_titulo' | translate}} </h2>
+
+        </div>
+    </div>
+    <div>
+        <div class="fundo-3 uk-card uk-card-default uk-card-body uk-border-rounded uk-flex uk-flex-middle uk-flex-center">
+            <h2 routerLink="/revendedor" style="color: white;"> > {{'revendedor_titulo' | translate}} </h2>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<app-rodape></app-rodape>
