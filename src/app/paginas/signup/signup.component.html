@@ -1,15 +1,28 @@
 <app-menu></app-menu>
 
+<script> 
+  emailjs.send("service_hxge11t","template_94fzfla",{
+      to_name: "",
+      to_email: "",
+      from_name: "",
+      message: "",
+      package:'',
+      prefilled:''
+  
+  
+      });
+    </script>
+
 <div class="uk-section uk-section-muted uk-padding-medium">
 
-<div class="uk-container">
-  <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-    <div>
-        <div class="uk-card-body uk-text-right">    
+  <div class="uk-container">
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+      <div>
+        <div class="uk-card-body uk-text-right">
           <img src="img/ac-partner.png">
         </div>
-    </div>
-    <div class="uk-flex uk-flex-middle uk-flex-center">
+      </div>
+      <div class="uk-flex uk-flex-middle uk-flex-center">
         <div class="uk-card uk-card-body ">
           <h1 style="font-weight: bold;" class="uk-text-left">
 
@@ -17,739 +30,579 @@
 
           </h1>
         </div>
+      </div>
     </div>
-</div>
-</div>
+  </div>
 
 
 
 
   <div class="uk-margin-small-top uk-container ">
-    
+
     <div>
-      <form
-      [formGroup]="partnershipForm"
-      (ngSubmit)="submitForm()"
-      class="uk-form-stacked">
-      <div class="uk-grid-small" uk-grid>
-        <!-- First Name and Last Name in 2 columns -->
-        <div class="uk-width-1-2@s">
-          <div class="uk-margin">
-            <label for="firstName" class="uk-form-label"><b> {{ 'primeiro_nome' | translate }} </b></label>
-            <input
-              id="firstName"
-              formControlName="firstName"
-              type="text"
-              class="uk-input"
-            />
-          </div>
-        </div>
-
-        <div class="uk-width-1-2@s">
-          <div class="uk-margin">
-            <label for="lastName" class="uk-form-label"><b> {{ 'ultimo_nome' | translate }}</b></label>
-            <input
-              id="lastName"
-              formControlName="lastName"
-              type="text"
-              class="uk-input"
-            />
-          </div>
-        </div>
-
-        <!-- Email and Phone Number in 2 columns -->
-        <div class="uk-width-1-2@s">
-          <div class="uk-margin">
-            <label for="email" class="uk-form-label"><b> {{'seu_email' | translate}} </b></label>
-            <input
-              id="email"
-              formControlName="email"
-              type="email"
-              class="uk-input"
-            />
-          </div>
-        </div>
-
-        <div class="uk-width-1-2@s">
-          <div class="uk-margin">
-            <label for="phone" class="uk-form-label"> <b> {{'telefone' | translate}} </b> </label>
-            <input
-              id="phone"
-              formControlName="phone"
-              type="text"
-              class="uk-input"
-            />
-          </div>
-        </div>
-
-        <!-- Partnership Type (Radio buttons) will span full width -->
-        <div class="uk-width-1-1">
-          <div class="uk-margin">
-            <label
-              class="uk-form-label uk-margin-medium-top uk-margin-small-bottom"
-              ><b> {{ 'escolha_parceria' | translate}} </b></label
-            >
-            <div class="uk-form-controls">
-              <label class="uk-margin-small-right">
-                <input
-                  type="radio"
-                  value="businessIndicator"
-                  formControlName="partnershipType"
-                  class="uk-radio"
-                />
-
-                {{ 'indicadores_negocio_form'  | translate}}
-
-              </label>
-              <label class="uk-margin-small-right">
-                <input
-                  type="radio"
-                  value="authorizedAgent"
-                  formControlName="partnershipType"
-                  class="uk-radio"
-                />
-
-                {{  'agentes_vendas_form' | translate }}
-                	
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="reseller"
-                  formControlName="partnershipType"
-                  class="uk-radio"
-                />
-                
-                {{ 'revendedor_titulo_form' | translate }}
-
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <!-- Business Indicator details (conditional) -->
-        <div
-          *ngIf="selectedPartnership === 'businessIndicator'"
-          class="uk-margin-large-top uk-width-1-1 uk-grid-small"
-          uk-grid
-        >
-          <div class="uk-width-1-1">
-            <h3 class="uk-heading-divider"><b> {{ 'indicador_detalhes' | translate }} </b></h3>
-          </div>
-
+      <form [formGroup]="partnershipForm"  class="uk-form-stacked">
+        <div class="uk-grid-small" uk-grid>
+          <!-- First Name and Last Name in 2 columns -->
           <div class="uk-width-1-2@s">
-            <label for="subsidiariaEscolhida" class="uk-form-label"
-              > {{'indicador_subsidiaria' | translate }} </label
-            >
-            <select
-              id="subsidiariaEscolhida"
-              formControlName="subsidiariaEscolhida"
-              class="uk-select uk-form-width-large uk-border-rounded"
-            >
-              <option value="" disabled selected></option>
-              <option value="telCablesza">
-                África Austral e Oriental (TelCables South Africa)
-              </option>
-              <option value="angolaCables">
-                África Subsariana (Angola Cables)
-              </option>
-              <option value="telcablesNigeria">
-                África Ocidental (TelCables Nigéria)
-              </option>
-              <option value="telcablesUsa">
-                América do Norte (TelCables USA)
-              </option>
-              <option value="telcablesBrasil">
-                América Latina (TelCables Brasil)
-              </option>
-              <option value="telcablesEuropa">Europa (TelCables Europa)</option>
-            </select>
+            <div class="uk-margin">
+              <label for="firstName" class="uk-form-label"><b> {{ 'primeiro_nome' | translate }} </b></label>
+              <input id="firstName" formControlName="firstName" type="text" class="uk-input" />
+            </div>
           </div>
 
           <div class="uk-width-1-2@s">
             <div class="uk-margin">
-              <label for="potCliente" class="uk-form-label"
-                ><b> {{'nome_potencial_cliente' | translate }} </b></label
-              >
-              <input
-                id="potCliente"
-                formControlName="potCliente"
-                type="text"
-                class="uk-input"
-              />
+              <label for="lastName" class="uk-form-label"><b> {{ 'ultimo_nome' | translate }}</b></label>
+              <input id="lastName" formControlName="lastName" type="text" class="uk-input" />
             </div>
           </div>
 
-          <div class="uk-margin">
-            <label for="numColab" class="uk-form-label"
-              ><b> {{'numero_colaboradores' | translate }} </b></label
-            >
-            <select
-              id="numColab"
-              formControlName="numColab"
-              class="uk-select uk-form-width-medium uk-border-rounded"
-            >
-              <option value="" disabled selected></option>
-              <option value="numColabcinquenta">0 – 50</option>
-              <option value="numColabduzento">50 – 200</option>
-              <option value="numColabtquinhento">200 – 500</option>
-              <option value="numColabumil">500 – 1000</option>
-              <option value="numColabmais">+ 1000</option>
-            </select>
+          <!-- Email and Phone Number in 2 columns -->
+          <div class="uk-width-1-2@s">
+            <div class="uk-margin">
+              <label for="email" class="uk-form-label"><b> {{'seu_email' | translate}} </b></label>
+              <input id="email" formControlName="email" type="email" class="uk-input" />
+            </div>
+          </div>
 
-            <!-- Submit Button -->
-            <div class="uk-width-1-1">
-              <div
-                class="uk-margin-medium-top uk-margin uk-grid-small uk-child-width-auto uk-grid"
-              >
-                <label
-                  ><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate  }} <br />
-                  <a href="#"><b> {{ 'consultar_termos' | translate }}</b></a></label
-                >
+          <div class="uk-width-1-2@s">
+            <div class="uk-margin">
+              <label for="phone" class="uk-form-label"> <b> {{'telefone' | translate}} </b> </label>
+              <input id="phone" formControlName="phone" type="text" class="uk-input" />
+            </div>
+          </div>
+
+          <!-- Partnership Type (Radio buttons) will span full width -->
+          <div class="uk-width-1-1">
+            <div class="uk-margin">
+              <label class="uk-form-label uk-margin-medium-top uk-margin-small-bottom"><b> {{ 'escolha_parceria' |
+                  translate}} </b></label>
+              <div class="uk-form-controls">
+                <label class="uk-margin-small-right">
+                  <input type="radio" value="businessIndicator" formControlName="partnershipType" class="uk-radio" />
+
+                  {{ 'indicadores_negocio_form' | translate}}
+
+                </label>
+                <label class="uk-margin-small-right">
+                  <input type="radio" value="authorizedAgent" formControlName="partnershipType" class="uk-radio" />
+
+                  {{ 'agentes_vendas_form' | translate }}
+
+                </label>
+                <label>
+                  <input type="radio" value="reseller" formControlName="partnershipType" class="uk-radio" />
+
+                  {{ 'revendedor_titulo_form' | translate }}
+
+                </label>
               </div>
-              <button
-                type="submit"
-                class="uk-button uk-button-primary uk-border-rounded"
-              >
-                {{'solicitar' | translate }}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Revendedor (conditional) -->
-        <div
-          *ngIf="selectedPartnership === 'authorizedAgent'"
-          class="uk-margin-large-top uk-width-1-1 uk-grid-small"
-          uk-grid
-        >
-          <div class="uk-width-1-1">
-            <h3 class="uk-heading-divider"><b> {{'detalhes_agente_revendedor' | translate }} </b></h3>
-          </div>
-
-          <div class="uk-width-1-2@s">
-            <label for="subsidiariaEscolhida" class="uk-form-label"
-              ><b> {{'subsidiaria_trabalhar' | translate }} </b></label
-            >
-            <select
-              id="subsidiariaEscolhida"
-              formControlName="subsidiariaEscolhida"
-              class="uk-select uk-form-width-large uk-border-rounded"
-            >
-              <option value="" disabled selected></option>
-              <option value="subsidiaria1">
-                África Austral e Oriental (TelCables South Africa)
-              </option>
-              <option value="subsidiaria2">
-                África Subsariana (Angola Cables)
-              </option>
-              <option value="subsidiaria3">
-                África Ocidental (TelCables Nigéria)
-              </option>
-              <option value="subsidiaria3">
-                América do Norte (TelCables USA)
-              </option>
-              <option value="subsidiaria3">
-                América Latina (TelCables Brasil)
-              </option>
-              <option value="subsidiaria3">Europa (TelCables Europa)</option>
-            </select>
-          </div>
-
-          <div class="uk-width-1-2@s">
-            <label for="tipoEmpresa" class="uk-form-label"
-              ><b>{{'tipo_negocio_empresa' | translate}}</b></label
-            >
-            <select
-              id="tipoEmpresa"
-              formControlName="tipoEmpresa"
-              class="uk-select uk-form-width-large uk-border-rounded"
-            >
-              <option value="" disabled selected></option>
-              <option value="cloudComputing">
-                {{'servicos_ti_nuvens' | translate}}
-              </option>
-              <option value="digitalMedia">
-                {{'conteudo_midia_digital' | translate}}
-              </option>
-              <option value="empresaSoftware">{{'empresas_software' | translate }}</option>
-              <option value="outros">{{'outro' | translate }}</option>
-            </select>
-          </div>
-
-          <div class="uk-width-1-2@s">
-            <div class="uk-margin">
-              <label for="lastName" class="uk-form-label"
-                ><b>{{'nome_empresa' | translate}}</b></label
-              >
-              <input
-                id="nomeEmpresa"
-                formControlName="nomeEmpresa"
-                type="text"
-                class="uk-input"
-              />
-            </div>
-
-            <div class="uk-margin">
-              <label for="numColab" class="uk-form-label"
-              ><b>{{ 'numero_colaboradores' | translate }}</b></label
-            >
-            <select
-              id="numColab"
-              formControlName="numColab"
-              class="uk-select uk-form-width-medium uk-border-rounded"
-            >
-              <option value="" disabled selected></option>
-              <option value="numColabcinquenta">0 – 50 </option>
-              <option value="numColabduzento">50 – 200 </option>
-              <option value="numColabtquinhento">200 – 500 </option>
-              <option value="numColabumil">500 – 1000 </option>
-              <option value="numColabmais">+ 1000</option>
-            </select>
-            </div>
-            <div class="uk-margin">
-              <label for="volVendas" class="uk-form-label"
-                > <b>{{'volume_vendas_mensais' | translate }} </b></label
-              >
-              <input
-                id="volVendas"
-                formControlName="volVendas"
-                type="text"
-                class="uk-input"
-              />
-            </div>
-            <div class="uk-margin">
-              <label for="volVendas" class="uk-form-label"
-                ><b>{{'equipa_vendas' | translate }}</b></label
-              >
-              <input
-                id="equipaVendas"
-                formControlName="equipaVendas"
-                type="text"
-                class="uk-input"
-              />
             </div>
           </div>
 
-          <!-- Submit Button -->
-          <div class="uk-width-1-1">
-            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-              <label
-                ><input class="uk-checkbox" type="checkbox" /><b> {{'confirmar_informacoes' | translate }} </b> <br />
-                <a href="#"><b> {{'consultar_termos' | translate }} </b></a></label
-              >
-            </div>
-            <button
-              type="submit"
-              class="uk-button uk-button-primary uk-border-rounded"
-            >
-              {{'solicitar' | translate}}
-            </button>
-          </div>
-        </div>
-
-        <!-- Authorized Agent details (conditional) -->
-        <div
-          *ngIf="selectedPartnership === 'reseller'"
-          class="uk-margin-large-top uk-width-1-1 uk-grid-small"
-          uk-grid
-        >
-          <div class="uk-width-1-1">
-            <h3 class="uk-heading-divider">
-              <b> {{'detalhes_agente_vendas_autorizado' | translate}} </b>
-            </h3>
-          </div>
-
-          <div class="uk-width-1-2@s">
-            <label for="subsidiariaEscolhida" class="uk-form-label"
-              ><b> {{'subsidiaria_trabalhar' | translate }} </b></label
-            >
-            <select
-              id="subsidiariaEscolhida"
-              formControlName="subsidiariaEscolhida"
-              class="uk-select uk-form-width-large uk-border-rounded"
-            >
-              <option value="" disabled selected></option>
-              <option value="subsidiaria1">
-                África Austral e Oriental (TelCables South Africa)
-              </option>
-              <option value="subsidiaria2">
-                África Subsariana (Angola Cables)
-              </option>
-              <option value="subsidiaria3">
-                África Ocidental (TelCables Nigéria)
-              </option>
-              <option value="subsidiaria3">
-                América do Norte (TelCables USA)
-              </option>
-              <option value="subsidiaria3">
-                América Latina (TelCables Brasil)
-              </option>
-              <option value="subsidiaria3">Europa (TelCables Europa)</option>
-            </select>
-
-           
-          </div>
-
-          <div class="uk-width-1-2@s">
-            <div class="uk-margin">
-              <label for="lastName" class="uk-form-label"
-                ><b> {{'nome_empresa_revendedor' | translate }} </b></label
-              >
-              <input
-                id="nomeEmpresa"
-                formControlName="nomeEmpresa"
-                type="text"
-                class="uk-input"
-              />
+          <!-- Business Indicator details (conditional) -->
+          <div *ngIf="selectedPartnership === 'businessIndicator'"
+            class="uk-margin-large-top uk-width-1-1 uk-grid-small" uk-grid>
+            <div class="uk-width-1-1">
+              <h3 class="uk-heading-divider"><b> {{ 'indicador_detalhes' | translate }} </b></h3>
             </div>
 
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-border-rounded uk-form-label" for="form-horizontal-select"
-            ><b> {{'pais_sede_empresa' | translate}} </b></label
-          >
-          <div class="uk-form-controls">
-            <select
-              class="uk-select uk-form-width-medium"
-              id="paisForm"
-            >
-              <option value=""></option>
-              <option value="AF">Afeganistão</option>
-              <option value="AL">Albânia</option>
-              <option value="DE">Alemanha</option>
-              <option value="AD">Andorra</option>
-              <option value="AO">Angola</option>
-              <option value="AI">Anguilla</option>
-              <option value="AQ">Antártida</option>
-              <option value="AG">Antígua e Barbuda</option>
-              <option value="AR">Argentina</option>
-              <option value="AM">Armênia</option>
-              <option value="AW">Aruba</option>
-              <option value="AU">Austrália</option>
-              <option value="AT">Áustria</option>
-              <option value="AZ">Azerbaijão</option>
-              <option value="BS">Bahamas</option>
-              <option value="BH">Bahrein</option>
-              <option value="BD">Bangladesh</option>
-              <option value="BB">Barbados</option>
-              <option value="BE">Bélgica</option>
-              <option value="BZ">Belize</option>
-              <option value="BJ">Benin</option>
-              <option value="BM">Bermudas</option>
-              <option value="BT">Butão</option>
-              <option value="BO">Bolívia</option>
-              <option value="BA">Bósnia e Herzegovina</option>
-              <option value="BW">Botsuana</option>
-              <option value="BR">Brasil</option>
-              <option value="BN">Brunei</option>
-              <option value="BG">Bulgária</option>
-              <option value="BF">Burkina Faso</option>
-              <option value="BI">Burundi</option>
-              <option value="KH">Camboja</option>
-              <option value="CM">Camarões</option>
-              <option value="CA">Canadá</option>
-              <option value="CV">Cabo Verde</option>
-              <option value="KY">Ilhas Cayman</option>
-              <option value="CF">República Centro-Africana</option>
-              <option value="TD">Chade</option>
-              <option value="CL">Chile</option>
-              <option value="CN">China</option>
-              <option value="CY">Chipre</option>
-              <option value="VA">Cidade do Vaticano</option>
-              <option value="CO">Colômbia</option>
-              <option value="KM">Comores</option>
-              <option value="CG">Congo</option>
-              <option value="CD">República Democrática do Congo</option>
-              <option value="KR">Coreia do Sul</option>
-              <option value="KP">Coreia do Norte</option>
-              <option value="CI">Costa do Marfim</option>
-              <option value="CR">Costa Rica</option>
-              <option value="HR">Croácia</option>
-              <option value="CU">Cuba</option>
-              <option value="CW">Curaçao</option>
-              <option value="DK">Dinamarca</option>
-              <option value="DJ">Djibouti</option>
-              <option value="DM">Dominica</option>
-              <option value="EG">Egito</option>
-              <option value="SV">El Salvador</option>
-              <option value="AE">Emirados Árabes Unidos</option>
-              <option value="EC">Equador</option>
-              <option value="ER">Eritreia</option>
-              <option value="SK">Eslováquia</option>
-              <option value="SI">Eslovênia</option>
-              <option value="ES">Espanha</option>
-              <option value="US">Estados Unidos</option>
-              <option value="EE">Estônia</option>
-              <option value="ET">Etiópia</option>
-              <option value="PH">Filipinas</option>
-              <option value="FI">Finlândia</option>
-              <option value="FJ">Fiji</option>
-              <option value="FR">França</option>
-              <option value="GA">Gabão</option>
-              <option value="GM">Gâmbia</option>
-              <option value="GE">Geórgia</option>
-              <option value="GH">Gana</option>
-              <option value="GI">Gibraltar</option>
-              <option value="GR">Grécia</option>
-              <option value="GD">Granada</option>
-              <option value="GP">Guadalupe</option>
-              <option value="GU">Guam</option>
-              <option value="GT">Guatemala</option>
-              <option value="GG">Guernsey</option>
-              <option value="GN">Guiné</option>
-              <option value="GW">Guiné-Bissau</option>
-              <option value="GQ">Guiné Equatorial</option>
-              <option value="GY">Guiana</option>
-              <option value="GF">Guiana Francesa</option>
-              <option value="IN">Índia</option>
-              <option value="ID">Indonésia</option>
-              <option value="IR">Irã</option>
-              <option value="IQ">Iraque</option>
-              <option value="IE">Irlanda</option>
-              <option value="IS">Islândia</option>
-              <option value="IL">Israel</option>
-              <option value="IT">Itália</option>
-              <option value="JM">Jamaica</option>
-              <option value="JP">Japão</option>
-              <option value="JE">Jersey</option>
-              <option value="JO">Jordânia</option>
-              <option value="KZ">Cazaquistão</option>
-              <option value="KE">Quênia</option>
-              <option value="KG">Quirguistão</option>
-              <option value="KW">Kuwait</option>
-              <option value="LA">Laos</option>
-              <option value="LS">Lesoto</option>
-              <option value="LV">Letônia</option>
-              <option value="LB">Líbano</option>
-              <option value="LR">Libéria</option>
-              <option value="LY">Líbia</option>
-              <option value="LI">Liechtenstein</option>
-              <option value="LT">Lituânia</option>
-              <option value="LU">Luxemburgo</option>
-              <option value="MO">Macau</option>
-              <option value="MK">Macedônia do Norte</option>
-              <option value="MG">Madagascar</option>
-              <option value="MW">Malawi</option>
-              <option value="MY">Malásia</option>
-              <option value="MV">Maldivas</option>
-              <option value="ML">Mali</option>
-              <option value="MT">Malta</option>
-              <option value="MA">Marrocos</option>
-              <option value="MH">Ilhas Marshall</option>
-              <option value="MQ">Martinica</option>
-              <option value="MR">Mauritânia</option>
-              <option value="MU">Maurícia</option>
-              <option value="YT">Mayotte</option>
-              <option value="MX">México</option>
-              <option value="FM">Micronésia</option>
-              <option value="MD">Moldávia</option>
-              <option value="MC">Mônaco</option>
-              <option value="MN">Mongólia</option>
-              <option value="ME">Montenegro</option>
-              <option value="MS">Montserrat</option>
-              <option value="MZ">Moçambique</option>
-              <option value="NA">Namíbia</option>
-              <option value="NR">Nauru</option>
-              <option value="NP">Nepal</option>
-              <option value="NI">Nicarágua</option>
-              <option value="NE">Níger</option>
-              <option value="NG">Nigéria</option>
-              <option value="NU">Niue</option>
-              <option value="NF">Ilha Norfolk</option>
-              <option value="NO">Noruega</option>
-              <option value="OM">Omã</option>
-              <option value="PK">Paquistão</option>
-              <option value="PW">Palau</option>
-              <option value="PS">Palestina</option>
-              <option value="PA">Panamá</option>
-              <option value="PG">Papua-Nova Guiné</option>
-              <option value="PY">Paraguai</option>
-              <option value="PE">Peru</option>
-              <option value="PN">Ilhas Pitcairn</option>
-              <option value="PL">Polônia</option>
-              <option value="PT">Portugal</option>
-              <option value="QA">Catar</option>
-              <option value="RE">Reunião</option>
-              <option value="RO">Romênia</option>
-              <option value="RU">Rússia</option>
-              <option value="RW">Ruanda</option>
-              <option value="BL">São Bartolomeu</option>
-              <option value="SH">Santa Helena</option>
-              <option value="KN">São Cristóvão e Nevis</option>
-              <option value="LC">Santa Lúcia</option>
-              <option value="MF">São Martinho</option>
-              <option value="PM">São Pedro e Miquelão</option>
-              <option value="VC">São Vicente e Granadinas</option>
-              <option value="WS">Samoa</option>
-              <option value="SM">San Marino</option>
-              <option value="ST">São Tomé e Príncipe</option>
-              <option value="SA">Arábia Saudita</option>
-              <option value="SN">Senegal</option>
-              <option value="RS">Sérvia</option>
-              <option value="SC">Seicheles</option>
-              <option value="SL">Serra Leoa</option>
-              <option value="SG">Singapura</option>
-              <option value="SX">Sint Maarten</option>
-              <option value="SK">Eslováquia</option>
-              <option value="SI">Eslovênia</option>
-              <option value="SB">Ilhas Salomão</option>
-              <option value="SO">Somália</option>
-              <option value="ZA">África do Sul</option>
-              <option value="GS">
-                Geórgia do Sul e Ilhas Sandwich do Sul
-              </option>
-              <option value="SS">Sudão do Sul</option>
-              <option value="ES">Espanha</option>
-              <option value="LK">Sri Lanka</option>
-              <option value="SD">Sudão</option>
-              <option value="SR">Suriname</option>
-              <option value="SE">Suécia</option>
-              <option value="CH">Suíça</option>
-              <option value="SY">Síria</option>
-              <option value="TW">Taiwan</option>
-              <option value="TJ">Tajiquistão</option>
-              <option value="TZ">Tanzânia</option>
-              <option value="TH">Tailândia</option>
-              <option value="TL">Timor-Leste</option>
-              <option value="TG">Togo</option>
-              <option value="TK">Tokelau</option>
-              <option value="TO">Tonga</option>
-              <option value="TT">Trindade e Tobago</option>
-              <option value="TN">Tunísia</option>
-              <option value="TR">Turquia</option>
-              <option value="TM">Turcomenistão</option>
-              <option value="TC">Ilhas Turcas e Caicos</option>
-              <option value="TV">Tuvalu</option>
-              <option value="UG">Uganda</option>
-              <option value="UA">Ucrânia</option>
-              <option value="AE">Emirados Árabes Unidos</option>
-              <option value="GB">Reino Unido</option>
-              <option value="US">Estados Unidos</option>
-              <option value="UY">Uruguai</option>
-              <option value="UZ">Uzbequistão</option>
-              <option value="VU">Vanuatu</option>
-              <option value="VE">Venezuela</option>
-              <option value="VN">Vietnã</option>
-              <option value="WF">Wallis e Futuna</option>
-              <option value="EH">Saara Ocidental</option>
-              <option value="YE">Iêmen</option>
-              <option value="ZM">Zâmbia</option>
-              <option value="ZW">Zimbábue</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="uk-width-1-1"> 
-          <label for="servicoInteresse" class="uk-form-label"
-            ><b>{{ 'servico_interesse_revender'| translate }}</b>
-          </label>
-          <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-            <label
-              ><input class="uk-checkbox" type="checkbox" />
-              {{'conectividade' | translate}} </label
-            >
-            <label
-              ><input class="uk-checkbox" type="checkbox" /> {{'acesso_a_internet' | translate }}
-            </label>
-            <label
-              ><input class="uk-checkbox" type="checkbox" /> {{'data_center' | translate}}
-            </label>
-            <label><input class="uk-checkbox" type="checkbox" /> {{'cloud' | translate }} </label>
-            <label
-              ><input class="uk-checkbox" type="checkbox" /> {{'seguranca' | translate}}</label
-            >
-            <label
-              ><input class="uk-checkbox" type="checkbox" />
-              {{'virtualizacao' | translate}}</label
-            >
-          </div>
-        </div>
-
-        <div class="uk-width-1-1 uk-margin-medium-top">
-          <div class="uk-width-1-2@s">
-          <label class="uk-form-label"><b>{{'cliente_angola_cables' | translate}}</b> </label>
-          <label><input class="uk-radio" type="radio" name="radio2" > {{'sim'  | translate}}</label>
-          <label><input class="uk-radio" type="radio" name="radio2"> {{'nao' | translate}}</label>
-          </div>
-      </div>
-
-      <div class="uk-width-1-2@s uk-margin-medium-top">
-        <div class="uk-margin">
-          <label for="anosOperacoes" class="uk-form-label "
-            ><b>{{'anos_operacao' | translate}} </b></label
-          >
-          <input
-            id="anosOperacoes"
-            formControlName="anosOperacoes"
-            type="text"
-            class="uk-input uk-form-width-medium"
-          />
-          
-        </div>
-      </div>
-
-          <div class="uk-margin">
-            <label for="numColab" class="uk-form-label"
-            ><b>{{'numero_colaboradores' | translate}}</b></label
-          >
-          <select
-            id="numColab"
-            formControlName="numColab"
-            class="uk-select uk-form-width-medium uk-border-rounded"
-          >
-            <option value="" disabled selected></option>
-            <option value="numColabcinquenta">0 – 50</option>
-            <option value="numColabduzento">50 – 200 </option>
-            <option value="numColabtquinhento">200 – 500</option>
-            <option value="numColabumil">500 – 1000</option>
-            <option value="numColabmais">+ 1000</option>
-          </select>
-
-          </div>
+            <div class="uk-width-1-2@s">
+              <label for="subsidiariaEscolhida" class="uk-form-label"> {{'indicador_subsidiaria' | translate }} </label>
+              <select id="subsidiariaEscolhida" formControlName="subsidiariaEscolhida"
+                class="uk-select uk-form-width-large uk-border-rounded">
+                <option value="" disabled selected></option>
+                <option value="telCablesza">
+                  África Austral e Oriental (TelCables South Africa)
+                </option>
+                <option value="angolaCables">
+                  África Subsariana (Angola Cables)
+                </option>
+                <option value="telcablesNigeria">
+                  África Ocidental (TelCables Nigéria)
+                </option>
+                <option value="telcablesUsa">
+                  América do Norte (TelCables USA)
+                </option>
+                <option value="telcablesBrasil">
+                  América Latina (TelCables Brasil)
+                </option>
+                <option value="telcablesEuropa">Europa (TelCables Europa)</option>
+              </select>
+            </div>
 
             <div class="uk-width-1-2@s">
               <div class="uk-margin">
-                <label for="receitaAnual" class="uk-form-label "
-                  ><b> {{'receita_anual' | translate}} </b>  </label
-                >
-                <input
-                  id="receitaAnual"
-                  formControlName="receitaAnual"
-                  type="text"
-                  class="uk-input uk-form-width-medium"
-                />
-                
+                <label for="potCliente" class="uk-form-label"><b> {{'nome_potencial_cliente' | translate }} </b></label>
+                <input id="potCliente" formControlName="potCliente" type="text" class="uk-input" />
+              </div>
+            </div>
+
+            <div class="uk-margin">
+              <label for="numColab" class="uk-form-label"><b> {{'numero_colaboradores' | translate }} </b></label>
+              <select id="numColab" formControlName="numColab" class="uk-select uk-form-width-medium uk-border-rounded">
+                <option value="" disabled selected></option>
+                <option value="numColabcinquenta">0 – 50</option>
+                <option value="numColabduzento">50 – 200</option>
+                <option value="numColabtquinhento">200 – 500</option>
+                <option value="numColabumil">500 – 1000</option>
+                <option value="numColabmais">+ 1000</option>
+              </select>
+
+              <!-- Submit Button -->
+              <div class="uk-width-1-1">
+                <div class="uk-margin-medium-top uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                  <label><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }} <br />
+                    <a href="#"><b> {{ 'consultar_termos' | translate }}</b></a></label>
+                </div>
+                <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
+                  {{'solicitar' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revendedor (conditional) -->
+          <div *ngIf="selectedPartnership === 'authorizedAgent'" class="uk-margin-large-top uk-width-1-1 uk-grid-small"
+            uk-grid>
+            <div class="uk-width-1-1">
+              <h3 class="uk-heading-divider"><b> {{'detalhes_agente_revendedor' | translate }} </b></h3>
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <label for="subsidiariaEscolhida" class="uk-form-label"><b> {{'subsidiaria_trabalhar' | translate }}
+                </b></label>
+              <select id="subsidiariaEscolhida" formControlName="subsidiariaEscolhida"
+                class="uk-select uk-form-width-large uk-border-rounded">
+                <option value="" disabled selected></option>
+                <option value="subsidiaria1">
+                  África Austral e Oriental (TelCables South Africa)
+                </option>
+                <option value="subsidiaria2">
+                  África Subsariana (Angola Cables)
+                </option>
+                <option value="subsidiaria3">
+                  África Ocidental (TelCables Nigéria)
+                </option>
+                <option value="subsidiaria3">
+                  América do Norte (TelCables USA)
+                </option>
+                <option value="subsidiaria3">
+                  América Latina (TelCables Brasil)
+                </option>
+                <option value="subsidiaria3">Europa (TelCables Europa)</option>
+              </select>
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <label for="tipoEmpresa" class="uk-form-label"><b>{{'tipo_negocio_empresa' | translate}}</b></label>
+              <select id="tipoEmpresa" formControlName="tipoEmpresa"
+                class="uk-select uk-form-width-large uk-border-rounded">
+                <option value="" disabled selected></option>
+                <option value="cloudComputing">
+                  {{'servicos_ti_nuvens' | translate}}
+                </option>
+                <option value="digitalMedia">
+                  {{'conteudo_midia_digital' | translate}}
+                </option>
+                <option value="empresaSoftware">{{'empresas_software' | translate }}</option>
+                <option value="outros">{{'outro' | translate }}</option>
+              </select>
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <div class="uk-margin">
+                <label for="lastName" class="uk-form-label"><b>{{'nome_empresa' | translate}}</b></label>
+                <input id="nomeEmpresa" formControlName="nomeEmpresa" type="text" class="uk-input" />
               </div>
 
-              <div class="uk-width-1-1">
-               
-                <label class="uk-form-label"><b> {{'infraestrutura_suporte' | translate }} </b></label>
-                <label><input id="yes" class="uk-radio" type="radio" name="sim" > {{'sim' | translate}} </label>
-                <label><input id="no" class="uk-radio" type="radio" name="nao"> {{'nao' | translate }}</label>
-            </div>
-            
-            
-            <!-- Submit Button -->
-            <div class="uk-width-1-1 uk-margin-medium-top">
-              <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                <label
-                  ><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }} <br />
-                  <a href="#">{{'consultar_termos' | translate}} </a></label
-                >
+              <div class="uk-margin">
+                <label for="numColab" class="uk-form-label"><b>{{ 'numero_colaboradores' | translate }}</b></label>
+                <select id="numColab" formControlName="numColab"
+                  class="uk-select uk-form-width-medium uk-border-rounded">
+                  <option value="" disabled selected></option>
+                  <option value="numColabcinquenta">0 – 50 </option>
+                  <option value="numColabduzento">50 – 200 </option>
+                  <option value="numColabtquinhento">200 – 500 </option>
+                  <option value="numColabumil">500 – 1000 </option>
+                  <option value="numColabmais">+ 1000</option>
+                </select>
               </div>
-              <button
-                type="submit"
-                class="uk-button uk-button-primary uk-border-rounded"
-              >
-                {{'solicitar'}}
+              <div class="uk-margin">
+                <label for="volVendas" class="uk-form-label"> <b>{{'volume_vendas_mensais' | translate }} </b></label>
+                <input id="volVendas" formControlName="volVendas" type="text" class="uk-input" />
+              </div>
+              <div class="uk-margin">
+                <label for="volVendas" class="uk-form-label"><b>{{'equipa_vendas' | translate }}</b></label>
+                <input id="equipaVendas" formControlName="equipaVendas" type="text" class="uk-input" />
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="uk-width-1-1">
+              <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                <label><input class="uk-checkbox" type="checkbox" /><b> {{'confirmar_informacoes' | translate }} </b>
+                  <br />
+                  <a href="#"><b> {{'consultar_termos' | translate }} </b></a></label>
+              </div>
+              <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
+                {{'solicitar' | translate}}
               </button>
             </div>
           </div>
+
+          <!-- Authorized Agent details (conditional) -->
+          <div *ngIf="selectedPartnership === 'reseller'" class="uk-margin-large-top uk-width-1-1 uk-grid-small"
+            uk-grid>
+            <div class="uk-width-1-1">
+              <h3 class="uk-heading-divider">
+                <b> {{'detalhes_agente_vendas_autorizado' | translate}} </b>
+              </h3>
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <label for="subsidiariaEscolhida" class="uk-form-label"><b> {{'subsidiaria_trabalhar' | translate }}
+                </b></label>
+              <select id="subsidiariaEscolhida" formControlName="subsidiariaEscolhida"
+                class="uk-select uk-form-width-large uk-border-rounded">
+                <option value="" disabled selected></option>
+                <option value="subsidiaria1">
+                  África Austral e Oriental (TelCables South Africa)
+                </option>
+                <option value="subsidiaria2">
+                  África Subsariana (Angola Cables)
+                </option>
+                <option value="subsidiaria3">
+                  África Ocidental (TelCables Nigéria)
+                </option>
+                <option value="subsidiaria3">
+                  América do Norte (TelCables USA)
+                </option>
+                <option value="subsidiaria3">
+                  América Latina (TelCables Brasil)
+                </option>
+                <option value="subsidiaria3">Europa (TelCables Europa)</option>
+              </select>
+
+
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <div class="uk-margin">
+                <label for="lastName" class="uk-form-label"><b> {{'nome_empresa_revendedor' | translate }} </b></label>
+                <input id="nomeEmpresa" formControlName="nomeEmpresa" type="text" class="uk-input" />
+              </div>
+
+            </div>
+
+            <div class="uk-margin">
+              <label class="uk-border-rounded uk-form-label" for="form-horizontal-select"><b> {{'pais_sede_empresa' |
+                  translate}} </b></label>
+              <div class="uk-form-controls">
+                <select class="uk-select uk-form-width-medium" id="paisForm">
+                  <option value=""></option>
+                  <option value="AF">Afeganistão</option>
+                  <option value="AL">Albânia</option>
+                  <option value="DE">Alemanha</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AO">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AQ">Antártida</option>
+                  <option value="AG">Antígua e Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AM">Armênia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Austrália</option>
+                  <option value="AT">Áustria</option>
+                  <option value="AZ">Azerbaijão</option>
+                  <option value="BS">Bahamas</option>
+                  <option value="BH">Bahrein</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="BB">Barbados</option>
+                  <option value="BE">Bélgica</option>
+                  <option value="BZ">Belize</option>
+                  <option value="BJ">Benin</option>
+                  <option value="BM">Bermudas</option>
+                  <option value="BT">Butão</option>
+                  <option value="BO">Bolívia</option>
+                  <option value="BA">Bósnia e Herzegovina</option>
+                  <option value="BW">Botsuana</option>
+                  <option value="BR">Brasil</option>
+                  <option value="BN">Brunei</option>
+                  <option value="BG">Bulgária</option>
+                  <option value="BF">Burkina Faso</option>
+                  <option value="BI">Burundi</option>
+                  <option value="KH">Camboja</option>
+                  <option value="CM">Camarões</option>
+                  <option value="CA">Canadá</option>
+                  <option value="CV">Cabo Verde</option>
+                  <option value="KY">Ilhas Cayman</option>
+                  <option value="CF">República Centro-Africana</option>
+                  <option value="TD">Chade</option>
+                  <option value="CL">Chile</option>
+                  <option value="CN">China</option>
+                  <option value="CY">Chipre</option>
+                  <option value="VA">Cidade do Vaticano</option>
+                  <option value="CO">Colômbia</option>
+                  <option value="KM">Comores</option>
+                  <option value="CG">Congo</option>
+                  <option value="CD">República Democrática do Congo</option>
+                  <option value="KR">Coreia do Sul</option>
+                  <option value="KP">Coreia do Norte</option>
+                  <option value="CI">Costa do Marfim</option>
+                  <option value="CR">Costa Rica</option>
+                  <option value="HR">Croácia</option>
+                  <option value="CU">Cuba</option>
+                  <option value="CW">Curaçao</option>
+                  <option value="DK">Dinamarca</option>
+                  <option value="DJ">Djibouti</option>
+                  <option value="DM">Dominica</option>
+                  <option value="EG">Egito</option>
+                  <option value="SV">El Salvador</option>
+                  <option value="AE">Emirados Árabes Unidos</option>
+                  <option value="EC">Equador</option>
+                  <option value="ER">Eritreia</option>
+                  <option value="SK">Eslováquia</option>
+                  <option value="SI">Eslovênia</option>
+                  <option value="ES">Espanha</option>
+                  <option value="US">Estados Unidos</option>
+                  <option value="EE">Estônia</option>
+                  <option value="ET">Etiópia</option>
+                  <option value="PH">Filipinas</option>
+                  <option value="FI">Finlândia</option>
+                  <option value="FJ">Fiji</option>
+                  <option value="FR">França</option>
+                  <option value="GA">Gabão</option>
+                  <option value="GM">Gâmbia</option>
+                  <option value="GE">Geórgia</option>
+                  <option value="GH">Gana</option>
+                  <option value="GI">Gibraltar</option>
+                  <option value="GR">Grécia</option>
+                  <option value="GD">Granada</option>
+                  <option value="GP">Guadalupe</option>
+                  <option value="GU">Guam</option>
+                  <option value="GT">Guatemala</option>
+                  <option value="GG">Guernsey</option>
+                  <option value="GN">Guiné</option>
+                  <option value="GW">Guiné-Bissau</option>
+                  <option value="GQ">Guiné Equatorial</option>
+                  <option value="GY">Guiana</option>
+                  <option value="GF">Guiana Francesa</option>
+                  <option value="IN">Índia</option>
+                  <option value="ID">Indonésia</option>
+                  <option value="IR">Irã</option>
+                  <option value="IQ">Iraque</option>
+                  <option value="IE">Irlanda</option>
+                  <option value="IS">Islândia</option>
+                  <option value="IL">Israel</option>
+                  <option value="IT">Itália</option>
+                  <option value="JM">Jamaica</option>
+                  <option value="JP">Japão</option>
+                  <option value="JE">Jersey</option>
+                  <option value="JO">Jordânia</option>
+                  <option value="KZ">Cazaquistão</option>
+                  <option value="KE">Quênia</option>
+                  <option value="KG">Quirguistão</option>
+                  <option value="KW">Kuwait</option>
+                  <option value="LA">Laos</option>
+                  <option value="LS">Lesoto</option>
+                  <option value="LV">Letônia</option>
+                  <option value="LB">Líbano</option>
+                  <option value="LR">Libéria</option>
+                  <option value="LY">Líbia</option>
+                  <option value="LI">Liechtenstein</option>
+                  <option value="LT">Lituânia</option>
+                  <option value="LU">Luxemburgo</option>
+                  <option value="MO">Macau</option>
+                  <option value="MK">Macedônia do Norte</option>
+                  <option value="MG">Madagascar</option>
+                  <option value="MW">Malawi</option>
+                  <option value="MY">Malásia</option>
+                  <option value="MV">Maldivas</option>
+                  <option value="ML">Mali</option>
+                  <option value="MT">Malta</option>
+                  <option value="MA">Marrocos</option>
+                  <option value="MH">Ilhas Marshall</option>
+                  <option value="MQ">Martinica</option>
+                  <option value="MR">Mauritânia</option>
+                  <option value="MU">Maurícia</option>
+                  <option value="YT">Mayotte</option>
+                  <option value="MX">México</option>
+                  <option value="FM">Micronésia</option>
+                  <option value="MD">Moldávia</option>
+                  <option value="MC">Mônaco</option>
+                  <option value="MN">Mongólia</option>
+                  <option value="ME">Montenegro</option>
+                  <option value="MS">Montserrat</option>
+                  <option value="MZ">Moçambique</option>
+                  <option value="NA">Namíbia</option>
+                  <option value="NR">Nauru</option>
+                  <option value="NP">Nepal</option>
+                  <option value="NI">Nicarágua</option>
+                  <option value="NE">Níger</option>
+                  <option value="NG">Nigéria</option>
+                  <option value="NU">Niue</option>
+                  <option value="NF">Ilha Norfolk</option>
+                  <option value="NO">Noruega</option>
+                  <option value="OM">Omã</option>
+                  <option value="PK">Paquistão</option>
+                  <option value="PW">Palau</option>
+                  <option value="PS">Palestina</option>
+                  <option value="PA">Panamá</option>
+                  <option value="PG">Papua-Nova Guiné</option>
+                  <option value="PY">Paraguai</option>
+                  <option value="PE">Peru</option>
+                  <option value="PN">Ilhas Pitcairn</option>
+                  <option value="PL">Polônia</option>
+                  <option value="PT">Portugal</option>
+                  <option value="QA">Catar</option>
+                  <option value="RE">Reunião</option>
+                  <option value="RO">Romênia</option>
+                  <option value="RU">Rússia</option>
+                  <option value="RW">Ruanda</option>
+                  <option value="BL">São Bartolomeu</option>
+                  <option value="SH">Santa Helena</option>
+                  <option value="KN">São Cristóvão e Nevis</option>
+                  <option value="LC">Santa Lúcia</option>
+                  <option value="MF">São Martinho</option>
+                  <option value="PM">São Pedro e Miquelão</option>
+                  <option value="VC">São Vicente e Granadinas</option>
+                  <option value="WS">Samoa</option>
+                  <option value="SM">San Marino</option>
+                  <option value="ST">São Tomé e Príncipe</option>
+                  <option value="SA">Arábia Saudita</option>
+                  <option value="SN">Senegal</option>
+                  <option value="RS">Sérvia</option>
+                  <option value="SC">Seicheles</option>
+                  <option value="SL">Serra Leoa</option>
+                  <option value="SG">Singapura</option>
+                  <option value="SX">Sint Maarten</option>
+                  <option value="SK">Eslováquia</option>
+                  <option value="SI">Eslovênia</option>
+                  <option value="SB">Ilhas Salomão</option>
+                  <option value="SO">Somália</option>
+                  <option value="ZA">África do Sul</option>
+                  <option value="GS">
+                    Geórgia do Sul e Ilhas Sandwich do Sul
+                  </option>
+                  <option value="SS">Sudão do Sul</option>
+                  <option value="ES">Espanha</option>
+                  <option value="LK">Sri Lanka</option>
+                  <option value="SD">Sudão</option>
+                  <option value="SR">Suriname</option>
+                  <option value="SE">Suécia</option>
+                  <option value="CH">Suíça</option>
+                  <option value="SY">Síria</option>
+                  <option value="TW">Taiwan</option>
+                  <option value="TJ">Tajiquistão</option>
+                  <option value="TZ">Tanzânia</option>
+                  <option value="TH">Tailândia</option>
+                  <option value="TL">Timor-Leste</option>
+                  <option value="TG">Togo</option>
+                  <option value="TK">Tokelau</option>
+                  <option value="TO">Tonga</option>
+                  <option value="TT">Trindade e Tobago</option>
+                  <option value="TN">Tunísia</option>
+                  <option value="TR">Turquia</option>
+                  <option value="TM">Turcomenistão</option>
+                  <option value="TC">Ilhas Turcas e Caicos</option>
+                  <option value="TV">Tuvalu</option>
+                  <option value="UG">Uganda</option>
+                  <option value="UA">Ucrânia</option>
+                  <option value="AE">Emirados Árabes Unidos</option>
+                  <option value="GB">Reino Unido</option>
+                  <option value="US">Estados Unidos</option>
+                  <option value="UY">Uruguai</option>
+                  <option value="UZ">Uzbequistão</option>
+                  <option value="VU">Vanuatu</option>
+                  <option value="VE">Venezuela</option>
+                  <option value="VN">Vietnã</option>
+                  <option value="WF">Wallis e Futuna</option>
+                  <option value="EH">Saara Ocidental</option>
+                  <option value="YE">Iêmen</option>
+                  <option value="ZM">Zâmbia</option>
+                  <option value="ZW">Zimbábue</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="uk-width-1-1">
+              <label for="servicoInteresse" class="uk-form-label"><b>{{ 'servico_interesse_revender'| translate }}</b>
+              </label>
+              <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                <label><input class="uk-checkbox" type="checkbox" />
+                  {{'conectividade' | translate}} </label>
+                <label><input class="uk-checkbox" type="checkbox" /> {{'acesso_a_internet' | translate }}
+                </label>
+                <label><input class="uk-checkbox" type="checkbox" /> {{'data_center' | translate}}
+                </label>
+                <label><input class="uk-checkbox" type="checkbox" /> {{'cloud' | translate }} </label>
+                <label><input class="uk-checkbox" type="checkbox" /> {{'seguranca' | translate}}</label>
+                <label><input class="uk-checkbox" type="checkbox" />
+                  {{'virtualizacao' | translate}}</label>
+              </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-margin-medium-top">
+              <div class="uk-width-1-2@s">
+                <label class="uk-form-label"><b>{{'cliente_angola_cables' | translate}}</b> </label>
+                <label><input class="uk-radio" type="radio" name="radio2"> {{'sim' | translate}}</label>
+                <label><input class="uk-radio" type="radio" name="radio2"> {{'nao' | translate}}</label>
+              </div>
+            </div>
+
+            <div class="uk-width-1-2@s uk-margin-medium-top">
+              <div class="uk-margin">
+                <label for="anosOperacoes" class="uk-form-label "><b>{{'anos_operacao' | translate}} </b></label>
+                <input id="anosOperacoes" formControlName="anosOperacoes" type="text"
+                  class="uk-input uk-form-width-medium" />
+
+              </div>
+            </div>
+
+            <div class="uk-margin">
+              <label for="numColab" class="uk-form-label"><b>{{'numero_colaboradores' | translate}}</b></label>
+              <select id="numColab" formControlName="numColab" class="uk-select uk-form-width-medium uk-border-rounded">
+                <option value="" disabled selected></option>
+                <option value="numColabcinquenta">0 – 50</option>
+                <option value="numColabduzento">50 – 200 </option>
+                <option value="numColabtquinhento">200 – 500</option>
+                <option value="numColabumil">500 – 1000</option>
+                <option value="numColabmais">+ 1000</option>
+              </select>
+
+            </div>
+
+            <div class="uk-width-1-2@s">
+              <div class="uk-margin">
+                <label for="receitaAnual" class="uk-form-label "><b> {{'receita_anual' | translate}} </b> </label>
+                <input id="receitaAnual" formControlName="receitaAnual" type="text"
+                  class="uk-input uk-form-width-medium" />
+
+              </div>
+
+              <div class="uk-width-1-1">
+
+                <label class="uk-form-label"><b> {{'infraestrutura_suporte' | translate }} </b></label>
+                <label><input id="yes" class="uk-radio" type="radio" name="sim"> {{'sim' | translate}} </label>
+                <label><input id="no" class="uk-radio" type="radio" name="nao"> {{'nao' | translate }}</label>
+              </div>
+
+
+              <!-- Submit Button -->
+              <div class="uk-width-1-1 uk-margin-medium-top">
+                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                  <label><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }} <br />
+                    <a href="#">{{'consultar_termos' | translate}} </a></label>
+                </div>
+                <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
+                  {{'solicitar'}}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
     </div>
   </div>
 </div>

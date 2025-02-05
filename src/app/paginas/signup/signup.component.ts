@@ -4,6 +4,8 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators} from '@angular
 import { CommonModule } from '@angular/common';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import emailjs,  {type EmailJSResponseStatus } from '@emailjs/browser';
+
 
 @Component({
   selector: 'app-signup',
@@ -11,46 +13,25 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent {
 
   translations: any;
 
-  ngOnInit() {
-    this.translate.get([
-      'registro_parceiro_titulo',
-      'primeiro_nome',
-      'ultimo_nome',
-      'seu_email',
-      'telefone',
-      'escolha_parceria',
-      'indicadores_negocio_form',
-      'agentes_vendas_form',
-      'revendedor_titulo_form',
-      'indicador_detalhes',
-      'indicador_subsidiaria',
-      'nome_potencial_cliente',
-      'numero_colaboradores',
-      'confirmar_informacoes',
-      'consultar_termos',
-      'solicitar'
-    ]).subscribe((res: any) => {
-      this.translations = res;
-    });
-  }
-
-
+  useLanguage(language: string): void {
+    this.translate.use(language);
+    this.translations.use(language);
+}
 
   partnershipForm: FormGroup;
   selectedPartnership: string = '';
 
-      useLanguage(language: string): void {
-          this.translate.use(language);
-          this.translations.use(language);
-      }
-      
-      
+    
 
   constructor(private fb: FormBuilder, private translate: TranslateService) {
+
+    
+
+
     this.partnershipForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -88,7 +69,13 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  submitForm() {
+  public submitForm(e: Event) {
+
+    e.preventDefault();
+
+    emailjs
+    .sendForm('service_hxge11t', 'template_', e.target as HTMLFormElement)
+
     if (this.partnershipForm.valid) {
       console.log('Form Submitted:', this.partnershipForm.value);
     } else {
