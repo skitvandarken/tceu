@@ -40,7 +40,7 @@
   <div class="uk-margin-small-top uk-container ">
 
     <div>
-      <form [formGroup]="partnershipForm"  class="uk-form-stacked">
+      <form [formGroup]="partnershipForm" (ngSubmit)="submitForm()" class="uk-form-stacked">
         <div class="uk-grid-small" uk-grid>
           <!-- First Name and Last Name in 2 columns -->
           <div class="uk-width-1-2@s">

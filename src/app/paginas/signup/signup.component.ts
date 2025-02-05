@@ -69,18 +69,38 @@ export class SignupComponent {
     });
   }
 
+
+
+
   public submitForm(e: Event) {
 
     e.preventDefault();
 
     emailjs
-    .sendForm('service_hxge11t', 'template_', e.target as HTMLFormElement)
+    .sendForm('service_hxge11t', 'template_52yj2o5', e.target as HTMLFormElement, {
+      publicKey: '8zvRzqg96H44z9txo',
+      ...this.partnershipForm,
 
-    if (this.partnershipForm.valid) {
-      console.log('Form Submitted:', this.partnershipForm.value);
-    } else {
-      console.log('Form is invalid');
-    }
-  }
+
+    })
+    .then(
+      () => {
+        this.sucessMessage = true;
+        console.log('SUCESSO');
+        this.partnershipForm = {
+
+        };
+
+        window.alert('Registo Solicitado com sucesso! 🎉. Caso sua candidatura aceite reberá suas credenciais no e-mail indicado.');
+        window.location.href = '';
+      },
+      (error) => {
+        console.log('Falhou...', (error as EmailJSResponseStatus).text);
+        window.alert('Não foi possível enviar sua candidatura');
+      }
+    );
+
+
+}
 
 }
