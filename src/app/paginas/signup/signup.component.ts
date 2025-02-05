@@ -31,37 +31,36 @@ export class SignupComponent {
 
     
 
-
     this.partnershipForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{9,15}$/)]],
-      potCliente: ['', Validators.required],
-      numColab: ['', Validators.required],
-      numeroColaboradores: ['', Validators.required],
-      receitaAnual: ['', Validators.required],
-      volVendas: ['', Validators.required],
-      subsidiariaEscolhida: ['', Validators.required],
-      partnershipType: ['', Validators.required],
-      paisForm: ['', Validators.required],
-      tipoEmpresa: ['', Validators.required],
-      nomeEmpresa: ['', Validators.required],
-      equipaVendas: ['', Validators.required],
-      servicoInteress: ['', Validators.required],
-      anosOperacoes: ['', Validators.required],
+      potCliente: ['' ],
+      numColab: [''],
+      numeroColaboradores: [''],
+      receitaAnual: [''],
+      volVendas: [''],
+      subsidiariaEscolhida: [''],
+      partnershipType: [''],
+      paisForm: [''],
+      tipoEmpresa: [''],
+      nomeEmpresa: [''],
+      equipaVendas: [''],
+      servicoInteress: [''],
+      anosOperacoes: [''],
       businessIndicatorDetails: this.fb.group({
         referralCount: [''],
-        keyIndustries: ['']
+        keyIndustries: [''],
       }),
       authorizedAgentDetails: this.fb.group({
         region: [''],
-        experienceYears: ['']
+        experienceYears: [''],
       }),
       resellerDetails: this.fb.group({
         storeName: [''],
-        productSpecialty: ['']
-      })
+        productSpecialty: [''],
+      }),
     });
 
     this.partnershipForm.get('partnershipType')?.valueChanges.subscribe(value => {
@@ -70,37 +69,28 @@ export class SignupComponent {
   }
 
 
+  submitForm(event: Event) {
+    event.preventDefault();
 
+    if (this.partnershipForm.invalid) {
+      window.alert('Por favor, preencha todos os campos obrigatórios.');
+      return;
+    }
 
-  public submitForm(e: Event) {
+    const formData = this.partnershipForm.value;
 
-    e.preventDefault();
-
-    emailjs
-    .sendForm('service_hxge11t', 'template_52yj2o5', e.target as HTMLFormElement, {
-      publicKey: '8zvRzqg96H44z9txo',
-      ...this.partnershipForm,
-
-
+    emailjs.send('service_hxge11t', 'template_52yj2o5', formData, {
+      publicKey: '8zvRzqg96H44z9txo'
     })
-    .then(
-      () => {
-        this.sucessMessage = true;
-        console.log('SUCESSO');
-        this.partnershipForm = {
+    .then(() => {
+      console.log('SUCESSO');
+      window.alert('Registo solicitado com sucesso! 🎉');
+      this.partnershipForm.reset();
+    })
+    .catch((error: EmailJSResponseStatus) => {
+      console.error('Falhou...', error.text);
+      window.alert('Não foi possível enviar sua candidatura.');
+    });
+  }
+}   
 
-        };
-
-        window.alert('Registo Solicitado com sucesso! 🎉. Caso sua candidatura aceite reberá suas credenciais no e-mail indicado.');
-        window.location.href = '';
-      },
-      (error) => {
-        console.log('Falhou...', (error as EmailJSResponseStatus).text);
-        window.alert('Não foi possível enviar sua candidatura');
-      }
-    );
-
-
-}
-
-}

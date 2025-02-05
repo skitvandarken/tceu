@@ -1,17 +1,5 @@
 <app-menu></app-menu>
 
-<script> 
-  emailjs.send("service_hxge11t","template_94fzfla",{
-      to_name: "",
-      to_email: "",
-      from_name: "",
-      message: "",
-      package:'',
-      prefilled:''
-  
-  
-      });
-    </script>
 
 <div class="uk-section uk-section-muted uk-padding-medium">
 
@@ -40,7 +28,7 @@
   <div class="uk-margin-small-top uk-container ">
 
     <div>
-      <form [formGroup]="partnershipForm" (ngSubmit)="submitForm()" class="uk-form-stacked">
+      <form [formGroup]="partnershipForm" (ngSubmit)="submitForm($event)" class="uk-form-stacked">
         <div class="uk-grid-small" uk-grid>
           <!-- First Name and Last Name in 2 columns -->
           <div class="uk-width-1-2@s">
