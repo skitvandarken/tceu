@@ -1,30 +1,28 @@
 <div class="uk-container">
-
-  <div class=" uk-grid-collapse uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-large-bottom"
-    uk-grid>
+  <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-large-bottom" uk-grid>
     <div class="uk-margin-medium-right uk-margin-medium-left uk-margin-medium-bottom">
-      <div id="contacto" class="uk-container uk-text-left ">
+      <div id="contacto" class="uk-container uk-text-left">
         <img class="uk-border-rounded" src="img/contact-us.webp">
-        <h1 style="white-space: pre-line; font-weight: 600; color: rgb(18, 72, 130)  !important;" class=" uk-text-left">
-          {{ 'atendimento_personalizado_titulo' | translate }}</h1>
+        <h1 style="white-space: pre-line; font-weight: 600; color: rgb(18, 72, 130) !important;" class="uk-text-left">
+          {{ 'atendimento_personalizado_titulo' | translate }}
+        </h1>
         <p class="uk-text-left">
           {{ 'atendimento_personalizado_descricao' | translate }}
         </p>
       </div>
     </div>
 
-    <div class="fundo-formulario ">
+    <div class="fundo-formulario">
       <div class="uk-container uk-padding uk-border-rounded uk-margin-medium-left uk-margin-medium-right">
-        <form class="uk-form-stacked uk-text-left  ">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm($event)" class="uk-form-stacked uk-text-left">
           <!-- Qual é a sua região -->
           <div class="uk-margin">
-            <h1 style="font-weight: 600; color: #fff;" class="texto uk-text-left texto"> {{ 'envia_mensagem_titulo' |
-              translate }} </h1>
-
-
-            <label class="texto uk-form-label" for="region"> {{ 'qual_sua_regiao' | translate }} </label>
+            <h1 style="font-weight: 600; color: #fff;" class="texto uk-text-left texto">
+              {{ 'envia_mensagem_titulo' | translate }}
+            </h1>
+            <label class="texto uk-form-label" for="region">{{ 'qual_sua_regiao' | translate }}</label>
             <div class="uk-form-controls">
-              <select class="uk-border-rounded uk-select" id="region" required>
+              <select class="uk-border-rounded uk-select" id="region" formControlName="region" required>
                 <option value="">{{ 'selecione' | translate }}</option>
                 <option value="brasil">🇧🇷 Brasil</option>
                 <option value="south-africa">🇿🇦 South Africa</option>
@@ -37,55 +35,57 @@
 
           <!-- Primeiro Nome -->
           <div class="uk-margin">
-
-            <label class="texto texto uk-form-label" for="firstName"> {{'primeiro_nome' | translate }} </label>
+            <label class="texto texto uk-form-label" for="firstName">{{ 'primeiro_nome' | translate }}</label>
             <div class="uk-form-controls">
-              <input class="uk-border-rounded uk-input" id="firstName" type="text" placeholder="" required />
+              <input class="uk-border-rounded uk-input" id="firstName" type="text" formControlName="firstName" required />
             </div>
           </div>
 
           <!-- Último Nome -->
           <div class="uk-margin">
-
-            <label class="texto uk-form-label" for="lastName"> {{ 'ultimo_nome' | translate }} </label>
+            <label class="texto uk-form-label" for="lastName">{{ 'ultimo_nome' | translate }}</label>
             <div class="uk-form-controls">
-              <input class="uk-border-rounded uk-input" id="lastName" type="text" placeholder="" required />
+              <input class="uk-border-rounded uk-input" id="lastName" type="text" formControlName="lastName" required />
             </div>
           </div>
 
           <!-- Seu E-Mail -->
           <div class="uk-margin">
-            <label class="texto uk-form-label" for="email"> {{ 'seu_email' | translate }} </label>
+            <label class="texto uk-form-label" for="email">{{ 'seu_email' | translate }}</label>
             <div class="uk-form-controls">
-              <input class="uk-input uk-border-rounded" id="email" type="email" placeholder="" required />
+              <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email" required />
             </div>
           </div>
 
           <!-- És cliente Angola Cables -->
           <div class="uk-margin">
-            <label class="texto uk-form-label"> {{'es_cliente_angola_cables' | translate}} </label>
+            <label class="texto uk-form-label">{{ 'es_cliente_angola_cables' | translate }}</label>
             <div class="uk-form-controls">
-              <label class="texto"><input class="uk-radio texto" type="radio" name="angolaCables" value="sim"
-                  required /> {{'sim' | translate}} </label>
-              <label class="texto uk-margin-left"><input class="uk-radio" type="radio" name="angolaCables"
-                  value="nao" /> {{'nao' | translate}}</label>
+              <label class="texto">
+                <input class="uk-radio texto" type="radio" formControlName="angolaCables" value="sim" required /> {{ 'sim' | translate }}
+              </label>
+              <label class="texto uk-margin-left">
+                <input class="uk-radio" type="radio" formControlName="angolaCables" value="nao" /> {{ 'nao' | translate }}
+              </label>
             </div>
           </div>
 
-          <!-- Qual área pretende contactar -->
-
-
-
-          <!-- Botão Enviar -->
+          <!-- Mensagem -->
           <div class="uk-margin">
-            <button class="uk-border-rounded uk-button uk-button-primary" type="submit"> {{ 'enviar_mensagem' |
-              translate }} </button>
+            <label class="texto uk-form-label" for="message">{{ 'mensagem' | translate }}</label>
+            <div class="uk-form-controls">
+              <textarea class="uk-textarea uk-border-rounded" id="message" rows="5" formControlName="message" required></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="uk-width-1-1 uk-margin-medium-top">
+            <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
+              {{ 'enviar_mensagem' | translate }}
+            </button>
           </div>
         </form>
       </div>
-
     </div>
-
   </div>
-
 </div>

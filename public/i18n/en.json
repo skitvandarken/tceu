@@ -185,5 +185,10 @@
 	"eu_confirmo": "I confirm that the information above is correct and I accept the terms of the partnership program.",
 	"revendedor_detalhes_form": "Reseller Agent Details",
 	"subsidiaria_revendedor_form": "Which subsidiary do you want to work with?",
-	"nome_empresa_revendedor": "Company name:"
+	"nome_empresa_revendedor": "Company name:",
+
+
+	"mensagem": "Message"
+	
+
 }
