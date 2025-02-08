@@ -23,8 +23,8 @@ export const appConfig: ApplicationConfig = {
             }
         }),
         provideAuth0({
-            domain: 'fluxodigital.uk.auth0.com',
-            clientId: 'XSLsJ37AhPS4GWpMgXAGHjbpyvIQ4AFx',
+            domain: 'dev-w75eqy38x7tfovk2.us.auth0.com',
+            clientId: 'QCtjjr4fUToPkTlXblQJvaAQb1rkLrTh',
             authorizationParams: {
               redirect_uri: window.location.origin
             },
