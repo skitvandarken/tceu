@@ -188,7 +188,13 @@
 	"nome_empresa_revendedor": "Company name:",
 
 
-	"mensagem": "Message"
+	"mensagem": "Message",
+
+	"campo_obrigatorio": "This field is required",
+	"formato_invalido": "Invalid format",
+	"formato_invalido_email": "Invalid E-mail format, must include @ and ."
+
+
 	
 
 }

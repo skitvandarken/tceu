@@ -228,7 +228,10 @@
 "form_revendedor": "Formulário de cadastro \nde Agente Revendedor",
 
 
-"mensagem": "Mensagem"
+"mensagem": "Mensagem",
+"campo_obrigatorio": "Este campo é obrigatório",
+"formato_invalido": "Formato inválido",
+"formato_invalido_email": "Formato de E-mail Inválido, deve incluir @ e ."
 
 
 

@@ -34,7 +34,7 @@ export class SignupComponent {
     this.partnershipForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{9,15}$/)]],
       potCliente: ['' ],
       numColab: [''],
@@ -72,8 +72,11 @@ export class SignupComponent {
   submitForm(event: Event) {
     event.preventDefault();
 
+    this.partnershipForm.markAllAsTouched();
+
+
     if (this.partnershipForm.invalid) {
-      window.alert('Por favor, preencha todos os campos obrigatórios.');
+      window.alert('Por favor, preencha correctamente todos os campos obrigatórios.');
       return;
     }
 

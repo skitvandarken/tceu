@@ -41,6 +41,14 @@
             </div>
           </div>
 
+
+          <div *ngIf="contactForm.get('firstName')?.invalid && (contactForm.get('firstName')?.dirty || contactForm.get('firstName')?.touched)" class="uk-text-danger">
+            <ng-container *ngIf="contactForm.get('firstName')?.errors?.['required']">
+              {{ 'campo_obrigatorio' | translate }}  </ng-container>
+            <ng-container *ngIf="contactForm.get('firstName')?.errors?.['pattern']">
+              {{ 'formato_invalido' | translate }} </ng-container>
+             </div>
+
           <!-- Último Nome -->
           <div class="uk-margin">
             <label class="texto uk-form-label" for="lastName">{{ 'ultimo_nome' | translate }}</label>
@@ -49,6 +57,13 @@
             </div>
           </div>
 
+          <div *ngIf="contactForm.get('lastName')?.invalid && (contactForm.get('lastName')?.dirty || contactForm.get('lastName')?.touched)" class="uk-text-danger">
+            <ng-container *ngIf="contactForm.get('lastName')?.errors?.['required']">
+              {{ 'campo_obrigatorio' | translate }}  </ng-container>
+            <ng-container *ngIf="contactForm.get('lastName')?.errors?.['pattern']">
+              {{ 'formato_invalido' | translate }} </ng-container>
+             </div>
+
           <!-- Seu E-Mail -->
           <div class="uk-margin">
             <label class="texto uk-form-label" for="email">{{ 'seu_email' | translate }}</label>
@@ -56,6 +71,13 @@
               <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email" required />
             </div>
           </div>
+
+          <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)" class="uk-text-danger">
+            <ng-container *ngIf="contactForm.get('email')?.errors?.['required']">
+              {{ 'campo_obrigatorio' | translate }}  </ng-container>
+            <ng-container *ngIf="contactForm.get('email')?.errors?.['pattern']">
+              {{ 'formato_invalido_email' | translate }} </ng-container>
+             </div>
 
           <!-- És cliente Angola Cables -->
           <div class="uk-margin">
@@ -78,12 +100,23 @@
             </div>
           </div>
 
+          <div *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)" class="uk-text-danger">
+            <ng-container *ngIf="contactForm.get('message')?.errors?.['required']">
+              {{ 'campo_obrigatorio' | translate }}  </ng-container>
+            <ng-container *ngIf="contactForm.get('message')?.errors?.['pattern']">
+              {{ 'formato_invalido_email' | translate }} </ng-container>
+             </div>
+
+
           <!-- Submit Button -->
           <div class="uk-width-1-1 uk-margin-medium-top">
             <button type="submit" class="uk-button uk-button-primary uk-border-rounded">
               {{ 'enviar_mensagem' | translate }}
             </button>
           </div>
+
+          
+             
         </form>
       </div>
     </div>

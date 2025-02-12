@@ -24,8 +24,8 @@ export class ContactoComponent {
           region: ['', Validators.required],
           firstName: ['', Validators.required],
           lastName: ['', Validators.required],
-          email: ['', [Validators.required, Validators.email]],
-          message: ['', Validators.required],
+          email: ['', [Validators.required, Validators.email, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]],
+          message: ['', Validators.required, Validators.minLength(10)],
           angolaCables : ['', Validators.required],
 
         });
@@ -36,6 +36,9 @@ export class ContactoComponent {
 
       submitForm(event: Event) {
         event.preventDefault();
+
+        this.contactForm.markAllAsTouched();
+
     
         if (this.contactForm.invalid) {
           window.alert('Por favor, preencha todos os campos obrigatórios.');
