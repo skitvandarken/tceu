@@ -12,15 +12,15 @@
 
 
 .fundo-connectivity{
-    background-image: url('/img/megafone.jpg');
+    background-image: url('/img/acordo_angolacables.jpeg');
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgb(18, 72, 130);
     background-blend-mode: multiply;
     padding-top:  20px;
+   
 
 }
 
@@ -49,9 +49,45 @@
 }
 
 .fundo-grid{
-    background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
-    
+    background-image: url('/img/acordo_angolacables.jpeg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top:  20px;
+    border-radius: 30px;
 
+}
+
+.fundo-grid2{
+    background-image: url('/img/rosto_angolacables.jpeg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top:  20px;
+    border-radius: 30px;
+
+}
+
+.fundo-selos{
+    
+        background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
+        border-radius: 30px;
+
+        
+    
+    
+}
+
+.fundo-selos2{
+    
+    background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
+
+    
+    
 }
 
 .icone{

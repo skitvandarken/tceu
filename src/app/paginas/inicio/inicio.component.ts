@@ -10,10 +10,12 @@ import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { SliderComponent } from '../../layout/slider/slider.component';
 import { ContactoComponent } from '../../layout/contacto/contacto.component';
 import { TesteComponent } from '../../layout/teste/teste.component';
+import { ParceirosComponent } from '../../layout/parceiros/parceiros.component';
+import { BlogComponent } from '../../layout/blog/blog.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, BeneficiosComponent, CategoriasComponent, ContactoComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ],
+  imports: [MenuComponent, BlogComponent, BeneficiosComponent, CategoriasComponent, ContactoComponent, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ParceirosComponent ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

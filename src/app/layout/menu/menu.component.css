@@ -26,6 +26,15 @@
     
 }
 
+.uk-navbar-container  {
+    background: linear-gradient(180deg,  rgb(129, 148, 170), rgb(99, 122, 146));
+    background-color: #005f73; /* Fallback for older browsers */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 6vh;
+
+}
+
 .uk-offcanvas-bar {
     background-color: #fff; /* Background color for the offcanvas bar */
     
@@ -45,14 +54,14 @@
 }
 
 .uk-navbar-nav>li>a{
-    color: #3e3e3e;
+    color: #ffffff;
     font-weight: bold;
     font-family: inherit
     
 }
 
 .uk-navbar-nav>li>a:hover{
-    color: #9d9d9d;
+    color: #050045;
     font-weight: bold;
     font-family: inherit
     

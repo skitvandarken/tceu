@@ -1,0 +1,42 @@
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* Hides the overflowing content */
+    position: relative;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0)); /* Fading effect at edges */
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0)); /* Safari support */
+  }
+  
+  /* Slider holding the images */
+  .slider {
+    display: flex;
+    width: 100%; /* Set to 100% to enable smooth scrolling */
+    overflow: hidden; /* Ensure it hides overflow */
+  }
+  
+  .slider-inner {
+    display: flex;
+    animation: infinite-scroll 20s linear infinite; /* Infinite scroll */
+  }
+  
+  /* Adjust image size */
+  .slider img {
+    width: 300; /* Adjust based on your image size */
+    height: 167; /* Adjust based on your image size */
+    margin: 0 20px;}
+    
+  
+  /* Keyframes for infinite, seamless scrolling */
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(100);
+    }
+    100% {
+      transform: translateX(-100%); /* Translate the entire width of the inner container */
+    }
+  }
+  
+
+  .fundo{
+    background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
+
+  }
