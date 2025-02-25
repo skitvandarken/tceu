@@ -6,6 +6,7 @@ import { CriarcontaComponent } from './paginas/criarconta/criarconta.component';
 import { IndicadorComponent } from './paginas/indicador/indicador.component';
 import { AgenteComponent } from './paginas/agente/agente.component';
 import { RevendedorComponent } from './paginas/revendedor/revendedor.component';
+import { DatacenterComponent } from './paginas/datacenter/datacenter.component';
 
 export const routes: Routes = [
   
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: 'criar', component: CriarcontaComponent},
     {path: 'indicador', component:IndicadorComponent},
     {path: 'agente', component: AgenteComponent},
-    {path: 'revendedor', component: RevendedorComponent}
+    {path: 'revendedor', component: RevendedorComponent},
+    {path: 'datacenter', component: DatacenterComponent}
 ];

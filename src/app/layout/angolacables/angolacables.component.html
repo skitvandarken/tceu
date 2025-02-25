@@ -27,17 +27,17 @@
 
 
       <div
-        class="uk-margin uk-margin-medium-top uk-child-width-1-2@m uk-grid-small uk-child-width-1-2@s uk-grid-match uk-grid uk-text-left">
-        <a> <button class="uk-button uk-button-default uk-button-large uk-border-pill">Ver vídeo institucional</button>
+        class="uk-margin uk-margin-medium-top uk-child-width-1-2@m uk-grid-small uk-child-width-1-2@s uk-grid-match uk-grid uk-text-center">
+        <a> <button class="botao uk-button uk-button-default uk-button-large uk-border-pill">Ver vídeo institucional</button>
         </a>
 
-        <a> <button class="uk-button uk-button-default uk-button-large uk-border-pill">Ver mapa interactivo</button>
+        <a> <button class="botao uk-button uk-button-default uk-button-large uk-border-pill">Ver mapa interactivo</button>
         </a>
 
       </div>
       <div class="uk-margin-small-top">
-        <a> <button class="uk-button uk-button-primary uk-button-large uk-border-pill">Mais sobre Angola Cables</button>
-        </a>
+        <button class=" uk-button uk-button-primary uk-button-large uk-border-pill">Mais sobre Angola Cables</button>
+        
 
       </div>
 
@@ -60,44 +60,56 @@
   </div>
 </div>
 
-
-
-<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match uk-margin-medium-left  uk-margin-medium-right " uk-grid>
+<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match uk-margin-medium-left uk-margin-medium-right" uk-grid>
   <div>
       <div class="uk-card madcix-bg uk-card-body uk-text-center">
-          <h1 style="color: white; font-size: 3.5rem; " class="uk-card-title">4</h1>
-          <p style="color: white;" >Continentes</p>
+          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+            <app-contador [startValue]="0" [targetValue]="4" [interval]="200"></app-contador>
+          </h1>
+          <p style="color: white;">Continentes</p>
       </div>
   </div>
   <div>
     <div class="uk-card madcix-bg uk-card-body uk-text-center">
-        <h1 style="color: white; font-size: 3.5rem; " class="uk-card-title">+27</h1>
-        <p style="color: white;" >IXPs</p>
+        <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+          <app-contador [startValue]="0" [targetValue]="27" [interval]="50"></app-contador>
+        </h1>
+        <p style="color: white;">IXPs</p>
     </div>
-</div>
-<div>
-  <div class="uk-card madcix-bg uk-card-body uk-text-center">
-      <h1 style="color: white; font-size: 3.5rem; " class="uk-card-title">+66</h1>
-      <p style="color: white;" >Data Centers Interconectados </p>
+  </div>
+  <div>
+    <div class="uk-card madcix-bg uk-card-body uk-text-center">
+        <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+          <app-contador [startValue]="0" [targetValue]="66" [interval]="40"></app-contador>
+        </h1>
+        <p style="color: white;">Data Centers Interconectados</p>
+    </div>
+  </div>
+  <div>
+    <div class="uk-card madcix-bg uk-card-body uk-text-center">
+        <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+          <app-contador [startValue]="0" [targetValue]="30" [interval]="50"></app-contador>
+        </h1>
+        <p style="color: white;">Pontos de Presença <br>(PoPs)</p>
+    </div>
+  </div>
+  <div>
+    <div class="uk-card madcix-bg uk-card-body uk-text-center">
+        <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+          <app-contador [startValue]="5500" [targetValue]="6000" [interval]="1"></app-contador>
+        </h1>
+        <p style="color: white;">Acordos de Peering</p>
+    </div>
   </div>
 </div>
-<div>
-  <div class="uk-card madcix-bg uk-card-body uk-text-center">
-      <h1 style="color: white; font-size: 3.5rem; " class="uk-card-title">+30</h1>
-      <p style="color: white;" >Pontos de Presença <br>(PoPs) </p>
-  </div>
-</div>
-<div>
-  <div class="uk-card madcix-bg uk-card-body uk-text-center">
-      <h1 style="color: white; font-size: 3.5rem; " class="uk-card-title">+6000</h1>
-      <p style="color: white;" >Acordos de Peering </p>
-  </div>
-</div>
-</div>
+
+
+<app-contador [startValue]="5" [targetValue]="20" [interval]="60"></app-contador>
+
 <!-- -->
 <div>
 
-  <div class="uk-padding">
+  <div class="">
     <div
       class="uk-grid-small uk-grid-match   uk-child-width-expand@s uk-text-center uk-margin-large-top uk-margin-small-bottom">
 

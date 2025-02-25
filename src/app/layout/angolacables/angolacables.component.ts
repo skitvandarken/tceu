@@ -3,10 +3,11 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { ContadorComponent } from "../contador/contador.component";
 
 @Component({
   selector: 'app-angolacables',
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, ContadorComponent],
   templateUrl: './angolacables.component.html',
   styleUrl: './angolacables.component.css'
 })
