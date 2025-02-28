@@ -1,62 +1,80 @@
-
-
 <nav class="uk-navbar-container uk-navbar" uk-navbar>
     <div class="uk-container">
         <div class="uk-navbar-left uk-hidden@m">
             <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
         </div>
-        
+
         <div class="uk-navbar-center uk-visible@m">
             <ul class="uk-navbar-nav">
                 <li class=" ">
-                    <a href="#inicio" uk-scroll="offset: 100" class="texto "><img class="uk-border-rounded" style="height: auto; width: 250px;" src="/img/logo-acsa-2.png"></a>
+                    <a href="#inicio" uk-scroll="offset: 100" class="texto "><img class="uk-border-rounded"
+                            style="height: auto; width: 250px;" src="/img/logo-acsa-2.png"></a>
                 </li>
                 <li>
-                    <a class="" routerLink="/datacenter" uk-scroll >Data Center</a>
-
-                    
-                </li>
-
-                <li>
-                    <a class="" href="#beneficios"  uk-scroll="offset: 100" > ICT</a>
+                    <a class="" routerLink="/datacenter" uk-scroll>{{ 'nav.datacenter' | translate }}</a>
                 </li>
 
                 <li>
-                    <a class="" href="#tipos"  uk-scroll="offset: 100" i18n>IP</a>
+                    <a class="" href="#beneficios" uk-scroll="offset: 100"> ICT</a>
                 </li>
 
                 <li>
-                    <a class="" href="#servicos" uk-scroll="offset: 100" i18n>Conectividade</a>
-                </li>
-
-
-               
-
-                
-                <li>
-                    <a class="" href="#contacto" uk-scroll="offset: 100" i18n>Empresa </a>
+                    <a class="" href="#tipos" uk-scroll="offset: 100" i18n>IP</a>
                 </li>
 
                 <li>
-                    
+                    <a class="" href="#servicos" uk-scroll="offset: 100" i18n> {{ 'nav.conectividade' | translate }} </a>
+                </li>
+
+
+
+
+
+                <li>
+                    <a class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.empresa' | translate }}  </a>
+                </li>
+
+                <li>
+
                 </li>
 
 
 
                 <li class=" uk-flex uk-flex-middle">
                     <div class="uk-flex uk-flex-middle">
-                        <a style="color:#fff" href="" class="uk-icon-link  uk-margin-small-right" uk-icon="icon:question; ratio: 1.5"></a>
-                        <a style="color:#fff" href="" class="uk-icon-link  uk-margin-small-right" uk-icon="icon:world; ratio: 1.5"></a>
+                        <a style="color:#fff" href="" class="uk-icon-link  uk-margin-small-right"
+                            uk-icon="icon:question; ratio: 1.5"></a>
+                        
+
+
+                            
+
 
                         <a style="color:#fff" href="" class="uk-icon-link" uk-icon="icon:search; ratio: 1.5"></a>
 
                     </div>
                 </li>
 
+                
+
+                <li> 
+                    <a style="color:#fff" href="" class="uk-icon-link" uk-icon="icon:world; ratio: 1.5"></a>
+                    <div class="uk-navbar-dropdown uk-border-rounded">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-margin-medium-left">
+                                <a style="color: black;" (click)="useLanguage('pt')"> <img class="bandeiras" src="img/bandeiras/ao.png"> PT</a>
+                            </li>
+                            <li class="uk-margin-medium-left">
+                                <a style="color: black;" (click)="useLanguage('en')"> <img class="bandeiras" src="img/bandeiras/usa.png"> EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
 
                 <li class=" uk-flex uk-flex-middle">
                     <div class="uk-flex uk-flex-middle">
-                 
+
                     </div>
                 </li>
 
@@ -72,59 +90,66 @@
     <div class="uk-offcanvas-bar">
         <ul class="uk-nav uk-nav-default uk-margin-small-left">
             <li class=" ">
-                <a style="color: black;" href="#inicio" uk-scroll="offset: 100" class="texto "><img class="uk-border-rounded" style="height: auto; width: 250px;" src="/img/ac-partner-logo.png"></a>
+                <a style="color: black;" href="#inicio" uk-scroll="offset: 100" class="texto "><img
+                        class="uk-border-rounded" style="height: auto; width: 250px;"
+                        src="/img/ac-partner-logo.png"></a>
             </li>
             <li>
-                <a style="color: black;" class="" href="#visao-geral" uk-scroll >{{ 'nav.visaogeral' | translate }}</a>
+                <a style="color: black;" class="" href="#visao-geral" uk-scroll>{{ 'nav.visaogeral' | translate }}</a>
 
-                
-            </li>
 
-            <li>
-                <a style="color: black;" class="" href="#beneficios"  uk-scroll="offset: 100" >{{ 'nav.beneficios' | translate }} </a>
             </li>
 
             <li>
-                <a style="color: black;" class="" href="#tipos"  uk-scroll="offset: 100" i18n>{{ 'nav.partnership' | translate }} </a>
+                <a style="color: black;" class="" href="#beneficios" uk-scroll="offset: 100">{{ 'nav.beneficios' |
+                    translate }} </a>
             </li>
 
             <li>
-                <a style="color: black;" class="" href="#servicos" uk-scroll="offset: 100" i18n>{{ 'nav.services' | translate }} </a>
-            </li>
-
-
-           
-
-            
-            <li>
-                <a style="color: black;" class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.contacto' | translate }} </a>
+                <a style="color: black;" class="" href="#tipos" uk-scroll="offset: 100" i18n>{{ 'nav.partnership' |
+                    translate }} </a>
             </li>
 
             <li>
-                
+                <a style="color: black;" class="" href="#servicos" uk-scroll="offset: 100" i18n>{{ 'nav.services' |
+                    translate }} </a>
+            </li>
+
+
+
+
+
+            <li>
+                <a style="color: black;" class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.contacto' |
+                    translate }} </a>
+            </li>
+
+            <li>
+
             </li>
 
 
 
             <li class=" ">
                 <div class="">
-                  <a  routerLink="/login"> <button (click)="login()"  class="uk-button uk-button-primary uk-border-rounded" >
-                        
-                    {{ 'nav.entrar' | translate }} </button></a> 
+                    <a routerLink="/login"> <button (click)="login()"
+                            class="uk-button uk-button-primary uk-border-rounded">
+
+                            {{ 'nav.entrar' | translate }} </button></a>
                 </div>
             </li>
 
 
             <li class=" ">
                 <div class="">
-                   <a routerLink="/conta"> <button  class="uk-button uk-button-primary uk-border-rounded" >
-                        
-                    {{ 'nav.criarconta' | translate }} </button></a>
+                    <a routerLink="/conta"> <button class="uk-button uk-button-primary uk-border-rounded">
+
+                            {{ 'nav.criarconta' | translate }} </button></a>
                 </div>
             </li>
 
 
-            <li  class="uk-flex uk-flex-middle">
+            <li class="uk-flex uk-flex-middle">
                 <a style="color: black;" (click)="useLanguage('pt')">PT</a>
 
             </li>
@@ -133,10 +158,17 @@
                 <a style="color: black;" (click)="useLanguage('en')">EN</a>
 
             </li>
-           
 
-            
-            
+
+
+
         </ul>
     </div>
 </div>
+
+
+
+<script>
+
+    
+</script>

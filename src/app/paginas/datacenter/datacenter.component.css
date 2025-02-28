@@ -1,5 +1,6 @@
 .fundo {
-    background-image: url('/img/angonap.jpg');
+    top: 10px;
+    background-image: url('/img/angonap.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,18 +12,16 @@
 
 .fundo-cloud {
 
-    background-image: url('/img/cloud_fluxohost.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 
     border-color: rgb(126, 195, 255);
     border-width: 1px;
-    border-style: solid;}
+    border-style: solid;
 
-
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
 
 .fundo-cloud:hover {
 
@@ -44,7 +43,7 @@
 }
 
 .uk-card-primary {
-    background: linear-gradient(to top, #234d77, #1e87f0);
+    background: linear-gradient(to top, #0e1f30, #052749);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-color: rgb(126, 195, 255);
     border-width: 1px;

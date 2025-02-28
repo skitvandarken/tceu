@@ -1,152 +1,286 @@
-.fundo-circuito{
-    background-image: url('/img/produtos/circuito.png');
-    background-position: center;
-    background-repeat: no-repeat;
+.fundo-div {
+    background-color: rgba(2, 0, 38) !important;
+
+}
+
+.texto-div {
+    color: white;
+
+
+}
+
+
+.uk-button-secondary {
+    border-color: black;
+    border-width: 2px;
+}
+
+.promo-video {
+    border-radius: 30px;
+}
+
+
+.bg-pattern {
+
+    background-image: url('/img/bg-pattern.jpg');
     background-size: cover;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+
+
+
+}
+
+.uk-button-secondary {
+    background: linear-gradient(-190deg, #131313, #000000, #141414);
+    color: #fff;
+}
+
+.uk-button-secondary:hover {
+    background: linear-gradient(-190deg, #131313, #292929, #191919);
+
+    color: #fff;
+    transition: 800ms;
+}
+
+.border {
+    border-radius: 30px;
+}
+
+.border-2 {
+    border-radius: 30px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
 }
 
 
-.fundo-remote{
-    background-image: url('/img/produtos/remote-peering.png');
-    background-position: center;
-    background-repeat: no-repeat;
+.botao {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+}
+
+.botao:hover {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.texto {
+    color: white !important;
+    font-family: "Roboto", serif !important;
+}
+
+.selos {
+    width: auto;
+    height: auto;
+}
+
+
+.fundo-connectivity {
+    background-image: url('/img/sacs.jpg');
+    background-color: black;
     background-size: cover;
-}
-
-.fundo-acloud{
-    background-image: url('/img/produtos/acloud.png');
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fundo-gdi{
-    background-image: url('/img/produtos/gdi.png');
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
+    padding-top: 20px;
+
 }
 
-.fundo-iptransit{
-    background-image: url('/img/produtos/ip-transit.png');
+
+.fundo-datacenter {
+    background-image: url('/img/fundo-datacenter.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
+    padding-top: 20px;
+
 }
 
-.fundo-ipgamer{
-    background-image: url('/img/produtos/ip-gamer.png');
+.fundo-cloud {
+    background-image: url('/img/cloud.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
+    padding-top: 20px;
+
 }
 
 
-.fundo-ipx{
-    background-image: url('/img/produtos/ip-exchange.png');
+
+
+.fundo-dc {
+    background-image: url('/img/conectividade_angolacables.jpeg');
     background-position: center;
-    background-repeat: no-repeat;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
     background-size: cover;
-}
-
-
-.fundo-managed{
-    background-image: url('/img/produtos/managed-services.png');
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
-.fundo-sdwan{
-    background-image: url('/img/produtos/sdwan-ac.png');
+.fundo-acess {
+    background-image: url('/img/acess_angolacables.jpeg');
     background-position: center;
-    background-repeat: no-repeat;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
     background-size: cover;
-}
-
-.fundo-antiddos{
-    background-image: url('/img/produtos/anti-ddos.png');
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
-.fundo-clouds2br{
-    background-image: url('/img/produtos/circuito.png');
+
+.fundo-dc2 {
+    background-image: url('/img/acess_angolacables.jpeg');
     background-position: center;
-    background-repeat: no-repeat;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
     background-size: cover;
-}
-
-
-.fundo-backups2{
-    background-image: url('/img/produtos/backups2.png');
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
 
-.fundo-dia{
-    background-image: url('/img/produtos/dia.png');
+
+.fundo-dc3 {
+    background-image: url('/img/datacenter-1.png');
     background-position: center;
-    background-repeat: no-repeat;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
     background-size: cover;
-}
-
-.fundo-angonap{
-    background-image: url('/img/produtos/angonap.png');
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
+}
+
+.fundo-dc4 {
+    background-image: url('/img/seguranca.jpeg');
+    background-position: center;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
 
 
-.texto{
-    color:white !important;
+.fundo-dc5 {
+    background-image: url('/img/cloud.jpeg');
+    background-position: center;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
-.texto-2{
-    font-size: 20px !important;
-    font-weight: 400 ;
+
+
+.fundo-dc6 {
+    background-image: url('/img/virtualizacao.jpeg');
+    background-position: center;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
-.texto-azul{
-    color: rgb(0, 81, 168);
+.fundo-dc7 {
+    background-image: url('/img/erp.png');
+    background-position: center;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(5, 0, 100, 0.788);
+    background-blend-mode: darken;
 }
 
 
-.uk-button-primary {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
-    background: linear-gradient(125deg, rgb(0, 44, 110), rgba(0, 97, 187, 1), rgb(0, 63, 122)) !important;
-    color: #ffffff; /* Ensure text is visible on the gradient */
-    border: none; /* Remove any default border */
-    padding: 10px 20px; /* Add padding for better appearance */
-  
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+.fundo-connectivity,
+.fundo-datacenter,
+.fundo-cloud,
+.fundo-dc,
+.fundo-acess,
+.fundo-dc2,
+.fundo-dc3,
+.fundo-dc4,
+.fundo-dc5,
+.fundo-dc6,
+.fundo-dc7 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.uk-button-primary:hover {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    color: #e6f7ff; /* Slightly lighter text color on hover */
-}
-
-.uk-button-default {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
-    background: linear-gradient(125deg, rgb(0, 44, 110), rgba(0, 97, 187, 1), rgb(0, 63, 122)) !important;
-    color: #ffffff; /* Ensure text is visible on the gradient */
-    border: none; /* Remove any default border */
-    padding: 10px 20px; /* Add padding for better appearance */
-    bottom: 10px;
-
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-    
-}
-
-.uk-button-default:hover {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    color: #e6f7ff; /* Slightly lighter text color on hover */
+.fundo-connectivity:hover,
+.fundo-datacenter:hover,
+.fundo-cloud:hover,
+.fundo-dc:hover,
+.fundo-acess:hover,
+.fundo-dc2:hover,
+.fundo-dc3:hover,
+.fundo-dc4:hover,
+.fundo-dc5:hover,
+.fundo-dc6:hover,
+.fundo-dc7:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

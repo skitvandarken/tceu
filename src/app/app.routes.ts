@@ -7,6 +7,7 @@ import { IndicadorComponent } from './paginas/indicador/indicador.component';
 import { AgenteComponent } from './paginas/agente/agente.component';
 import { RevendedorComponent } from './paginas/revendedor/revendedor.component';
 import { DatacenterComponent } from './paginas/datacenter/datacenter.component';
+import { Angonap2Component } from './paginas/angonap2/angonap2.component';
 
 export const routes: Routes = [
   
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: 'indicador', component:IndicadorComponent},
     {path: 'agente', component: AgenteComponent},
     {path: 'revendedor', component: RevendedorComponent},
-    {path: 'datacenter', component: DatacenterComponent}
+    {path: 'datacenter', component: DatacenterComponent},
+    {path: 'angonap2', component: Angonap2Component}
 ];

@@ -1,0 +1,44 @@
+<div class="uk-child-width-1-5@m uk-grid-small uk-grid-match uk-margin-medium-left uk-margin-medium-right uk-margin-large-bottom" uk-grid>
+    <div>
+        <div class="uk-card fundo-numeros uk-card-body uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="0" [targetValue]="4" [interval]="200"></app-contador>
+            </h1>
+            <p style="color: white;">{{ 'num.continentes' | translate }}</p>
+        </div>
+    </div>
+    <div>
+      <div class="uk-card fundo-numeros uk-card-body uk-text-center">
+          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+            <app-contador [startValue]="0" [targetValue]="27" [interval]="50"></app-contador>
+          </h1>
+          <p style="color: white;">{{ 'num.ixp' | translate }}</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card fundo-numeros uk-card-body uk-text-center">
+          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+            <app-contador [startValue]="0" [targetValue]="66" [interval]="40"></app-contador>
+          </h1>
+          <p style="color: white;">{{ 'num.datacenters' | translate }}</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card fundo-numeros uk-card-body uk-text-center">
+          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+            <app-contador [startValue]="0" [targetValue]="30" [interval]="50"></app-contador>
+          </h1>
+          <p style="color: white;">{{ 'num.pops' | translate }}</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card fundo-numeros uk-card-body uk-text-center">
+          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+            <app-contador [startValue]="5500" [targetValue]="6000" [interval]="1"></app-contador>
+          </h1>
+          <p style="color: white;">{{ 'num.peering' | translate }}</p>
+      </div>
+    </div>
+  </div>
+  
+  

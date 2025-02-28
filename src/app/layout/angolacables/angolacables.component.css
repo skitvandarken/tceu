@@ -1,26 +1,26 @@
-.fundo-div{
+.fundo-div {
     background-color: rgba(2, 0, 38) !important;
 
 }
 
-.texto-div{
+.texto-div {
     color: white;
- 
+
 
 }
 
 
-.uk-button-secondary{
+.uk-button-secondary {
     border-color: black;
     border-width: 2px;
 }
 
-.promo-video{
+.promo-video {
     border-radius: 30px;
 }
 
 
-.bg-pattern{
+.bg-pattern {
 
     background-image: url('/img/bg-pattern.jpg');
     background-size: cover;
@@ -33,7 +33,7 @@
 }
 
 
-.fundo-dc{
+.fundo-dc {
     background-image: url('/img/conectividade_angolacables.jpeg');
     background-position: center;
     border-color: #fff;
@@ -48,7 +48,7 @@
     background-blend-mode: darken;
 }
 
-.fundo-acess{
+.fundo-acess {
     background-image: url('/img/acess_angolacables.jpeg');
     background-position: center;
     border-color: #fff;
@@ -64,7 +64,7 @@
 }
 
 
-.fundo-dc2{
+.fundo-dc2 {
     background-image: url('/img/acess_angolacables.jpeg');
     background-position: center;
     border-color: #fff;
@@ -81,7 +81,7 @@
 
 
 
-.fundo-dc3{
+.fundo-dc3 {
     background-image: url('/img/datacenter-1.png');
     background-position: center;
     border-color: #fff;
@@ -96,7 +96,7 @@
     background-blend-mode: darken;
 }
 
-.fundo-dc4{
+.fundo-dc4 {
     background-image: url('/img/seguranca.jpeg');
     background-position: center;
     border-color: #fff;
@@ -113,7 +113,7 @@
 
 
 
-.fundo-dc5{
+.fundo-dc5 {
     background-image: url('/img/cloud.jpeg');
     background-position: center;
     border-color: #fff;
@@ -130,7 +130,7 @@
 
 
 
-.fundo-dc6{
+.fundo-dc6 {
     background-image: url('/img/virtualizacao.jpeg');
     background-position: center;
     border-color: #fff;
@@ -144,7 +144,8 @@
     background-color: rgba(5, 0, 100, 0.788);
     background-blend-mode: darken;
 }
-.fundo-dc7{
+
+.fundo-dc7 {
     background-image: url('/img/erp.png');
     background-position: center;
     border-color: #fff;
@@ -159,37 +160,38 @@
     background-blend-mode: darken;
 }
 
-.madcix-bg{
+.madcix-bg {
     background: linear-gradient(-180deg, #00a2ff, #003796);
-    height: auto;/* Background color for the navbar */
+    height: auto;
+    /* Background color for the navbar */
     border-radius: 20px;
 
 }
 
-.uk-button-secondary{
+.uk-button-secondary {
     background: linear-gradient(-190deg, #131313, #000000, #141414);
     color: #fff;
 }
 
-.uk-button-secondary:hover{
+.uk-button-secondary:hover {
     background: linear-gradient(-190deg, #131313, #292929, #191919);
-    
+
     color: #fff;
     transition: 800ms;
 }
 
 
-.fundo-telcables{
+.fundo-telcables {
     background-color: #151250;
 }
 
-    /* Make buttons responsive by setting width to 100% */
+/* Make buttons responsive by setting width to 100% */
 
-.border{
+.border {
     border-radius: 30px;
 }
 
-.border-2{
+.border-2 {
     border-radius: 30px;
     border-color: white;
     border-width: 2px;
@@ -204,18 +206,18 @@
 
 
 
-.texto{
-    color:white !important;
-    font-family: "Roboto", serif !important; 
+.texto {
+    color: white !important;
+    font-family: "Roboto", serif !important;
 }
 
-.selos{
+.selos {
     width: auto;
     height: auto;
 }
 
 
-.fundo-connectivity{
+.fundo-connectivity {
     background-image: url('/img/sacs.jpg');
     background-color: black;
     background-size: cover;
@@ -224,12 +226,12 @@
     background-size: cover;
     background-color: rgba(5, 0, 100, 0.788);
     background-blend-mode: darken;
-    padding-top:  20px;
+    padding-top: 20px;
 
 }
 
 
-.fundo-datacenter{
+.fundo-datacenter {
     background-image: url('/img/fundo-datacenter.jpg');
     background-color: black;
     background-size: cover;
@@ -238,11 +240,11 @@
     background-size: cover;
     background-color: rgba(5, 0, 100, 0.788);
     background-blend-mode: darken;
-    padding-top:  20px;
+    padding-top: 20px;
 
 }
 
-.fundo-cloud{
+.fundo-cloud {
     background-image: url('/img/cloud.jpg');
     background-color: black;
     background-size: cover;
@@ -251,22 +253,50 @@
     background-size: cover;
     background-color: rgba(5, 0, 100, 0.788);
     background-blend-mode: darken;
-    padding-top:  20px;
+    padding-top: 20px;
 
 }
 
-.fundo-grid{
+.fundo-grid {
     background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
-    
+
 
 }
 
-.botao{
+.botao {
     border-color: black;
     border-style: solid;
     border-width: 2px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
 }
+
+.botao:hover {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.botao-azul {
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+}
+
+
+
+.botao-azul:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 
 h1 {
     transition: all 0.3s ease-out;
-  }
+}

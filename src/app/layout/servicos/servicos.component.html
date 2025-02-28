@@ -1,384 +1,71 @@
-<div class="uk-container uk-margin-medium-top">
-  <p class="uk-text-center" style="color: rgb(18, 72, 130);">
-    {{ 'descarregar_ficha' | translate }}
-    <span class="icone uk-margin-small-right" uk-icon="icon: file-pdf; ratio:2" style="color: rgb(18, 72, 130);"></span>
-    PT
-  </p>
-</div>
-<div class="uk-text-center uk-margin-small-top">
-  <a routerLink="/conta">
-    <button class="uk-button-primary uk-border-pill uk-button uk-button-medium">
-      {{ 'tornar_se_parceiro' | translate }}
-    </button>
-  </a>
-</div>
-<div class="uk-container uk-text-center uk-margin-medium-top">
-  <hr class="uk-divider-small" />
-  <h3 class="uk-text-center">
-    {{ 'programa_parceiros_descricao' | translate }}
-  </h3>
-</div>
+<div style="background-color: #020026;">
 
-<div id="servicos" class="uk-container uk-margin-large-bottom uk-margin-large-top">
-  <ul class="uk-text-center uk-border-rounded uk-subnav uk-subnav-pill uk-flex-center"
-    uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
-    <li>
-      <a class="texto-2" href="#">{{ 'conectividade' | translate }}</a>
-    </li>
-    <li><a class="texto-2" href="#">{{ 'acesso_a_internet' | translate }}</a></li>
-    <li><a class="texto-2" href="#">{{ 'data_center' | translate }}</a></li>
-    <li><a class="texto-2" href="#">{{ 'cloud' | translate }}</a></li>
-    <li><a class="texto-2" href="#">{{ 'seguranca' | translate }}</a></li>
-    <li><a class="texto-2" href="#">{{ 'virtualizacao' | translate }}</a></li>
-  </ul>
+<div class=" uk-container">
 
-  <div class="uk-switcher uk-margin">
-    <div>
-      <div class="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-        <div class="ov-div">
-          <div class="uk-card uk-card-default uk-border-rounded fundo-circuito">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold" class="texto uk-card-title">{{ 'circuito_titulo' | translate }}</h3>
-              <p class="texto">{{ 'circuito_descricao' | translate }}</p>
-              <a class="texto" href="#">
-                <button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+  <div id="visao-geral"
+    class="  uk-margin-medium-top uk-child-width-1-2@m uk-grid-small uk-child-width-1-1@s uk-grid-match uk-grid uk-text-left uk-grid-small">
 
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-remote">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold" class="uk-card-title texto">{{ 'remote_peering_titulo' | translate }}</h3>
-              <p class="texto">{{ 'remote_peering_descricao' | translate }}</p>
-              <a
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/Conectividade/Peering Remoto.pdf">
-                <button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+    <!-- Lado esquerdo -->
+    <div class="uk-container uk-width-1-2@m uk-margin-small-top uk-margin-small-bottom">
 
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-gdi">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold" class="texto uk-card-title">{{ 'gdi_titulo' | translate }}</h3>
-              <p class="texto">{{ 'gdi_descricao' | translate }}</p>
-              <a class="texto"
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/Conectividade/GDI.pdf">
-                <button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button>
-              </a>
-            </div>
-          </div>
+      <div class="uk-card fundo-dc border uk-card-default uk-card-large uk-card-body">
+        <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.conectividade' | translate }}</b></h1>
+        <a style="color:white">{{ 'saiba.mais' | translate }}</a>
+      </div>
+    </div>
+    <!--Lado direito-->
+    <div class="uk-width-1-2@m  uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-center uk-flex-middle">
+      <div>
+        <div class="uk-card fundo-acess border uk-card-default uk-card-large uk-card-body">
+          <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.acesso' | translate }}</b></h1>
+          <a style="color:white">{{ 'saiba.mais' | translate }}</a>
         </div>
       </div>
     </div>
+    <div class="uk-container uk-width-1-2@m  uk-margin-small-bottom">
 
-    <div>
-      <div class="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-dia">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold" class="texto uk-card-title">{{ 'dia_titulo' | translate }}</h3>
-              <p class="texto">{{ 'dia_descricao' | translate }}</p>
-              <a class="texto"
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/Serviços de IP/Transito_IP.pdf">
-                <button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-iptransit">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="texto uk-card-title">{{ 'ip_transito_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'ip_transito_descricao' | translate }} </p>
-              <a class="texto"
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/Serviços de IP/Transito_IP.pdf"><button
-                  class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-        <!--
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-cards">
-            
-            <div class="uk-card-body">
-              <h3 class="texto uk-card-title">DIA</h3>
-              <p class="texto">
-                A solução oferece acesso seguro a CDNs e Tier 1 globais sem ASN, conectando 27 IXPs estrategicamente.
-              </p>
-              <a
-                class="texto"
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/Serviços de IP/Transito_IP.pdf"
-                ><button
-                  class="texto uk-button-default uk-button uk-border-rounded"
-                >
-                   {{ 'detalhes' | translate }}
-                </button></a
-              >
-            </div>
-          </div>
-        </div>
-        -->
-
-        <div>
-          <div class="uk-card uk-card-default fundo-ipgamer uk-border-rounded">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto"> {{ 'ip_gamer_titulo' | translate }} </h3>
-              <p class="texto">
-              {{ 'ip_gamer_descricao' | translate }}
-              </p>
-              <a href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-ipx">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto">{{ 'ip_exchange_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'ip_exchange_descricao' | translate }}
-              </p>
-              <a href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
+      <div class="uk-card fundo-dc3 border uk-card-default uk-card-large uk-card-body">
+        <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.datacenter' | translate }}</b></h1>
+        <a style="color:white">{{ 'saiba.mais' | translate }}  </a>
+      </div>
+    </div>
+    <!--Lado direito-->
+    <div class="uk-width-1-2@m uk-margin-small-bottom uk-flex uk-flex-center uk-flex-middle">
+      <div>
+        <div class="uk-card fundo-dc4 border uk-card-default uk-card-large uk-card-body">
+          <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.seguranca' | translate }}</b></h1>
+          <a style="color:white"> {{ 'saiba.mais' | translate }} </a>
         </div>
       </div>
     </div>
-
-
-    <div>
-      <div class="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-angonap">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="texto uk-card-title"> {{ 'angonap_titulo' | translate }} </h3>
-              <p class="texto">
-                {{ 'angonap_descricao' | translate }}
-
-              </p>
-              <a class="texto" href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="uk-card uk-card-default fundo-managed uk-border-rounded">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto"> {{ 'managed_services_titulo' | translate }} </h3>
-              <p class="texto">
-                {{ 'managed_services_descricao' | translate }}
-              </p>
-              <a href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div>
-      <div class="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-clouds2br">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="texto uk-card-title">{{ 'clouds2africa_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'clouds2africa_descricao' | translate }}
-              </p>
-              <a class="texto"
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/ICT/Clouds2Africa.pdf"><button
-                  class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="uk-card uk-card-default fundo-clouds2br uk-border-rounded">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto">{{ 'clouds2brasil_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'clouds2brasil_descricao' | translate }}
-              </p>
-              <a
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/ICT/Clouds2Brasil.pdf"><button
-                  class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-backups2">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto">{{ 'backup2africa_titulo' | translate }} </h3>
-              <p class="texto">
-                {{ 'backup2africa_descricao' | translate }} </p>
-              <a
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/ICT/Backup2Africa.pdf"><button
-                  class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-backups2">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto">{{ 'backup2brasil_titulo' | translate }} </h3>
-              <p class="texto">
-                {{ 'backup2brasil_descricao' | translate }} </p>
-              <a
-                href="https://obj-lad01.clouds2africa.com/v1/AUTH_59c5acbe70034b7ea3a68fbc7ddc96b5/marketing/salespartner_web/ICT/Backup2Brasil.pdf"><button
-                  class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-
-        <div>
-          <div class="uk-card uk-card-default fundo-cards uk-border-rounded fundo-acloud">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold" class="uk-card-title texto">{{ 'acloud_connect_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'acloud_connect_descricao' | translate }} </p>
-              <a href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-
-        <!--
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-sdwan">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="texto uk-card-title">SD-WAN</h3>
-              <p class="texto">
-                Optimiza a rede com várias conexões (MPLS, LTE, Internet), segurança com inspeção SSL e gestão centralizada, reduzindo custos e aumentando segurança e eficiência.
-              </p>
-              <a class="texto" href="#"
-                ><button
-                  class="texto uk-button-default uk-button uk-border-rounded"
-                >
-                   {{ 'detalhes' | translate }}
-                </button></a
-              >
-            </div>
-          </div>
-        </div>
--->
-
-
-
-      </div>
-    </div>
-
-
-    <!--Segurança -->
-    <div>
-      <div class="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-angonap">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="texto uk-card-title"> {{ 'shields2africa_titulo' | translate }}
-              </h3>
-              <p class="texto">
-                {{ 'shields2africa_descricao' | translate }}
-              </p>
-              <a class="texto" href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="uk-card uk-card-default fundo-managed uk-border-rounded">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="uk-card-title texto">{{ 'shields2brasil_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'shields2africa_descricao' | translate }} </p>
-              <a href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div>
-      <div class="uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-
-
-        <div>
-          <div class="uk-card uk-card-default uk-border-rounded fundo-sdwan">
-            <div class="uk-card-media-top"></div>
-            <div class="uk-card-body">
-              <h3 style="font-weight: bold;" class="texto uk-card-title">{{ 'sd_wan_titulo' | translate }}</h3>
-              <p class="texto">
-                {{ 'sd_wan_descricao' | translate }} </p>
-              <a class="texto" href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                  {{ 'detalhes' | translate }}
-                </button></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-
   </div>
+
+
+  <div id="visao-geral"
+    class="  uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-left uk-grid-small" uk-grid>
+    <!-- Lado esquerdo -->
+    <div class="uk-container uk-width-1-4@m  uk-margin-medium-bottom uk-margin-small-right ">
+      <div class="uk-card border fundo-dc5 uk-card-default uk-card-large uk-card-body">
+        <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.cloud' | translate }}</b></h1>
+        <a style="color:white"> {{ 'saiba.mais' | translate }} </a>
+      </div>
+    </div>
+    <!--Lado direito-->
+    <div class="uk-container uk-width-1-4@m  uk-margin-medium-bottom uk-margin-small-right">
+      <div class="uk-card border fundo-dc6 uk-card-default uk-card-large uk-card-body">
+        <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.virtualizacao' | translate }}</b></h1>
+        <a style="color:white"> {{ 'saiba.mais' | translate }} </a>
+      </div>
+    </div>
+
+    <div class="uk-container uk-width-1-4@m  uk-margin-medium-bottom">
+      <div class="uk-card border fundo-dc7 uk-card-default uk-card-large uk-card-body">
+        <h1 style="color:white" class="uk-card-title"><b>{{ 'servicos.erp' | translate }}</b></h1>
+        <a style="color:white"> {{ 'saiba.mais' | translate }} </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 </div>

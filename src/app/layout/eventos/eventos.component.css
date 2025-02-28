@@ -1,0 +1,32 @@
+.fundo-div {
+    background-color: rgba(2, 0, 38) !important;
+
+}
+
+
+
+
+/* Make buttons responsive by setting width to 100% */
+
+.border {
+    border-radius: 30px;
+}
+
+.border-2 {
+    border-radius: 30px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* Hides the overflowing content */
+    position: relative;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0)); /* Fading effect at edges */
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0)); /* Safari support */
+  }

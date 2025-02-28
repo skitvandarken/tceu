@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './cloud.component.css'
 })
 export class CloudComponent {
+  
 
 }

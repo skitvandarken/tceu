@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
     this.translate.use(language);
 }
 
-   constructor(public auth: AuthService, private router: Router, private  translate: TranslateService) {
+   constructor(  public auth: AuthService, private router: Router, private  translate: TranslateService) {
 
     
   
