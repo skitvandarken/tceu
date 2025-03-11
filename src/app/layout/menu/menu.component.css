@@ -31,19 +31,23 @@
     
 }
 
-.uk-navbar-container  {
-    background: linear-gradient(180deg,  rgb(129, 148, 170), rgb(99, 122, 146));
-    background-color: #005f73; /* Fallback for older browsers */
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+.uk-navbar-container {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Adjust alignment as needed */
+    background: linear-gradient(180deg, rgba(129, 148, 170, 0.4), rgba(99, 122, 146, 0.4));
+    background-color: rgba(0, 95, 115, 0.4); /* Fallback for older browsers */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     height: 6vh;
-
 }
 
 .uk-offcanvas-bar {
     background-color: #fff; /* Background color for the offcanvas bar */
-    
 }
+
 
 .texto{
     color: #fff ;
@@ -131,4 +135,13 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+
+.uk-navbar-dropdown{
+    border-top-color: #050045;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }

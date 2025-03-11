@@ -76,7 +76,29 @@
   "qual.datacenter": "Qual datacenter deseja visitar?",
   "iniciar.visita": "Iniciar visita",
   "formato_invalido_email": "Formato de e-mail inválido",
-  "campo_obrigatorio": "Campo obrigatório"
+  "campo_obrigatorio": "Campo obrigatório",
+  "comecar.visita": "Começar Visita",
+
+"menu-empresa": "Empresa",
+"menu-servicos": "Serviços",
+"menu-parceiros": "Parceiros",
+
+
+"menu-conheca": "Conheça-nos",
+"menu-eventos": "Eventos",
+"menu-blog": "Blog",
+"menu-noticias": "Notícias",
+
+"menu-conectividade": "Conectividade",
+"menu-cloud": "Cloud",
+"menu-seguranca": "Segurança",
+
+
+"menu-datacenter": "Data Center",
+"menu-virtual": "Virtualização",
+"menu-erp": "ERP"
+
+
 
 
 

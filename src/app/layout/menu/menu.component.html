@@ -8,77 +8,95 @@
             <ul class="uk-navbar-nav">
                 <li class=" ">
                     <a href="#inicio" uk-scroll="offset: 100" class="texto "><img class="uk-border-rounded"
-                            style="height: auto; width: 250px;" src="/img/logo-acsa-2.png"></a>
+                            style="height: auto; width: 180px;" src="/img/logo-acsa-2.png"></a>
                 </li>
-                <li>
-                    <a class="" routerLink="/datacenter" uk-scroll>{{ 'nav.datacenter' | translate }}</a>
-                </li>
-
-                <li>
-                    <a class="" href="#beneficios" uk-scroll="offset: 100"> ICT</a>
-                </li>
-
-                <li>
-                    <a class="" href="#tipos" uk-scroll="offset: 100" i18n>IP</a>
-                </li>
-
-                <li>
-                    <a class="" href="#servicos" uk-scroll="offset: 100" i18n> {{ 'nav.conectividade' | translate }} </a>
-                </li>
-
-
-
 
 
                 <li>
-                    <a class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.empresa' | translate }}  </a>
+                    <a class="" routerLink="/datacenter" uk-scroll>{{ 'menu-empresa' | translate }}</a>
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                        <div class=" uk-drop-grid uk-child-width-1-2" uk-grid>
+                            <div class="">
+                                <ul class="uk-margin-medium-left uk-nav uk-navbar-dropdown-nav">
+                                    
+                                    <li class="uk-margin-small-bottom" ><b> {{ 'menu-conheca' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom" ><b> {{ 'menu-eventos' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom" ><b> {{ 'menu-blog' | translate }}</b> </li>   
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-noticias' | translate }}</b> </li>                                       
+                                </ul>
+                            </div>
+                            <div class="">
+                                <ul class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav">
+                                    
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-trust' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-recrutamento' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-talent' | translate }}</b> </li>   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </li>
 
                 <li>
 
+                    
+                    <a class="" routerLink="/datacenter" uk-scroll>{{ 'menu-servicos' | translate }}</a>
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                        <div class=" uk-drop-grid uk-child-width-1-2" uk-grid>
+                            <div class="">
+                                <ul class="uk-margin-medium-left uk-nav uk-navbar-dropdown-nav">
+                                    
+                                    <li class="uk-margin-small-bottom" ><b> {{ 'menu-conectividade' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom" ><b> {{ 'menu-cloud' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom" ><b> {{ 'menu-seguranca' | translate }}</b> </li>   
+                                </ul>
+                            </div>
+                            <div class="">
+                                <ul class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav">
+                                    
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-datacenter' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-virtual' | translate }}</b> </li>
+                                    <li class="uk-margin-small-bottom"><b> {{ 'menu-erp' | translate }}</b> </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
                 </li>
-
-
+            
+                <li>
+                    <a class="" routerLink="/datacenter" uk-scroll>{{ 'menu-parceiros' | translate }}</a>
+                </li>
 
                 <li class=" uk-flex uk-flex-middle">
                     <div class="uk-flex uk-flex-middle">
                         <a style="color:#fff" href="" class="uk-icon-link  uk-margin-small-right"
                             uk-icon="icon:question; ratio: 1.5"></a>
-                        
-
-
-                            
-
-
                         <a style="color:#fff" href="" class="uk-icon-link" uk-icon="icon:search; ratio: 1.5"></a>
-
                     </div>
                 </li>
 
-                
-
-                <li> 
-                    <a style="color:#fff" href="" class="uk-icon-link" uk-icon="icon:world; ratio: 1.5"></a>
-                    <div class="uk-navbar-dropdown uk-border-rounded">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-margin-medium-left">
-                                <a style="color: black;" (click)="useLanguage('pt')"> <img class="bandeiras" src="img/bandeiras/ao.png"> PT</a>
-                            </li>
-                            <li class="uk-margin-medium-left">
-                                <a style="color: black;" (click)="useLanguage('en')"> <img class="bandeiras" src="img/bandeiras/usa.png"> EN</a>
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Language Dropdown -->
+                <li>
+                    <form>
+                        <div class="uk-margin">
+                            <div uk-form-custom="target: > * > span:first-child">
+                                <select aria-label="Custom controls" (change)="onLanguageChange($event)">
+                                    <option value="pt">PT</option>
+                                    <option value="en">EN</option>
+                                </select>
+                                <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                    <span>
+                                        <img class="bandeiras" [src]="selectedFlag" id="selected-flag">
+                                        <span id="selected-language">{{ selectedLanguage }}</span>
+                                    </span>
+                                    <span uk-icon="icon: chevron-down"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </li>
-
-
-                <li class=" uk-flex uk-flex-middle">
-                    <div class="uk-flex uk-flex-middle">
-
-                    </div>
-                </li>
-
-
             </ul>
         </div>
 
@@ -96,79 +114,42 @@
             </li>
             <li>
                 <a style="color: black;" class="" href="#visao-geral" uk-scroll>{{ 'nav.visaogeral' | translate }}</a>
-
-
             </li>
-
             <li>
                 <a style="color: black;" class="" href="#beneficios" uk-scroll="offset: 100">{{ 'nav.beneficios' |
                     translate }} </a>
             </li>
-
             <li>
                 <a style="color: black;" class="" href="#tipos" uk-scroll="offset: 100" i18n>{{ 'nav.partnership' |
                     translate }} </a>
             </li>
-
             <li>
                 <a style="color: black;" class="" href="#servicos" uk-scroll="offset: 100" i18n>{{ 'nav.services' |
                     translate }} </a>
             </li>
-
-
-
-
-
             <li>
                 <a style="color: black;" class="" href="#contacto" uk-scroll="offset: 100" i18n>{{ 'nav.contacto' |
                     translate }} </a>
             </li>
-
             <li>
-
-            </li>
-
-
-
-            <li class=" ">
                 <div class="">
                     <a routerLink="/login"> <button (click)="login()"
                             class="uk-button uk-button-primary uk-border-rounded">
-
                             {{ 'nav.entrar' | translate }} </button></a>
                 </div>
             </li>
-
-
-            <li class=" ">
+            <li>
                 <div class="">
                     <a routerLink="/conta"> <button class="uk-button uk-button-primary uk-border-rounded">
-
                             {{ 'nav.criarconta' | translate }} </button></a>
                 </div>
             </li>
-
-
             <li class="uk-flex uk-flex-middle">
                 <a style="color: black;" (click)="useLanguage('pt')">PT</a>
-
             </li>
-
             <li class="uk-flex uk-flex-middle">
                 <a style="color: black;" (click)="useLanguage('en')">EN</a>
-
             </li>
-
-
-
-
         </ul>
     </div>
 </div>
-
-
-
-<script>
-
-    
-</script>

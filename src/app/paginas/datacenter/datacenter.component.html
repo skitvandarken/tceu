@@ -4,48 +4,57 @@
 
 <div class="uk-padding uk-margin-large-top fundo">
 
-    <div class="uk-margin-large-top uk-margin-large-left uk-margin-large-right  uk-child-width-expand@s uk-text-left" uk-grid>
+    <div class="uk-margin-large-top uk-margin-large-left uk-margin-large-right  uk-child-width-expand@s uk-text-left"
+        uk-grid>
         <div>
             <h1 style="color:white">
-                <b> {{'datacenter.titulo' | translate }} </b>     </h1>
-                <p style="color:white" class="uk-margin-small-top">  {{'datacenter.desc' | translate}} <br>  {{'datacenter.desc2' | translate}} </p>
+                <b> {{'datacenter.titulo' | translate }} </b>
+            </h1>
+            <p style="color:white" class="uk-margin-small-top"> {{'datacenter.desc' | translate}} <br>
+                {{'datacenter.desc2' | translate}} </p>
         </div>
         <div>
         </div>
-        
-  
+
+
     </div>
 
-    
+
     <div class=" uk-margin-large-left uk-margin-large-right uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
-   
-        <div >
+
+        <div>
             <div class="  uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
                 <div>
                     <div class="border uk-card uk-card-primary uk-card-body">
                         <h3>Angonap 1</h3>
                         <p>Luanda, Angola</p>
-                        <button class="uk-margin-small-top uk-button uk-button-default uk-border-pill">{{'saiba.mais'|translate }} </button>
+                        <button
+                            class="uk-margin-small-top uk-button uk-button-default uk-border-pill">{{'saiba.mais'|translate
+                            }} </button>
 
                     </div>
                 </div>
                 <div>
-                    <div class= "border uk-card uk-card-primary uk-card-body">
+                    <div class="border uk-card uk-card-primary uk-card-body">
                         <h3>Angonap 2</h3>
                         <p>Fortaleza, Brasil</p>
-                        <button class="uk-margin-small-top uk-button uk-button-default uk-border-pill">{{'saiba.mais'|translate }}</button>
+                        <button
+                            class="uk-margin-small-top uk-button uk-button-default uk-border-pill">{{'saiba.mais'|translate
+                            }}</button>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <div>
             <div class="border fundo-cloud uk-card uk-card-default uk-card-body uk-text-left">
-                <h3  style="color:  white;"> {{'visita.virtual' | translate }} </h3>
+                <h3 style="color:  white;"> {{'visita.virtual' | translate }} </h3>
                 <p style="color: white;">
                     {{'visita.desc' | translate }}</p>
-                    <a href="#modal-visita" uk-toggle><button class="uk-button uk-button-primary uk-button-large uk-border-pill"> {{'visita.botao' | translate}} </button></a>
-                </div>
+                <a href="#modal-visita" uk-toggle><button
+                        class="uk-button uk-button-primary uk-button-large uk-border-pill"> {{'visita.botao' |
+                        translate}} </button></a>
+            </div>
         </div>
     </div>
 
@@ -69,40 +78,43 @@
 
         <form [formGroup]="visitForm" class="uk-form-stacked uk-border-rounded">
 
-            <div *ngIf="visitForm.get('firstName')?.invalid && (visitForm.get('firstName')?.dirty || visitForm.get('firstName')?.touched)" class="uk-text-danger">
+            <div *ngIf="visitForm.get('firstName')?.invalid && (visitForm.get('firstName')?.dirty || visitForm.get('firstName')?.touched)"
+                class="uk-text-danger">
                 <ng-container *ngIf="visitForm.get('firstName')?.errors?.['required']">
-                  {{ 'campo_obrigatorio' | translate }}  </ng-container>
+                    {{ 'campo_obrigatorio' | translate }} </ng-container>
                 <ng-container *ngIf="visitForm.get('firstName')?.errors?.['pattern']">
-                  {{ 'formato_invalido' | translate }} </ng-container>
-                 </div>
-    
-              <!-- Último Nome -->
-              <div class="uk-margin">
+                    {{ 'formato_invalido' | translate }} </ng-container>
+            </div>
+
+            <!-- Último Nome -->
+            <div class="uk-margin">
                 <label class="texto uk-form-label" for="nome">{{ 'nome.completo' | translate }}</label>
                 <div class="uk-form-controls">
-                  <input class="uk-border-rounded uk-input" id="nome" type="text" formControlName="nome" required />
+                    <input class="uk-border-rounded uk-input" id="nome" type="text" formControlName="nome" required />
                 </div>
-              </div>
-    
-      
-              <!-- Seu E-Mail -->
-              <div class="uk-margin">
+            </div>
+
+
+            <!-- Seu E-Mail -->
+            <div class="uk-margin">
                 <label class="texto uk-form-label" for="email">{{ 'seu.email' | translate }}</label>
                 <div class="uk-form-controls">
-                  <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email" required />
+                    <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email"
+                        required />
                 </div>
-              </div>
-    
-              <div *ngIf="visitForm.get('email')?.invalid && (visitForm.get('email')?.dirty || visitForm.get('email')?.touched)" class="uk-text-danger">
+            </div>
+
+            <div *ngIf="visitForm.get('email')?.invalid && (visitForm.get('email')?.dirty || visitForm.get('email')?.touched)"
+                class="uk-text-danger">
                 <ng-container *ngIf="visitForm.get('email')?.errors?.['required']">
-                  {{ 'campo_obrigatorio' | translate }}  </ng-container>
+                    {{ 'campo_obrigatorio' | translate }} </ng-container>
                 <ng-container *ngIf="visitForm.get('email')?.errors?.['pattern']">
-                  {{ 'formato_invalido_email' | translate }} </ng-container>
-                 </div>
-    
-        
+                    {{ 'formato_invalido_email' | translate }} </ng-container>
+            </div>
+
+
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-select">Qual Data Center pretende visitar ?</label>
+                <label class="uk-form-label" for="form-stacked-select"> {{ 'qual.datacenter' | translate }} </label>
                 <div class="uk-form-controls">
                     <select class="uk-select uk-border-rounded" id="form-stacked-select">
                         <option>AngoNAP I (Luanda, Angola)</option>
@@ -110,11 +122,12 @@
                     </select>
                 </div>
             </div>
-        
-            
+
+
         </form>
         <p class="uk-text-right">
-            <button (click)="submitForm($event)" class="uk-button uk-button-primary uk-border-rounded" type="button">Começar visita</button>
+            <button (click)="submitForm($event)" class="uk-button uk-button-primary uk-border-rounded"
+                type="button">{{'comecar.visita' | translate }} </button>
         </p>
     </div>
 </div>

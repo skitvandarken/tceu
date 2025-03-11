@@ -74,7 +74,24 @@
 "qual.datacenter": "Which data center would you like to visit?",
 "iniciar.visita": "Start Visit",
 "formato_invalido_email": "Invalid email format",
-"campo_obrigatorio": "Required field"
+"campo_obrigatorio": "Required field",
+"comecar.visita": "Start Tour",
+
+"menu-empresa": "Services",
+"menu-servicos": "About Us",
+"menu-parceiros": "Partners",
+
+
+"menu-conheca": "About Us",
+"menu-eventos": "Events",
+"menu-blog": "Blog",
+"menu-noticias": "News",
+
+"menu-trust": "Trust Center",
+"menu-recrutamento": "Recruitment",
+"menu-talent": "Talent Seedz"
+
+
 
 
 	
