@@ -8,7 +8,7 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
-  imports: [RouterLink, CommonModule, TranslateModule],
+  imports: [RouterLink, CommonModule, TranslateModule,],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })

@@ -31,10 +31,7 @@
     
 }
 
-.uk-navbar-container {
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Adjust alignment as needed */
+.uk-navbar-container  {
     background: linear-gradient(180deg, rgba(129, 148, 170, 0.4), rgba(99, 122, 146, 0.4));
     background-color: rgba(0, 95, 115, 0.4); /* Fallback for older browsers */
     backdrop-filter: blur(10px);
@@ -112,7 +109,6 @@ p, .translated
 }
 
 button {
-  background-color: #008CBA;
   border: none;
   color: white;
   padding: 0.25rem 0.5rem;

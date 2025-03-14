@@ -6,3 +6,15 @@ body, a, p, h1, h2, h3, h4, li, ul {
     font-style: normal;
 
 }   
+
+
+.border {
+    border-radius: 30px;
+}
+
+.border-2 {
+    border-radius: 30px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}

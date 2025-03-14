@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { MenuComponent } from '../menu/menu.component';
+import { RodapeComponent } from '../rodape/rodape.component';
 
 
 
 @Component({
   selector: 'app-blog',
   imports: [
-    TranslatePipe
+    TranslatePipe,
+    MenuComponent,
+    RodapeComponent
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
