@@ -22,6 +22,8 @@ import { NoticiasComponent } from './paginas/noticias/noticias.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
 import { RecrutamentoComponent } from './paginas/recrutamento/recrutamento.component';
 import { VirtualizacaoComponent } from './paginas/virtualizacao/virtualizacao.component';
+import { ErpComponent } from './paginas/erp/erp.component';
+import { TrustCenterComponent } from './paginas/trust-center/trust-center.component';
 
 export const routes: Routes = [
   
@@ -49,5 +51,7 @@ export const routes: Routes = [
     {path: 'contacto', component: ContactoComponent},
     {path: 'recrutamento', component: RecrutamentoComponent},
     {path: 'datacenter', component: DatacentersevicesComponent},
-    {path: 'virtualizacao', component: VirtualizacaoComponent}
+    {path: 'virtualizacao', component: VirtualizacaoComponent},
+    {path: 'erp', component: ErpComponent},
+    {path: 'trust-center', component: TrustCenterComponent}
 ];

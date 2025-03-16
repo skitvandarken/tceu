@@ -14,10 +14,11 @@ import { TelcablesComponent } from "../../layout/telcables/telcables.component";
 import { AdComponent } from "../../layout/ad/ad.component";
 import { CaracteristicasComponent } from '../../layout/caracteristicas/caracteristicas.component';
 import { Ad2Component } from "../../layout/ad2/ad2.component";
+import { CertificacoesComponent } from '../../layout/certificacoes/certificacoes.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, NumerosComponent, ServicosComponent, EventosComponent, NumerosComponent, AdComponent, CaracteristicasComponent, BlogComponent, Ad2Component, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ParceirosComponent, TelcablesComponent, AdComponent ],
+  imports: [MenuComponent, NumerosComponent, CertificacoesComponent, ServicosComponent, EventosComponent, NumerosComponent, AdComponent, CaracteristicasComponent, BlogComponent, Ad2Component, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ParceirosComponent, TelcablesComponent, AdComponent ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

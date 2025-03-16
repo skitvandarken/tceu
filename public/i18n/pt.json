@@ -5,9 +5,9 @@
 	"nav.ip": "IP",
 	"nav.conectividade": "Conectividade",
   "nav.empresa": "Empresa",
-  "ac.descricao": "Angola Cables é uma multinacional de telecomunicações que oferece soluções avançadas de conectividade global por meio de uma robusta infraestrutura de  cabos submarinos, data centers e pontos de interconexão.",
+  "ac.descricao": "Angola Cables é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP5, operadores Tier | e fornecedores de conteúdo globais. Com mais de 30 POPs e conexões a 66 Data Centers interconectados e 6.000 acordos de peering, o tráfego na sua rede internacional excede os 18,500 Tbps.",
   "ac.presenca": "PRESENÇA LOCAL, NEGÓCIO GLOBAL",
-  "ac.presencadescricao": " A Angola Cables opera uma robusta rede global de backbone, proporcionando acesso a  principais IXP5, operadores Tier | e fornecedores de conteúdo globais. Com mais de 30 POPs e conexões a 66 Data Centers interconectados e 6.000 acordos de peering, o tráfego na sua rede internacional excede os 18,500 Tbps.",
+  "ac.presencadescricao": "Fornecemos soluções de conectividade inovadoras para os mercados wholesale e corporativo em todo o mundo. Como um importante operador de rede global, pioneiro em rotas de cabos submarinos no Atlântico, conectividade entre data centers de Oeste para Leste, de Sul a Sul, oferecemos uma gama de soluções digitais personalizadas, desde IP Transit até serviços em nuvem, para múltiplas indústrias, incluindo operadoras de telecomunicações, CDNs e OTTs, além de setores financeiros, de petróleo e gás e outras indústrias com subsidiárias em Angola, Brasil, África do Sul, Nigéria, Europa e EUA.",
   "ver.videoinstitucional": "Ver vídeo institucional",
   "ver.mapa": "Ver mapa interactivo",
   "mais.sobre": "Mais sobre Angola Cables",
@@ -26,13 +26,13 @@
   "servicos.conectividade": "Conectividade",
   "servicos.seguranca": "Segurança",
   "saiba.mais": "Saiba mais",
-  "eventos": "Eventos",
-  "em.destaque": "Em Destaque",
+  "eventos": "EVENTOS",
+  "em.destaque": "EM DESTAQUE",
   "fique.atento": "Fique atento a nossa agenda e saiba ",
-  "onde.eventos": "onde oGrupo Angola Cables estará presente",
+  "onde.eventos": "onde o Grupo Angola Cables estará presente",
   "caracteristicas": "CONFIÁVEL | TRANSPARÊNCIA | RESPONSÁVEL",
   "conectada.mundo": "21ª operadora mais conectada do mundo",
-  "conectada.africa": "1ª operadora mais conectada do mundo",
+  "conectada.africa": "Operadora mais conectada de África",
   "conectada.cplp": "Operadora mais conectada da CPLP",
   "nossas_certificacoes": "NOSSAS CERTIFICAÇÕES",
   "nossos.parceiros": "NOSSOS PARCEIROS",
@@ -104,9 +104,13 @@
 
 "menu-talent": "Talents Seedz",
 
-"menu-latencias": "Latências"
+"menu-latencias": "Latências",
 
-
+"servicos.em": "SERVIÇOS",
+"servicos.destaque": " EM DESTAQUE",
+"menu-angolacables": " A Angola Cables é uma multinacional de telecomunicações com escritórios em mais de 7 cidades, 5 países e 200 colaboradores, de vários horizontes e culturas. Temos uma rede que cobre os 4 continentes do Atlântico.",
+"menu-ac-title": "Presença da Angola Cables",
+"menu-escritorios": "ESCRITÓRIOS"
 
 
   

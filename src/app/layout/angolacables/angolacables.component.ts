@@ -7,7 +7,7 @@ import { ContadorComponent } from "../contador/contador.component";
 
 @Component({
   selector: 'app-angolacables',
-  imports: [CommonModule, TranslatePipe, ContadorComponent],
+  imports: [CommonModule, TranslatePipe, ContadorComponent, RouterLink],
   templateUrl: './angolacables.component.html',
   styleUrl: './angolacables.component.css'
 })

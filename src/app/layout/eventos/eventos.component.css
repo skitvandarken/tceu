@@ -27,6 +27,8 @@
     width: 100%;
     overflow: hidden; /* Hides the overflowing content */
     position: relative;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0)); /* Fading effect at edges */
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0)); /* Safari support */
-  }
+    }
+
+    .botao-ver-todos{
+
+    }

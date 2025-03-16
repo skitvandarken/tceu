@@ -284,3 +284,32 @@
   transform: scale(1.05);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+.gradiente-nome-equipa {
+    width: 100%; /* Ensures the gradient spans the entire width */
+    padding: 20px; /* Adjust padding as needed */
+    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+    /* Adjust opacity and colors to your preference */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.title-text {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.description-text {
+    color: white;
+    border-radius: 30px;
+    text-align: left;
+}
+
+.uk-border-rounded{
+border-radius: 20px;
+}

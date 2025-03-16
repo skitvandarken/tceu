@@ -12,8 +12,8 @@
 }
 
 .fundo-grid2{
-    background-image: url('/img/rosto_angolacables.jpeg');
-    background-color: black;
+    background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-rodape',
-  imports: [ TranslatePipe, CommonModule],
+  imports: [ TranslatePipe, CommonModule, RouterLink],
   templateUrl: './rodape.component.html',
   styleUrl: './rodape.component.css'
 })
