@@ -4,9 +4,9 @@
 "nav.ip": "IP",
 "nav.conectividade": "Connectivity",
 "nav.empresa": "Company",
-"ac.descricao": "Angola Cables is a multinational telecommunications company that offers advanced global connectivity solutions through a robust infrastructure of submarine cables, data centers, and interconnection points.",
+"ac.descricao": "Angola Cables is a multinational telecommunications company that operates a robust global backbone network, providing access to major IXP5, Tier 1 operators, and global content providers. With over 30 POPs and connections to 66 interconnected data centers and 6,000 peering agreements, traffic on its international network exceeds 18,500 Tbps.",
 "ac.presenca": "LOCAL PRESENCE, GLOBAL BUSINESS",
-"ac.presencadescricao": "Angola Cables operates a robust global backbone network, providing access to major IXPs, Tier 1 operators, and global content providers. With more than 30 PoPs and connections to 66 interconnected Data Centers and 6,000 peering agreements, traffic on its international network exceeds 18,500 Tbps.",
+"ac.presencadescricao": "We provide innovative connectivity solutions for the wholesale and corporate markets worldwide. As a major global network operator and a pioneer in submarine cable routes across the Atlantic, as well as West-to-East and South-to-South data center connectivity, we offer a range of customized digital solutions—from IP Transit to cloud services—for multiple industries. Our clients include telecommunications operators, CDNs, and OTTs, as well as the financial, oil and gas sectors, and other industries. We have subsidiaries in Angola, Brazil, South Africa, Nigeria, Europe, and the USA.",
 "ver.videoinstitucional": "Watch video",
 "ver.mapa": "View interactive map",
 "mais.sobre": "More about Angola Cables",
@@ -87,13 +87,37 @@
 "menu-blog": "Blog",
 "menu-noticias": "News",
 
+
+
+
+"menu-conectividade": "Connectivity",
+"menu-cloud": "Cloud",
+"menu-seguranca": "Security",
+
+
+"menu-datacenter": "Data Center",
+"menu-virtual": "Virtualization",
+"menu-erp": "ERP",
+
 "menu-trust": "Trust Center",
+
 "menu-recrutamento": "Recruitment",
-"menu-talent": "Talent Seedz",
+
+"menu-talent": "Talents Seedz",
+
+"menu-latencias": "Latencies",
 
 
-"menu-latencias": "Latencies"
 
-	
+
+
+"servicos.em": "FEATURED",
+"servicos.destaque": "SERVICES",
+"menu-angolacables": " Angola Cables is a multinational telecommunications company with offices in over 7 cities, across 5 countries, and a team of 200 employees from diverse backgrounds and cultures. Our network spans four continents across the Atlantic.",
+"menu-ac-title": "Angola Cables's Presence",
+"menu-escritorios": "OFFICES",
+"saber.mais": "Learn more",
+"aprenda.team": "LEARN WITH OUR TEAM"
 
 }
+
