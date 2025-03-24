@@ -66,6 +66,19 @@
 
 }
 
+.fundo-linha{
+background-image: url('/img/fundo-linha.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+}
+
+.img-resp-social{
+    height: 637px;
+    width: 100%;
+}
+
 .fundo-card-valores{
 
     background: linear-gradient(135deg, rgba(1, 95, 132, 0.2), rgb(0, 44, 62));
@@ -78,6 +91,7 @@
 
 .gradiente-nome-equipa{
     background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+    width: 100%;
 
 }
 
