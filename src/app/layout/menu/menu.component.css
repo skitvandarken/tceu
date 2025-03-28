@@ -137,3 +137,40 @@ button:hover {
 }
 
 
+
+
+
+
+/* Language Switcher Specific Styles */
+.uk-form-custom select {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.uk-form-custom button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.uk-form-custom button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.uk-form-custom .uk-icon {
+    color: white;
+}
+
+/* Ensure proper vertical alignment with other nav items */
+.uk-navbar-nav > li.uk-navbar-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
