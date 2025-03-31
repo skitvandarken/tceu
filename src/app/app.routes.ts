@@ -24,6 +24,9 @@ import { RecrutamentoComponent } from './paginas/recrutamento/recrutamento.compo
 import { VirtualizacaoComponent } from './paginas/virtualizacao/virtualizacao.component';
 import { ErpComponent } from './paginas/erp/erp.component';
 import { TrustCenterComponent } from './paginas/trust-center/trust-center.component';
+import { IptransitComponent } from './dummy/artigos/iptransit/iptransit.component';
+import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
+import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
 
 export const routes: Routes = [
   
@@ -53,5 +56,9 @@ export const routes: Routes = [
     {path: 'datacenter', component: DatacentersevicesComponent},
     {path: 'virtualizacao', component: VirtualizacaoComponent},
     {path: 'erp', component: ErpComponent},
-    {path: 'trust-center', component: TrustCenterComponent}
+    {path: 'trust-center', component: TrustCenterComponent},
+
+    {path: 'artigos/ip-transit-chave', component: IptransitComponent},
+    {path: 'artigos/ciberseguranca', component: CibersecComponent},
+    {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent}
 ];

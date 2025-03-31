@@ -3,6 +3,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { MenuComponent } from '../menu/menu.component';
 import { RodapeComponent } from '../rodape/rodape.component';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -11,7 +12,8 @@ import { RodapeComponent } from '../rodape/rodape.component';
   imports: [
     TranslatePipe,
     MenuComponent,
-    RodapeComponent
+    RodapeComponent,
+    RouterLink
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'

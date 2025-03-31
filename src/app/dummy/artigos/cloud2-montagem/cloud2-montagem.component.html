@@ -1,0 +1,201 @@
+<app-menu></app-menu>
+
+
+<div class="fundo-cabecalho">
+    <div class="gradiente-texto-cabecalho">
+        <div class="conteudo-cabecalho uk-margin-medium-top">
+            <div class="uk-container uk-margin-large-bottom">
+                <h1 style="color:white; font-weight: bolder;">Como hospedar um website na Clouds2Africa</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fundo-artigo">
+    <div class="uk-container ">
+        <div class="uk-grid-large uk-margin-large-bottom" uk-grid>
+            
+            <!-- Main Article Section -->
+            <div class="uk-width-expand">
+                <article style="color:white" class="uk-article uk-margin-large-top">
+                    <div class="">
+                        <table class="uk-table">
+                            <tbody>
+                                <tr>
+                                    <td style="color: rgba(255, 255, 255, 0.495);">Escrito por:</td>
+                                    <td>Adilson Camenha</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td style="color: rgba(255, 255, 255, 0.495);">Publicado em:</td>
+                                    <td>Coordenador de Operações Inovação Digital, Angola Cables</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="color:white" class="uk-text-lead">No universo dos clouds providers, quase todos conhecem os grandes e internacionais (Google, AWS, Azure, OCI e outros), mas hoje queremos apresentar a Clouds2Africa.</p>
+                    
+                    <p style="color:white">Cloud provider made in angola com vários pontos de presença em vários países, para as empresas e entidades Angolanas que preocupam-se com a soberania dos dados, eis a solução.</p>
+                    
+                    <p style="color:white">Feitas as apresentações é hora de por a mão na massa:</p>
+
+                    <h2>1. Criando a VM</h2>
+                    
+                    <div>
+                        <ul class="uk-list uk-list-disc">
+                            <li>Para criar a sua VM, aceda a console da Clouds2Africa e no campo de pesquisa, escreva instances</li>
+                            <li>Escolha "Create", no cabeçalho</li>
+                        </ul>
+                    </div>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/clouds2africa-create-vm.jpg" alt="Tela de criação de VM na Clouds2Africa">
+                    
+                    <p>Preencha todos os dados solicitados para criação da instancia e clica em "Finish":</p>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/clouds2africa-vm-details.jpg" alt="Detalhes para criação da VM">
+                    <img class="uk-border-rounded" src="img/artigos/clouds2africa-vm-summary.jpg" alt="Resumo da VM criada">
+                    
+                    <p>Com os detalhes da vm, hora de conectar-se a ela, podemos aceder via web mais prefiro faze-lo via SSH com o Termius.</p>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/termius-interface.jpg" alt="Tela de inicio do Termius">
+                    
+                    <p>Como manda as boas praticas e já dizia aqueles que vieram antes de nós, software bom, é software actualizado, vamos actualizar S.O da vm, com os comandos (ubuntu):</p>
+                    
+                    <pre><code>sudo apt-get update
+sudo apt-get upgrade</code></pre>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/update-upgrade-commands.jpg" alt="Resumo dos comandos update e upgrade">
+
+                    <h2>2. Instalação do nginx</h2>
+                    
+                    <p>Vamos usar o nginx como servidor web, para isto, na vm digite o comando:</p>
+                    
+                    <pre><code>sudo apt-get install nginx</code></pre>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/nginx-installation.jpg" alt="Resumo da instalação do nginx">
+                    
+                    <p>Com o servidor instalado, podemos verificar o estado, digitando o comando:</p>
+                    
+                    <pre><code>systemctl status nginx</code></pre>
+                    
+                    <p>ou inserindo o Elastic IP da vm no navegador: <code>102.130.71.231</code></p>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/nginx-default-page.jpg" alt="Tela default do nginx">
+                    
+                    <p>Feito isto, hora de copiar o nosso website para o servidor, usaremos o meu repositório do Github, mas antes devemos instalar o git na vm, com o comando:</p>
+                    
+                    <pre><code>sudo apt-get install git</code></pre>
+                    
+                    <p>Caso necessário, pós alguns S.O actualizados já vem com git instalado.</p>
+
+                    <img class="uk-border-rounded" src="img/artigos/instaladou-git.jpg" alt="Tela default do nginx">
+
+
+                    <h2>3. Clonando o repositório do Git</h2>
+                    
+                    <p>Escolha o directório correcto do nginx:</p>
+                    
+                    <pre><code>cd /var/www/html</code></pre>
+                    
+                    <p>Clone o repositório:</p>
+                    
+                    <pre><code>git clone https://github.com/AdilsonJobs/MeuSite.git</code></pre>
+                    
+                    <p>Saída esperada:</p>
+                    
+                    <pre><code>Cloning into 'MeuSite'...
+remote: Enumerating objects: 533, done.
+remote: Counting objects: 100% (72/72), done.
+remote: Compressing objects: 100% (37/37), done.
+remote: Total 533 (delta 43), reused 46 (delta 35), pack-reused 461
+Receiving objects: 100% (533/533), 3.89 MiB | 2.71 MiB/s, done.
+Resolving deltas: 100% (234/234), done.</code></pre>
+                    
+                    <p>Verifique os arquivos:</p>
+                    
+                    <pre><code>ls</code></pre>
+                    
+                    <p>Saída esperada:</p>
+                    
+                    <pre><code>MeuSite  index.nginx-debian.html</code></pre>
+                    
+                    <p>Pronto, o seu website esta agora no servidor, como não adicionamos na raiz, teremos de chamar o endereço e no final adicionar /MeuSite</p>
+                    
+                    <p>Acesse: <code>http://102.130.71.231/MeuSite/</code></p>
+                    
+                    <img class="uk-border-rounded" src="img/artigos/website-final.jpg" alt="Website hospedado com sucesso">
+                    
+                    <p>Pronto… Tens o seu website para divulgar a sua marca/empresa/instituição, sem os seus dados terem que transitar o oceano, de forma práctica e rápida, sem falar da redundância e disponibilidade que são características de uma cloud.</p>
+                    
+                    <p>Isto que apresentamos é a ponta do iceberg, existe uma infinidade de recursos e serviços que a Clouds2Africa tem disponível.</p>
+                </article>
+            </div>
+            
+            <!-- Sidebar Section for More Articles -->
+            <aside style="color:white;padding: 30px; border-radius: 8px;" class="fundo-mais-artigos uk-width-1-3@m uk-margin-large-top uk-margin-left">
+                <h3 style="color:white"><span>Mais Artigos</span></h3>
+                <ul class="uk-list uk-list-divider">
+                    <li>
+                        <div class="">
+                            <div class="uk-grid-small" uk-grid>
+                                <div>
+                                    <img class="foto-mais-artigos uk-border-rounded" src="img/acsa-partner.jpg" alt="Artigo relacionado">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <p style="color: rgba(40, 193, 253, 1)" class="uk-margin-remove-bottom">Artigo 1</p>
+                                    <p class="uk-text-meta uk-margin-remove-top">Mollit proident consectetur elit adipisicing sunt Lorem nostrud...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <div class="uk-grid-small" uk-grid>
+                                <div>
+                                    <img class="foto-mais-artigos uk-border-rounded" src="img/acsa-partner.jpg" alt="Artigo relacionado">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <p style="color:rgba(40, 193, 253, 1);" class="uk-margin-remove-bottom">Artigo 2</p>
+                                    <p class="uk-text-meta uk-margin-remove-top">Mollit proident consectetur elit adipisicing sunt Lorem nostrud...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <div class="uk-grid-small" uk-grid>
+                                <div>
+                                    <img class="foto-mais-artigos uk-border-rounded" src="img/acsa-partner.jpg" alt="Artigo relacionado">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <p style="color: rgba(40, 193, 253, 1);" class="uk-margin-remove-bottom">Artigo 3</p>
+                                    <p class="uk-text-meta uk-margin-remove-top">Mollit proident consectetur elit adipisicing sunt Lorem nostrud...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">
+                            <div class="uk-grid-small" uk-grid>
+                                <div>
+                                    <img class="foto-mais-artigos uk-border-rounded" src="img/acsa-partner.jpg" alt="Artigo relacionado">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <p style="color: rgba(40, 193, 253, 1);" class="uk-margin-remove-bottom">Artigo 4</p>
+                                    <p class="uk-text-meta uk-margin-remove-top">Mollit proident consectetur elit adipisicing sunt Lorem nostrud...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <div class="uk-margin uk-text-center">
+                        <a class="uk-margin-large-top" style="color: rgba(40, 193, 253, 1);" href="#">Ver todos</a>
+                    </div>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<app-rodape></app-rodape>
