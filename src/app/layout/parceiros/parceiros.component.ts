@@ -20,10 +20,11 @@ export class ParceirosComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const sliderInner = document.querySelector('.slider-inner') as HTMLElement;
-    const images = sliderInner.innerHTML;
-
-    // Duplicate the images
-    sliderInner.innerHTML += images; // Append the same images for a seamless effect
+    
+    // Clone all images and append them for seamless loop
+    if (sliderInner) {
+      sliderInner.innerHTML += sliderInner.innerHTML;
+    }
   }
 
 }

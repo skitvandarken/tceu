@@ -174,3 +174,8 @@ button:hover {
     align-items: center;
     height: 100%;
 }
+
+
+select {
+    font-family: 'Noto Color Emoji', sans-serif !important;
+  }

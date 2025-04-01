@@ -1,37 +1,78 @@
 .slider-container {
-    width: 100%;
-    overflow: hidden; /* Hides the overflowing content */
-    position: relative;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0)); /* Fading effect at edges */
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0)); /* Safari support */
-  }
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-inner {
+  display: flex;
+  animation: infinite-scroll 30s linear infinite;
+  will-change: transform; /* Improves performance */
+}
+
+.slider img {
+  width: 300px;
+  height: 150px;
+  margin: 0 20px;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+@keyframes infinite-scroll {
   
-  /* Slider holding the images */
-  .slider {
-    display: flex;
-    width: 100%; /* Set to 100% to enable smooth scrolling */
-    overflow: hidden; /* Ensure it hides overflow */
-  }
-  
-  .slider-inner {
-    display: flex;
-    animation: infinite-scroll 20s linear infinite; /* Infinite scroll */
-  }
-  
-  /* Adjust image size */
-  .slider img {
-    width: 300; /* Adjust based on your image size */
-    height: 167; /* Adjust based on your image size */
-    margin: 0 20px;}
-    
-  
-  /* Keyframes for infinite, seamless scrolling */
-  @keyframes infinite-scroll {
     0% {
-      transform: translateX(100);
+      transform: translateX(0);
+      opacity: 0;
+    }
+    5% {
+      transform: translateX(-15% );
+      opacity: 0.9;
+    }
+    10% {
+      transform: translateX(-30%);
+      opacity: 1;
+    }
+    90% {
+      opacity: 1; 
+      transform: (-100%);/* Fully visible until 90% */
     }
     100% {
-      transform: translateX(-100%); /* Translate the entire width of the inner container */
+      transform: translateX(-300%);
+      opacity: 0; /* Fade out at the end */
     }
-  }
   
+}
+
+
+
+/* Gradient fade overlay (left and right) */
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px; /* Adjust fade width */
+  z-index: 2;
+  pointer-events: none;
+}
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+
+.slider-inner {
+  animation: infinite-scroll 40s linear infinite;
+}
