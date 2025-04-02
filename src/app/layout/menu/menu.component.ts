@@ -14,16 +14,22 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent implements OnInit {
-
+  private preloadFlags() {
+    ['ao', 'usa', 'fr'].forEach(flag => {
+      new Image().src = `/img/bandeiras/${flag}.png`;
+    });
+  }
 
   constructor(
     public auth: AuthService,
     private router: Router,
     private translate: TranslateService,
     private cdr: ChangeDetectorRef
+    
   ) {}
 
   ngOnInit(): void {
+    this.preloadFlags();
     this.auth.isAuthenticated$.subscribe(isAuthenticated => {
       if (isAuthenticated) {
         this.router.navigate(['/painel']);
@@ -58,6 +64,8 @@ export class MenuComponent implements OnInit {
         this.selectedFlag = 'img/bandeiras/fr.png';
         this.selectedLanguage = 'FR';
     }
+
+    
 
     this.cdr.detectChanges();
   }

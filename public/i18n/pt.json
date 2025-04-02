@@ -126,13 +126,119 @@
 "equipa.lid.Mark":"Líder de Marketing",
 "equipa.lid.com":"Líder Comercial  ​",
 "equipa.PCE.tel.nigeria":"PCE da TelCables Nigeria​",
-"equipe.pce.telc.brasil":"PCE da TelCables Brasil​"
+"equipe.pce.telc.brasil":"PCE da TelCables Brasil​",
 
 
 
 
 
+  "empresa.page_title": "Sobre a empresa",
+  "empresa.header_title": "Estamos conectando o mundo todo com o nosso trabalho.",
+  "empresa.historia.title": "NOSSA HISTÓRIA",
+  "empresa.historia.description": "Angola Cables é uma multinacional de telecomunicações que oferece soluções avançadas de conectividade global por meio de uma robusta infraestrutura de cabos submarinos, data centers e pontos de interconexão.",
+  "empresa.timeline.2009": "Angola Cables nasce do consórcio do cabo WACS e com ela a visão de conectar Angola ao mundo",
+  "empresa.timeline.2010": "Iniciamos a construção da CLS de Sangano, um marco de infraestrutura com qualidade técnica internacional",
+  "empresa.timeline.2011": "Inaugurámos em Luanda, o data Center AngoNAP Luanda",
+  "empresa.timeline.2012": "O cabo WACS e o AngoNAP começaram a operar, marcando o início da nossa actividade comercial",
+  "empresa.timeline.2013": "Recebemos o Prêmio de Qualidade e Excelência e estivemos presentes em grandes eventos da indústria",
+  "empresa.timeline.2014": "Avançamos com os projectos do Data Center ADC e do Cabo Monet",
+  "empresa.timeline.2015": "Apresentamos a Angola Cables ao Brasil e criamos a ideia de Hub Tecnológico em Fortaleza",
+  "empresa.timeline.2016": "O cabo Monet chega ao Brasil",
+  "empresa.timeline.2017": "Iniciamos as obras do Data Center Fortaleza e lançamos o cabo SACS",
+  "empresa.timeline.2018": "Conectamos 2 continentes Américas - África com os cabos Monet e SACS em operação",
+  "empresa.timeline.2019": "Certificamos com qualidade internacional a CLS Monet e inauguramos o Data Center Fortaleza",
+  "empresa.timeline.2021": "Inovamos com os novos produtos digitais e as variações de IP e o Anti_DDoS (camada 7)",
+  "empresa.timeline.2022": "Crescimento 3x a infraestrutura Lançamos o Clouds2Africa, Clouds2Brasil e ACeleraNET Abrimos novos PoPs em Singapura e Los Angeles",
+  "empresa.timeline.2023": "Certificações ISO 27001 Atingimos a meta de 1% da internet mundial na nossa rede Tivemos um crescimento médio de 22% (EBITDA) no triénio",
+  "empresa.timeline.2024": "Consolidação do nosso negócio e operações nas subsidiárias da África do Sul, Nigéria, Europa/Madeira e USA/Bermudas",
 
+  
+  
+    "empresa.valores.title": "VALORES",
+    "empresa.valores.missao.title": "MISSÃO",
+    "empresa.valores.missao.text": "Liderar a conectividade digital no Atlântico Sul e potenciar o crescimento dos mercados emergentes.",
+    "empresa.valores.visao.title": "VISÃO",
+    "empresa.valores.visao.text": "Tornar Angola num dos principais Hubs de Telecomunicações em África e acelerar a transformação digital nos países do Atlântico Sul.",
+    "empresa.valores.paixao.title": "Paixão",
+    "empresa.valores.paixao.text": "Valorizamos o sentimento colectivo de amor pelo que fazemos. A forma como cada um se envolve para o resultado final é de extrema importância para que ele alcance o nível de entrega que almejamos. Estamos todos conectados com irreverência, energia e orgulho na empresa e na equipa. Transformamos o impossível em realidade, porque somos apaixonados pelo que fazemos.",
+    "empresa.valores.sustentabilidade.title": "Sustentabilidade",
+    "empresa.valores.sustentabilidade.text": "Trabalhamos pensando no impacto mundial no presente para sustentar o futuro. Da empresa, dos negócios, dos projectos sociais e ambientais, das comunidades e mercados onde nos inserimos. Todos estamos conectados com o planeta e cuidar dele é o dever de cada um.",
+    "empresa.valores.talento.title": "Talento",
+    "empresa.valores.talento.text": "Valorizamos o sentimento colectivo de amor pelo que fazemos. A forma como cada um se envolve para o resultado final é de extrema importância para que ele alcance o nível de entrega que almejamos. Estamos todos conectados com irreverência, energia e orgulho na empresa e na equipa. Transformamos o impossível em realidade, porque somos apaixonados pelo que fazemos.",
+    "empresa.valores.eficiencia.title": "Eficiência",
+    "empresa.valores.eficiencia.text": "Estamos empenhados no cumprimento ético e objectivo dos procedimentos e objectivos da organização. Gerimos a nossa ferramenta e recursos utilizando os mais elevados padrões e certificações para fornecer serviços superiores aos nossos parceiros comerciais e clientes. O nosso investimento contínuo no desenvolvimento do conhecimento e na criação de talentos são os motores de eficiência que alimentam o nosso crescimento e evolução.",
+  
+ 
+
+    
+      "equipa.title": "NOSSA EQUIPA",
+      "equipa.description": "A nossa equipa de comerciais está cá para o ajudar com o seu negócio. Trabalham diariamente para que consiga atingir os seus objectivos e que tenha as melhores soluções, adaptadas às suas necessidades e do seu negócio.",
+      "equipa.bio_button": "Bio",
+      "equipa.back_button": "Voltar",
+      
+      "equipa.angelo_gama.name": "ÂNGELO GAMA",
+      "equipa.angelo_gama.position": "Presidente do Conselho Executivo",
+      "equipa.angelo_gama.bio": "Ângelo Gama é CEO da Angola Cables desde 2020. Formado em Engenharia Eletrotécnica e de Computadores pelo IST em Lisboa, iniciou sua carreira como engenheiro de suporte técnico na HP, em Lisboa, e acumula mais de 21 anos de experiência nos setores de telecomunicações e tecnologia da informação. Ao longo de sua trajetória, esteve envolvido em projetos importantes, como o lançamento da primeira operadora de telefonia móvel 3G da Europa na Three Mobile, no Reino Unido, e a fusão entre a HP e a Compaq, além de ter trabalhado com a Atos Origin, na Holanda.",
+      
+      "equipa.laura_carneiro.name": "LAURA CARNEIRO",
+      "equipa.laura_carneiro.position": "Administradora Executiva",
+      "equipa.laura_carneiro.bio": "Laura Carneiro é Administradora na Angola Cables desde 2012, responsável pela área Administrativa e Financeira, onde planeja, monitora e define estratégias de acordo com as metas da organização. Já trabalhou na Startel e na Mundo Telecomunicações. Possui formação em Gestão Financeira pela Universidade Católica de Angola e curso de liderança estratégica. Com habilidades em comunicação, resolução de problemas e liderança de equipes.",
+      
+      "equipa.rui_faria.name": "RUI FARIA",
+      "equipa.rui_faria.position": "Administrador Executivo",
+      "equipa.rui_faria.bio": "Gestor com mais de 25 anos de experiência em TI, Comunicação e Telecomunicações, especializado em estratégias de negócios, projetos estruturantes, inteligência de marketing e comunicação. Com um histórico de sucesso na entrega de programas impactantes, contribuiu para a transformação e crescimento das empresas onde atuou, posicionando-as como líderes no mercado nacional e internacional. Demonstrou competência e ética na gestão de recursos humanos, contratos de clientes e retorno de ativos. Fluente em português e inglês, facilitando a expansão em mercados internacionais. Especialidades: Estratégias de negócios, gestão de projetos, análise de mercado, desenvolvimento de produtos e internacionalização.",
+      
+      "equipa.sergio_pozuelo.name": "SERGIO POZUELO",
+      "equipa.sergio_pozuelo.position": "Director Comercial",
+      "equipa.sergio_pozuelo.bio": "Sergio Pozuelo é executivo internacional com mais de 20 anos de experiência em Vendas e Marketing nos setores de Telecomunicações e TI, atuando em diversas regiões como Europa, Oriente Médio, África e América Latina. Graduado em Engenharia de Telecomunicações pela Universidade Politécnica de Madrid, com MBA e Mestrado em Marketing, é Diretor Comercial Global da Angola Cables. Ele é responsável pelas subsidiárias da empresa em Angola, Brasil, África do Sul, Europa e EUA, liderando estratégias comerciais e impulsionando o crescimento nos mercados internacionais. A Angola Cables é uma multinacional de telecomunicações presente em mais de 5 países",
+      
+      "equipa.lucenildo_junior.name": "LUCENILDO JUNIOR",
+      "equipa.lucenildo_junior.position": "Director Técnico",
+      "equipa.lucenildo_junior.bio": "Lucenildo Junior é Chief Technology Officer (CTO) da Angola Cables, com vasta experiência no desenvolvimento de redes e gestão de redes globais complexas. Reconhecido por seu conhecimento profundo e abordagem prática para resolver desafios de rede, é responsável pela infraestrutura IP/MPLS da empresa e supervisiona a expansão da rede global da Angola Cables. Lucenildo possui mestrado em Ciência da Computação e doutorado em Engenharia Elétrica pela Universidade de São Paulo. Antes de ingressar na Angola Cables em 2019, trabalhou em projetos de pesquisa e desenvolvimento no NIC.br, RNP Brasil e G8 Networks. Ele também é membro ativo do NANOG e LACNIC.",
+      
+      "equipa.julio_chilela.name": "JÚLIO CHILELA",
+      "equipa.julio_chilela.position": "Director de Inovação Digital",
+      "equipa.julio_chilela.bio": "Júlio Chilela é Diretor de Inovação Digital na Angola Cables e entusiasta da Cloud. Com vasta experiência, liderou o desenvolvimento de plataformas digitais e projetos globais, destacando-se pela implementação da primeira cloud pública angolana com self-onboard, abrangendo 6 regiões em 4 países (Angola, Nigéria, África do Sul e Brasil). Candidato ao doutoramento em Ciências da Computação pela Universidade do Porto e Universidade de Houston, sua pesquisa foca em 'entrega de internet via satélite com redes 5G e Core em Cloud'. Possui mestrado em Tecnologias de Informação Geográfica pela Universidade de Coimbra e experiência em diversas empresas internacionais.",
+      
+      "equipa.artur_mendes.name": "ARTUR MENDES",
+      "equipa.artur_mendes.position": "VP de Vendas",
+      "equipa.artur_mendes.bio": "Artur Mendes é VP de Vendas da Angola Cables, com mais de 20 anos de experiência no setor de telecomunicações global. Ingressou na empresa em 2013, após 12 anos na Nokia, onde ocupou diversas funções na Nokia Mobile Phone e Nokia Multimedia Network Terminals. Como VP de Vendas, é responsável pela estratégia global e desenvolvimento de negócios, além de gerenciar relacionamentos com clientes-chave. Artur tem amplo conhecimento sobre projetos importantes, como os cabos submarinos Monet e SACS, e a modernização do Data Center da Angola Cables no Brasil, que integra as estações de aterragem desses cabos.",
+      
+      "equipa.frederico_oliveira.name": "FREDERICO OLIVEIRA",
+      "equipa.frederico_oliveira.position": "Líder de Engenharia",
+      "equipa.frederico_oliveira.bio": "Frederico Oliveira é Head de Engenharia na Angola Cables, destacando-se na administração e manutenção de redes IP e submarinas. Com experiência na gestão de equipes e colaboração com diversos fornecedores, lidera a entrega de soluções de alta qualidade. Ao longo de sua carreira, focou conhecimentos em redes corporativas, provedores de serviços e telecomunicações. Reconhecido por sua persistência, resiliência e adaptabilidade, soluções inovadoras e abordagens proativas para resolver desafios em ambientes dinâmicos e desafiadores.",
+      
+      "equipa.samuel_carvalho.name": "SAMUEL CARVALHO",
+      "equipa.samuel_carvalho.position": "Líder do Marketing",
+      "equipa.samuel_carvalho.bio": "Samuel Carvalho é CMO da Angola Cables e possui mestrado em Comunicação Corporativa, BA em Relações Públicas e Marketing, além de certificação em Liderança Transformacional pelo Lisbon MBA Program. Com mais de 18 anos de experiência em consultoria operacional e de marketing para empresas do setor financeiro e FMCG, construiu uma carreira sólida em estratégias de marketing, mídia, publicidade, gestão de marca e comunicação. Sob sua liderança, a Angola Cables implementou a estratégia 'Global Deep Connection', promovendo produtos como CDN, IXP, Cloud Services, Data Centers e a rede submarina que conecta a África à América do Sul.",
+      
+      "equipa.ariete_pereira.name": "ARIETE PEREIRA",
+      "equipa.ariete_pereira.position": "Líder Comercial",
+      "equipa.ariete_pereira.bio": "Ariete Pereira possui mais de 10 anos de experiência em cargos comerciais no setor de telecomunicações e atualmente é Líder de Vendas na Angola Cables. Destaca-se na construção de relacionamentos sólidos e duradouros com clientes ao redor do mundo, oferecendo valor consistente e confiança por meio de um serviço confiável e parcerias estratégicas. Comprometida em gerar valor excepcional para os parceiros, busca garantir que sua equipe esteja motivada e empoderada para contribuir com o crescimento e sucesso da Angola Cables no cenário global de telecomunicações.",
+      
+      "equipa.fernando_fernandes.name": "FERNANDO FERNANDES",
+      "equipa.fernando_fernandes.position": "CEO da TelCables Nigeria",
+      "equipa.fernando_fernandes.bio": "Fernando Fernandes é CEO da TelCables Nigeria & West Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables na Nigéria e região da África Ocidental. Com ampla experiência no setor de telecomunicações, Fernando tem se destacado pela sua liderança adaptável e inovadora, focada em expandir a rede da empresa e melhorar a entrega de serviços. Nomeado CEO em 2023, desempenhou um papel crucial na consolidação da TelCables como líder de mercado na região.",
+      
+      "equipa.virgilio_alves.name": "VIRGÍLIO ALVES",
+      "equipa.virgilio_alves.position": "Líder de Pós-Venda",
+      "equipa.virgilio_alves.bio": "Virgílio Alves possui mais de 15 anos de experiência em Customer Experience (CX) e atua como Líder de Pós-Venda, Operações e Canais da Angola Cables há 5 anos. Focado em soluções estratégicas e operacionais, busca aprimorar a experiência do cliente. Com vasta experiência no setor de telecomunicações e operadores móveis, adota uma abordagem prática e orientada para resultados, sempre centrada no cliente. Membro da Customer Experience Professionals Association (CXPA), contribui para a transformação de processos, equipes e tecnologias, garantindo que cada ponto de contato proporcione uma experiência fluida, eficiente e memorável.",
+      
+      "equipa.sudhir_juggernath.name": "SUDHIR JUGGERNAUTH",
+      "equipa.sudhir_juggernath.position": "CEO da TelCables South Africa",
+      "equipa.sudhir_juggernath.bio": "Sudhir Juggernath é CEO da TelCables Southern & East Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables nas regiões da África Austral e Oriental. Com 20 anos de experiência no setor de telecomunicações e tecnologia, Sudhir tem um histórico de posições estratégicas em empresas como Siemens, Neotel, BT Global Services e Orange, com foco em desenvolvimento de negócios. Nomeado CEO em setembro de 2023, é conhecido por sua visão analítica e habilidade em negociar e gerar oportunidades de mercado.",
+      
+      "equipa.claudio_florindo.name": "CLÁUDIO FLORINDO",
+      "equipa.claudio_florindo.position": "CEO da TelCables Brasil",
+      "equipa.claudio_florindo.bio": "Cláudio Florindo é CEO da TelCables no Brasil. Com mais de 20 anos de experiência no setor de telecomunicações, ingressou na empresa em 2018, assumindo cargos de liderança, como Head of Engineering e Diretor de Tecnologia. Possui vasta experiência na implementação de soluções digitais inovadoras, com foco na expansão e melhoria das capacidades de redes de diversas empresas e setores. Antes de entrar na Angola Cables, trabalhou em empresas como Movicel, CapGemini, Rumos, NCR Angola e IT One, consolidando sua trajetória no mercado internacional de telecomunicações.",
+
+
+      
+        "slideshow.video_alt_text": "Seu navegador não suporta o vídeo em falta",
+        "slideshow.slide1.title": "Os nossos cabos submarinos são colocados nas profundezas do oceano, local onde habitam as tartarugas, deste modo queremos preservar o ecossistema e queremos deixá-lo de uma forma sustentável as próximas gerações.",
+        "slideshow.slide1.description": "Fazemos todo o investimento possível para que as nossas operações continuem a preservar os mares e oceanos, assim como as espécies que lá habitam nomeadamente as tartarugas Kitabanga que estão em extinção."
+      
+ 
 
 
 
