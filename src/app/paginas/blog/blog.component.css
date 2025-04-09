@@ -1,5 +1,8 @@
 .fundo-cabecalho{
-    background-image: url('/img/layout/cabecalho-pagina.jpeg');
+    background-image: url('/img/blog-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     background-color: #000;
     position: relative;
