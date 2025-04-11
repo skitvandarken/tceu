@@ -5,7 +5,7 @@
 	"nav.ip": "IP",
 	"nav.conectividade": "Conectividade",
   "nav.empresa": "Empresa",
-  "ac.descricao": "Angola Cables é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP5, operadores Tier | e fornecedores de conteúdo globais. Com mais de 30 POPs e conexões a 66 Data Centers interconectados e 6.000 acordos de peering, o tráfego na sua rede internacional excede os 18,500 Tbps.",
+  "ac.descricao": " é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP, operadores Tier | e fornecedores de conteúdo globais. Com mais de 30 POPs e conexões a 66 Data Centers interconectados e 6.000 acordos de peering, o tráfego na sua rede internacional excede os 18,500 Tbps.",
   "ac.presenca": "PRESENÇA LOCAL, NEGÓCIO GLOBAL",
   "ac.presencadescricao": "Fornecemos soluções de conectividade inovadoras para os mercados wholesale e corporativo em todo o mundo. Como um importante operador de rede global, pioneiro em rotas de cabos submarinos no Atlântico, conectividade entre data centers de Oeste para Leste, de Sul a Sul, oferecemos uma gama de soluções digitais personalizadas, desde IP Transit até serviços em nuvem, para múltiplas indústrias, incluindo operadoras de telecomunicações, CDNs e OTTs, além de setores financeiros, de petróleo e gás e outras indústrias com subsidiárias em Angola, Brasil, África do Sul, Nigéria, Europa e EUA.",
   "ver.videoinstitucional": "Ver vídeo institucional",
@@ -108,7 +108,7 @@
 
 "servicos.em": "SERVIÇOS",
 "servicos.destaque": " EM DESTAQUE",
-"menu-angolacables": " A Angola Cables é uma multinacional de telecomunicações com escritórios em mais de 7 cidades, 5 países e 200 colaboradores, de vários horizontes e culturas. Temos uma rede que cobre os 4 continentes do Atlântico.",
+"menu-angolacables": " A Angola Cables é uma multinacional de telecomunicações com escritórios em mais de 7 cidades, 5 países e mais de 200 colaboradores, de vários horizontes e culturas. Temos uma rede que cobre os 4 continentes do Atlântico.",
 "menu-ac-title": "Presença da Angola Cables",
 "menu-escritorios": "ESCRITÓRIOS",
 "saber.mais": "Saber mais",
@@ -135,7 +135,7 @@
   "empresa.page_title": "Sobre a empresa",
   "empresa.header_title": "Estamos conectando o mundo todo com o nosso trabalho.",
   "empresa.historia.title": "NOSSA HISTÓRIA",
-  "empresa.historia.description": "Angola Cables é uma multinacional de telecomunicações que oferece soluções avançadas de conectividade global por meio de uma robusta infraestrutura de cabos submarinos, data centers e pontos de interconexão.",
+  "empresa.historia.description": " é uma multinacional de telecomunicações que oferece soluções avançadas de conectividade global por meio de uma robusta infraestrutura de cabos submarinos, data centers e pontos de interconexão.",
   "empresa.timeline.2009": "Angola Cables nasce do consórcio do cabo WACS e com ela a visão de conectar Angola ao mundo",
   "empresa.timeline.2010": "Iniciamos a construção da CLS de Sangano, um marco de infraestrutura com qualidade técnica internacional",
   "empresa.timeline.2011": "Inaugurámos em Luanda, o data Center AngoNAP Luanda",
@@ -149,7 +149,7 @@
   "empresa.timeline.2019": "Certificamos com qualidade internacional a CLS Monet e inauguramos o Data Center Fortaleza",
   "empresa.timeline.2021": "Inovamos com os novos produtos digitais e as variações de IP e o Anti_DDoS (camada 7)",
   "empresa.timeline.2022": "Crescimento 3x a infraestrutura Lançamos o Clouds2Africa, Clouds2Brasil e ACeleraNET Abrimos novos PoPs em Singapura e Los Angeles",
-  "empresa.timeline.2023": "Certificações ISO 27001 Atingimos a meta de 1% da internet mundial na nossa rede Tivemos um crescimento médio de 22% (EBITDA) no triénio",
+  "empresa.timeline.2023": "Certificações ISO 27001 <br> Atingimos a meta de 1% da internet mundial na nossa rede <br> Tivemos um crescimento médio de 22% (EBITDA) no triénio",
   "empresa.timeline.2024": "Consolidação do nosso negócio e operações nas subsidiárias da África do Sul, Nigéria, Europa/Madeira e USA/Bermudas",
 
   

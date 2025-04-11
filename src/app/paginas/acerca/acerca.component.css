@@ -75,7 +75,7 @@ width: 100%;
 }
 
 .img-resp-social{
-    height: 637px;
+    height: 70vh; /* Adjust the height as needed */
     width: 100%;
 }
 

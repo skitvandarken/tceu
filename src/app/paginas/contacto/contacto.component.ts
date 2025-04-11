@@ -29,10 +29,9 @@ export class ContactoComponent {
             { name: 'Angola', value: '0' },
             { name: 'África do Sul', value: '1' },
             { name: 'Nigéria', value: '2' },
-            { name: 'Portugal', value: '3' },
+            { name: 'Europa', value: '3' },
             { name: 'Brasil', value: '4' },
             { name: 'EUA', value: '5' },
-            { name: 'Europa (TelCables Europa)', value: '6' }
           ];
         
           addresses: Record<string, Address[]> = {
@@ -40,18 +39,21 @@ export class ContactoComponent {
               {
                 title: 'Sede',
                 address: 'Edifício Cellwave, Via AL5 Zona, XR6B<br>Talatona, Luanda Sul, Angola',
-                phone: '+244 927 686 206'
               },
               {
-                title: 'Data Center - AngoNap Luanda',
-                address: 'Avenida Pedro Castro Van Dúnem Loy<br>Talatona, Luanda Sul, Angola'
+                title: 'Data Center - AngoNAP Luanda',
+                address: 'Avenida Pedro Castro Van Dúnem Loy<br>Talatona, Luanda Sul, Angola',
+              },
+              {
+                title: 'Data Center - AngoNAP Bengo',
+                address: 'Praia de Sangano, Município da Kissama, <br> Bengo, Angola',
               }
             ],
             'África do Sul': [
               {
-                title: 'Johannesburg Office',
-                address: 'The Business Park, 2nd Floor<br>15 Lower Road, Morningside<br>Johannesburg, 2057, South Africa',
-                phone: '+27 11 234 5678'
+                title: 'Johannesburg',
+                address: 'Suite 1, The Pivot, Block E <br> 1 Montecasino Boulevard, Fourways<br> 2191 - Gauteng, South Africa',
+                phone: '+27 11 234 5678',
               },
               {
                 title: 'Cape Town Office',
@@ -66,41 +68,35 @@ export class ContactoComponent {
             ],
             'Portugal': [
               {
-                title: 'Lisbon Office',
-                address: 'Avenida da Liberdade, 245, 5º<br>1250-143 Lisboa, Portugal',
+                title: 'Lisba',
+                address: 'Avenida da Liberdade, 245, 5º <br> 1250-143 Lisboa, Portugal',
                 phone: '+351 21 123 4567'
               }
             ],
             'Brasil': [
               {
-                title: 'São Paulo Office',
+                title: 'São Paulo',
                 address: 'Rua Irmã Gabriela, 51 <br>Brooklin <br>CEP 04571-130 – São Paulo',
-                phone: '+55 11 2345-6789'
               },
               {
-                title: 'Data Center',
-                address: 'Avenida Trajano de Medeiros, 1851 <br>Praia do Futuro I – Fortaleza – Ce <br>CEP 04571-130 – São Paulo <br> CEP 60.182-325',
-                phone: '+55 11 2345-6789',
+                title: 'Data Center  AngonaNAP Fortaleza',
+                address: 'Avenida Trajano de Medeiros, 1851 <br> Praia do Futuro I – Fortaleza – Ce <br>CEP 04571-130 – São Paulo <br> CEP 60.182-325',
               }
             ],
             'EUA': [
               {
                 title: 'Bermuda',
-                address: 'Canon’s Court,22 Victoria Street, HamiltonSA',
+                address: 'Canon’s Court,22 Victoria Street, <br> HM 12, Bermuda',
                 phone: '+1 212 123 4567'
               },
             
             ],
-            'Europa (TelCables Europa)': [
+            'Europa': [
               {
-                title: 'Amsterdam Office',
-                address: 'Kingsfordweg 43<br>1043 GP Amsterdam, Netherlands',
-                phone: '+31 20 123 4567'
+                title: 'Escritório - Lisboa',
+                address: 'Rua 1° De Julho, n° 1,9350-206 Ribeira Brava <br> Madeira – Portugal',                phone: '+31 20 123 4567'
               },
-              {
-                title: 'Frankfurt Office',
-                address: 'MesseTurm, Friedrich-Ebert-Anlage 49<br>60327 Frankfurt am Main, Germany'
-              }
+         
             ]
           };
         

@@ -1,5 +1,10 @@
 .fundo-cabecalho {
     background-image: url('/img/servicos/cabelhaco-servicos.png');
+    position: relative;
+    min-height: 400px; /* Adjust based on design */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: #000;
     position: relative;
     min-height: 400px; /* Adjust based on design */
