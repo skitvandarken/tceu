@@ -53,12 +53,9 @@ export class ContactoComponent {
               {
                 title: 'Johannesburg',
                 address: 'Suite 1, The Pivot, Block E <br> 1 Montecasino Boulevard, Fourways<br> 2191 - Gauteng, South Africa',
-                phone: '+27 11 234 5678',
+               
               },
-              {
-                title: 'Cape Town Office',
-                address: 'The Towers, 5th Floor<br>25 Bree Street<br>Cape Town, 8001, South Africa'
-              }
+        
             ],
             'Nigéria': [
               {
@@ -92,7 +89,7 @@ export class ContactoComponent {
             'Europa': [
               {
                 title: 'Escritório - Portugal',
-                address: 'Rua 1° De Julho, n° 1,9350-206 Ribeira Brava <br> Madeira – Portugal',                phone: '+31 20 123 4567'
+                address: 'Rua da Alfândega, n.º 64, 5.º andar,<br> 9000 059 FUNCHAL <br> Madeira – Portugal',               
               },
          
             ]
