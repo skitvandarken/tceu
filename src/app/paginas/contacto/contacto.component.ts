@@ -45,7 +45,7 @@ export class ContactoComponent {
                 address: 'Avenida Pedro Castro Van Dúnem Loy<br>Talatona, Luanda Sul, Angola',
               },
               {
-                title: 'Data Center - AngoNAP Bengo',
+                title: 'Estação Sangano',
                 address: 'Praia de Sangano, Município da Kissama, <br> Bengo, Angola',
               }
             ],
@@ -68,9 +68,8 @@ export class ContactoComponent {
             ],
             'Portugal': [
               {
-                title: 'Lisba',
+                title: 'Lisboa',
                 address: 'Avenida da Liberdade, 245, 5º <br> 1250-143 Lisboa, Portugal',
-                phone: '+351 21 123 4567'
               }
             ],
             'Brasil': [
@@ -87,13 +86,12 @@ export class ContactoComponent {
               {
                 title: 'Bermuda',
                 address: 'Canon’s Court,22 Victoria Street, <br> HM 12, Bermuda',
-                phone: '+1 212 123 4567'
               },
             
             ],
             'Europa': [
               {
-                title: 'Escritório - Lisboa',
+                title: 'Escritório - Portugal',
                 address: 'Rua 1° De Julho, n° 1,9350-206 Ribeira Brava <br> Madeira – Portugal',                phone: '+31 20 123 4567'
               },
          

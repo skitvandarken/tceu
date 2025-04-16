@@ -26,6 +26,10 @@
     background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
 }
 
+.botao-guia {
+    background-color: rgba(40, 193, 253, 1);
+    color: rgba(0, 0, 78, 0.918);
+}
 
 
 

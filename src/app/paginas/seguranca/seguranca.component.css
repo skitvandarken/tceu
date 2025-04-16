@@ -35,3 +35,9 @@
     color: rgba(5, 5, 51, 1);
     font-weight: bolder;
 }
+
+
+.botao-guia {
+    background-color: rgba(40, 193, 253, 1);
+    color: rgba(0, 0, 78, 0.918);
+}

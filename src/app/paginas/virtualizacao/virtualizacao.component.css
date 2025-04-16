@@ -28,6 +28,10 @@
 
 
 
+.botao-guia {
+    background-color: rgba(40, 193, 253, 1);
+    color: rgba(0, 0, 78, 0.918);
+}
 
 .uk-subnav-pill>.uk-active>a {
     border-radius: 5px;
