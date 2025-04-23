@@ -1,130 +1,155 @@
-.fundo-cabecalho{
+.fundo-cabecalho {
     background-image: url('/img/nossasinformacoes.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     background-color: #000;
     position: relative;
-    min-height: 400px; /* Adjust based on design */
+    min-height: 400px;
 }
 
-.logo-cabecalho-pagina{
+.logo-cabecalho-pagina {
     height: 40px;
     width: auto;
-
 }
 
-.conteudo-cabecalho{
-    
+.conteudo-cabecalho {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0));
 }
 
-
-.fundo-cronologia{
+.fundo-cronologia {
     background-color: rgba(247, 247, 247, 1);
     position: relative;
-    min-height: 300px; /* Adjust based on design */
+    min-height: 300px;
 }
 
-
-.fundo-cronologia-abas{
+.fundo-cronologia-abas {
     background-color: rgba(247, 247, 247, 1);
-
 }
 
-
-
-.conteudo-cronologia{
-    
-    position:relative;
+.conteudo-cronologia {
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
-.texto-abas-cronologia{
+.texto-abas-cronologia {
     font-size: 20px !important;
-    font-weight: 400 ;
+    font-weight: 700;
+    color: #00003C;
 }
 
-.uk-subnav-pill>.uk-active>a{
-    border-radius: 5px ;
-    background-color: rgba(40, 193, 253, 1);
+.uk-subnav-pill>.uk-active>a {
+    border-radius: 5px;
+    background-color: rgba(40, 193, 253, 1) !important;
     color: rgba(5, 5, 51, 1);
     font-weight: bolder;
 }
 
-
-.fundo-valores{
-
-    background-color: rgba(5, 5, 51, 1);;
-
+.fundo-valores {
+    background-color: rgba(5, 5, 51, 1);
 }
 
-.fundo-linha{
-background-image: url('/img/fundo-linha.png');
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-width: 100%;
-}
-
-.img-resp-social{
-    height: 70vh; /* Adjust the height as needed */
+.fundo-linha {
+    background-image: url('/img/fundo-linha.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
 }
 
-.fundo-card-valores{
-
-    background: linear-gradient(135deg, rgba(1, 95, 132, 0.2), rgb(0, 44, 62));
-
+.img-resp-social {
+    height: 70vh;
+    width: 100%;
 }
 
-.fundo-equipa{
+.fundo-card-valores {
+    background: linear-gradient(135deg, rgba(1, 95, 132, 0.2), rgb(0, 44, 62));
+}
+
+.fundo-equipa {
     background-color: rgba(26, 184, 221, 1);
 }
 
-.gradiente-nome-equipa{
-    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+.gradiente-nome-equipa {
+    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0));
     width: 100%;
-
 }
 
-
-.missao-imagem{
+.missao-imagem {
     height: 40vh;
     width: 100%;
     object-fit: cover;
 }
 
-
 .video-container {
     position: relative;
     width: 100%;
-    height: 70vh; /* Adjust the height as needed */
+    height: 70vh;
     overflow: hidden;
     display: flex;
     justify-content: left;
     align-items: left;
     background-color: black;
     border-radius: 20px;
-
 }
 
 .background-video {
     position: absolute;
-    top: 50%; /* Start positioning from the center */
+    top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the container without distortion */
-    object-position: center; /* Center the video, cropping equally from top and bottom */
-    transform: translate(-50%, -50%); /* Center the video within the container */
+    object-fit: cover;
+    object-position: center;
+    transform: translate(-50%, -50%);
     opacity: 0.3;
 }
+
+/* Slider specific styles */
+.uk-slider-container {
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
+
+.uk-slider-items li {
+    margin: 0 5px;
+}
+
+.uk-slider-items li a {
+    padding: 8px 16px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.uk-slider-items li.uk-active a {
+    background-color: rgba(40, 193, 253, 1);
+    color: rgba(5, 5, 51, 1);
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+@media (max-width: 640px) {
+    .uk-slider-container {
+        padding: 0 30px;
+    }
+    
+    .uk-grid-item-match {
+        margin-bottom: 20px;
+    }
+    
+    .uk-width-1-2@m {
+        width: 100% !important;
+    }
+}
+
+.uk-dotnav{
+    color: #fff !important;
+} 
 

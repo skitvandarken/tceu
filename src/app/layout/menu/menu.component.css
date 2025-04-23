@@ -37,7 +37,7 @@
     font-family: inherit;
     display: flex;
     align-items: center;
-    padding: 10px 15px; /* Consistent padding for navbar items */
+    padding: 10px 15px; /* Espaçamento entre os elementos a do menu*/
 }
 
 .uk-navbar-nav > li > a:hover {
@@ -45,13 +45,28 @@
 }
 
 .uk-navbar-dropdown {
+    
     border-top-color: #050045;
     border-top-width: 10px;
     border-top-style: solid;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding: 10px; /* Add padding for better spacing inside dropdown */
+    padding: 20px; /* Add padding for better spacing inside dropdown */
 }
+
+
+.pesquisa{
+    border-top-color: #050045;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 20px; /* Add padding for better spacing inside dropdown */
+}
+
+
 
 .uk-navbar-dropdown-nav {
     list-style: none;
@@ -179,3 +194,18 @@ button:hover {
 select {
     font-family: 'Noto Color Emoji', sans-serif !important;
   }
+
+
+  
+.bt {
+    background-color: #1AB8DD;
+    color: black;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #18a9cc; /* Slightly darker shade for hover */
+}

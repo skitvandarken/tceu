@@ -18,56 +18,60 @@
                 <b>{{ 'empresa.historia.title' | translate }}</b>
             </h2>
             <div>
-                <h3 class=""><b style="color:#28C1FD">Angola Cables</b> {{ 'empresa.historia.description' | translate }}
-                </h3>
+                <h3 class=""><b style="color:#28C1FD">Angola Cables</b> {{ 'empresa.historia.description' | translate }}</h3>
             </div>
         </div>
     </div>
 </div>
 
 <div class="fundo-cronologia-abas">
-
     <div class="uk-container">
+        <div class="uk-margin-small-left uk-margin-small-right uk-padding">
+            <!-- Slider Navigation -->
+            <div uk-slider>
+                <div class="uk-position-relative">
+                    <!-- Navigation Arrows -->
+                    <a class="uk-position-center-left-out uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right-out uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    
+                    <!-- Slider Container -->
+                    <div class="uk-slider-container">
+                        <ul class="uk-slider-items uk-child-width-auto uk-grid uk-grid-small" uk-switcher="connect: .timeline-content">
+                            <li><a class="texto-abas-cronologia" style="font-weight: bolder">2009</a></li>
+                            <li><a class="texto-abas-cronologia">2010</a></li>
+                            <li><a class="texto-abas-cronologia">2011</a></li>
+                            <li><a class="texto-abas-cronologia">2012</a></li>
+                            <li><a class="texto-abas-cronologia">2013</a></li>
+                            <li><a class="texto-abas-cronologia">2014</a></li>
+                            <li><a class="texto-abas-cronologia">2015</a></li>
+                            <li><a class="texto-abas-cronologia">2016</a></li>
+                            <li><a class="texto-abas-cronologia">2017</a></li>
+                            <li><a class="texto-abas-cronologia">2018</a></li>
+                            <li><a class="texto-abas-cronologia">2019</a></li>
+                            <li><a class="texto-abas-cronologia">2021</a></li>
+                            <li><a class="texto-abas-cronologia">2022</a></li>
+                            <li><a class="texto-abas-cronologia">2023</a></li>
+                            <li><a class="texto-abas-cronologia">2024</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <div class="uk-margin-small-left uk-margin-small-right uk-padding ">
-
-            <ul class="uk-subnav uk-subnav-pill" uk-switcher>
-
-                <li style="font-weight: bold"><a class="texto-abas-cronologia">2009</a></li>
-                <li><a class="texto-abas-cronologia">2010</a></li>
-                <li><a class="texto-abas-cronologia">2011</a></li>
-                <li><a class="texto-abas-cronologia">2012</a></li>
-                <li><a class="texto-abas-cronologia">2013</a></li>
-                <li><a class="texto-abas-cronologia">2014</a></li>
-                <li><a class="texto-abas-cronologia">2015</a></li>
-                <li><a class="texto-abas-cronologia">2016</a></li>
-                <li><a class="texto-abas-cronologia">2017</a></li>
-                <li><a class="texto-abas-cronologia">2018</a></li>
-                <li><a class="texto-abas-cronologia">2019</a></li>
-                <li><a class="texto-abas-cronologia">2021</a></li>
-                <li><a class="texto-abas-cronologia">2022</a></li>
-                <li><a class="texto-abas-cronologia">2023</a></li>
-                <li><a class="texto-abas-cronologia">2024</a></li>
-
-
-
-            </ul>
-
-            <div class="uk-switcher uk-margin">
+            <!-- Content Switcher -->
+            <div class="timeline-content uk-switcher uk-margin">
                 <!-- 2009 -->
                 <div style="background-color: white;" class="" uk-grid>
                     <div class="uk-grid-item-match uk-width-auto@m">
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2009</h2>
-                            <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/ac-simbolo.png">
+                            <p class="">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/ac-simbolo.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-start">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2009' | translate }}
                             </h4>
                         </div>
@@ -80,14 +84,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2010</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/back-bone.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/back-bone.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-start">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2010' | translate }}
                             </h4>
                         </div>
@@ -100,14 +103,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2011</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/data-center.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/data-center.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-start">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2011' | translate }}
                             </h4>
                         </div>
@@ -120,14 +122,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2012</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/icones_0000s_0011_CABOS.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/icones_0000s_0011_CABOS.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-start">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2012' | translate }}
                             </h4>
                         </div>
@@ -140,14 +141,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2013</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/premio.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/premio.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2013' | translate }}
                             </h4>
                         </div>
@@ -160,14 +160,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2014</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/monet-fortaleza.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/monet-fortaleza.png">
                             </p>
                         </div>
                     </div>
-                    <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
+                    <div class="uk-flex uk-flex-middle uk-margin-small-left uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2014' | translate }}
                             </h4>
                         </div>
@@ -180,14 +179,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2015</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/apresentacao.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/apresentacao.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2015' | translate }}
                             </h4>
                         </div>
@@ -200,14 +198,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2016</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/monet-fortaleza.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/monet-fortaleza.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2016' | translate }}
                             </h4>
                         </div>
@@ -220,14 +217,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2017</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/icones_0000s_0006_PREDIO.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/icones_0000s_0006_PREDIO.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2017' | translate }}
                             </h4>
                         </div>
@@ -240,14 +236,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2018</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/icones_0000s_0011_CABOS.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/icones_0000s_0011_CABOS.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2018' | translate }}
                             </h4>
                         </div>
@@ -260,14 +255,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2019</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/certificacao.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/certificacao.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2019' | translate }}
                             </h4>
                         </div>
@@ -280,14 +274,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2021</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/anti-ddos.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/anti-ddos.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2021' | translate }}
                             </h4>
                         </div>
@@ -300,14 +293,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2022</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/clouds.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/clouds.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2022' | translate }}
                             </h4>
                         </div>
@@ -320,14 +312,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2023</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/certificacao.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/certificacao.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2023' | translate }}
                             </h4>
                         </div>
@@ -340,14 +331,13 @@
                         <div class="uk-card uk-card-body">
                             <h2 style="font-weight: bolder;">2024</h2>
                             <p>
-                                <img height="200px" width="200px" class="uk-border-rounded"
-                                    src="img/cronologia/ac-simbolo.png">
+                                <img height="200px" width="200px" class="uk-border-rounded" src="img/cronologia/ac-simbolo.png">
                             </p>
                         </div>
                     </div>
                     <div class="uk-flex uk-flex-middle uk-width-1-2@m" style="padding: 0;">
                         <div class="uk-flex uk-flex-middle">
-                            <h4 style="font-weight: bold;" class="uk-margin-large-right">
+                            <h4 style="font-weight: bold;" class="uk-padding">
                                 {{ 'empresa.timeline.2024' | translate }}
                             </h4>
                         </div>
@@ -356,629 +346,578 @@
             </div>
         </div>
     </div>
+</div>
 
 
 
-    <div class="fundo-valores">
-        <div class="uk-container uk-padding">
-            <div class="uk-child-width-expand@s" uk-grid>
-                <div class="uk-grid-item-match">
-                    <div class="uk-card uk-card-body">
-                        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                            {{ 'empresa.valores.missao.title' | translate }}
-                        </h1>
-                        <h4 style="color:white">
-                            {{ 'empresa.valores.missao.text' | translate }}
-                        </h4>
-                    </div>
-                </div>
-                <div>
-                    <img class="uk-border-rounded missao-imagem" src="img/ac-missao.jpg">
-                </div>
-            </div>
-        </div>
 
-        <div class="uk-container uk-padding">
-            <div class="uk-child-width-expand@s" uk-grid>
-                <div>
-                    <img class="uk-border-rounded missao-imagem" src="img/ac-visao.jpg">
-                </div>
-                <div class="uk-grid-item-match">
-                    <div class="uk-card uk-margin-small-top">
-                        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                            {{ 'empresa.valores.visao.title' | translate }}
-                        </h1>
-                        <h4 style="color:white">
-                            {{ 'empresa.valores.visao.text' | translate }}
-                        </h4>
-                    </div>
+
+
+<div class="fundo-valores">
+    <div class="uk-container uk-padding">
+        <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-grid-item-match">
+                <div class="uk-card uk-card-body">
+                    <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+                        {{ 'empresa.valores.missao.title' | translate }}
+                    </h1>
+                    <h4 style="color:white">
+                        {{ 'empresa.valores.missao.text' | translate }}
+                    </h4>
                 </div>
             </div>
-        </div>
-
-        <div class="uk-container uk-padding">
-            <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                {{ 'empresa.valores.title' | translate }}
-            </h1>
-
-            <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
-                <div>
-                    <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
-                        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                            <span class="uk-margin-small-right" uk-icon="icon: heart; ratio:2"></span>
-                            {{ 'empresa.valores.paixao.title' | translate }}
-                        </h1>
-                        <p style="color:white">
-                            {{ 'empresa.valores.paixao.text' | translate }}
-                        </p>
-                    </div>
-                </div>
-                <div class="uk-grid-item-match">
-                    <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
-                        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                            <span class="uk-margin-small-right" uk-icon="icon: lifesaver; ratio:2"></span>
-                            {{ 'empresa.valores.sustentabilidade.title' | translate }}
-                        </h1>
-                        <p style="color:white">
-                            {{ 'empresa.valores.sustentabilidade.text' | translate }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
-                <div>
-                    <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
-                        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                            <span class="uk-margin-small-right" uk-icon="icon: star; ratio:2"></span>
-                            {{ 'empresa.valores.talento.title' | translate }}
-                        </h1>
-                        <p style="color:white">
-                            {{ 'empresa.valores.talento.text' | translate }}
-                        </p>
-                    </div>
-                </div>
-                <div class="uk-grid-item-match">
-                    <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
-                        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
-                            <span class="uk-margin-small-right" uk-icon="icon: cog; ratio:2"></span>
-                            {{ 'empresa.valores.eficiencia.title' | translate }}
-                        </h1>
-                        <p style="color:white">
-                            {{ 'empresa.valores.eficiencia.text' | translate }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fundo-valores">
-        <app-telcables></app-telcables>
-    </div>
-
-
-    <div class="fundo-accionistas uk-container">
-
-
-        <div class="uk-padding uk-child-width-expand@s " uk-grid>
-
             <div>
-                <div class="">
-                    <h2 style="color: rgba(5, 5, 51, 1);; font-weight: bolder;">ESTRUTURA DE ACCIONISTAS</h2>
-                    <p>
-                        Angola Cables, S. A., é uma sociedade de direito angolano, com sede social na Rua das Quipacas,
-                        Casa
-                        n.º 186, Bairro e Município da Ingombota, Luanda, Angola. </p>
-                    <img src="img/layout/acionistas-participaco.png">
+                <img class="uk-border-rounded missao-imagem" src="img/ac-missao.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-container uk-padding">
+        <div class="uk-child-width-expand@s" uk-grid>
+            <div>
+                <img class="uk-border-rounded missao-imagem" src="img/ac-visao.jpg">
+            </div>
+            <div class="uk-grid-item-match">
+                <div class="uk-card uk-margin-small-top">
+                    <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+                        {{ 'empresa.valores.visao.title' | translate }}
+                    </h1>
+                    <h4 style="color:white">
+                        {{ 'empresa.valores.visao.text' | translate }}
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-container uk-padding">
+        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+            {{ 'empresa.valores.title' | translate }}
+        </h1>
+
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
+            <div>
+                <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
+                    <h2 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+                        <span class="uk-margin-small-right" uk-icon="icon: heart; ratio:2"></span>
+                        {{ 'empresa.valores.paixao.title' | translate }}
+                    </h2>
+                    <p style="color:white">
+                        {{ 'empresa.valores.paixao.text' | translate }}
+                    </p>
                 </div>
             </div>
             <div class="uk-grid-item-match">
-                <img src="img/layout/acionistas-chart.png">
-
+                <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
+                    <h2 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+                        <span class="uk-margin-small-right" uk-icon="icon: lifesaver; ratio:2"></span>
+                        {{ 'empresa.valores.sustentabilidade.title' | translate }}
+                    </h2>
+                    <p style="color:white">
+                        {{ 'empresa.valores.sustentabilidade.text' | translate }}
+                    </p>
+                </div>
             </div>
+        </div>
 
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
+            <div>
+                <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
+                    <h2 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+                        <span class="uk-margin-small-right" uk-icon="icon: star; ratio:2"></span>
+                        {{ 'empresa.valores.talento.title' | translate }}
+                    </h2>
+                    <p style="color:white">
+                        {{ 'empresa.valores.talento.text' | translate }}
+                    </p>
+                </div>
+            </div>
+            <div class="uk-grid-item-match">
+                <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
+                    <h2 style="color: rgba(40, 193, 253, 1); font-weight: bolder;">
+                        <span class="uk-margin-small-right" uk-icon="icon: cog; ratio:2"></span>
+                        {{ 'empresa.valores.eficiencia.title' | translate }}
+                    </h2>
+                    <p style="color:white">
+                        {{ 'empresa.valores.eficiencia.text' | translate }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+<div class="fundo-valores">
+    <app-telcables></app-telcables>
+</div>
 
-    <div class="fundo-equipa">
 
-        <div class="uk-padding">
-            <h2 class="uk-text-center" style="color: rgba(5, 5, 51, 1); font-weight: bolder;">{{ "equipa.title" | translate }}</h2>
-            <p style="color: rgba(5, 5, 51, 1); margin-right: 20%; margin-left:20%" class="uk-text-center">
-                {{ "equipa.description" | translate }}
-            </p>
+<div class="fundo-accionistas uk-container uk-margin-large-top">
+
+
+    <div class="uk-padding uk-child-width-expand@s uk-grid-match " uk-grid>
+
+        <div>
+            <div class="">
+                <h2 style="color: rgba(5, 5, 51, 1);; font-weight: bolder;">ESTRUTURA DE ACCIONISTAS</h2>
+                <p>
+                    Angola Cables, S. A., é uma sociedade de direito angolano, com sede social na Rua das Quipacas,
+                    Casa
+                    n.º 186, Bairro e Município da Ingombota, Luanda, Angola. </p>
+                <img src="img/layout/acionistas-participaco.png">
+            </div>
+        </div>
+        <div class="">
+            <img src="img/layout/acionistas-chart.png">
+
         </div>
 
-        <div class="uk-container uk-padding">
-      
-            <!-- First Row -->
+    </div>
+</div>
+
+<div class="fundo-equipa">
+
+    <div class="uk-padding uk-container">
+        <h2 class="uk-text-center" style="color: rgba(5, 5, 51, 1); font-weight: 800;">{{ "equipa.title" | translate }}</h2>
+        <p style="color: rgba(5, 5, 51, 1); margin-right: 20%; margin-left:20%;" class="uk-text-center">
+            {{ "equipa.description" | translate }}
+        </p>
+    </div>
+
+    <div class="uk-container uk-padding">
+  
+        <!-- First Row -->
+        <div class="uk-child-width-expand@s" uk-grid>
+            <!-- Angelo Gama -->
+            <div>
+                <div style="background-color: white;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/angelo-gama-min.png" uk-img>
+                    <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.angelo_gama.name" | translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.angelo_gama.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                            type="button" uk-toggle="target: #modal-angelo">{{ "equipa.bio_button" | translate }}</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Laura Carneiro -->
+            <div>
+                <div style="background-color: white;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/laura-carneiro-min.png" uk-img>
+                    <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.laura_carneiro.name" | translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.laura_carneiro.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                            type="button" uk-toggle="target: #modal-laura">{{ "equipa.bio_button" | translate }}</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Rui Faria -->
+            <div>
+                <div style="background-color: white;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/rui-faria-min.png" uk-img>
+                    <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.rui_faria.name" | translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.rui_faria.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                            type="button" uk-toggle="target: #modal-rui">{{ "equipa.bio_button" | translate }}</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Sergio Pozuelo -->
+            <div>
+                <div style="background-color: white;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/sergio-pozuelo-min.png" uk-img>
+                    <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.sergio_pozuelo.name" | translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.sergio_pozuelo.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                            type="button" uk-toggle="target: #modal-sergio">{{ "equipa.bio_button" | translate }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Second Row -->
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
             <div class="uk-child-width-expand@s" uk-grid>
-                <!-- Angelo Gama -->
+                <!-- Lucenildo Junior -->
                 <div>
                     <div style="background-color: white;"
                         class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                        data-src="img/equipa/angelo-gama-min.png" uk-img>
+                        data-src="img/equipa/lucenildo-junios-min.png" uk-img>
                         <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.angelo_gama.name" | translate }}</b>
-                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.angelo_gama.position" | translate }}</p>
-                            <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                type="button" uk-toggle="target: #modal-angelo">{{ "equipa.bio_button" | translate }}</button>
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.lucenildo_junior.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.lucenildo_junior.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-lucenildo">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
                 </div>
-        
-                <!-- Laura Carneiro -->
+    
+                <!-- Julio Chilela -->
                 <div>
                     <div style="background-color: white;"
                         class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                        data-src="img/equipa/laura-carneiro-min.png" uk-img>
+                        data-src="img/equipa/julio-chilela-min.png" uk-img>
                         <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.laura_carneiro.name" | translate }}</b>
-                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.laura_carneiro.position" | translate }}</p>
-                            <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                type="button" uk-toggle="target: #modal-laura">{{ "equipa.bio_button" | translate }}</button>
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.julio_chilela.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.julio_chilela.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-julio">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
                 </div>
-        
-                <!-- Rui Faria -->
+    
+                <!-- Artur Mendes -->
                 <div>
                     <div style="background-color: white;"
                         class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                        data-src="img/equipa/rui-faria-min.png" uk-img>
+                        data-src="img/equipa/artur-mendes-min.png" uk-img>
                         <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.rui_faria.name" | translate }}</b>
-                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.rui_faria.position" | translate }}</p>
-                            <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                type="button" uk-toggle="target: #modal-rui">{{ "equipa.bio_button" | translate }}</button>
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.artur_mendes.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.artur_mendes.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-artur">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
                 </div>
-        
-                <!-- Sergio Pozuelo -->
+    
+                <!-- Frederico Oliveira -->
                 <div>
                     <div style="background-color: white;"
                         class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                        data-src="img/equipa/sergio-pozuelo-min.png" uk-img>
+                        data-src="img/equipa/frederico-oliveira-min.png" uk-img>
                         <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.sergio_pozuelo.name" | translate }}</b>
-                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.sergio_pozuelo.position" | translate }}</p>
-                            <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                type="button" uk-toggle="target: #modal-sergio">{{ "equipa.bio_button" | translate }}</button>
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.frederico_oliveira.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.frederico_oliveira.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-frederico">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
                 </div>
             </div>
-        
-            <!-- Second Row -->
-            <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
-                <div class="uk-child-width-expand@s" uk-grid>
-                    <!-- Lucenildo Junior -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/lucenildo-junios-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.lucenildo_junior.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.lucenildo_junior.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-lucenildo">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
+        </div>
+    
+        <!-- Third Row -->
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
+            <div class="uk-child-width-expand@s" uk-grid>
+                <!-- Samuel Carvalho -->
+                <div>
+                    <div style="background-color: white;"
+                        class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                        data-src="img/equipa/samuel-carvalho-min.png" uk-img>
+                        <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.samuel_carvalho.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.samuel_carvalho.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-samuel">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
-        
-                    <!-- Julio Chilela -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/julio-chilela-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.julio_chilela.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.julio_chilela.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-julio">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
+                </div>
+    
+                <!-- Ariete Pereira -->
+                <div>
+                    <div style="background-color: white;"
+                        class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                        data-src="img/equipa/ariete-pereira-min.png" uk-img>
+                        <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.ariete_pereira.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.ariete_pereira.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-ariete">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
-        
-                    <!-- Artur Mendes -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/artur-mendes-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.artur_mendes.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.artur_mendes.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-artur">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
+                </div>
+    
+                <!-- Fernando Fernandes -->
+                <div>
+                    <div style="background-color: white;"
+                        class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                        data-src="img/equipa/fernando-fernandes-min.png" uk-img>
+                        <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.fernando_fernandes.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.fernando_fernandes.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-fernando">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
-        
-                    <!-- Frederico Oliveira -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/frederico-oliveira-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.frederico_oliveira.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.frederico_oliveira.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-frederico">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
+                </div>
+    
+                <!-- Virgílio Alves -->
+                <div>
+                    <div style="background-color: white;"
+                        class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                        data-src="img/equipa/virgilio-alves.png" uk-img>
+                        <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.virgilio_alves.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.virgilio_alves.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-virgilio">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
                 </div>
             </div>
-        
-            <!-- Third Row -->
-            <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
-                <div class="uk-child-width-expand@s" uk-grid>
-                    <!-- Samuel Carvalho -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/samuel-carvalho-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.samuel_carvalho.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.samuel_carvalho.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-samuel">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Ariete Pereira -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/ariete-pereira-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.ariete_pereira.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.ariete_pereira.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-ariete">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Fernando Fernandes -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/fernando-fernandes-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.fernando_fernandes.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.fernando_fernandes.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-fernando">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Virgílio Alves -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/virgilio-alves.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.virgilio_alves.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.virgilio_alves.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-virgilio">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
+        </div>
+    
+        <!-- Fourth Row -->
+        <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
+            <div class="uk-child-width-expand@s" uk-grid>
+                <!-- Sudhir Juggernath -->
+                <div>
+                    <div style="background-color: white;"
+                        class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                        data-src="img/equipa/suddhir-juggernath-min.png" uk-img>
+                        <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.sudhir_juggernath.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.sudhir_juggernath.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-sudhir">{{ "equipa.bio_button" | translate }}</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Fourth Row -->
-            <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
-                <div class="uk-child-width-expand@s" uk-grid>
-                    <!-- Sudhir Juggernath -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/suddhir-juggernath-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.sudhir_juggernath.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.sudhir_juggernath.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-sudhir">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
+    
+                <!-- Cláudio Florindo -->
+                <div>
+                    <div style="background-color: white;"
+                        class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                        data-src="img/equipa/claudio-florindo-min.png" uk-img>
+                        <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                            <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.claudio_florindo.name" | translate }}</b>
+                            <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.claudio_florindo.position" | translate }}</p>
+                            <button
+                                class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
+                                type="button" uk-toggle="target: #modal-claudio">{{ "equipa.bio_button" | translate }}</button>
                         </div>
-                    </div>
-        
-                    <!-- Cláudio Florindo -->
-                    <div>
-                        <div style="background-color: white;"
-                            class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                            data-src="img/equipa/claudio-florindo-min.png" uk-img>
-                            <div class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                                <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.claudio_florindo.name" | translate }}</b>
-                                <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{ "equipa.claudio_florindo.position" | translate }}</p>
-                                <button
-                                    class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-pill"
-                                    type="button" uk-toggle="target: #modal-claudio">{{ "equipa.bio_button" | translate }}</button>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Empty div for layout balance -->
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- All Modals -->
-        <div id="modal-angelo" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.angelo_gama.name" | translate }}</b></h2>
-                <p>{{ "equipa.angelo_gama.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/%C3%A2ngelo-gama-943a071?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="img/social-icons/linkedin.png"> </a>
-
-            </div>
-        </div>
-        
-        <div id="modal-laura" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.laura_carneiro.name" | translate }}</b></h2>
-                <p>{{ "equipa.laura_carneiro.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/laura-carneiro-25251755"> <img src="img/social-icons/linkedin.png"> </a>
-
-            </div>
-        </div>
-        
-        <div id="modal-rui" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.rui_faria.name" | translate }}</b></h2>
-                <p>{{ "equipa.rui_faria.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/rui-a-faria-18610419"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-lucenildo" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.lucenildo_junior.name" | translate }}</b></h2>
-                <p>{{ "equipa.lucenildo_junior.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/lucenildo-lins-de-aquino-j%C3%BAnior-8635ba92"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-julio" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.julio_chilela.name" | translate }}</b></h2>
-                <p>{{ "equipa.julio_chilela.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/julio-gabriel-chilela-016578b4"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-artur" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.artur_mendes.name" | translate }}</b></h2>
-                <p>{{ "equipa.artur_mendes.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/artur-mendes-0023ba"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-frederico" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.frederico_oliveira.name" | translate }}</b></h2>
-                <p>{{ "equipa.frederico_oliveira.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/frederico-oliveira"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-samuel" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.samuel_carvalho.name" | translate }}</b></h2>
-                <p>{{ "equipa.samuel_carvalho.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/samuel-carvalhobranddirector2"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-ariete" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.ariete_pereira.name" | translate }}</b></h2>
-                <p>{{ "equipa.ariete_pereira.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/ariete-pereira-martins-4701b322"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-fernando" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.fernando_fernandes.name" | translate }}</b></h2>
-                <p>{{ "equipa.fernando_fernandes.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/laura-carneiro-25251755"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-virgilio" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.virgilio_alves.name" | translate }}</b></h2>
-                <p>{{ "equipa.virgilio_alves.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/virgiliotalves"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-sudhir" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.sudhir_juggernath.name" | translate }}</b></h2>
-                <p>{{ "equipa.sudhir_juggernath.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/sudhir-juggernath-7545068"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        <div id="modal-claudio" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.claudio_florindo.name" | translate }}</b></h2>
-                <p>{{ "equipa.claudio_florindo.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/claudio-florindo"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-
-              
-        <div id="modal-sergio" uk-modal>
-            <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-                <h2 class="uk-modal-title"><b>{{ "equipa.sergio_pozuelo.name" | translate }}</b></h2>
-                <p>{{ "equipa.sergio_pozuelo.bio" | translate }}</p>
-                <p class="uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
-                        type="button">{{ "equipa.back_button" | translate }}</button>
-                </p>
-                Conectar: <a target="_blank" href="https://www.linkedin.com/in/sergiopozuelo"> <img src="img/social-icons/linkedin.png"> </a>
-            </div>
-        </div>
-        
-        
-        <div class="uk-margin-medium-top uk-container">
-            <div uk-slideshow="animation: push; parallax: true; parallax-start: 98%; parallax-end: 100%;">
-                <div class="uk-slideshow-items">
-                    <div>
-                        <div class="video-container">
-                            <video autoplay loop muted id="backgroundVideo" class="background-video">
-                                <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
-                                {{ 'slideshow.video_alt_text' | translate }}
-                            </video>
-                            <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
-                                <h2 class="uk-margin-remove">
-                                    {{ 'slideshow.slide1.title' | translate }}
-                                </h2>
-                            </div>
-                            <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
-                                <p class="uk-margin-remove">
-                                    {{ 'slideshow.slide1.description' | translate }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img style="border-radius: 20px;" class="img-resp-social" src="img/sangano-escola-new.png" alt="" uk-cover>
                     </div>
                 </div>
-                <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+    
+                <!-- Empty div for layout balance -->
+                <div></div>
+                <div></div>
             </div>
-        </div>      <!-- 
+        </div>
+    </div>
+    
+    <!-- All Modals -->
+    <div id="modal-angelo" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.angelo_gama.name" | translate }}</b></h2>
+            <p>{{ "equipa.angelo_gama.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/%C3%A2ngelo-gama-943a071?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="img/social-icons/linkedin.png"> </a>
 
-    <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push">
+        </div>
+    </div>
+    
+    <div id="modal-laura" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.laura_carneiro.name" | translate }}</b></h2>
+            <p>{{ "equipa.laura_carneiro.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/laura-carneiro-25251755"> <img src="img/social-icons/linkedin.png"> </a>
 
+        </div>
+    </div>
+    
+    <div id="modal-rui" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.rui_faria.name" | translate }}</b></h2>
+            <p>{{ "equipa.rui_faria.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/rui-a-faria-18610419"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-lucenildo" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.lucenildo_junior.name" | translate }}</b></h2>
+            <p>{{ "equipa.lucenildo_junior.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/lucenildo-lins-de-aquino-j%C3%BAnior-8635ba92"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-julio" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.julio_chilela.name" | translate }}</b></h2>
+            <p>{{ "equipa.julio_chilela.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/julio-gabriel-chilela-016578b4"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-artur" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.artur_mendes.name" | translate }}</b></h2>
+            <p>{{ "equipa.artur_mendes.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/artur-mendes-0023ba"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-frederico" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.frederico_oliveira.name" | translate }}</b></h2>
+            <p>{{ "equipa.frederico_oliveira.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/frederico-oliveira"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-samuel" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.samuel_carvalho.name" | translate }}</b></h2>
+            <p>{{ "equipa.samuel_carvalho.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/samuel-carvalhobranddirector2"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-ariete" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.ariete_pereira.name" | translate }}</b></h2>
+            <p>{{ "equipa.ariete_pereira.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/ariete-pereira-martins-4701b322"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-fernando" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.fernando_fernandes.name" | translate }}</b></h2>
+            <p>{{ "equipa.fernando_fernandes.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/laura-carneiro-25251755"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-virgilio" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.virgilio_alves.name" | translate }}</b></h2>
+            <p>{{ "equipa.virgilio_alves.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/virgiliotalves"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-sudhir" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.sudhir_juggernath.name" | translate }}</b></h2>
+            <p>{{ "equipa.sudhir_juggernath.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/sudhir-juggernath-7545068"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+    <div id="modal-claudio" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.claudio_florindo.name" | translate }}</b></h2>
+            <p>{{ "equipa.claudio_florindo.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/claudio-florindo"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+
+          
+    <div id="modal-sergio" uk-modal>
+        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title"><b>{{ "equipa.sergio_pozuelo.name" | translate }}</b></h2>
+            <p>{{ "equipa.sergio_pozuelo.bio" | translate }}</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close uk-border-pill"
+                    type="button">{{ "equipa.back_button" | translate }}</button>
+            </p>
+            Conectar: <a target="_blank" href="https://www.linkedin.com/in/sergiopozuelo"> <img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+    
+ 
+
+</div>
+
+    
+<div class="uk-margin-medium-top uk-container">
+    <div uk-slideshow="animation: push; parallax: true; parallax-start: 70%; parallax-end: 100%;">
         <div class="uk-slideshow-items">
-            <div class="video-container">
-                <video autoplay loop muted id="backgroundVideo" class="background-video ">
-                    <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
-                    Seu não navegador não suporta o vídeo em falta.
-                </video>
-                <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
-                    <h2 class="uk-margin-remove">Os nossos cabos submarinos são colocados nas profundezas do oceano,
-                        local onde habitam as tartarugas, deste modo queremos preservar o ecossistema e queremos
-                        deixá-lo de uma forma sustentável as próximas gerações.</h2>
+            <div>
+                <div class="video-container">
+                    <video autoplay loop muted id="backgroundVideo" class="background-video">
+                        <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
+                        {{ 'slideshow.video_alt_text' | translate }}
+                    </video>
+                    <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
+                        <h2 class="uk-margin-remove">
+                            {{ 'slideshow.slide1.title' | translate }}
+                        </h2>
+                    </div>
+                    <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
+                        <p class="uk-margin-remove">
+                            {{ 'slideshow.slide1.description' | translate }}
+                        </p>
+                    </div>
                 </div>
-
-                <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
-                    <p class="uk-margin-remove">Fazemos todo o investimento possível para que as nossas operações
-                        continuem a preservar os mares e oceanos, assim como as espécies que lá habitam nomeadamente as
-                        tartarugas Kitabanga que estão em extinção.</p>
-                </div>
-
-
             </div>
-
-            <div class="video-container">
-                <video autoplay loop muted id="backgroundVideo" class="background-video ">
-                    <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
-                    Seu não navegador não suporta o vídeo em falta.
-                </video>
-                <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
-                    <h2 class="uk-margin-remove">Os nossos cabos submarinos são colocados nas profundezas do oceano,
-                        local onde habitam as tartarugas, deste modo queremos preservar o ecossistema e queremos
-                        deixá-lo de uma forma sustentável as próximas gerações.</h2>
-                </div>
-
-                <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
-                    <p class="uk-margin-remove">Fazemos todo o investimento possível para que as nossas operações
-                        continuem a preservar os mares e oceanos, assim como as espécies que lá habitam nomeadamente as
-                        tartarugas Kitabanga que estão em extinção.</p>
-                </div>
-
-
+            <div>
+                <img style="border-radius: 20px;" class="img-resp-social" src="img/sangano-escola-new.png" alt="" uk-cover>
             </div>
-
         </div>
-
-        <div class="uk-light">
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
-                uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next
-                uk-slideshow-item="next"></a>
-        </div>
-
+       <!--  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
     </div>
+</div>     
 
-    -->
-
-
-    </div>
-
-    <app-rodape></app-rodape>
+<app-rodape></app-rodape>

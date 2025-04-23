@@ -26,6 +26,10 @@
     background-size: cover;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 
 
 
@@ -284,6 +288,9 @@
 .botao-azul {
 
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #022561;
+    background-color: #28C1FD;
+    font-weight:bold;
 
 }
 
