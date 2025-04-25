@@ -191,6 +191,12 @@ button:hover {
 }
 
 
+body > app-root > app-inicio > app-menu > nav > div > div.uk-navbar-left.uk-hidden\@m > a > svg {
+    color: white !important;
+}
+
+
+
 select {
     font-family: 'Noto Color Emoji', sans-serif !important;
   }
@@ -208,4 +214,8 @@ select {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     background-color: #18a9cc; /* Slightly darker shade for hover */
+}
+.uk-navbar-toggle-icon{
+    color: white !important;
+
 }
