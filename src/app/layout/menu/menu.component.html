@@ -200,6 +200,7 @@
                 <a style="color: black;" href="#inicio" uk-scroll="offset: 100" class="texto "><img
                         class="uk-border-rounded" style="height: auto; width: 250px;" src="/img/logo-acsa.png"></a>
             </li>
+            <a style="color:black; font-size: 9px"><b>Acerca da Empresa</b></a>
             <li>
                 <a style="color: black;" class="" routerLink="/acerca" uk-scroll>{{ 'menu-conheca' | translate }}</a>
             </li>
@@ -230,6 +231,12 @@
             </li>
 
 
+            <li>
+                <a style="color: black;" class="" href="https://talents-seedz.ao/" uk-scroll="offset: 100" i18n> {{
+                    'menu-talent' | translate }} </a>
+            </li>
+
+    
 
             <li class="uk-flex uk-flex-middle">
                 <a style="color: black;" (click)="useLanguage('pt')"> PT</a>
@@ -237,6 +244,7 @@
             <li class="uk-flex uk-flex-middle">
                 <a style="color: black;" (click)="useLanguage('en')"> EN</a>
             </li>
+         
         </ul>
     </div>
 </div>
