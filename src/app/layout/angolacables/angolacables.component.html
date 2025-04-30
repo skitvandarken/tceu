@@ -16,18 +16,18 @@
     <div class=" uk-width-1-2@m  uk-margin-large-bottom ">
       <div class="uk-text-left">
         <div class=" uk-border-rounded">
-          <h3 style="color: #000026;" class=" "><img class="uk-margin-small-right" width="55" height="58"
+          <p style="color: #000026; font-size: 1.3rem;" class=" "><img class="uk-margin-small-right" width="55" height="58"
               src="img/icone-ac.png"> <b>{{ 'ac.presenca' | translate }}</b>
-          </h3>
+          </p>
         </div>
-        <h4 style="color: #000026;" class=" uk-margin-small-right">{{ 'ac.presencadescricao' | translate }}</h4>
+        <p style="color: #000026; font-size: 1.1rem;" class=" uk-margin-small-right">{{ 'ac.presencadescricao' | translate }}</p>
       </div>
 
 
       <!-- BOTÕES | SOBRE ANGOLA CABLES -->
       <div
         class="uk-margin uk-margin-medium-top uk-child-width-1-2@m uk-grid-small uk-child-width-1-2@s uk-grid-match uk-grid uk-text-center">
-        <a class="uk-text-decoration-none">
+        <a href="#modal-video" uk-toggle class="uk-text-decoration-none">
           <button class="botao uk-button uk-button-default uk-button-large uk-border-pill">{{ 'ver.videoinstitucional' |
             translate }}</button>
         </a>
@@ -47,14 +47,38 @@
       </div>
     </div>
 
+    
+
     <!-- Lado Direito | Vídeo Sobre Angola Cables -->
     <div class=" uk-width-1-2@m  uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-top  ">
       <div class="uk-text-center">
 
-        <video controls="true" loop muted id="promoVideo" class="promo-video uk-border-rounded">
-          <source src="https://marketing.host2africa.com/files/AC-Angolaoutlook-EN-2025%202-new.mp4" type="video/mp4" />
-          Seu navegador não suporta o vídeo em falta.
-        </video>
+        <!-- This is a button toggling the modal -->
+
+<!-- This is an anchor toggling the modal -->
+<a href="#modal-video" uk-toggle>
+
+
+<img src="img/video-miniatura.png">
+
+</a>
+
+<!-- This is the modal -->  
+<div class="  " id="modal-video" uk-modal>
+
+    <div class=" uk-container uk-margin-auto-vertical ">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+
+      <video controls="true" loop muted id="promoVideo" class="promo-video uk-border-rounded">
+        <source src="https://marketing.host2africa.com/files/AC-Angolaoutlook-EN-2025%202-new.mp4" type="video/mp4" />
+        Seu navegador não suporta o vídeo em falta.
+      </video>
+
+   
+    </div>
+</div>
+
+       
       </div>
     </div>
   </div>

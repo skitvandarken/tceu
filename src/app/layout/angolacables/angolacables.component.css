@@ -307,3 +307,10 @@
 h1 {
     transition: all 0.3s ease-out;
 }
+
+
+.uk-modal-body{
+    height: 70vh;
+    overflow-y: auto;
+    width: 100vh;
+}
