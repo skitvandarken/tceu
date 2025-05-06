@@ -70,6 +70,8 @@
 
 .fundo-card-valores {
     background: linear-gradient(135deg, rgba(1, 95, 132, 0.2), rgb(0, 44, 62));
+    border-radius: 20px;
+
 }
 
 .fundo-equipa {
@@ -79,6 +81,7 @@
 .gradiente-nome-equipa {
     background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0));
     width: 100%;
+    
 }
 
 .missao-imagem {

@@ -2,6 +2,23 @@
     border-radius: 30px;
 }
 
+.botao-azul {
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #022561;
+    background-color: #28C1FD;
+}
+
+
+
+.botao-azul:hover {
+
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
 .fundo-cta{
 
     background-image: url('/img/fundo-cta.png'); 
