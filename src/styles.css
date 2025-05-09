@@ -18,3 +18,8 @@ body, a, p, h1, h2, h3, h4, li, ul {
     border-width: 2px;
     border-style: solid;
 }
+
+.uk-button{
+    text-transform: none;
+    padding: 8px;
+}

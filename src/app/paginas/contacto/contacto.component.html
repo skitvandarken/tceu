@@ -6,8 +6,8 @@
         <div class=" conteudo-cabecalho uk-margin-medium-top   ">
             <div class="uk-container uk-margin-large-bottom">
 
-                <h4 class="" style="color:white">Contacto</h4>
-                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;"> Entre em contacto<br> connosco</h1>
+                <h4 class="" style="color:white; font-size: 1.1rem;">Contacto</h4>
+                <h1 style="color:rgba(39, 200, 227, 1); font-weight: 800; margin-top: 20px; font-size: 2.43rem;"> Entre em contacto<br> connosco</h1>
             </div>
 
         </div>
@@ -30,11 +30,14 @@
             <aside style="color:white; padding: 30px; border-radius: 8px;" class="uk-width-1-3@m uk-margin-large-top uk-margin-left">
                 <p style="color:white"><span>País/Região</span></p>
               
-                <div class="uk-margin">
+                <div style="margin-top: 8px;" class="uk-margin">
                   <div uk-form-custom="target: > * > span:first-child">
                     <div class="uk-form-controls">
                       <select class="uk-select uk-border-rounded" 
-                              style="background-color: rgba(240, 240, 248, 1);"
+                              style="background-color: rgba(240, 240, 248, 1); text-align: left;
+                              padding: 5px 25px !important; text-transform: capitalize;
+                              border: 1px soli #28C1FD;
+                              border-radius: 10px;"
                               (change)="onCountryChange($event)">
                         @for (country of countries; track country.value) {
                           <option [value]="country.name" [selected]="country.name === selectedCountry">
@@ -56,7 +59,7 @@
                       <div class="uk-grid-small" uk-grid>
                         <div class="uk-width-expand uk-margin-large-top">
                           <p style="color: white;" class="uk-margin-remove-bottom">{{ address.title }}</p>
-                          <p class="uk-margin-small-top" style="color: rgb(216, 216, 216);" [innerHTML]="address.address"></p>
+                          <p style="margin-top: 50px !important" class="uk-margin-small-top" style="color: rgb(216, 216, 216);" [innerHTML]="address.address"></p>
                           @if (address.phone) {
                             <p style="color: rgb(216, 216, 216);">{{ address.phone }}</p>
                           }
@@ -86,19 +89,19 @@
                 <form class="uk-grid-small uk-padding fundo-form" uk-grid>
                     <h3 style="color:rgba(24, 24, 50, 1); font-weight: bold;">Somos rápidos a responder!</h3>
                     <div class="uk-width-1-2@s">
-                        <b>Primeiro nome*</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Primeiro nome*</p>
                         <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
                     </div>
                     <div class="uk-width-1-2@s">
-                        <b>Último nome*</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Último nome*</p>
                         <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
                     </div>
                     <div class="uk-width-1-1">
-                        <b>Número de telefone</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Número de telefone</p>
                         <input class="uk-input" type="text" placeholder="" aria-label="100">
                     </div>
                     <div class="uk-width-1-2@s">
-                        <b>Região</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Região</p>
                         <div class="uk-margin">
                             <div class="uk-form-controls">
                                 <select class="uk-select uk-border-rounded" style="background-color: rgba(240, 240, 248, 1);">
@@ -114,7 +117,7 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@s">
-                        <b>Departamento</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Departamento</p>
                         <div class="uk-margin">
                             <div class="uk-form-controls">
                                 <select class="uk-select uk-border-rounded" style="background-color: rgba(240, 240, 248, 1);">
@@ -132,21 +135,21 @@
                         </div>
                     </div>
                     <div class="uk-width-1-2@s">
-                        <b>Nome da empresa</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Nome da empresa</p>
                         <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
                     </div>
                     <div class="uk-width-1-2@s">
-                        <b>Cargo na empresa</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Cargo na empresa</p>
                         <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
                     </div>
 
                     <div class="uk-width-1-1">
-                        <b>E-mail*</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">E-mail*</p>
                         <input class="uk-input" type="text" placeholder="" aria-label="100">
                     </div>
 
                     <div class="uk-width-1-1">
-                        <b>Mensagem</b>
+                        <p style="color: #1B1B1B; font-weight: 600;">Mensagem</p>
                         <textarea class="uk-textarea uk-border-rounded" rows="5" placeholder="" aria-label=""></textarea>
                     </div>
                     <div class="uk-width-1-2@s">
