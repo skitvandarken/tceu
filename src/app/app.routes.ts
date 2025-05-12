@@ -28,6 +28,7 @@ import { IptransitComponent } from './dummy/artigos/iptransit/iptransit.componen
 import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
 import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
 
+
 export const routes: Routes = [
   
     {path:'',component: InicioComponent},
@@ -60,5 +61,21 @@ export const routes: Routes = [
 
     {path: 'artigos/ip-transit-chave', component: IptransitComponent},
     {path: 'artigos/ciberseguranca', component: CibersecComponent},
-    {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent}
+    {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent},
+
+
+    
+  { 
+    path: 'artigos', 
+    loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent) 
+  },
+  { 
+    path: 'post/:id', 
+    loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent) 
+  },
+  
+    { 
+    path: 'postar', 
+    loadComponent: () => import('./layout/artigo-postar/artigo-postar.component').then(m => m.ArtigoPostarComponent) 
+  },
 ];

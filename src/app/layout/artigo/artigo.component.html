@@ -1,0 +1,24 @@
+<!-- src/app/components/post-list/post-list.component.html -->
+<div class="uk-container uk-margin-top">
+  <div uk-grid>
+    @for (post of posts(); track post.id) {
+      <div class="uk-width-1-2@m">
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-margin-bottom">
+          <h3 class="uk-card-title">
+            <a [routerLink]="['/post', post.id]" class="uk-link-heading">{{ post.title }}</a>
+          </h3>
+          <p>{{ post.content | truncate:150 }}</p>
+          <div class="uk-text-meta">
+            Posted on {{ post.createdAt | date }}
+          </div>
+        </div>
+      </div>
+    } @empty {
+      <div class="uk-width-1-1">
+        <div class="uk-alert uk-alert-primary">
+          No posts available yet.
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="form-container">
+  <h2>Create New Post</h2>
+  
+  @if (errorMessage) {
+    <div class="error-message">
+      {{ errorMessage }}
+    </div>
+  }
+
+  <form (ngSubmit)="onSubmit()" #postForm="ngForm">
+    <div class="form-group">
+      <label for="title">Title*</label>
+      <input
+        type="text"
+        id="title"
+        [(ngModel)]="newPost.title"
+        name="title"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content*</label>
+      <textarea
+        id="content"
+        [(ngModel)]="newPost.content"
+        name="content"
+        rows="6"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl">Image URL (optional)</label>
+      <input
+        type="url"
+        id="imageUrl"
+        [(ngModel)]="newPost.imageUrl"
+        name="imageUrl"
+      >
+    </div>
+
+    <button 
+      type="submit" 
+      [disabled]="isSubmitting || !postForm.form.valid"
+    >
+      @if (isSubmitting) {
+        <span>Publishing...</span>
+      } @else {
+        <span>Publish Post</span>
+      }
+    </button>
+  </form>
+</div>

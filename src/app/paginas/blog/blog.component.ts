@@ -4,9 +4,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { RouterLink } from '@angular/router';
+import { ArtigoListaComponent } from '../../layout/artigo-lista/artigo-lista.component';
 @Component({
   selector: 'app-blog',
-  imports: [TranslatePipe, MenuComponent, RouterLink, RodapeComponent],
+  imports: [TranslatePipe, ArtigoListaComponent, MenuComponent, RouterLink, RodapeComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
