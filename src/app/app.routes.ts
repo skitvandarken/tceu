@@ -27,6 +27,7 @@ import { TrustCenterComponent } from './paginas/trust-center/trust-center.compon
 import { IptransitComponent } from './dummy/artigos/iptransit/iptransit.component';
 import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
 import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
+import { DashboardComponent } from './paginas/dashboard/dashboard.component';
 
 
 export const routes: Routes = [
@@ -62,6 +63,9 @@ export const routes: Routes = [
     {path: 'artigos/ip-transit-chave', component: IptransitComponent},
     {path: 'artigos/ciberseguranca', component: CibersecComponent},
     {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent},
+
+        {path: 'dashboard', component:DashboardComponent},
+
 
 
     

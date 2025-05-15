@@ -67,3 +67,14 @@ button {
   border-radius: 4px;
   margin-bottom: 1.5rem;
 }
+
+
+
+.botao-azul {
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #022561;
+    background-color: #28C1FD;
+    border-radius: 40px;
+}
+
