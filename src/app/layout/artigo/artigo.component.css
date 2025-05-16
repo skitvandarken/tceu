@@ -30,8 +30,9 @@
 }
 
 .foto-mais-artigos{
-    width: auto;
+    width: 100px;
     height: 100px;
+    object-fit: cover  ;
 }
 
 .fundo-mais-artigos{

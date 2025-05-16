@@ -48,25 +48,39 @@
         <aside style="color:white;padding: 30px; border-radius: 8px;"
           class="fundo-mais-artigos uk-width-1-3@m uk-margin-large-top uk-margin-left">
           <h4 style="color:white"><span>Mais Artigos</span></h4>
+
+          @if (posts$ | async; as posts) {
           <ul class="uk-list uk-list-divider">
+            @for (relatedPost of posts; track relatedPost.id) {
+            @if (relatedPost.id !== post?.id) {
             <li>
-              <div class="">
+              <div>
                 <div class="uk-grid-small" uk-grid>
                   <div>
-                    <img class="foto-mais-artigos uk-border-rounded" src="img/foto-1.jpeg" alt="Avatar">
+                    <img class="foto-mais-artigos uk-border-rounded" [src]="relatedPost.imageUrl"
+                      alt="Imagem de {{ relatedPost.title }}" width="60" height="60" style="object-fit: cover;" />
                   </div>
                   <div class="uk-width-expand">
-                    <p style="color: rgba(40, 193, 253, 1)" class="uk-margin-remove-bottom">Artigo 1</p>
-                    <p style="color: #A2A2B2;" class="uk-text-meta uk-margin-remove-top">Mollit proident consectetur
-                      elit adipisicing sunt Lorem nostrud...</p>
+                    <a [routerLink]="['/artigo', relatedPost.id]" style="text-decoration: none;">
+                      <p style="color: rgba(40, 193, 253, 1)" class="uk-margin-remove-bottom">
+                        {{ relatedPost.title }}
+                      </p>
+                    </a>
+                    <p [innerHTML]="post.content | truncate:100:true" style="color: #A2A2B2;" class="uk-text-meta uk-margin-remove-top">
+                     
+                    </p>
                   </div>
                 </div>
               </div>
             </li>
+            }
+            }
+
             <div class="uk-margin uk-text-center">
-              <a class="uk-margin-large-top" style="color: rgba(40, 193, 253, 1);" href="#">Ver todos</a>
+              <a class="uk-margin-large-top" style="color: rgba(40, 193, 253, 1);" routerLink="/blog">Ver todos</a>
             </div>
           </ul>
+          }
         </aside>
       </div>
     </div>
