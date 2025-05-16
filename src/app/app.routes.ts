@@ -74,7 +74,7 @@ export const routes: Routes = [
     loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent) 
   },
   { 
-    path: 'post/:id', 
+    path: 'artigo/:id', 
     loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent) 
   },
   
