@@ -4,27 +4,35 @@ import { Firestore, addDoc, collection, serverTimestamp } from '@angular/fire/fi
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { EditorModule } from '@tinymce/tinymce-angular';
-import { doc, getDoc, setDoc } from '@angular/fire/firestore';
+import { MenuComponent } from '../menu/menu.component';
+
 @Component({
   selector: 'app-artigo-postar',
-  standalone: true, // Add this for standalone components
+  standalone: true,
   imports: [FormsModule, CommonModule, EditorModule],
   templateUrl: './artigo-postar.component.html',
-  styleUrls: ['./artigo-postar.component.css'] // Fixed property name (styleUrl → styleUrls)
+  styleUrls: ['./artigo-postar.component.css']
 })
 export class ArtigoPostarComponent {
 
-//editor
+  // Data models
+  editorContent: string = '';
+  featuredImageUrl: string = '';
+  newPost = {
+    title: '',
+  };
 
+  isSubmitting = false;
+  errorMessage = '';
 
-  editorContent = '';
+  // TinyMCE config
   editorConfig = {
     height: 400,
     menubar: true,
     plugins: [
       'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
-  'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
-  'media', 'table', 'emoticons', 'help'
+      'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+      'media', 'table', 'emoticons', 'help'
     ],
     toolbar:
       'undo redo | formatselect | bold italic backcolor | ' +
@@ -32,55 +40,19 @@ export class ArtigoPostarComponent {
       'bullist numlist outdent indent | removeformat | help'
   };
 
-  constructor(private firestore: Firestore) {
-    this.loadContent();
-  }
-
-async save() {
-  const collectionRef = collection(this.firestore, 'posts');
-  await addDoc(collectionRef, {
-    content: this.editorContent,
-    updatedAt: new Date()
-  });
-}
-
-  async loadContent() {
-    const ref = doc(this.firestore, 'posts/sample-post');
-    const snapshot = await getDoc(ref);
-    if (snapshot.exists()) {
-      this.editorContent = snapshot.data()['content'] || '';
-    }
-  }
-
-  //fim do editor
-
-
-
-
+  private firestore = inject(Firestore);
   private router = inject(Router);
 
-  // Form model
-  newPost = {
-    title: '',
-    content: '',
-    imageUrl: ''
-  };
-
-  isSubmitting = false;
-  errorMessage = '';
-
   async onSubmit() {
-    // Reset previous errors
     this.errorMessage = '';
-    
-    // Validate required fields
+
     if (!this.newPost.title.trim()) {
-      this.errorMessage = 'Title is required';
+      this.errorMessage = 'O título é obrigatório.';
       return;
     }
-    
-    if (!this.newPost.content.trim()) {
-      this.errorMessage = 'Content is required';
+
+    if (!this.editorContent.trim()) {
+      this.errorMessage = 'O conteúdo é obrigatório.';
       return;
     }
 
@@ -90,18 +62,20 @@ async save() {
       const postsCollection = collection(this.firestore, 'posts');
       await addDoc(postsCollection, {
         title: this.newPost.title,
-        content: this.newPost.content,
-        imageUrl: this.newPost.imageUrl || null,
+        content: this.editorContent,
+        imageUrl: this.featuredImageUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
 
-      // Reset form and redirect
-      this.newPost = { title: '', content: '', imageUrl: '' };
+      // Reset form
+      this.newPost.title = '';
+      this.editorContent = '';
+      this.featuredImageUrl = '';
       this.router.navigate(['/']);
-      
+
     } catch (error) {
-      console.error('Error submitting post:', error);
+      console.error('Erro ao salvar o artigo:', error);
       this.errorMessage = this.getFirestoreError(error);
     } finally {
       this.isSubmitting = false;
@@ -110,8 +84,8 @@ async save() {
 
   private getFirestoreError(error: any): string {
     if (error.code === 'permission-denied') {
-      return 'You do not have permission to create posts';
+      return 'Você não tem permissão para criar artigos.';
     }
-    return 'Failed to submit post. Please try again.';
+    return 'Falha ao salvar. Tente novamente.';
   }
 }

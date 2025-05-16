@@ -1,71 +1,62 @@
+
 <div class="uk-container uk-margin-large-top">
-<h2>Criar ou editar artigo do blog</h2>
-    <editor
-      [(ngModel)]="editorContent"
-      [init]="editorConfig"
-      apiKey="a8yzw2uhdu7v6niumnokr811bginwp5kfr689ismxj4dtnxu"
 
-      
-    ></editor>
-    
-    <button class="uk-margin-large-top botao-azul uk-button uk-button-large uk-border-rounded" (click)="save()">Salvar e publicar</button>
+  <h2>Criar ou editar artigo do blog</h2>
 
-</div>
- 
-<!-- 
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="uk-alert-danger uk-margin" uk-alert>
+    {{ errorMessage }}
+  </div>
 
-<div class="form-container">
-  <h2>Create New Post</h2>
-  
-  @if (errorMessage) {
-    <div class="error-message">
-      {{ errorMessage }}
-    </div>
-  }
-
-  <form (ngSubmit)="onSubmit()" #postForm="ngForm">
-    <div class="form-group">
-      <label for="title">Title*</label>
+  <!-- Title -->
+  <div class="uk-margin-top">
+    <label for="title" class="uk-form-label">Título do artigo</label>
+    <div class="uk-form-controls">
       <input
         type="text"
         id="title"
         [(ngModel)]="newPost.title"
-        name="title"
+        class="uk-input"
+        placeholder="Digite o título do artigo"
         required
-      >
+      />
     </div>
+  </div>
 
-    <div class="form-group">
-      <label for="content">Conteúdo*</label>
-      <textarea
-        id="content"
-        [(ngModel)]="newPost.content"
-        name="content"
-        rows="6"
-        required
-      ></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="imageUrl">Link da imagem (optional)</label>
+  <!-- Featured Image -->
+  <div class="uk-margin-top">
+    <label for="featuredImageUrl" class="uk-form-label">Link da imagem de destaque</label>
+    <div class="uk-form-controls">
       <input
         type="url"
-        id="imageUrl"
-        [(ngModel)]="newPost.imageUrl"
-        name="imageUrl"
-      >
+        id="featuredImageUrl"
+        [(ngModel)]="featuredImageUrl"
+        class="uk-input"
+        placeholder="https://exemplo.com/imagem.jpg"
+      />
     </div>
 
-    <button 
-      type="submit" 
-      [disabled]="isSubmitting || !postForm.form.valid"
-    >
-      @if (isSubmitting) {
-        <span>Publishing...</span>
-      } @else {
-        <span>Publish Post</span>
-      }
-    </button>
-  </form>
+    <div *ngIf="featuredImageUrl" class="uk-margin-top">
+      <p>Pré-visualização:</p>
+      <img [src]="featuredImageUrl" alt="Imagem de destaque" style="max-width: 300px;" />
+    </div>
+  </div>
+
+  <!-- Editor -->
+  <div class="uk-margin-top">
+    <editor
+      [(ngModel)]="editorContent"
+      [init]="editorConfig"
+      apiKey="a8yzw2uhdu7v6niumnokr811bginwp5kfr689ismxj4dtnxu"
+    ></editor>
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    class="uk-margin-large-top botao-azul uk-button uk-button-large uk-border-rounded"
+    (click)="onSubmit()"
+    [disabled]="isSubmitting"
+  >
+    {{ isSubmitting ? 'Publicando...' : 'Salvar e publicar' }}
+  </button>
 </div>
--->
