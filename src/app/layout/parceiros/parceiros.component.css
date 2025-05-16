@@ -14,65 +14,46 @@
 
 .slider-inner {
   display: flex;
-  animation: infinite-scroll 30s linear infinite;
-  will-change: transform; /* Improves performance */
+  animation: infinite-scroll 20s linear infinite;
+  will-change: transform;
 }
 
 .slider img {
   width: 300px;
   height: 150px;
   margin: 0 20px;
-  flex-shrink: 0; /* Prevents shrinking */
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
+/* Keyframes animation */
 @keyframes infinite-scroll {
-  
-    0% {
-      transform: translateX(0);
-      opacity: 0;
-    }
-    5% {
-      transform: translateX(-15% );
-      opacity: 0.9;
-    }
-    10% {
-      transform: translateX(-30%);
-      opacity: 1;
-    }
-    90% {
-      opacity: 1; 
-      transform: (-100%);/* Fully visible until 90% */
-    }
-    100% {
-      transform: translateX(-300%);
-      opacity: 0; /* Fade out at the end */
-    }
-  
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-
-
-/* Gradient fade overlay (left and right) */
+/* Gradient fade on sides */
 .slider-container::before,
 .slider-container::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100px; /* Adjust fade width */
+  width: 100px;
   z-index: 2;
   pointer-events: none;
 }
+
 .slider-container::before {
   left: 0;
   background: linear-gradient(to right, white, transparent);
 }
+
 .slider-container::after {
   right: 0;
   background: linear-gradient(to left, white, transparent);
-}
-
-
-.slider-inner {
-  animation: infinite-scroll 40s linear infinite;
 }
