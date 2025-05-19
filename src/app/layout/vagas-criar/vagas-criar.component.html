@@ -1,6 +1,6 @@
 <div class="uk-container uk-margin-large-top">
 
-  <h2 class="uk-text-left">Criar ou editar artigo do blog</h2>
+  <h2 class="uk-text-left">Criar vaga de emprego</h2>
 
   <!-- Error Message -->
   <div *ngIf="errorMessage" class="uk-alert-danger uk-margin" uk-alert>
@@ -9,7 +9,7 @@
 
   <!-- Title -->
   <div class="uk-margin-top uk-text-left">
-    <label for="title" class="uk-form-label">Título do artigo</label>
+    <label for="title" class="uk-form-label">Posição aberta</label>
     <div class="uk-form-controls">
       <input type="text" id="title" [(ngModel)]="newPost.title" class="uk-input" placeholder="Digite o título do artigo"
         required />
@@ -18,7 +18,7 @@
 
   <!-- Featured Image -->
   <div class="uk-margin-top uk-text-left">
-    <label for="featuredImageUrl" class="uk-form-label">Link da imagem de destaque</label>
+    <label for="featuredImageUrl" class="uk-form-label">Link da imagem da vaga</label>
     <div class="uk-form-controls">
       <input type="url" id="featuredImageUrl" [(ngModel)]="featuredImageUrl" class="uk-input"
         placeholder="https://exemplo.com/imagem.jpg" />
@@ -33,23 +33,23 @@
   <div class="uk-margin-top uk-text-left">
     <label for="featuredImageUrl" class="uk-form-label">Autor do artigo:</label>
     <div class="uk-form-controls">
-      <input type="text" id="author"  [(ngModel)]="newPost.author" class="uk-input"
-        placeholder="Nome do autor" />
+      <input type="text" id="author" [(ngModel)]="newPost.author" class="uk-input" placeholder="Nome do autor" />
     </div>
   </div>
 
   <!-- Editor -->
+  <h3 class="uk-text-left">Descrição das responsabilidades</h3>
+
   <div class="uk-margin-top">
     <editor [(ngModel)]="editorContent" [init]="editorConfig" apiKey="a8yzw2uhdu7v6niumnokr811bginwp5kfr689ismxj4dtnxu">
     </editor>
   </div>
 
   <!-- Submit Button -->
-   <div class="uk-text-left">
-<button class="uk-margin-large-top botao-azul uk-button uk-button-large uk-border-rounded" (click)="onSubmit()"
-    [disabled]="isSubmitting">
-    {{ isSubmitting ? 'Publicando...' : 'Salvar e publicar' }}
-  </button>
-   </div>  
-
+  <div class="uk-text-left">
+    <button class="uk-margin-large-top botao-azul uk-button uk-button-large uk-border-rounded" (click)="onSubmit()"
+      [disabled]="isSubmitting">
+      {{ isSubmitting ? 'Publicando...' : 'Salvar e publicar' }}
+    </button>
+  </div>
 </div>

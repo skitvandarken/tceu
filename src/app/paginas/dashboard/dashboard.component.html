@@ -12,8 +12,7 @@
         <li><a class="texto-2" href="#">{{ 'dashboard-noticias' | translate }}</a></li>
         <li><a class="texto-2" href="#">{{ 'dashboard-empregos' | translate }}</a></li>
         <li><a class="texto-2" href="#">{{ 'dashboard-eventos' | translate }}</a></li>
-        <li><a class="texto-2" href="#">{{ 'dashboard-empresa' | translate }}</a></li>
-        <li><a class="texto-2" href="#">{{ 'virtualizacao' | translate }}</a></li>
+        <li><a class="texto-2" href="#">{{ 'dashboard-paineis' | translate }}</a></li>
     </ul>
 
     <div class="uk-switcher uk-margin">
@@ -27,10 +26,10 @@
                             <app-artigo-postar></app-artigo-postar>
 
                             <div class="uk-container uk-margin-large-bottom">
-                                <h1 class="uk-text-center uk-margin-large-top uk-text-bold"
-                                    style=" font-weight: bolder;"> Artigos publicados</h1>
+                                <h3 class="uk-text-left uk-margin-large-top uk-text-bold" style=" font-weight: bolder;">
+                                    Artigos publicados</h3>
 
-<app-artigo-lista></app-artigo-lista>
+                                <app-artigo-lista></app-artigo-lista>
                             </div>
 
 
@@ -50,7 +49,16 @@
                         <div class="uk-card-media-top"></div>
                         <div class="uk-card-body">
 
-                            <p>Conteúdo aqui</p>
+                            <app-noticias-postar></app-noticias-postar>
+
+                            <div class="uk-container uk-margin-large-bottom">
+                                <h3 class="uk-text-left uk-margin-large-top uk-text-bold" style=" font-weight: bolder;">
+                                    Notícias publicadas</h3>
+
+                                <app-noticias-listar></app-noticias-listar>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -68,40 +76,20 @@
                     <div class="uk-card uk-card-default fundo-clouds2br uk-border-rounded">
                         <div class="uk-card-media-top"></div>
                         <div class="uk-card-body">
-                            <p>Conteúdo aqui</p>
-                        </div>
-                    </div>
-                </div>
+                            <app-vagas-criar></app-vagas-criar>
+                            <div class="uk-container uk-margin-large-bottom">
+                                <h3 class="uk-text-left uk-margin-large-top uk-text-bold" style=" font-weight: bolder;">
+                                    Vagas Abertas</h3>
 
-                <div>
-                    <div class="uk-card uk-card-default uk-border-rounded fundo-backups2">
-                        <div class="uk-card-media-top"></div>
-                        <div class="uk-card-body">
-                            <p>Conteúdo aqui</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-border-rounded fundo-backups2">
-                        <div class="uk-card-media-top"></div>
-                        <div class="uk-card-body">
-                            <p>Conteúdo aqui</p>
+                                <app-vagas-listar></app-vagas-listar>
+                            </div>
 
                         </div>
                     </div>
                 </div>
 
 
-                <div>
-                    <div class="uk-card uk-card-default fundo-cards uk-border-rounded fundo-acloud">
-                        <div class="uk-card-media-top"></div>
-                        <div class="uk-card-body">
-                            <p>Conteúdo aqui</p>
 
-                        </div>
-                    </div>
-                </div>
 
 
 
@@ -118,26 +106,19 @@
                     <div class="uk-card uk-card-default uk-border-rounded fundo-angonap">
                         <div class="uk-card-media-top"></div>
                         <div class="uk-card-body">
-                            <p>Conteúdo aqui</p>
+                            <app-eventos-postar></app-eventos-postar>
+                            <div class="uk-container uk-margin-large-bottom">
+                                <h3 class="uk-text-left uk-margin-large-top uk-text-bold" style=" font-weight: bolder;">
+                                    Vagas Abertas</h3>
+
+                                <app-vagas-listar></app-vagas-listar>
+                            </div>
 
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div class="uk-card uk-card-default fundo-managed uk-border-rounded">
-                        <div class="uk-card-media-top"></div>
-                        <div class="uk-card-body">
-                            <h3 style="font-weight: bold;" class="uk-card-title texto">{{ 'shields2brasil_titulo' |
-                                translate }}</h3>
-                            <p class="texto">
-                                {{ 'shields2africa_descricao' | translate }} </p>
-                            <a href="#"><button class="texto uk-button-default uk-button uk-border-rounded">
-                                    {{ 'detalhes' | translate }}
-                                </button></a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
 
@@ -150,7 +131,15 @@
                     <div class="uk-card uk-card-default uk-border-rounded fundo-sdwan">
                         <div class="uk-card-media-top"></div>
                         <div class="uk-card-body">
-                            <p>Conteúdo aqui</p>
+                            <app-paineis-postar></app-paineis-postar>
+
+                            <div class="uk-container uk-margin-large-bottom">
+                                <h3 class="uk-text-left uk-margin-large-top uk-text-bold" style=" font-weight: bolder;">
+                                    Painéis publicados</h3>
+
+                                <app-paineis-listar></app-paineis-listar>
+                            </div>
+
 
                         </div>
                     </div>

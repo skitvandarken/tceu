@@ -28,6 +28,7 @@ import { IptransitComponent } from './dummy/artigos/iptransit/iptransit.componen
 import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
 import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
+import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component';
 
 
 export const routes: Routes = [
@@ -82,4 +83,11 @@ export const routes: Routes = [
     path: 'postar', 
     loadComponent: () => import('./layout/artigo-postar/artigo-postar.component').then(m => m.ArtigoPostarComponent) 
   },
+  
+      { 
+    path: 'postar-vaga', 
+    loadComponent: () => import('./layout/vagas-criar/vagas-criar.component').then(m => m.VagasCriarComponent) 
+  },
+
+
 ];
