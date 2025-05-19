@@ -36,7 +36,7 @@
   "nossos.parceiros": "NOSSOS PARCEIROS",
   "ad.entre": "Entre em",
   "ad.contacto": "contacto",
-  "ad.descricao": "Qualquer questão que tiver ou informação que precisar, estaremos disponíveis para responder.",
+  "ad.descricao": "Qualquer questão que tiver ou informação que precisar,\n  estaremos disponíveis para responder.",
   "ad.botao": "ENTRAR EM CONTACTO",
   "siga.nos": "Siga-nos",
   "link.uteis": "Links úteis",
@@ -198,5 +198,7 @@
   "dashboard-noticias": "Notícias",
   "dashboard-eventos": "Eventos",
   "dashboard-empresa": "Empresa",
-  "dashboard-paineis": "Painéis"
+  "dashboard-paineis": "Painéis em Eventos",
+  "dashboard-titulo": "Painel de Gestão",
+  "dashboard-welcome": "Bem-vindo "
 }

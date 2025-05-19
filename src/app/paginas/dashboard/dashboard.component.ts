@@ -11,6 +11,7 @@ import { EventosListarComponent } from '../../layout/eventos-listar/eventos-list
 import { EventosPostarComponent } from '../../layout/eventos-postar/eventos-postar.component';
 import { PaineisPostarComponent } from '../../layout/paineis-postar/paineis-postar.component';
 import { PaineisListarComponent } from '../../layout/paineis-listar/paineis-listar.component';
+import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,7 +27,8 @@ import { PaineisListarComponent } from '../../layout/paineis-listar/paineis-list
     EventosListarComponent,
     EventosPostarComponent,
     PaineisPostarComponent,
-    PaineisListarComponent
+    PaineisListarComponent,
+    RodapeComponent
    ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
