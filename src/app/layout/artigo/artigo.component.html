@@ -1,23 +1,27 @@
 <app-menu></app-menu>
 
+<!-- app.component.html or wherever the section is rendered -->
+
+<div *ngIf="post.imageUrl" class="hero-section" [ngStyle]="{'background-image': 'url(' + post.imageUrl + ')'}">
+  <div class="overlay">
+    <div class="uk-container">
+      <h2 class="title">
+        {{ post.title }}
+      </h2>
+    </div>
+  </div>
+</div>
 
 
+
+
+  
 <div>
   <div class="fundo-artigo" *ngIf="post; else loading">
 
-    <div class="fundo-cabecalho">
-      <div class="gradiente-texto-cabecalho">
-        <div class="conteudo-cabecalho uk-margin-medium-top">
-          <div class="uk-container uk-margin-large-bottom">
-            <h1 style="color:white; font-weight: bolder; font-size: 2.43rem; font-weight: 800; margin-top: 20px;">
-              <span>{{ post.title }}</span>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="uk-container uk-margin-large-bot">
+
+    <div class="uk-container">
       <div class="uk-grid-large uk-margin-large-bottom" uk-grid>
         <div class="uk-width-expand">
           <article style="color:white" class="uk-article uk-margin-large-top">
@@ -34,10 +38,7 @@
             <!-- Date -->
 
 
-            <!-- Featured Image
-    <div *ngIf="post.imageUrl" class="uk-margin-bottom">
-      <img [src]="post.imageUrl" alt="Imagem destacada" style="width: 100%; max-height: 400px; object-fit: cover;" />
-    </div> -->
+
 
             <!-- Post Content -->
             <div class="uk-article " [innerHTML]="safeContent"></div>
