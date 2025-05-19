@@ -17,9 +17,11 @@ export class ArtigoPostarComponent {
 
   // Data models
   editorContent: string = '';
+  author: string = '';
   featuredImageUrl: string = '';
   newPost = {
     title: '',
+    author: '',
   };
 
   isSubmitting = false;
@@ -63,6 +65,7 @@ export class ArtigoPostarComponent {
       await addDoc(postsCollection, {
         title: this.newPost.title,
         content: this.editorContent,
+         author: this.newPost.author, 
         imageUrl: this.featuredImageUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()

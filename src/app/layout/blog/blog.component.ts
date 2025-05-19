@@ -1,30 +1,54 @@
-import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
-import { MenuComponent } from '../menu/menu.component';
-import { RodapeComponent } from '../rodape/rodape.component';
+import { Component, inject, OnInit } from '@angular/core';
+import { BlogService } from '../../services/blog.service';
+import { AsyncPipe, CommonModule, DatePipe, NgFor, NgIf } from '@angular/common';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TruncatePipe } from '../../pipes/truncate.pipe';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-
-
 
 @Component({
   selector: 'app-blog',
   imports: [
+       AsyncPipe,
+    CommonModule,
+    DatePipe,
+    NgFor,
+    NgIf,
     TranslatePipe,
-    MenuComponent,
-    RodapeComponent,
+    TruncatePipe,
     RouterLink
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
+
 
   
-     constructor (private translate: TranslateService) {}
-      useLanguage(language: string): void {
-        this.translate.use(language);
-    }
-    
+  safeContent: SafeHtml = '';
+  private blogService = inject(BlogService);
+  posts$ = this.blogService.getPosts();
+
+
+
+  constructor(
+    private translate: TranslateService,
+    private sanitizer: DomSanitizer
+
+
+  ) { }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
+
+
+  
+  ngOnInit() {
+    this.posts$.subscribe(posts => {
+      if (posts.length > 0) {
+        this.safeContent = this.sanitizer.bypassSecurityTrustHtml(posts[0].content);
+      }
+    });
+  }
 
 }

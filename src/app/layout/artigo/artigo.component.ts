@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule, DatePipe, NgIf } from '@angular/common';
 
@@ -8,17 +8,16 @@ import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MenuComponent } from '../menu/menu.component';
 import { RodapeComponent } from "../rodape/rodape.component";
-
-
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-artigo',
+  standalone: true,
   imports: [RouterLink, DatePipe, TruncatePipe, NgIf, CommonModule, MenuComponent, RodapeComponent],
   templateUrl: './artigo.component.html',
   styleUrl: './artigo.component.css',
-
 })
-export class ArtigoComponent implements OnInit {
+export class ArtigoComponent implements OnInit, OnDestroy {
 
   private route = inject(ActivatedRoute);
   private blogService = inject(BlogService);
@@ -26,19 +25,29 @@ export class ArtigoComponent implements OnInit {
 
   post: any;
   safeContent: SafeHtml = '';
-
   posts$ = this.blogService.getPosts();
 
+  private routeSub: Subscription | undefined;
 
   ngOnInit(): void {
-    const postId = this.route.snapshot.paramMap.get('id');
-    if (postId) {
-      this.blogService.getPostById(postId).subscribe((data) => {
-        this.post = data;
-        if (this.post.content) {
-          this.safeContent = this.sanitizer.bypassSecurityTrustHtml(this.post.content);
-        }
-      });
-    }
+    this.routeSub = this.route.params.subscribe(params => {
+      const postId = params['id'];
+      if (postId) {
+        this.loadPostById(postId);
+      }
+    });
+  }
+
+  loadPostById(postId: string): void {
+    this.blogService.getPostById(postId).subscribe((data) => {
+      this.post = data;
+      if (this.post?.content) {
+        this.safeContent = this.sanitizer.bypassSecurityTrustHtml(this.post.content);
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.routeSub?.unsubscribe();
   }
 }

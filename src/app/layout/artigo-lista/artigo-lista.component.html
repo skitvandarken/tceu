@@ -15,7 +15,7 @@
           {{ post.createdAt?.toDate() | date: 'dd/MM/yyyy' }}
         </p>
           <a style="color: #1A1A1A;" [routerLink]="['/artigo', post.id]">
-            <p style="font-size: 1.3rem; font-weight: 500;" class="uk-card-title">{{ post.title }}</p>
+            <p style="font-size: 1.3rem; font-weight: 500;" class="uk-card-title uk-text-left">{{ post.title }}</p>
           </a>
         </div>
         <!-- 
