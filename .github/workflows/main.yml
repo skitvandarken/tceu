@@ -1,30 +1,37 @@
-name: Deploy Angular App to Web Disk
+name: Deploy to cPanel Web Disk
+
 on:
   push:
     branches:
-      - main  # Dispara ao fazer push na branch main
+      - dashboard
+
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22' # Versão compatível com Angular
-      - name: Install Dependencies
-        run: npm ci
-      - name: Build Angular App
-        run: npm run build -- --configuration production
-      - name: Deploy via WebDAV
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add build steps here if needed, e.g.:
+      # - name: Install dependencies
+      #   run: npm install
+      # - name: Build project
+      #   run: npm run build
+
+      - name: Deploy to cPanel Web Disk via WebDAV
         env:
-          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
-          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
+          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
+          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
+          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
         run: |
-          BUILD_DIR="dist/part/browser"
-          WEBDISK_URL="https://parceiros-demo-acsa.fluxo-host.com:2078"
-          for file in $(find $BUILD_DIR -type f); do
-            REMOTE_PATH="${WEBDISK_URL}/${file#"$BUILD_DIR/"}"
-            curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH"
+          # Find all files except those in the files/ directory at root
+          find . -type f ! -path "./.git/*" ! -path "./.github/*" ! -path "./files/*" | while read file; do
+            remote_path="${file#./}"
+            # Create directory structure if needed (WebDAV requires directories to exist)
+            if [[ "$remote_path" == *"/"* ]]; then
+              dir_path=$(dirname "$remote_path")
+              curl -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -X MKCOL --create-dirs "$WEBDAV_URL/$dir_path" || true
+            fi
+            # Upload file
+            curl -T "$file" --user "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" "$WEBDAV_URL/$remote_path"
           done
