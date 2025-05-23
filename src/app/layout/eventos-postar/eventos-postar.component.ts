@@ -16,8 +16,9 @@ export class EventosPostarComponent{
   // Data models
   editorContent: string = '';
   author: string = '';
+  eventoUrl: string = '';
   featuredImageUrl: string = '';
-  newPost = {
+  newEvento = {
     title: '',
     author: '',
   };
@@ -46,31 +47,32 @@ export class EventosPostarComponent{
   async onSubmit() {
     this.errorMessage = '';
 
-    if (!this.newPost.title.trim()) {
+    if (!this.newEvento.title.trim()) {
       this.errorMessage = 'O título é obrigatório.';
       return;
     }
 
+    /*
     if (!this.editorContent.trim()) {
       this.errorMessage = 'O conteúdo é obrigatório.';
       return;
-    }
+    } */
 
     this.isSubmitting = true;
 
     try {
-      const postsCollection = collection(this.firestore, 'posts');
-      await addDoc(postsCollection, {
-        title: this.newPost.title,
+      const eventosCollection = collection(this.firestore, 'eventos');
+      await addDoc(eventosCollection, {
+        title: this.newEvento.title,
         content: this.editorContent,
-         author: this.newPost.author, 
+         author: this.newEvento.author, 
         imageUrl: this.featuredImageUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
 
       // Reset form
-      this.newPost.title = '';
+      this.newEvento.title = '';
       this.editorContent = '';
       this.featuredImageUrl = '';
       this.router.navigate(['/']);
@@ -85,7 +87,7 @@ export class EventosPostarComponent{
 
   private getFirestoreError(error: any): string {
     if (error.code === 'permission-denied') {
-      return 'Você não tem permissão para criar artigos.';
+      return 'Você não tem permissão para criar eventos.';
     }
     return 'Falha ao salvar. Tente novamente.';
   }

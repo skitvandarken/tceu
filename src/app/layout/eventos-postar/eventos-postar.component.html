@@ -11,7 +11,7 @@
   <div class="uk-margin-top uk-text-left">
     <label for="title" class="uk-form-label">Nome do evento</label>
     <div class="uk-form-controls">
-      <input type="text" id="title" [(ngModel)]="newPost.title" class="uk-input" placeholder="Digite o nome do evento"
+      <input type="text" id="title" [(ngModel)]="newEvento.title" class="uk-input" placeholder="Digite o nome do evento"
         required />
     </div>
   </div>
@@ -26,24 +26,25 @@
 
     <div *ngIf="featuredImageUrl" class="uk-margin-top">
       <p>Pré-visualização:</p>
-      <img [src]="featuredImageUrl" alt="Imagem de destaque" style="max-width: 300px;" />
+      <img [src]="featuredImageUrl" alt="Banner do evento" style="max-width: 300px;" />
     </div>
   </div>
 
   <div class="uk-margin-top uk-text-left">
     <label for="featuredImageUrl" class="uk-form-label">Organização:</label>
     <div class="uk-form-controls">
-      <input type="text" id="author" [(ngModel)]="newPost.author" class="uk-input" placeholder="Nome do autor" />
+      <input type="text" id="author" [(ngModel)]="newEvento.author" class="uk-input" placeholder="Nome da entidade organizador" />
     </div>
   </div>
 
-  <!-- Editor -->
+  <!-- Editor
   <h3 class="uk-text-left">Descrição das responsabilidades</h3>
 
   <div class="uk-margin-top">
     <editor [(ngModel)]="editorContent" [init]="editorConfig" apiKey="a8yzw2uhdu7v6niumnokr811bginwp5kfr689ismxj4dtnxu">
     </editor>
   </div>
+   -->
 
   <!-- Submit Button -->
   <div class="uk-text-left">
