@@ -24,6 +24,13 @@
         placeholder="https://exemplo.com/imagem.jpg" />
     </div>
 
+      <div class="uk-margin-top uk-text-left">
+    <label for="noticiaUrl" class="uk-form-label">Link da notícia</label>
+    <div class="uk-form-controls">
+      <input type="url" id="noticiaUrl" [(ngModel)]="noticiaUrl" class="uk-input"
+        placeholder="" />
+    </div>
+
     <div *ngIf="featuredImageUrl" class="uk-margin-top">
       <p>Pré-visualização:</p>
       <img [src]="featuredImageUrl" alt="Imagem de destaque" style="max-width: 300px;" />

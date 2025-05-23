@@ -17,6 +17,7 @@ export class NoticiasPostarComponent {
   editorContent: string = '';
   author: string = '';
   featuredImageUrl: string = '';
+  noticiaUrl: string = '';
   newNoticia = {
     title: '',
     author: '',
@@ -66,6 +67,7 @@ export class NoticiasPostarComponent {
         content: this.editorContent,
         author: this.newNoticia.author,
         imageUrl: this.featuredImageUrl || null,
+        noticiaUrl: this.noticiaUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
