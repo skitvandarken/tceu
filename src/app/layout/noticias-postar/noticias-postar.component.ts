@@ -17,7 +17,7 @@ export class NoticiasPostarComponent {
   editorContent: string = '';
   author: string = '';
   featuredImageUrl: string = '';
-  newPost = {
+  newNoticia = {
     title: '',
     author: '',
   };
@@ -46,31 +46,32 @@ export class NoticiasPostarComponent {
   async onSubmit() {
     this.errorMessage = '';
 
-    if (!this.newPost.title.trim()) {
+    if (!this.newNoticia.title.trim()) {
       this.errorMessage = 'O título é obrigatório.';
       return;
     }
 
+    /*
     if (!this.editorContent.trim()) {
       this.errorMessage = 'O conteúdo é obrigatório.';
       return;
-    }
+    } */
 
     this.isSubmitting = true;
 
     try {
-      const postsCollection = collection(this.firestore, 'posts');
+      const postsCollection = collection(this.firestore, 'noticias');
       await addDoc(postsCollection, {
-        title: this.newPost.title,
+        title: this.newNoticia.title,
         content: this.editorContent,
-        author: this.newPost.author,
+        author: this.newNoticia.author,
         imageUrl: this.featuredImageUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
 
       // Reset form
-      this.newPost.title = '';
+      this.newNoticia.title = '';
       this.editorContent = '';
       this.featuredImageUrl = '';
       this.router.navigate(['/']);

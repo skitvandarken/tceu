@@ -1,4 +1,4 @@
-// src/app/services/blog.service.ts
+
 import { Injectable, inject, signal } from '@angular/core';
 import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
 import { Vaga } from '../models/vagas.models';
