@@ -1,45 +1,46 @@
-// src/app/services/recrutamento.service.ts
+// src/app/services/blog.service.ts
 import { Injectable, inject, signal } from '@angular/core';
 import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
-import { Vagas } from '../models/vagas.models';
+import { Vaga } from '../models/vagas.models';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RecrutamentoService {
+export class VagaService {
   private firestore = inject(Firestore);
   private vagasCollection = collection(this.firestore, 'vagas');
+  
+  vagas = signal<Vaga[]>([]);
 
-  vagas = signal<Vagas[]>([]);
   constructor() {
-    console.log('RecrutamentoService initialized');
+    console.log('VagaService initializado');
     this.getVagas().subscribe(vagas => {
-      console.log('Loaded vagas:', vagas);
+      console.log('Vagas carregadas', vagas);
       this.vagas.set(vagas);
     });
   }
 
-  getVagas(): Observable<Vagas[]> {
-    console.log('Fetching all vagas');
+  getVagas(): Observable<Vaga[]> {
+    console.log('Fetching all posts');
     return collectionData(this.vagasCollection, { idField: 'id' }).pipe(
-      map((vagas: any[]) => vagas.map(vaga => vaga as Vagas)),
-      tap(vagas => console.log('Vagas from Firestore:', vagas))
-    ) as Observable<Vagas[]>;
+      map((posts: any[]) => posts.map(vaga => vaga as Vaga)),
+      tap(posts => console.log('Posts from Firestore:', posts))
+    ) as Observable<Vaga[]>;
   }
 
-  getVagaById(id: string): Observable<Vagas | undefined> {
+  getPostById(id: string): Observable<Vaga | undefined> {
     console.log('Fetching vaga with ID:', id);
-    const vagaDoc = doc(this.firestore, `vagas/${id}`);
-    return docData(vagaDoc, { idField: 'id' }).pipe(
+    const postDoc = doc(this.firestore, `vagas/${id}`);
+    return docData(postDoc, { idField: 'id' }).pipe(
       map(vaga => {
         if (!vaga) {
           throw new Error('Vaga not found');
         }
-        return vaga as Vagas;
+        return vaga as Vaga;
       }),
       tap(vaga => console.log('Retrieved vaga:', vaga))
-    ) as Observable<Vagas>;
+    ) as Observable<Vaga>;
   }
 }

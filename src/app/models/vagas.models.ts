@@ -1,10 +1,10 @@
-export interface Vagas {
+export interface Vaga {
   id?: string;
   posicao: string;
-  responsabilidades: string;
+  content: string;
   departamento?: string;
-  createdAt: Date | any;  // 'any' for Firestore timestamps
+  createdAt: Date | any;
   updatedAt?: Date | any;
-  imagevagaUrl?: string;
   emailDepartamento?: string;
+  imageUrl: string; // Make sure this is required if you're using it
 }

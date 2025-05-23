@@ -17,9 +17,10 @@ export class VagasCriarComponent {
   editorContent: string = '';
   author: string = '';
   featuredImageUrl: string = '';
-  newPost = {
-    title: '',
-    author: '',
+  newVaga = {
+    posicao: '',
+    departamento: '',
+    
   };
 
   isSubmitting = false;
@@ -46,31 +47,31 @@ export class VagasCriarComponent {
   async onSubmit() {
     this.errorMessage = '';
 
-    if (!this.newPost.title.trim()) {
-      this.errorMessage = 'O título é obrigatório.';
+    if (!this.newVaga.posicao.trim()) {
+      this.errorMessage = 'A poisção é obrigatória.';
       return;
     }
 
     if (!this.editorContent.trim()) {
-      this.errorMessage = 'O conteúdo é obrigatório.';
+      this.errorMessage = 'As responsabilidades são obrigatórias.';
       return;
     }
 
     this.isSubmitting = true;
 
     try {
-      const postsCollection = collection(this.firestore, 'posts');
-      await addDoc(postsCollection, {
-        title: this.newPost.title,
+      const vagasCollection = collection(this.firestore, 'vagas');
+      await addDoc(vagasCollection, {
+        posicao: this.newVaga.posicao,
         content: this.editorContent,
-         author: this.newPost.author, 
+         author: this.newVaga.departamento, 
         imageUrl: this.featuredImageUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
 
       // Reset form
-      this.newPost.title = '';
+      this.newVaga.posicao = '';
       this.editorContent = '';
       this.featuredImageUrl = '';
       this.router.navigate(['/']);
@@ -85,7 +86,7 @@ export class VagasCriarComponent {
 
   private getFirestoreError(error: any): string {
     if (error.code === 'permission-denied') {
-      return 'Você não tem permissão para criar artigos.';
+      return 'Você não tem permissão para publicar Vagas.';
     }
     return 'Falha ao salvar. Tente novamente.';
   }
