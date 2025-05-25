@@ -11,7 +11,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
   templateUrl: './eventos-postar.component.html',
   styleUrl: './eventos-postar.component.css'
 })
-export class EventosPostarComponent{
+export class EventosPostarComponent {
 
   // Data models
   editorContent: string = '';
@@ -21,6 +21,8 @@ export class EventosPostarComponent{
   newEvento = {
     title: '',
     author: '',
+    eventoUrl: '',
+
   };
 
   isSubmitting = false;
@@ -65,8 +67,9 @@ export class EventosPostarComponent{
       await addDoc(eventosCollection, {
         title: this.newEvento.title,
         content: this.editorContent,
-         author: this.newEvento.author, 
+        author: this.newEvento.author,
         imageUrl: this.featuredImageUrl || null,
+        eventoUrl: this.eventoUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });

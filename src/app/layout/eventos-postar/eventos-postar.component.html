@@ -31,9 +31,19 @@
   </div>
 
   <div class="uk-margin-top uk-text-left">
+
+    <label for="eventoUrl" class="uk-form-label">Link da Landing Page</label>
+    <div class="uk-form-controls">
+      <input type="url" id="eventoUrl" [(ngModel)]="eventoUrl" class="uk-input"
+        placeholder="https://exemplo.com/landingpage" />
+    </div>
+  </div>
+
+  <div class="uk-margin-top uk-text-left">
     <label for="featuredImageUrl" class="uk-form-label">Organização:</label>
     <div class="uk-form-controls">
-      <input type="text" id="author" [(ngModel)]="newEvento.author" class="uk-input" placeholder="Nome da entidade organizador" />
+      <input type="text" id="author" [(ngModel)]="newEvento.author" class="uk-input"
+        placeholder="Nome da entidade organizador" />
     </div>
   </div>
 

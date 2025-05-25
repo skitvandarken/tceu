@@ -1,174 +1,24 @@
 <div class="uk-container uk-margin-top">
-    @if (eventos$ | async; as eventos) {
-    <div class="uk-grid uk-child-width-1-3@m uk-grid-medium" uk-grid>
-        @for (evento of eventos; track evento.id) {
-        <div>
-            <div style="border-radius: 30px;" class="uk-card  uk-border-rounded uk-text-left">
-
-                <!-- Featured Image -->
-                <div *ngIf="evento.imageUrl" class="uk-card-media-top">
-                    <img [src]="evento.imageUrl" class="" alt="Imagem de destaque"
-                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 150px; width: auto; object-fit: cover;" />
-                </div>
-
-                <div class=" "
-                    style="background-color: #1C1C45; padding: 25px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
-                    <p class="uk-text-meta uk-margin-remove-top uk-text-left"
-                        style="font-size: 0.9rem; margin-bottom: 5px;">
-                        {{ evento.createdAt?.toDate() | date: 'dd/MM/yyyy ' }}
-                    </p>
-                    <a style="color: #1A1A1A;" href="{{ evento.eventoUrl }}" >
-                        <p style="color: white !important;" class="uk-light">{{ evento.title }}</p>
-                    </a>
-                    <div class="uk-child-width-expand@s" uk-grid>
-                        <div>
-                            <div class=" ">
-                                <p style="font-size: .8rem; color: #C2C4D1;" class="uk-text-left">{{ evento.organizacao }}</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="">
-                                <a style="color:  #28C1FD; font-size: 0.95rem;"
-                                    href="{{ evento.eventoUrl }}" target="_blank">
-                                    <p class="uk-text-right">Ler Mais</p>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- 
-        <div class="uk-card-body">
-          <div *ngIf="post.content" [innerHTML]="post.content | truncate:150"></div>
-        </div>
-       
-
-        <div class="uk-card-footer uk-flex uk-flex-between uk-flex-middle">
-          <a [routerLink]="['/artigo', post.id]" class="uk-button uk-button-text">Ler mais</a>
-        </div> -->
-
+  @if (eventos$ | async; as eventos) {
+    <div class="uk-grid uk-child-width-1-3@m uk-grid-medium uk-text-center uk-light" uk-grid>
+      @for (evento of eventos; track evento.id) {
+        <div class="uk-transition-toggle" tabindex="0">
+          <div class="uk-panel uk-text-center">
+            <img class="border-2" [src]="evento.imageUrl" alt="Imagem do evento" />
+            <div class="overlay">
+              <a [href]="evento.eventoUrl" target="_blank" rel="noopener">
+                <p class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill">
+                  Ver detalhes
+                </p>
+              </a>
             </div>
+          </div>
         </div>
-        }
+      }
     </div>
-    } @else {
+  } @else {
     <div class="uk-flex uk-flex-center uk-margin-large-top">
-        <div uk-spinner></div>
+      <div uk-spinner></div>
     </div>
-    }
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="fundo-cronologia-abas ">
-
-    <div class="uk-container">
-
-        <div class="uk-margin-small-left uk-margin-small-right uk-padding ">
-
-            <ul class="uk-subnav uk-subnav-pill" uk-switcher>
-                <li style="font-weight: bold"><a class="texto-abas-cronologia uk-padding">Próximos eventos</a></li>
-                <li><a class="texto-abas-cronologia">Painéis</a></li>
-
-
-            </ul>
-
-            <div class="uk-switcher uk-margin ">
-                <div class=" slider-container uk-position-relative uk-margin-large-top uk-margin-large-bottom uk-visible-toggle uk-light"
-                    tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000; pause-on-hover: false">
-
-
-
-
-
-
-
-
-                    <div class="uk-child-width-expand@s uk-text-center uk-light" uk-grid>
-                        <div class="uk-transition-toggle" tabindex="0">
-                            <div class="uk-panel uk-text-center">
-                                <img href="" class="border-2"  src="img/eventos/gitexafrica2025.jpg">
-                                <div class="overlay">
-                                    <a href="https://angolacables.rds.land/gitex-africa">
-                                        <p
-                                            class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill ">
-                                            Ver detalhes</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="uk-transition-toggle" tabindex="0">
-                            <div class="uk-panel uk-text-center">
-                                <img class="border-2"  src="img/eventos/evento-1.png">
-                                <div class="overlay">
-                                    <a href="#">
-                                        <p
-                                            class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill ">
-                                            Ver detalhes</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="uk-transition-toggle" tabindex="0">
-                            <div class="uk-panel uk-text-center">
-                                <img class="border-2" src="img/eventos/evento-2.png">
-                                <div class="overlay">
-                                    <a href="#">
-                                        <p
-                                            class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill ">
-                                            Ver detalhes</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div>
-                    <div class="uk-child-width-1-2 uk-text-center uk-light" uk-grid>
-                        <div class="uk-transition-toggle" tabindex="0">
-                            <div class="uk-panel uk-text-center">
-                                <img class="border-2" src="img/adilson-intranet.jpg">
-                                <div class="overlay">
-                                    <p
-                                        class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill ">
-                                        Ver detalhes</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="uk-transition-toggle" tabindex="0">
-                            <div class="uk-panel uk-text-center">
-                                <img class="border-2" src="img/walter-intranet.jpg">
-                                <div class="overlay">
-                                    <p
-                                        class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill ">
-                                        Ver detalhes</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-
-    </div>
+  }
 </div>
