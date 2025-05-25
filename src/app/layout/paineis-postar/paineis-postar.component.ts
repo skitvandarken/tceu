@@ -4,19 +4,21 @@ import { Firestore, addDoc, collection, serverTimestamp } from '@angular/fire/fi
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { EditorModule } from '@tinymce/tinymce-angular';
+
 @Component({
   selector: 'app-paineis-postar',
-  imports: [FormsModule, CommonModule, EditorModule],
+  imports: [FormsModule, CommonModule, EditorModule,],
   templateUrl: './paineis-postar.component.html',
   styleUrl: './paineis-postar.component.css'
 })
-export class PaineisPostarComponent   {
+export class PaineisPostarComponent {
 
   // Data models
   editorContent: string = '';
   author: string = '';
   featuredImageUrl: string = '';
-  newPost = {
+  painelUrl: string = '';
+  newPainel = {
     title: '',
     author: '',
   };
@@ -45,37 +47,39 @@ export class PaineisPostarComponent   {
   async onSubmit() {
     this.errorMessage = '';
 
-    if (!this.newPost.title.trim()) {
+    if (!this.newPainel.title.trim()) {
       this.errorMessage = 'O título é obrigatório.';
       return;
     }
 
+    /*
     if (!this.editorContent.trim()) {
       this.errorMessage = 'O conteúdo é obrigatório.';
       return;
-    }
+    } */
 
     this.isSubmitting = true;
 
     try {
-      const postsCollection = collection(this.firestore, 'posts');
-      await addDoc(postsCollection, {
-        title: this.newPost.title,
+      const paineisCollection = collection(this.firestore, 'paineis');
+      await addDoc(paineisCollection, {
+        title: this.newPainel.title,
         content: this.editorContent,
-         author: this.newPost.author, 
+        author: this.newPainel.author,
         imageUrl: this.featuredImageUrl || null,
+        painelUrl: this.painelUrl,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
 
       // Reset form
-      this.newPost.title = '';
+      this.newPainel.title = '';
       this.editorContent = '';
       this.featuredImageUrl = '';
       this.router.navigate(['/']);
 
     } catch (error) {
-      console.error('Erro ao salvar o artigo:', error);
+      console.error('Erro ao salvar o painel:', error);
       this.errorMessage = this.getFirestoreError(error);
     } finally {
       this.isSubmitting = false;

@@ -1,6 +1,6 @@
 <div class="uk-container uk-margin-large-top">
 
-    <h2 class="uk-text-left">Criar ou editar artigo do blog</h2>
+    <h2 class="uk-text-left">Publicar painel de evento</h2>
 
     <!-- Error Message -->
     <div *ngIf="errorMessage" class="uk-alert-danger uk-margin" uk-alert>
@@ -9,16 +9,16 @@
 
     <!-- Title -->
     <div class="uk-margin-top uk-text-left">
-        <label for="title" class="uk-form-label">Título do artigo</label>
+        <label for="title" class="uk-form-label">Título do painel</label>
         <div class="uk-form-controls">
-            <input type="text" id="title" [(ngModel)]="newPost.title" class="uk-input"
-                placeholder="Digite o título do artigo" required />
+            <input type="text" id="title" [(ngModel)]="newPainel.title" class="uk-input"
+                placeholder="Digite o título do painel" required />
         </div>
     </div>
 
     <!-- Featured Image -->
     <div class="uk-margin-top uk-text-left">
-        <label for="featuredImageUrl" class="uk-form-label">Link da imagem de destaque</label>
+        <label for="featuredImageUrl" class="uk-form-label">Link do banner do painel</label>
         <div class="uk-form-controls">
             <input type="url" id="featuredImageUrl" [(ngModel)]="featuredImageUrl" class="uk-input"
                 placeholder="https://exemplo.com/imagem.jpg" />
@@ -31,19 +31,19 @@
     </div>
 
     <div class="uk-margin-top uk-text-left">
-        <label for="featuredImageUrl" class="uk-form-label">Autor do artigo:</label>
+        <label for="featuredImageUrl" class="uk-form-label"> Nome do evento correspondente</label>
         <div class="uk-form-controls">
-            <input type="text" id="author" [(ngModel)]="newPost.author" class="uk-input" placeholder="Nome do autor" />
+            <input type="text" id="author" [(ngModel)]="newPainel.author" class="uk-input" placeholder="Nome do autor" />
         </div>
     </div>
 
-    <!-- Editor -->
+    <!-- Editor 
     <div class="uk-margin-top">
         <editor [(ngModel)]="editorContent" [init]="editorConfig"
             apiKey="a8yzw2uhdu7v6niumnokr811bginwp5kfr689ismxj4dtnxu">
         </editor>
     </div>
-
+-->
     <!-- Submit Button -->
     <div class="uk-text-left">
 
