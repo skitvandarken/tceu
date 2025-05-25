@@ -12,6 +12,7 @@ import { EventosPostarComponent } from '../../layout/eventos-postar/eventos-post
 import { PaineisPostarComponent } from '../../layout/paineis-postar/paineis-postar.component';
 import { PaineisListarComponent } from '../../layout/paineis-listar/paineis-listar.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -28,7 +29,8 @@ import { RodapeComponent } from '../../layout/rodape/rodape.component';
     EventosPostarComponent,
     PaineisPostarComponent,
     PaineisListarComponent,
-    RodapeComponent
+    RodapeComponent, 
+    CommonModule
    ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
@@ -41,5 +43,15 @@ export class DashboardComponent {
             
             constructor(private translate: TranslateService) {}
             selectedCountry: string = 'Angola';
+
+            activeTab: string = 'blog'; // Set default active tab
+
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
+  }
+
+  isTabActive(tab: string): boolean {
+    return this.activeTab === tab;
+  }
 
 }

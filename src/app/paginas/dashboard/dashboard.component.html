@@ -1,178 +1,92 @@
 <app-menu></app-menu>
 
-<div class="fundo-cabecalho">
-    <div class="gradiente-texto-cabecalho">
-        <div class="conteudo-cabecalho uk-margin-medium-top">
-            <div class="uk-container uk-padding ">
-                <img class="logo-cabecalho-pagina" src="img/layout/logo-cabecalho-pagina.png">
-                <h4 style="font-size: 1.1rem; color:white">{{ 'dashboard-welcome' | translate }}</h4>
-                <h1 style="color:white; font-size: 2.4rem; font-weight: 800; margin-top: 20px;">{{ 'dashboard-titulo' |
-                    translate }}</h1>
-            </div>
-        </div>
+<header class="fundo-cabecalho">
+  <div class="conteudo-cabecalho uk-margin-medium-top">
+    <div class="uk-container uk-padding">
+      <img class="logo-cabecalho-pagina" src="img/layout/logo-cabecalho-pagina.png" alt="Logo">
+      <h4 class="texto-subtitulo">{{ 'dashboard-welcome' | translate }}</h4>
+      <h1 class="texto-titulo">{{ 'dashboard-titulo' | translate }}</h1>
     </div>
-</div>
+  </div>
+</header>
 
-<div class="uk-background-muted">
-
-
-
-
-    <div id="servicos" class="uk-container uk-padding  ">
-        <ul class="uk-text-center uk-border-rounded uk-subnav uk-subnav-pill uk-flex-center uk-margin-large-top"
-            uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
-            <li>
-                <a class="texto-2" href="#">{{ 'dashboard-blog' | translate }}</a>
-            </li>
-            <li><a class="texto-2" href="#">{{ 'dashboard-noticias' | translate }}</a></li>
-            <li><a class="texto-2" href="#">{{ 'dashboard-empregos' | translate }}</a></li>
-            <li><a class="texto-2" href="#">{{ 'dashboard-eventos' | translate }}</a></li>
-            <li><a class="texto-2" href="#">{{ 'dashboard-paineis' | translate }}</a></li>
-        </ul>
-
-        <div class="uk-switcher uk-margin">
-            <div>
-                <div class="uk-child-width-1-1@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-                    <div class="ov-div">
-                        <div class="uk-card uk-card-default uk-border-rounded fundo-circuito">
-                            <div class="uk-card-media-top"></div>
-                            <div class="uk-card-body">
-
-                                <app-artigo-postar></app-artigo-postar>
-
-                                <div class="uk-container uk-margin-large-bottom">
-                                    <h3 class="uk-text-left uk-margin-large-top uk-text-bold"
-                                        style=" font-weight: bolder;">
-                                        Artigos publicados</h3>
-
-                                    <app-artigo-lista></app-artigo-lista>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-            <div>
-                <div class="uk-child-width-1-1@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-default uk-border-rounded fundo-dia">
-                            <div class="uk-card-media-top"></div>
-                            <div class="uk-card-body">
-
-                                <app-noticias-postar></app-noticias-postar>
-
-                                <div class="uk-container uk-margin-large-bottom">
-                                    <h3 class="uk-text-left uk-margin-large-top uk-text-bold"
-                                        style=" font-weight: bolder;">
-                                        Notícias publicadas</h3>
-
-                                    <app-noticias-listar></app-noticias-listar>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            <div>
-                <div class="uk-child-width-1-1@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-
-
-                    <div>
-                        <div class="uk-card uk-card-default fundo-clouds2br uk-border-rounded">
-                            <div class="uk-card-media-top"></div>
-                            <div class="uk-card-body">
-                                <app-vagas-criar></app-vagas-criar>
-                                <div class="uk-container uk-margin-large-bottom">
-                                    <h3 class="uk-text-left uk-margin-large-top uk-text-bold"
-                                        style=" font-weight: bolder;">
-                                        Vagas Abertas</h3>
-
-                                    <app-vagas-listar></app-vagas-listar>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-            <!--Segurança -->
-            <div>
-                <div class="uk-child-width-1-1@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-default uk-border-rounded fundo-angonap">
-                            <div class="uk-card-media-top"></div>
-                            <div class="uk-card-body">
-                                <app-eventos-postar></app-eventos-postar>
-                                <div class="uk-container uk-margin-large-bottom">
-                                    <h3 class="uk-text-left uk-margin-large-top uk-text-bold"
-                                        style=" font-weight: bolder;">
-                                        Eventos Publicados</h3>
-
-                                    <app-eventos-listar></app-eventos-listar>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-            <div>
-                <div class="uk-child-width-1-1@m uk-child-width-1-1@s uk-grid-match uk-grid uk-text-center" uk-grid>
-
-
-                    <div>
-                        <div class="uk-card uk-card-default uk-border-rounded fundo-sdwan">
-                            <div class="uk-card-media-top"></div>
-                            <div class="uk-card-body">
-                                <app-paineis-postar></app-paineis-postar>
-
-                                <div class="uk-container uk-margin-large-bottom">
-                                    <h3 class="uk-text-left uk-margin-large-top uk-text-bold"
-                                        style=" font-weight: bolder;">
-                                        Painéis publicados</h3>
-
-                                    <app-paineis-listar></app-paineis-listar>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-        </div>
+<main class="uk-background-muted">
+  <section id="servicos" class="uk-container uk-padding-large">
+    <div class="uk-card uk-card-body uk-margin-bottom">
+      <ul class="uk-subnav uk-subnav-pill uk-flex-center">
+        <li [class.uk-active]="isTabActive('blog')">
+          <a (click)="setActiveTab('blog')">{{ 'dashboard-blog' | translate }}</a>
+        </li>
+        <li [class.uk-active]="isTabActive('noticias')">
+          <a (click)="setActiveTab('noticias')">{{ 'dashboard-noticias' | translate }}</a>
+        </li>
+        <li [class.uk-active]="isTabActive('empregos')">
+          <a (click)="setActiveTab('empregos')">{{ 'dashboard-empregos' | translate }}</a>
+        </li>
+        <li [class.uk-active]="isTabActive('eventos')">
+          <a (click)="setActiveTab('eventos')">{{ 'dashboard-eventos' | translate }}</a>
+        </li>
+        <li [class.uk-active]="isTabActive('paineis')">
+          <a (click)="setActiveTab('paineis')">{{ 'dashboard-paineis' | translate }}</a>
+        </li>
+      </ul>
     </div>
 
-</div>
+    <!-- Blog Section -->
+    <div *ngIf="isTabActive('blog')" class="uk-animation-fade">
+      <div class="uk-card uk-card-body">
+        <app-artigo-postar></app-artigo-postar>
+        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
+          <span>Artigos publicados</span>
+        </h3>
+        <app-artigo-lista></app-artigo-lista>
+      </div>
+    </div>
+
+    <!-- Notícias Section -->
+    <div *ngIf="isTabActive('noticias')" class="uk-animation-fade">
+      <div class="uk-card uk-card-body">
+        <app-noticias-postar></app-noticias-postar>
+        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
+          <span>Notícias publicadas</span>
+        </h3>
+        <app-noticias-listar></app-noticias-listar>
+      </div>
+    </div>
+
+    <!-- Empregos Section -->
+    <div *ngIf="isTabActive('empregos')" class="uk-animation-fade">
+      <div class="uk-card uk-card-body">
+        <app-vagas-criar></app-vagas-criar>
+        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
+          <span>Vagas Abertas</span>
+        </h3>
+        <app-vagas-listar></app-vagas-listar>
+      </div>
+    </div>
+
+    <!-- Eventos Section -->
+    <div *ngIf="isTabActive('eventos')" class="uk-animation-fade">
+      <div class="uk-card uk-card-body">
+        <app-eventos-postar></app-eventos-postar>
+        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
+          <span>Eventos Publicados</span>
+        </h3>
+        <app-eventos-listar></app-eventos-listar>
+      </div>
+    </div>
+
+    <!-- Painéis Section -->
+    <div *ngIf="isTabActive('paineis')" class="uk-animation-fade">
+      <div class="uk-card uk-card-body">
+        <app-paineis-postar></app-paineis-postar>
+        <h3 class="uk-heading-line uk-text-center uk-margin-medium-top">
+          <span>Painéis publicados</span>
+        </h3>
+        <app-paineis-listar></app-paineis-listar>
+      </div>
+    </div>
+  </section>
+</main>
 
 <app-rodape></app-rodape>
