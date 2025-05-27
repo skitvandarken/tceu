@@ -1,84 +1,78 @@
 <!-- TEXTO DE CHAMADA: SOBRE ANGOLA CABLES -->
 <div class=" bg-pattern">
-  <div class="uk-container ">
-    <h2 class="uk-text-center uk-container uk-margin-large-top"><b style="color:#28C1FD ;">Angola Cables</b> {{ 'ac.descricao' | translate
-      }}</h2>
+  <div class="uk-container " style="padding: 80px">
+    <p style="font-size: 1.55rem; color:#000026 " class="uk-text-center uk-container "><b
+        style="color:#28C1FD ; font-size: 1.55rem;  ">Angola Cables</b> {{ 'ac.descricao' | translate
+      }}</p>
   </div>
 </div>
 
 <!-- 2 Colunas | Presença Global & Vídeo Institucional AC -->
 
-<div class="uk-container uk-margin-large-top">
-  <div
-    class="uk-margin-medium-top uk-child-width-1-2@m uk-grid-medium uk-child-width-1-2@s uk-grid-match uk-grid uk-text-left">
+<div class="uk-container">
+  <div class=" uk-child-width-1-2@m uk-grid-medium uk-child-width-1-2@s uk-grid-match-height uk-grid uk-text-left">
 
     <!--Lado esquerdo-->
     <div class=" uk-width-1-2@m  uk-margin-large-bottom ">
       <div class="uk-text-left">
-        <div class=" uk-border-rounded">
-          <p style="color: #000026; font-size: 1.3rem;" class=" "><img class="uk-margin-small-right" width="55" height="58"
-              src="img/icone-ac.png"> <b>{{ 'ac.presenca' | translate }}</b>
+        <div class=" uk-border-rounded fundo-forma">
+          <p style="color: #000026; font-size: 1.3rem; margin-left: 10px;" class=" "><img class="uk-margin-small-right"
+              width="55" height="58" src="img/icone-ac.png"> <b>{{ 'ac.presenca' | translate }}</b>
           </p>
         </div>
-        <p style="color: #000026; font-size: 1.1rem;" class=" uk-margin-small-right">{{ 'ac.presencadescricao' | translate }}</p>
+        <p style="color: #000026; font-size: 1.1rem;" class=" uk-margin-small-right">{{ 'ac.presencadescricao' |
+          translate }}</p>
       </div>
 
 
       <!-- BOTÕES | SOBRE ANGOLA CABLES -->
       <div
-        class="uk-margin uk-margin-medium-top uk-child-width-1-2@m uk-grid-small uk-child-width-1-2@s uk-grid-match uk-grid uk-text-center">
+        class="uk-margin uk-margin-small-top uk-child-width-1-2@m uk-grid-small uk-child-width-1-2@s uk-grid-match uk-grid uk-text-center">
         <a href="#modal-video" uk-toggle class="uk-text-decoration-none ">
-          <button class="botao uk-button uk-button-default uk-button-large uk-border-pill uk-margin-small-top">{{ 'ver.videoinstitucional' |
+          <button class="botao uk-button uk-button-default uk-button-medium uk-border-pill uk-margin-small-top">{{
+            'ver.videoinstitucional' |
             translate }}</button>
         </a>
 
         <a href="https://www.submarinecablemap.com/landing-point/sangano-angola" class="uk-text-decoration-none">
-          <button class="botao uk-button uk-button-default uk-button-large uk-border-pill uk-margin-small-top">{{ 'ver.mapa' | translate
+          <button class="botao uk-button uk-button-default uk-button-medium uk-border-pill uk-margin-small-top">{{
+            'ver.mapa' | translate
             }}</button>
         </a>
       </div>
 
       <div class="">
         <a routerLink="/acerca" class="uk-text-decoration-none">
-          <button class="botao-azul uk-button uk-button-primary uk-width-1-1 uk-button-large uk-border-pill">{{
+          <button class="botao-azul uk-button uk-button-primary uk-width-1-1 uk-button-medium uk-border-pill">{{
             'mais.sobre' |
             translate }}</button>
         </a>
       </div>
     </div>
 
-    
 
-    <!-- Lado Direito | Vídeo Sobre Angola Cables -->
-    <div class=" uk-width-1-2@m  uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-top  ">
+    <!-- Right Side | Video About Angola Cables -->
+    <div class="uk-width-1-2@m uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-top">
       <div class="uk-text-center">
 
-        <!-- This is a button toggling the modal -->
+        <!-- Button to toggle the modal -->
+        <a href="#modal-video" uk-toggle>
+          <img src="img/video-miniatura.png" alt="Video Thumbnail">
+        </a>
 
-<!-- This is an anchor toggling the modal -->
-<a href="#modal-video" uk-toggle>
+        <!-- Modal -->
+        <div id="modal-video" uk-modal>
+          <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body uk-border-rounded">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
 
+            <video controls loop muted id="promoVideo" class="promo-video uk-border-rounded">
+              <source src="https://marketing.host2africa.com/files/AC-Angolaoutlook-EN-2025%202-new.mp4"
+                type="video/mp4" />
+              Seu navegador não suporta o vídeo em falta.
+            </video>
+          </div>
+        </div>
 
-<img src="img/video-miniatura.png">
-
-</a>
-
-<!-- This is the modal -->  
-<div class="  " id="modal-video" uk-modal>
-
-    <div class=" uk-container uk-margin-auto-vertical ">
-      <button class="uk-modal-close-default" type="button" uk-close></button>
-
-      <video controls="true" loop muted id="promoVideo" class="promo-video uk-border-rounded">
-        <source src="https://marketing.host2africa.com/files/AC-Angolaoutlook-EN-2025%202-new.mp4" type="video/mp4" />
-        Seu navegador não suporta o vídeo em falta.
-      </video>
-
-   
-    </div>
-</div>
-
-       
       </div>
     </div>
   </div>

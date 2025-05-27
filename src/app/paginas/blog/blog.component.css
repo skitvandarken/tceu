@@ -7,6 +7,8 @@
     background-color: #000;
     position: relative;
     min-height: 400px; /* Adjust based on design */
+        margin-top: 70px;
+
 }
 
 .logo-cabecalho-pagina{

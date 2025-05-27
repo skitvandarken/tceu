@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body, a, p, h1, h2, h3, h4, li, ul {
   
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 
@@ -29,4 +29,8 @@ body, a, p, h1, h2, h3, h4, li, ul {
     max-width: 100%;
     height: auto;
   }
+}
+
+.uk-link-reset {
+  text-transform: none;
 }

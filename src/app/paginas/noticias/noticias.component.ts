@@ -3,11 +3,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
+import { NoticiasListarComponent } from '../../layout/noticias-listar/noticias-listar.component';
 
 
 @Component({
   selector: 'app-noticias',
-  imports: [TranslatePipe, MenuComponent, RodapeComponent],
+  imports: [TranslatePipe, MenuComponent, RodapeComponent, NoticiasListarComponent],
   templateUrl: './noticias.component.html',
   styleUrl: './noticias.component.css'
 })

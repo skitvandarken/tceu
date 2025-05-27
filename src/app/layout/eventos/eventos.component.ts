@@ -1,23 +1,51 @@
-import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
-import { MenuComponent } from '../menu/menu.component';
+import { Component, inject, OnInit } from '@angular/core';
+import { EventoService } from '../../services/evento.service';
+import { AsyncPipe, CommonModule, DatePipe, NgFor, NgIf } from '@angular/common';
+import { TranslatePipe,  TranslateService } from '@ngx-translate/core';
 import { RodapeComponent } from '../rodape/rodape.component';
+import { MenuComponent } from '../menu/menu.component';
+import { TruncatePipe } from '../../pipes/truncate.pipe';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-eventos',
-  imports: [ TranslatePipe, MenuComponent, RodapeComponent, RouterLink],
+  imports: [     AsyncPipe,
+    CommonModule,
+    DatePipe,
+    NgFor,
+    NgIf,
+    TranslatePipe,
+    RodapeComponent,
+    TruncatePipe,
+    MenuComponent,
+    RouterLink
+],
   templateUrl: './eventos.component.html',
   styleUrl: './eventos.component.css'
 })
-export class EventosComponent {
+export class EventosComponent implements OnInit {
 
-  
-        useLanguage(language: string): void {
-          this.translate.use(language);
+
+  safeContent: SafeHtml = '';
+  private eventoService = inject(EventoService);
+  eventos$ = this.eventoService.getEventos();
+
+  constructor(
+    private translate: TranslateService,
+    private sanitizer: DomSanitizer
+  ) { }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
+
+  ngOnInit() {
+    this.eventos$.subscribe(eventos => {
+      if (eventos.length > 0) {
+        this.safeContent = this.sanitizer.bypassSecurityTrustHtml(eventos[0].content);
       }
-      
-      constructor(private translate: TranslateService) {}
-
+    });
+  }
 }

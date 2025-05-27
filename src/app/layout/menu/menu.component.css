@@ -1,16 +1,35 @@
+#modal-video .uk-modal-close-default {
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* optional: darker background */
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.3s ease;
+}
+
+#modal-video .uk-modal-close-default:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 .uk-navbar-container {
     z-index: 1000;
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
     background: linear-gradient(180deg, rgba(129, 148, 170, 0.4), rgba(99, 122, 146, 0.4));
     background-color: rgba(0, 95, 115, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0; /* Add padding for better spacing */
+    padding: 10px 0;
+    /* Add padding for better spacing */
+    border-radius: 0 0 20px 20px;
+    /* Rounded corners at the bottom */
 }
 
 .uk-navbar-center {
@@ -27,35 +46,40 @@
     padding: 0;
 }
 
-.uk-navbar-nav > li {
-    margin: 0 10px; /* Consistent spacing between navbar items */
+.uk-navbar-nav>li {
+    margin: 0 10px;
+    /* Consistent spacing between navbar items */
 }
 
-.uk-navbar-nav > li > a {
+.uk-navbar-nav>li>a {
     color: #ffffff;
     font-weight: bold;
     font-family: inherit;
     display: flex;
     align-items: center;
-    padding: 10px 15px; /* Espaçamento entre os elementos a do menu*/
+    padding: 10px 15px;
+    /* Espaçamento entre os elementos a do menu*/
+    text-transform: none;
+
 }
 
-.uk-navbar-nav > li > a:hover {
+.uk-navbar-nav>li>a:hover {
     color: #050045;
 }
 
 .uk-navbar-dropdown {
-    
+
     border-top-color: #050045;
     border-top-width: 10px;
     border-top-style: solid;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding: 20px; /* Add padding for better spacing inside dropdown */
+    padding: 20px;
+    /* Add padding for better spacing inside dropdown */
 }
 
 
-.pesquisa{
+.pesquisa {
     border-top-color: #050045;
     border-top-width: 10px;
     border-top-style: solid;
@@ -63,7 +87,8 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    padding: 20px; /* Add padding for better spacing inside dropdown */
+    padding: 20px;
+    /* Add padding for better spacing inside dropdown */
 }
 
 
@@ -74,8 +99,9 @@
     margin: 0;
 }
 
-.uk-navbar-dropdown-nav > li {
-    margin: 2px 0; /* Consistent spacing between dropdown items */
+.uk-navbar-dropdown-nav>li {
+    margin: 2px 0;
+    /* Consistent spacing between dropdown items */
 }
 
 .bandeiras {
@@ -121,8 +147,9 @@ div {
     padding: 1rem 0rem;
 }
 
-p, .translated {
-   /* background-color: #d4f3ff;
+p,
+.translated {
+    /* background-color: #d4f3ff;
     padding: 0.5rem 1rem; */
 }
 
@@ -184,14 +211,14 @@ button:hover {
 }
 
 /* Ensure proper vertical alignment with other nav items */
-.uk-navbar-nav > li.uk-navbar-item {
+.uk-navbar-nav>li.uk-navbar-item {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
 
-body > app-root > app-inicio > app-menu > nav > div > div.uk-navbar-left.uk-hidden\@m > a > svg {
+body>app-root>app-inicio>app-menu>nav>div>div.uk-navbar-left.uk-hidden\@m>a>svg {
     color: white !important;
 }
 
@@ -199,10 +226,10 @@ body > app-root > app-inicio > app-menu > nav > div > div.uk-navbar-left.uk-hidd
 
 select {
     font-family: 'Noto Color Emoji', sans-serif !important;
-  }
+}
 
 
-  
+
 .bt {
     background-color: #1AB8DD;
     color: black;
@@ -213,9 +240,11 @@ select {
 .bt:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background-color: #18a9cc; /* Slightly darker shade for hover */
+    background-color: #18a9cc;
+    /* Slightly darker shade for hover */
 }
-.uk-navbar-toggle-icon{
+
+.uk-navbar-toggle-icon {
     color: white !important;
 
 }
