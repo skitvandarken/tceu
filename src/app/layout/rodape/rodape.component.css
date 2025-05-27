@@ -1,94 +1,92 @@
+/* Footer Styles */
 .site-footer {
-    
-    padding: 40px 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow at the top */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  padding: 40px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+}
 
-  }
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+/* Footer Grid Layout */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
 
-  
-  .site-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Footer content layout: 3 columns */
+/* Footer Columns */
+.footer-column {
+  margin-bottom: 20px;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(8, 8, 8, 1);
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #85afff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* Logo */
+.footer-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 960px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 10px; /* Adds space between columns */
-  
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Footer columns style */
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
   .footer-column {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  /* Footer Links */
-  .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 5px 0 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    text-decoration: none;
-   
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: #85afff; /* Change link color on hover */
-  }
-  
-  
-  
-  /* Social Media Icons */
-  .social-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .social-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-  }
-  
-  .social-links a:hover {
-    color: #f0506e; /* Change icon color on hover */
-  }
-  
-  /* Google Maps iframe styling */
-  .footer-column iframe {
-    border-radius: 8px; /* Rounded edges for the map */
-    margin-top: 15px;
-  }
-  
-  .link{
-    color: #ffffff !important;
+    text-align: center;
   }
 
-
-  .fundo-rodape{
-    background: linear-gradient(45deg, rgba(0, 24, 61), rgba(0, 97, 187), rgba(0, 42, 81)) !important;
-
+  .social-icons {
+    justify-content: center;
   }
-
-  a {
-    color:#333
-  }
+}

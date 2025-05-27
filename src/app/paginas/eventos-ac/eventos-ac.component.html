@@ -3,12 +3,11 @@
 
     <div class=" gradiente-texto-cabecalho">
 
-        <div class=" conteudo-cabecalho uk-margin-medium-top   ">
+        <div class=" conteudo-cabecalho uk-margin-medium-top ">
             <div class="uk-container uk-margin-large-bottom">
                 <img class=" logo-cabecalho-pagina" src="img/layout/logo-cabecalho-pagina.png">
-                <h4 class="" style="color:white">Eventos</h4>
-                <h1 style="color:white; font-weight: bolder;"> Estamos
-                    conectando o mundo<br> todo com o nosso trabalho. </h1>
+                <h4 class="" style="color:white">{{ 'eventos_titulo_pagina' | translate }}</h4>
+                <h1 style="color:white; font-weight: bolder;">{{ 'eventos_conectando_mundo' | translate }}</h1>
             </div>
 
         </div>
@@ -25,8 +24,8 @@
         <div class="uk-margin-small-left uk-margin-small-right uk-padding ">
 
             <ul class="uk-subnav uk-subnav-pill" uk-switcher>
-                <li style="font-weight: bold"><a class="texto-abas-cronologia uk-padding">Próximos eventos</a></li>
-                <li><a class="texto-abas-cronologia">Painéis</a></li>
+                <li style="font-weight: bold"><a class="texto-abas-cronologia uk-padding">{{ 'proximos_eventos' | translate }}</a></li>
+                <li><a class="texto-abas-cronologia">{{ 'paineis_eventos' | translate }}</a></li>
 
 
             </ul>
@@ -42,9 +41,9 @@
                 </div>
 
                 <div>
-                    
+
                 <app-paineis-listar></app-paineis-listar>
-                
+
                 </div>
 
 

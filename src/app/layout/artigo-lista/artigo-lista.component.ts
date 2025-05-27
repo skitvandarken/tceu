@@ -28,15 +28,17 @@ import { RouterLink } from '@angular/router';
 })
 export class ArtigoListaComponent implements OnInit {
 
-  
   safeContent: SafeHtml = '';
   private blogService = inject(BlogService);
   posts$ = this.blogService.getPosts();
 
   constructor(
-    private translate: TranslateService,
+    private translate: TranslateService, // Já está aqui
     private sanitizer: DomSanitizer
-  ) {}
+  ) {
+    this.translate.setDefaultLang('pt'); // Inserido
+    this.translate.use(this.translate.currentLang || 'pt'); // Inserido
+  }
 
   useLanguage(language: string): void {
     this.translate.use(language);

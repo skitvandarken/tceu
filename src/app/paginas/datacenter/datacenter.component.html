@@ -4,59 +4,59 @@
 
 <div class="uk-padding fundo">
 
-    <div class="uk-margin-large-top uk-margin-large-left uk-margin-large-right  uk-child-width-expand@s uk-text-left"
-        uk-grid>
-        <div>
-            <h1 style="color:white">
-                <b> {{'datacenter.titulo' | translate }} </b>
-            </h1>
-            <p style="color:white" class="uk-margin-small-top"> {{'datacenter.desc' | translate}} <br>
-                {{'datacenter.desc2' | translate}} </p>
-        </div>
-        <div>
-        </div>
-
-
+  <div class="uk-margin-large-top uk-margin-large-left uk-margin-large-right  uk-child-width-expand@s uk-text-left"
+    uk-grid>
+    <div>
+      <h1 style="color:white">
+        <b> {{'datacenter.titulo' | translate }} </b>
+      </h1>
+      <p style="color:white" class="uk-margin-small-top"> {{'datacenter.desc' | translate}} <br>
+        {{'datacenter.desc2' | translate}} </p>
+    </div>
+    <div>
     </div>
 
 
-    <div class=" uk-margin-large-left uk-margin-large-right uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
+  </div>
 
+
+  <div class=" uk-margin-large-left uk-margin-large-right uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
+
+    <div>
+      <div class="  uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
         <div>
-            <div class="  uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
-                <div>
-                    <div class="border uk-card uk-card-primary uk-card-body">
-                        <h3>Angonap 1</h3>
-                        <p>Luanda, Angola</p>
-                        <button
-                            class="uk-margin-small-top uk-button uk-button-default uk-border-pill">{{'saiba.mais'|translate
-                            }} </button>
+          <div class="border uk-card uk-card-primary uk-card-body">
+            <h3>Angonap 1</h3>
+            <p>Luanda, Angola</p>
+            <button class="uk-margin-small-top uk-button uk-button-default uk-border-pill"><span
+                class="uk-margin-small-right uk-margin-small-left"> {{'saiba.mais'|translate
+                }} </span> </button>
 
-                    </div>
-                </div>
-                <div>
-                    <div class="border uk-card uk-card-primary uk-card-body">
-                        <h3>Angonap 2</h3>
-                        <p>Fortaleza, Brasil</p>
-                        <button
-                            class="uk-margin-small-top uk-button uk-button-default uk-border-pill">{{'saiba.mais'|translate
-                            }}</button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-
         <div>
-            <div class="border fundo-cloud uk-card uk-card-default uk-card-body uk-text-left">
-                <h3 style="color:  white;"> {{'visita.virtual' | translate }} </h3>
-                <p style="color: white;">
-                    {{'visita.desc' | translate }}</p>
-                <a href="#modal-visita" uk-toggle><button
-                        class="uk-button uk-button-primary uk-button-large uk-border-pill"> {{'visita.botao' |
-                        translate}} </button></a>
-            </div>
+          <div class="border uk-card uk-card-primary uk-card-body">
+            <h3>Angonap 2</h3>
+            <p>Fortaleza, Brasil</p>
+            <button class="uk-margin-small-top uk-button uk-button-default uk-border-pill"><span
+                class="uk-margin-small-right uk-margin-small-left"> {{'saiba.mais'|translate
+                }}</span></button>
+          </div>
         </div>
+      </div>
     </div>
+
+    <div>
+      <div class="border fundo-cloud uk-card uk-card-default uk-card-body uk-text-left">
+        <h3 style="color:  white;"> {{'visita.virtual' | translate }} </h3>
+        <p style="color: white;">
+          {{'visita.desc' | translate }}</p>
+        <a href="#modal-visita" uk-toggle><button class="uk-button uk-button-primary uk-button-large uk-border-pill">
+            <span class="uk-margin-small-right uk-margin-small-left"> {{'visita.botao' |
+              translate}} </span> </button></a>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -66,72 +66,128 @@
 </div>
 
 
-<!-- This is a button toggling the modal -->
-
-<!-- This is an anchor toggling the modal -->
 
 <!-- This is the modal -->
 <div id="modal-visita" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body uk-border-rounded">
-        <h2 class="uk-modal-title">Informações do visitante</h2>
+  <div class="uk-modal-dialog uk-modal-body uk-border-rounded">
+    <h2 class="uk-modal-title">Informações do visitante</h2>
 
 
-        <form [formGroup]="visitForm" class="uk-form-stacked uk-border-rounded">
+    <form [formGroup]="visitForm" class="uk-form-stacked uk-border-rounded">
 
-            <div *ngIf="visitForm.get('firstName')?.invalid && (visitForm.get('firstName')?.dirty || visitForm.get('firstName')?.touched)"
-                class="uk-text-danger">
-                <ng-container *ngIf="visitForm.get('firstName')?.errors?.['required']">
-                    {{ 'campo_obrigatorio' | translate }} </ng-container>
-                <ng-container *ngIf="visitForm.get('firstName')?.errors?.['pattern']">
-                    {{ 'formato_invalido' | translate }} </ng-container>
+      <div
+        *ngIf="visitForm.get('firstName')?.invalid && (visitForm.get('firstName')?.dirty || visitForm.get('firstName')?.touched)"
+        class="uk-text-danger">
+        <ng-container *ngIf="visitForm.get('firstName')?.errors?.['required']">
+          {{ 'campo_obrigatorio' | translate }} </ng-container>
+        <ng-container *ngIf="visitForm.get('firstName')?.errors?.['pattern']">
+          {{ 'formato_invalido' | translate }} </ng-container>
+      </div>
+
+      <!-- Último Nome -->
+      <div class="uk-margin">
+        <label class="texto uk-form-label" for="nome">{{ 'nome.completo' | translate }}</label>
+        <div class="uk-form-controls">
+          <input class="uk-border-rounded uk-input" id="nome" type="text" formControlName="nome" required />
+        </div>
+      </div>
+
+
+      <!-- Seu E-Mail -->
+      <div class="uk-margin">
+        <label class="texto uk-form-label" for="email">{{ 'seu.email' | translate }}</label>
+        <div class="uk-form-controls">
+          <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email" required />
+        </div>
+      </div>
+
+      <div *ngIf="visitForm.get('email')?.invalid && (visitForm.get('email')?.dirty || visitForm.get('email')?.touched)"
+        class="uk-text-danger">
+        <ng-container *ngIf="visitForm.get('email')?.errors?.['required']">
+          {{ 'campo_obrigatorio' | translate }} </ng-container>
+        <ng-container *ngIf="visitForm.get('email')?.errors?.['pattern']">
+          {{ 'formato_invalido_email' | translate }} </ng-container>
+      </div>
+
+
+      <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-select"> {{ 'qual.datacenter' | translate }} </label>
+        <div class="uk-form-controls">
+          <select class="uk-select uk-border-rounded" id="form-stacked-select">
+            <option>AngoNAP I (Luanda, Angola)</option>
+            <option>AngoNAP II (Fortaleza, Brasil)</option>
+          </select>
+        </div>
+      </div>
+
+
+    </form>
+    <p class="uk-text-right">
+      <button (click)="submitForm($event)" class="uk-button uk-button-primary uk-border-rounded"
+        type="button">{{'comecar.visita' | translate }} </button>
+    </p>
+  </div>
+</div>
+<!--
+<div class="fundo-cabecalho">
+    <div class="gradiente-texto-cabecalho">
+        <div class="conteudo-cabecalho uk-margin-medium-top">
+            <div class="uk-container uk-margin-large-bottom">
+                <h4 style="color:white">Data Center</h4>
+                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">Infraestrutura robusta para um mundo digital <br> sempre conectado.</h1>
             </div>
-
-            <!-- Último Nome -->
-            <div class="uk-margin">
-                <label class="texto uk-form-label" for="nome">{{ 'nome.completo' | translate }}</label>
-                <div class="uk-form-controls">
-                    <input class="uk-border-rounded uk-input" id="nome" type="text" formControlName="nome" required />
-                </div>
-            </div>
-
-
-            <!-- Seu E-Mail -->
-            <div class="uk-margin">
-                <label class="texto uk-form-label" for="email">{{ 'seu.email' | translate }}</label>
-                <div class="uk-form-controls">
-                    <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email"
-                        required />
-                </div>
-            </div>
-
-            <div *ngIf="visitForm.get('email')?.invalid && (visitForm.get('email')?.dirty || visitForm.get('email')?.touched)"
-                class="uk-text-danger">
-                <ng-container *ngIf="visitForm.get('email')?.errors?.['required']">
-                    {{ 'campo_obrigatorio' | translate }} </ng-container>
-                <ng-container *ngIf="visitForm.get('email')?.errors?.['pattern']">
-                    {{ 'formato_invalido_email' | translate }} </ng-container>
-            </div>
-
-
-            <div class="uk-margin">
-                <label class="uk-form-label" for="form-stacked-select"> {{ 'qual.datacenter' | translate }} </label>
-                <div class="uk-form-controls">
-                    <select class="uk-select uk-border-rounded" id="form-stacked-select">
-                        <option>AngoNAP I (Luanda, Angola)</option>
-                        <option>AngoNAP II (Fortaleza, Brasil)</option>
-                    </select>
-                </div>
-            </div>
-
-
-        </form>
-        <p class="uk-text-right">
-            <button (click)="submitForm($event)" class="uk-button uk-button-primary uk-border-rounded"
-                type="button">{{'comecar.visita' | translate }} </button>
-        </p>
+        </div>
     </div>
 </div>
+ --><div class="uk-margin-large-right uk-margin-large-left">
+  <div
+    class="uk-grid-column-small uk-grid-row-small uk-child-width-1-3@s uk-grid-match uk-text-left uk-margin-large-bottom uk-margin-large-top "
+    uk-grid>
+
+    <div>
+      <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column">
+        <div class="uk-card-media-top">
+          <img class="border-2 card-image" src="img/servicos/angonap_service.png" width="1800" height="1200" alt="">
+          <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>AngoNAP</b></h2><br><br><br>
+          <p>{{ 'angonap_card_descricao' | translate }}</p>
+
+        </div>
+        <a style="font-weight: bold;" href="#">
+          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' | translate }}</button>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column">
+        <div class="uk-card-media-top">
+          <img class="border-2 card-image" src="img/servicos/managed-services.jpg" width="1800" height="1200" alt="">
+          <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>Managed Services</b></h2> <br><br><br>
+          <p>{{ 'managed_services_card_descricao' | translate }}</p>
+        </div>
+
+        <a style="font-weight: bold;" href="#">
+          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' | translate }}</button>
+        </a>
+      </div>
+    </div>
 
 
+    <div>
+      <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column">
+        <div class="uk-card-media-top">
+          <img class="border-2 card-image" src="img/servicos/gdi.jpg" width="1800" height="1200" alt="">
+          <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>Global Data Center Interconnection</b></h2><br>
+          <p>{{ 'global_data_center_interconnection_card_descricao' | translate }}</p>
+        </div>
+
+        <a style="font-weight: bold;" href="#">
+          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' | translate }}</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <app-rodape></app-rodape>

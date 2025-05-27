@@ -458,11 +458,8 @@
 
         <div>
             <div class="">
-                <h2 style="color: rgba(5, 5, 51, 1);; font-weight: bolder;">ESTRUTURA DE ACCIONISTAS</h2>
-                <p>
-                    Angola Cables, S. A., é uma sociedade de direito angolano, com sede social na Rua das Quipacas,
-                    Casa
-                    n.º 186, Bairro e Município da Ingombota, Luanda, Angola. </p>
+                <h2 style="color: rgba(5, 5, 51, 1);; font-weight: bolder;">{{ "estrutura.accionista" | translate }}</h2>
+                <p>{{ "accionistas.description" | translate }} </p>
                 <img src="img/layout/acionistas-participaco.png">
             </div>
         </div>
@@ -891,33 +888,76 @@
 </div>
 
     
-<div style="height: 80vh; width: auto;" class="uk-margin-medium-top uk-container">
-    <div uk-slideshow="animation: push; parallax: true; parallax-start: 70%; parallax-end: 100%;">
-        <div class="uk-slideshow-items">
-            <div>
-                <div class="video-container">
-                    <video autoplay loop muted id="backgroundVideo" class="background-video">
-                        <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
-                        {{ 'slideshow.video_alt_text' | translate }}
-                    </video>
-                    <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
-                        <h2 class="uk-margin-remove">
-                            {{ 'slideshow.slide1.title' | translate }}
-                        </h2>
-                    </div>
-                    <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
-                        <p class="uk-margin-remove">
-                            {{ 'slideshow.slide1.description' | translate }}
-                        </p>
+<div class="uk-margin-medium-top uk-container" style="height: 80vh;">
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+        
+        <div class="uk-slider-items uk-grid">
+            <!-- Slide 1: Video -->
+                <div class="uk-width-1-1">
+                <div class="uk-panel">
+                    <div class="video-container">
+                        <video autoplay loop muted id="backgroundVideo" class="background-video" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                            <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
+                            {{ 'slideshow.video_alt_text' | translate }}
+                        </video>
+                        <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
+                            <h2 class="uk-margin-remove">
+                                {{ 'slideshow.slide1.title' | translate }}
+                            </h2>
+                        </div>
+                        <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
+                            <p class="uk-margin-remove">
+                                {{ 'slideshow.slide1.description' | translate }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <img style="border-radius: 20px;" class="img-resp-social" src="img/sangano-escola-new.png" alt="" uk-cover>
+            
+            <!-- Slide 2: Image -->
+            <div class="uk-width-1-1">
+                <div class="">
+                    <img src="img/sangano-escola-new.png" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" uk-cover>
+                    <!-- You can add text overlays here if needed -->
+                </div>
             </div>
-        </div>
-       <!--  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul> -->
-    </div>
-</div>     
+            
+            <!-- Add more slides as needed -->
 
+
+            <div class="uk-width-1-1">
+                <div class="uk-panel">
+                    <div class="video-container">
+                        <video autoplay loop muted id="backgroundVideo" class="background-video" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                            <source src="https://marketing.host2africa.com/files/tartaruga-sangano.mp4" type="video/mp4">
+                            {{ 'slideshow.video_alt_text' | translate }}
+                        </video>
+                        <div class="uk-position-left uk-position-small uk-text-left uk-light uk-padding">
+                            <h2 class="uk-margin-remove">
+                                {{ 'slideshow.slide1.title' | translate }}
+                            </h2>
+                        </div>
+                        <div class="uk-position-bottom uk-position-small uk-text-left uk-light uk-padding">
+                            <p class="uk-margin-remove">
+                                {{ 'slideshow.slide1.description' | translate }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="uk-width-3-4">
+                <div class="uk-panel">
+                    <img src="images/photo3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <div class="uk-position-center uk-panel"><h1>Optional Text</h1></div>
+                </div>
+            </div>
+            -->
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+    </div>
+</div>
 <app-rodape></app-rodape>

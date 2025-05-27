@@ -6,10 +6,13 @@ import { CommonModule } from '@angular/common';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { MenuComponent } from '../menu/menu.component';
 
+import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
+
 @Component({
   selector: 'app-artigo-postar',
   standalone: true,
-  imports: [FormsModule, CommonModule, EditorModule],
+  // Adição de TranslatePipe aos imports
+  imports: [FormsModule, CommonModule, EditorModule, TranslatePipe], // Inserido
   templateUrl: './artigo-postar.component.html',
   styleUrls: ['./artigo-postar.component.css']
 })
@@ -44,6 +47,12 @@ export class ArtigoPostarComponent {
 
   private firestore = inject(Firestore);
   private router = inject(Router);
+  private translate = inject(TranslateService); // Inserido
+
+  constructor() { // Construtor adicionado/modificado para incluir a lógica de tradução
+    this.translate.setDefaultLang('pt'); // Inserido
+    this.translate.use(this.translate.currentLang || 'pt'); // Inserido
+  }
 
   async onSubmit() {
     this.errorMessage = '';
@@ -65,7 +74,7 @@ export class ArtigoPostarComponent {
       await addDoc(postsCollection, {
         title: this.newPost.title,
         content: this.editorContent,
-         author: this.newPost.author, 
+        author: this.newPost.author,
         imageUrl: this.featuredImageUrl || null,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
@@ -91,4 +100,8 @@ export class ArtigoPostarComponent {
     }
     return 'Falha ao salvar. Tente novamente.';
   }
+
+  useLanguage(language: string): void { // Inserido
+    this.translate.use(language); // Inserido
+  } // Inserido
 }

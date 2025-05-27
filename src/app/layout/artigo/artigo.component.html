@@ -1,7 +1,5 @@
 <app-menu></app-menu>
 
-<!-- app.component.html or wherever the section is rendered -->
-
 <div *ngIf="post.imageUrl" class="hero-section" [ngStyle]="{'background-image': 'url(' + post.imageUrl + ')'}">
   <div class="overlay">
     <div class="uk-container">
@@ -15,7 +13,6 @@
 
 
 
-  
 <div>
   <div class="fundo-artigo" *ngIf="post; else loading">
 
@@ -26,29 +23,22 @@
         <div class="uk-width-expand">
           <article style="color:white" class="uk-article uk-margin-large-top">
             <div class="">
-              <p style="font-size: 0.9rem; color: #A2A2B2;">Escrito por:
+              <p style="font-size: 0.9rem; color: #A2A2B2;">{{ 'artigo.escrito_por' | translate }}:
                 <b style="color: white;"> {{ post.author}} </b>
               </p>
 
 
-              <p style="color: #A2A2B2;">Publicado em: <b style="color: white;"> {{ post.createdAt?.toDate() | date:
+              <p style="color: #A2A2B2;">{{ 'publicado_em' | translate }}: <b style="color: white;"> {{ post.createdAt?.toDate() | date:
                   'dd/MM/yyyy' }} </b></p>
 
             </div>
-            <!-- Date -->
-
-
-
-
-            <!-- Post Content -->
             <div class="uk-article " [innerHTML]="safeContent"></div>
           </article>
         </div>
 
-        <!-- Sidebar Section for More Articles -->
         <aside style="color:white;padding: 30px; border-radius: 8px;"
           class="fundo-mais-artigos uk-width-1-3@m uk-margin-large-top uk-margin-left">
-          <h4 style="color:white"><span>Mais Artigos</span></h4>
+          <h4 style="color:white"><span>{{ 'mais_artigos' | translate }}</span></h4>
 
           @if (posts$ | async; as posts) {
           <ul class="uk-list uk-list-divider">
@@ -68,7 +58,7 @@
                       </p>
                     </a>
                     <p [innerHTML]="post.content | truncate:100:true" style="color: #A2A2B2;" class="uk-text-meta uk-margin-remove-top">
-                     
+                      
                     </p>
                   </div>
                 </div>
@@ -78,7 +68,7 @@
             }
 
             <div class="uk-margin uk-text-center">
-              <a class="uk-margin-large-top" style="color: rgba(40, 193, 253, 1);" routerLink="/blog">Ver todos</a>
+              <a class="uk-margin-large-top" style="color: rgba(40, 193, 253, 1);" routerLink="/blog">{{ 'artigo.ver_todos' | translate }}</a>
             </div>
           </ul>
           }
