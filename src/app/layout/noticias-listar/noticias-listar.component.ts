@@ -1,12 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NoticiaService } from '../../services/noticia.service';
 import { AsyncPipe, CommonModule, DatePipe, NgFor, NgIf } from '@angular/common';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { RodapeComponent } from '../rodape/rodape.component';
-import { MenuComponent } from '../menu/menu.component';
-import { TruncatePipe } from '../../pipes/truncate.pipe';
+import {  TranslateService } from '@ngx-translate/core';
+
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -16,13 +13,8 @@ import { RouterLink } from '@angular/router';
         AsyncPipe,
     CommonModule,
     DatePipe,
-    NgFor,
     NgIf,
-    TranslatePipe,
-    RodapeComponent,
-    TruncatePipe,
-    MenuComponent,
-    RouterLink
+
   ],
   templateUrl: './noticias-listar.component.html',
   styleUrl: './noticias-listar.component.css'

@@ -281,7 +281,16 @@
   "virtual_router_titulo": "Virtual Router",
   "virtual_router_descricao": "The Virtual Router is an economical solution that allows your company to expand its presence with minimal investment in logistical and Data Center resources (colocation, hardware, and power). In general, the client has remote access (anywhere, anytime) and full autonomy to manage the equipment.",
   "sd_wan_titulo": "SD-WAN",
-  "sd_wan_descricao": "AC SD-WAN is an Angola Cables service that enhances networks with intelligence, maximizing gains in combining connectivity (MPLS, LTE, Internet, and other security features). It offers centralized management, cost reduction, and raises security levels by incorporating real-time SSL inspection."
+  "sd_wan_descricao": "AC SD-WAN is an Angola Cables service that enhances networks with intelligence, maximizing gains in combining connectivity (MPLS, LTE, Internet, and other security features). It offers centralized management, cost reduction, and raises security levels by incorporating real-time SSL inspection.",
+    "centro_confianca_titulo_pagina": "Trust Center",
+  "centro_confianca_subtitulo_pagina": "Our commitment is to provide High-Performance connectivity solutions.",
+  "qualidade_titulo": "Quality",
+  "seguranca_titulo": "Security",
+  "infraestrutura_titulo": "Infrastructure",
+  "esg_titulo": "ESG",
+  "certificacoes_parceiros_titulo": "Partner Certifications",
+  "premios_titulo_parte1": "WE DON'T SEEK AWARDS, BUT",
+  "premios_titulo_parte2": "WE VALUE RECOGNITION"
 
 
 

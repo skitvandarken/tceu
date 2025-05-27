@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import {  TranslateService } from '@ngx-translate/core';
+import {  TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-parceiros',

@@ -1,12 +1,10 @@
-import { Component, Directive, ElementRef, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import {  TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-slider',
-  imports: [RouterLink, CommonModule, TranslatePipe],
+  imports: [ CommonModule, ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
