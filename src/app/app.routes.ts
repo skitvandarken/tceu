@@ -31,7 +31,7 @@ export const routes: Routes = [
   
     {path:'',component: InicioComponent},
     {path: 'inicio', component: InicioComponent},
-    {path: 'acerca', component: AcercaComponent},
+    {path: 'sobre', component: AcercaComponent},
 
     {path: 'conta', component: SignupComponent},
     {path: 'indicador', component:IndicadorComponent},

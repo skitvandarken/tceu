@@ -115,9 +115,30 @@
     color: #e6f7ff;
 }
 
+/* Glassmorphic look for Offcanvas Bar */
 .uk-offcanvas-bar {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(20px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(20px); /* For Safari compatibility */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for depth */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Shadow for lift */
+    color: #ffffff; /* Ensure text is white for contrast */
 }
+
+/* Adjust Offcanvas navigation link colors for better readability on glassmorphic background */
+#offcanvas-nav .uk-nav-default li a {
+    color: #ffffff !important; /* Make sure links are white */
+    font-weight: bold; /* Keep them bold for prominence */
+}
+
+#offcanvas-nav .uk-nav-default li a:hover {
+    color: #e0e0e0 !important; /* Slightly lighter white on hover */
+}
+
+#offcanvas-nav .uk-nav-header {
+    color: #e0e0e0; /* Lighter color for headers */
+}
+
 
 .texto {
     color: #fff;
@@ -136,7 +157,8 @@ div {
     padding: 1rem 0rem;
 }
 
-p, .translated {
+p,
+.translated {
     /* background-color: #d4f3ff;
     padding: 0.5rem 1rem; */
 }
@@ -224,6 +246,14 @@ select {
     color: white !important;
 }
 
+
+.uk-modal-dialog {
+
+    width: 900px;
+    height: auto;
+
+}
+
 /* Responsive Media Queries */
 /* Large screens (desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -234,68 +264,64 @@ select {
 
 /* Medium screens (tablets, 768px to 1199px) */
 @media (max-width: 1199px) and (min-width: 768px) {
-    .uk-navbar-nav > li {
+    .uk-navbar-nav>li {
         margin: 0 8px;
     }
-    
-    .uk-navbar-nav > li > a > img {
+
+    .uk-navbar-nav>li>a>img {
         width: 150px !important;
     }
-    
+
     .uk-navbar-dropdown-width-2 {
         width: 350px;
     }
-    
+
     .uk-navbar-container {
         padding: 8px 0;
     }
 }
+
 
 /* Small screens (phones, 767px and below) */
 @media (max-width: 767px) {
     .uk-visible\@m {
         display: none !important;
     }
-    
+
     .uk-hidden\@m {
         display: block !important;
     }
-    
+
     #offcanvas-nav .uk-offcanvas-bar {
-        width: 300px;
-    
+        width: 100%;
+        /* Re-apply glassmorphism for smaller screens */
+        background-color: rgba(255, 255, 255, 0.15); /* Slightly less transparent */
+        backdrop-filter: blur(15px); /* Slightly less blur for smaller screens */
+        -webkit-backdrop-filter: blur(15px);
+        border-right: 1px solid rgba(255, 255, 255, 0.3); /* Slightly more prominent border */
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2); /* Adjusted shadow */
     }
-    
-    .uk-navbar-container {
-        padding: 9px 0;
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
-        height: 100px;
-        position: fixed;
-        justify-content: center;
-        width: 100vw;
-    }
-    
+
     #offcanvas-nav img {
         width: 200px !important;
         margin-bottom: 20px;
     }
-    
+
     .uk-form-custom button {
         padding: 0 8px;
         height: 36px;
     }
-    
+
     .uk-modal-dialog {
         width: 90%;
         margin: 0 auto;
     }
-    
+
     #search-modal .uk-modal-body {
         padding: 15px;
     }
-    
-    #offcanvas-nav .uk-nav-default > li > a {
+
+    #offcanvas-nav .uk-nav-default>li>a {
         font-size: 14px;
         padding: 8px 0;
     }
@@ -306,19 +332,19 @@ select {
     #offcanvas-nav .uk-offcanvas-bar {
         width: 250px;
     }
-    
+
     #offcanvas-nav img {
         width: 180px !important;
     }
-    
+
     .uk-modal-dialog {
         padding: 10px;
     }
-    
+
     #search-modal input.uk-input {
         font-size: 14px;
     }
-    
+
     .uk-button {
         padding: 8px 12px;
         font-size: 14px;
@@ -330,11 +356,11 @@ select {
     .uk-form-custom button {
         padding: 0 6px;
     }
-    
+
     .bandeiras {
         width: 16px;
     }
-    
+
     #selected-language {
         font-size: 12px !important;
     }
@@ -345,15 +371,15 @@ select {
     .uk-navbar-container {
         padding: 3px 0;
     }
-    
+
     #offcanvas-nav .uk-offcanvas-bar {
         height: 80vh;
-        overflow-y: auto;
     }
 }
 
 /* High DPI screens adjustments */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .uk-navbar-container {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);

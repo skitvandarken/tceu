@@ -6,7 +6,7 @@
   "nav.empresa": "Empresa",
   "ac.descricao": " é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP, operadores Tier | e fornecedores de conteúdo globais. Com mais de 30 POPs e conexões a 66 Data Centers interconectados e 6.000 acordos de peering, o tráfego na sua rede internacional excede os 18,500 Tbps.",
   "ac.presenca": "PRESENÇA LOCAL, NEGÓCIO GLOBAL",
-  "ac.presencadescricao": "Fornecemos soluções de conectividade inovadoras para os mercados wholesale e corporativo em todo o mundo. Como um importante operador de rede global, pioneiro em rotas de cabos submarinos no Atlântico, conectividade entre data centers de Oeste para Leste, de Sul a Sul, oferecemos uma gama de soluções digitais personalizadas, desde IP Transit até serviços em nuvem, para múltiplas indústrias, incluindo operadoras de telecomunicações, CDNs e OTTs, além de setores financeiros, de petróleo e gás e outras indústrias com subsidiárias em Angola, Brasil, África do Sul, Nigéria, Europa e EUA.",
+  "ac.presencadescricao": "Oferecemos soluções de conectividade inovadoras para os mercados wholesale e corporativo, com presença global e foco em rotas submarinas no Atlântico. Conectamos data centers de Oeste a Leste e de Sul a Sul, fornecendo serviços digitais personalizados — de IP Transit à nuvem — para telecom, CDNs, OTTs, finanças, petróleo, gás e outros setores com operações em Angola, Brasil, África do Sul, Nigéria, Europa e EUA.",
   "ver.videoinstitucional": "Ver vídeo institucional",
   "ver.mapa": "Ver mapa interactivo",
   "mais.sobre": "Mais sobre Angola Cables",
@@ -31,7 +31,7 @@
   "fique.atento": "Fique atento a nossa agenda e saiba onde o ",
   "onde.eventos": " Grupo Angola Cables ",
   "onde.presente": "estará presente",
-  "caracteristicas": "CONFIÁVEL | TRANSPARÊNCIA | RESPONSÁVEL",
+  "caracteristicas": "CONFIÁVEL | TRANSPARENTE | RESPONSÁVEL",
   "conectada.mundo": "23ª operadora mais interconectada do mundo",
   "conectada.africa": "Operadora mais interconectada de África",
   "conectada.cplp": "Operadora mais interconectada da CPLP",
@@ -182,19 +182,26 @@
   "equipa.samuel_carvalho.bio": "Samuel Carvalho é CMO da Angola Cables e possui mestrado em Comunicação Corporativa, BA em Relações Públicas e Marketing, além de certificação em Liderança Transformacional pelo Lisbon MBA Program. Com mais de 18 anos de experiência em consultoria operacional e de marketing para empresas do setor financeiro e FMCG, construiu uma carreira sólida em estratégias de marketing, mídia, publicidade, gestão de marca e comunicação. Sob sua liderança, a Angola Cables implementou a estratégia 'Global Deep Connection', promovendo produtos como CDN, IXP, Cloud Services, Data Centers e a rede submarina que conecta a África à América do Sul.",
   "equipa.ariete_pereira.name": "ARIETE PEREIRA",
   "equipa.ariete_pereira.position": "Líder Comercial",
-  "equipa.ariete_pereira.bio": "Ariete Pereira possui mais de 10 anos de experiência em cargos comerciais no setor de telecomunicações e atualmente é Líder de Vendas na Angola Cables. Destaca-se na construção de relacionamentos sólidos e duradouros com clientes ao redor do mundo, oferecendo valor consistente e confiança por meio de um serviço confiável e parcerias estratégicas. Comprometida em gerar valor excepcional para os parceiros, busca garantir que sua equipe esteja motivada e empoderada para contribuir com o crescimento e sucesso da Angola Cables no cenário global de telecomunicações.",
+  "equipa.ariete_pereira.bio": "Ariete Pereira possui mais de 10 anos de experiência em cargos comerciais no setor de telecomunicações e atualmente é Líder de Vendas na Angola Cables. Destaca-se na construção de relacionamentos sólidos e duradouros com clientes ao redor do mundo, oferecendo valor consistente e confiança por meio de um serviço confiável e parcerias estratégicas.<br> Comprometida em gerar valor excepcional para os parceiros, busca garantir que sua equipe esteja motivada e empoderada para contribuir com o crescimento e sucesso da Angola Cables no cenário global de telecomunicações.",
   "equipa.fernando_fernandes.name": "FERNANDO FERNANDES",
   "equipa.fernando_fernandes.position": "CEO da TelCables Nigeria",
-  "equipa.fernando_fernandes.bio": "Fernando Fernandes é CEO da TelCables Nigeria & West Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables na Nigéria e região da África Ocidental. Com ampla experiência no setor de telecomunicações, Fernando tem se destacado pela sua liderança adaptável e inovadora, focada em expandir a rede da empresa e melhorar a entrega de serviços. Nomeado CEO em 2023, desempenhou um papel crucial na consolidação da TelCables como líder de mercado na região.",
+  "equipa.fernando_fernandes.bio": "Fernando Fernandes é CEO da TelCables Nigeria & West Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables na Nigéria e região da África Ocidental.<br> Com ampla experiência no setor de telecomunicações, Fernando tem se destacado pela sua liderança adaptável e inovadora, focada em expandir a rede da empresa e melhorar a entrega de serviços. Nomeado CEO em 2023, desempenhou um papel crucial na consolidação da TelCables como líder de mercado na região.",
   "equipa.virgilio_alves.name": "VIRGÍLIO ALVES",
   "equipa.virgilio_alves.position": "Líder de Pós-Venda",
-  "equipa.virgilio_alves.bio": "Virgílio Alves possui mais de 15 anos de experiência em Customer Experience (CX) e atua como Líder de Pós-Venda, Operações e Canais da Angola Cables há 5 anos. Focado em soluções estratégicas e operacionais, busca aprimorar a experiência do cliente. Com vasta experiência no setor de telecomunicações e operadores móveis, adota uma abordagem prática e orientada para resultados, sempre centrada no cliente. Membro da Customer Experience Professionals Association (CXPA), contribui para a transformação de processos, equipes e tecnologias, garantindo que cada ponto de contato proporcione uma experiência fluida, eficiente e memorável.",
+  "equipa.virgilio_alves.bio": "Virgílio Alves possui mais de 15 anos de experiência em Customer Experience (CX) e atua como Líder de Pós-Venda, Operações e Canais da Angola Cables há 5 anos. Focado em soluções estratégicas e operacionais, busca aprimorar a experiência do cliente.<br> Com vasta experiência no setor de telecomunicações e operadores móveis, adota uma abordagem prática e orientada para resultados, sempre centrada no cliente. Membro da Customer Experience Professionals Association (CXPA), contribui para a transformação de processos, equipes e tecnologias, garantindo que cada ponto de contato proporcione uma experiência fluida, eficiente e memorável.",
   "equipa.sudhir_juggernath.name": "SUDHIR JUGGERNAUTH",
   "equipa.sudhir_juggernath.position": "CEO da TelCables South Africa",
-  "equipa.sudhir_juggernath.bio": "Sudhir Juggernath é CEO da TelCables Southern & East Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables nas regiões da África Austral e Oriental. Com 20 anos de experiência no setor de telecomunicações e tecnologia, Sudhir tem um histórico de posições estratégicas em empresas como Siemens, Neotel, BT Global Services e Orange, com foco em desenvolvimento de negócios. Nomeado CEO em setembro de 2023, é conhecido por sua visão analítica e habilidade em negociar e gerar oportunidades de mercado.",
-  "equipa.claudio_florindo.name": "CLÁUDIO FLORINDO",
-  "equipa.claudio_florindo.position": "CEO da TelCables Brasil",
-  "equipa.claudio_florindo.bio": "Cláudio Florindo é CEO da TelCables no Brasil. Com mais de 20 anos de experiência no setor de telecomunicações, ingressou na empresa em 2018, assumindo cargos de liderança, como Head of Engineering e Diretor de Tecnologia. Possui vasta experiência na implementação de soluções digitais inovadoras, com foco na expansão e melhoria das capacidades de redes de diversas empresas e setores. Antes de entrar na Angola Cables, trabalhou em empresas como Movicel, CapGemini, Rumos, NCR Angola e IT One, consolidando sua trajetória no mercado internacional de telecomunicações.",
+  "equipa.sudhir_juggernath.bio": "Sudhir Juggernath é CEO da TelCables Southern & East Africa, subsidiária da Angola Cables, provedor global de soluções ICT e operadora de rede mais conectada da África. Ele é responsável pela gestão, desenvolvimento e expansão das operações da TelCables nas regiões da África Austral e Oriental.<br> Com 20 anos de experiência no setor de telecomunicações e tecnologia, Sudhir tem um histórico de posições estratégicas em empresas como Siemens, Neotel, BT Global Services e Orange, com foco em desenvolvimento de negócios. <br>Nomeado CEO em setembro de 2023, é conhecido por sua visão analítica e habilidade em negociar e gerar oportunidades de mercado.",
+  "equipa.mahen_mahido.name": "Mahen Naidu",
+  "equipa.mahen_mahido.position": "Líder de Soluções de Negócios",
+  "equipa.mahen_mahido.bio": "  Profissional de Telecomunicações com mais de 10 anos de experiência nas áreas de Arquitetura de Soluções, Desenvolvimento de Produtos e Modelagem de Preços Comerciais. Excelentes habilidades de comunicação e ampla experiência trabalhando com clientes e parceiros. <br> Eu prospero em trazer novas ideias e soluções para alcançar e impulsionar requisitos de negócios específicos. Eu me esforço para me manter a par do cenário de networking para agregar valor aos requisitos de negócios para o público interno e externo. Candidato organizado e confiável, bem-sucedido no gerenciamento de várias prioridades com uma atitude positiva. <br> Vontade de assumir responsabilidades adicionais para atingir as metas da equipe.",
+  
+  "equipa.guilherme_vieira.name": "Guilherme Viveira",
+  "equipa.guilherme_vieira.position": "Director de vendas",
+"equipa.guilherme_vieira.bio": "Vinte e um anos de experiência em empresas nacionais e multinacionais do setor de Tecnologia de Informação e Comunicação (TIC), dezoito dos quais suportando mudanças organizacionais envolvendo processos de negócio complexos;\n\nSólida experiência comercial e em desenvolvimento de negócios adquirida através de ampla vivência em negociação de soluções de TIC (software, hardware e serviços) nas regiões sudeste, nordeste, sul e centro-oeste do Brasil;\n\nAtuação e conhecimento consistentes em todas as fases do ciclo de vendas para organizações públicas e privadas.<br> Proficiência nas principais modalidades e tipos de aquisições públicas e privadas como RFI, RFP, RFQ, concorrência, pregão, menor preço, técnica e preço, sistema de registro de preços, dentre outras;",
+
+
+  
   "slideshow.video_alt_text": "Seu navegador não suporta o vídeo em falta",
   "slideshow.slide1.title": "Os nossos cabos submarinos são colocados nas profundezas do oceano, local onde habitam as tartarugas, deste modo queremos preservar o ecossistema e queremos deixá-lo de uma forma sustentável as próximas gerações.",
   "slideshow.slide1.description": "Fazemos todo o investimento possível para que as nossas operações continuem a preservar os mares e oceanos, assim como as espécies que lá habitam nomeadamente as tartarugas Kitabanga que estão em extinção.",
@@ -266,6 +273,10 @@
   "gestao_simplificada_titulo": "Gestão simplificada e performance maximizada para o seu negócio​",
   "sap_business_one_titulo": "SAP Business One",
   "sap_business_one_descricao": "O SAP Business One ajuda no crescimento lucrativo dos seus negócios com processos simplificados e tomada de decisões estratégicas com base em informações dispostas em tempo real.",
+   "sap_ecobizz_titulo": "Ecobizz",
+  "sap_ecobizz_descricao": "O ECOBIZZ é uma ERP completo que permite que as micro e PMES comecem a sua atividade de negócio no digital sem complexidades. Integração completa de soluções digitais em uma só plataforma",
+  
+  
   "cloud_titulo_pagina": "Cloud",
   "cloud_subtitulo_pagina": "Os serviços de cloud certos para a sua empresa crescer sem limites.",
   "clouds2africa_titulo": "Clouds2Africa",
@@ -278,7 +289,7 @@
   "backups2brasil_descricao": "A melhor experiência de jogo com latências reduzidas, conectando diretamente aos principais servidores globais e garantindo desempenho superior, estabilidade, qualidade e uma conexão confiável para jogadores mais exigentes, com suporte dedicado, acesso a plataformas de última geração e roteamento otimizado para máxima eficiência.",
   "vods2africa_titulo": "Vods2Africa",
   "vods2africa_descricao": "O Remote Peering permite conexão remota a pontos de troca de tráfego (IXPs) globais, oferecendo maior eficiência, redução de custos e latência otimizada. Ideal para empresas que buscam interconectar-se diretamente a múltiplas redes, melhorando desempenho e alcance global com infraestrutura robusta e segura.",
-    "seguranca_titulo_pagina": "Segurança",
+  "seguranca_titulo_pagina": "Segurança",
   "seguranca_subtitulo_parte1": "Defenda a sua infraestrutura com soluções",
   "seguranca_subtitulo_parte2": "inteligentes de cibersegurança.",
   "shields2africa_titulo": "Shields2Africa",
@@ -291,7 +302,7 @@
   "virtual_router_descricao": "O Virtual Router é uma solução económica que permite à sua empresa expandir a sua presença com investimento mínimo em recursos logísticos e de Data Center (colocation, hardware e energia). No geral o cliente tem acesso remoto (em qualquer lugar, a qualquer hora) e total autonomia para gerir o equipamento",
   "sd_wan_titulo": "SD-WAN",
   "sd_wan_descricao": "O AC SD-WAN é um serviço da Angola Cables que potencializa redes com inteligência, maximizando os ganhos na combinação de conectividade (MPLS, LTE, Internet e outros recursos de segurança). Ele oferece gestão centralizada, redução de custos e eleva os níveis de segurança ao incorporar inspeção SSL em tempo real.",
-   "centro_confianca_titulo_pagina": "Centro de Confiança",
+  "centro_confianca_titulo_pagina": "Centro de Confiança",
   "centro_confianca_subtitulo_pagina": "Nosso compromisso é proporcionar soluções de conectividade de Alto Desempenho.",
   "qualidade_titulo": "Qualidade",
   "seguranca_titulo": "Segurança",
@@ -299,10 +310,6 @@
   "esg_titulo": "ESG",
   "certificacoes_parceiros_titulo": "Certificações dos Parceiros",
   "premios_titulo_parte1": "NÃO BUSCAMOS PREMIOS, MAS",
-  "premios_titulo_parte2": "VALORIZAMOS O RECONHECIMENTO"
-
-
-
-
-
+  "premios_titulo_parte2": "VALORIZAMOS O RECONHECIMENTO",
+  "Conectar": "Conectar"
 }

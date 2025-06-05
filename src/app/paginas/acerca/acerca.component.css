@@ -6,7 +6,7 @@
     background-color: #000;
     position: relative;
     min-height: 400px;
-        margin-top: 67px;
+    margin-top: 67px;
 
 }
 
@@ -83,7 +83,7 @@
 .gradiente-nome-equipa {
     background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0));
     width: 100%;
-    
+
 }
 
 .missao-imagem {
@@ -144,17 +144,72 @@
     .uk-slider-container {
         padding: 0 30px;
     }
-    
+
     .uk-grid-item-match {
         margin-bottom: 20px;
     }
-    
-    .uk-width-1-2@m {
+
+    .uk-width-1-2 {
         width: 100% !important;
     }
 }
 
-.uk-dotnav{
+.uk-dotnav {
     color: #fff !important;
-} 
+}
 
+
+
+.uk-background-primary {
+    border-radius: 50% !important;
+}
+
+
+
+/* Responsive text sizing */
+.responsive-title {
+    font-size: 1.5rem;
+    /* Default size for desktop */
+}
+
+.responsive-description {
+    font-size: 14px;
+    /* Default size for desktop */
+}
+
+/* Tablet screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    .responsive-title {
+        font-size: 1.3rem;
+    }
+
+    .responsive-description {
+        font-size: 13px;
+    }
+}
+
+/* Mobile screens (up to 767px) */
+@media (max-width: 767px) {
+    .responsive-title {
+        font-size: 1.1rem;
+    }
+
+    .responsive-description {
+        font-size: 12px;
+    }
+}
+
+/* Small mobile screens (up to 480px) */
+@media (max-width: 480px) {
+    .responsive-title {
+        font-size: 1rem;
+    }
+
+    .responsive-description {
+        font-size: 11px;
+    }
+}
+
+.uk-border-circle{
+    border-radius: 50px;
+}

@@ -1,6 +1,6 @@
 <div class="uk-container uk-margin-top">
     @if (noticias$ | async; as noticias) {
-    <div class="uk-grid uk-child-width-1-3@m uk-grid-medium" uk-grid>
+    <div class="uk-grid uk-child-width-1-3@m uk-grid-medium uk-grid-match" uk-grid>
         @for (noticia of noticias; track noticia.id) {
         <div>
             <div style="border-radius: 30px;" class="uk-card  uk-border-rounded uk-text-left">

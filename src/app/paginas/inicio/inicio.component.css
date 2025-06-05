@@ -20,3 +20,12 @@
         color: #ffffff; /* Ensure text is visible on the gradient */
 
 }
+
+
+ .ac-divider {
+        border: none;
+        height: 8px;
+        background-color: #28C1FD;
+        margin: 20px 0; /* Adjust spacing as needed */
+        width: 100%;
+    }
