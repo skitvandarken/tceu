@@ -28,22 +28,33 @@
     background-color: rgba(247, 247, 247, 1);
     position: relative;
     min-height: 300px;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    /* Legacy */
+    overflow-wrap: break-word;
+    /* Modern */
+    word-break: break-word;
+    /* Ensures breaks */
+
+
 }
 
 .fundo-cronologia-abas {
     background-color: rgba(247, 247, 247, 1);
 }
 
+/*
 .conteudo-cronologia {
     position: relative;
     bottom: 0;
     width: 100%;
 }
-
+*/
 .texto-abas-cronologia {
     font-size: 20px !important;
     font-weight: 700;
     color: #00003C;
+
 }
 
 .uk-subnav-pill>.uk-active>a {
@@ -210,6 +221,6 @@
     }
 }
 
-.uk-border-circle{
+.uk-border-circle {
     border-radius: 50px;
 }

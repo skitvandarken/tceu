@@ -325,6 +325,10 @@ select {
         font-size: 14px;
         padding: 8px 0;
     }
+
+    .uk-navbar-container {
+        height: 95px;
+    }
 }
 
 /* Extra small screens (phones, 480px and below) */
