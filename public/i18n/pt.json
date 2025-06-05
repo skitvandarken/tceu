@@ -4,7 +4,7 @@
   "nav.ip": "IP",
   "nav.conectividade": "Conectividade",
   "nav.empresa": "Empresa",
-  "ac.descricao": " é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP, operadores Tier | e fornecedores de conteúdo globais. Com mais de 30 POPs e conexões a 66 Data Centers interconectados e 6.000 acordos de peering, o tráfego na sua rede internacional excede os 18,500 Tbps.",
+  "ac.descricao": " é uma multinacional de telecomunicações que opera uma robusta rede global de backbone, proporcionando acesso a principais IXP, operadores Tier | e fornecedores de conteúdo globais.",
   "ac.presenca": "PRESENÇA LOCAL, NEGÓCIO GLOBAL",
   "ac.presencadescricao": "Oferecemos soluções de conectividade inovadoras para os mercados wholesale e corporativo, com presença global e foco em rotas submarinas no Atlântico. Conectamos data centers de Oeste a Leste e de Sul a Sul, fornecendo serviços digitais personalizados — de IP Transit à nuvem — para telecom, CDNs, OTTs, finanças, petróleo, gás e outros setores com operações em Angola, Brasil, África do Sul, Nigéria, Europa e EUA.",
   "ver.videoinstitucional": "Ver vídeo institucional",
@@ -203,7 +203,7 @@
 
   
   "slideshow.video_alt_text": "Seu navegador não suporta o vídeo em falta",
-  "slideshow.slide1.title": "Os nossos cabos submarinos são colocados nas profundezas do oceano, local onde habitam as tartarugas, deste modo queremos preservar o ecossistema e queremos deixá-lo de uma forma sustentável as próximas gerações.",
+  "slideshow.slide1.title": "Os nossos cabos submarinos são instalados nas profundezas do oceano, respeitando o habitat das tartarugas e preservando o ecossistema para as futuras gerações.",
   "slideshow.slide1.description": "Fazemos todo o investimento possível para que as nossas operações continuem a preservar os mares e oceanos, assim como as espécies que lá habitam nomeadamente as tartarugas Kitabanga que estão em extinção.",
   "dashboard-blog": "Artigos",
   "dashboard-empregos": "Vagas",
@@ -288,7 +288,7 @@
   "backups2brasil_titulo": "Backups2Brasil",
   "backups2brasil_descricao": "A melhor experiência de jogo com latências reduzidas, conectando diretamente aos principais servidores globais e garantindo desempenho superior, estabilidade, qualidade e uma conexão confiável para jogadores mais exigentes, com suporte dedicado, acesso a plataformas de última geração e roteamento otimizado para máxima eficiência.",
   "vods2africa_titulo": "Vods2Africa",
-  "vods2africa_descricao": "O Remote Peering permite conexão remota a pontos de troca de tráfego (IXPs) globais, oferecendo maior eficiência, redução de custos e latência otimizada. Ideal para empresas que buscam interconectar-se diretamente a múltiplas redes, melhorando desempenho e alcance global com infraestrutura robusta e segura.",
+  "vods2africa_descricao": "Vods2Africa é uma solução de transmissão desenvolvida pela Angola Cables que permite a operadores e utilizadores finais distribuir conteúdos multimídia com agilidade. Através da rede IP da Angola Cables, é possível transmitir televisão linear, rádio, jornais, revistas, câmaras de segurança e outros serviços, com elevada performance e confiabilidade via Internet.",
   "seguranca_titulo_pagina": "Segurança",
   "seguranca_subtitulo_parte1": "Defenda a sua infraestrutura com soluções",
   "seguranca_subtitulo_parte2": "inteligentes de cibersegurança.",

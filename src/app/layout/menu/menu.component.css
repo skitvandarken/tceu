@@ -129,7 +129,7 @@
 #offcanvas-nav .uk-nav-default li a {
     color: #ffffff !important; /* Make sure links are white */
     font-weight: bold; /* Keep them bold for prominence */
-}
+    text-transform: none;}
 
 #offcanvas-nav .uk-nav-default li a:hover {
     color: #e0e0e0 !important; /* Slightly lighter white on hover */
@@ -296,7 +296,7 @@ select {
         width: 100%;
         /* Re-apply glassmorphism for smaller screens */
         background-color: rgba(255, 255, 255, 0.15); /* Slightly less transparent */
-        backdrop-filter: blur(15px); /* Slightly less blur for smaller screens */
+        backdrop-filter: blur(20px); /* Slightly less blur for smaller screens */
         -webkit-backdrop-filter: blur(15px);
         border-right: 1px solid rgba(255, 255, 255, 0.3); /* Slightly more prominent border */
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2); /* Adjusted shadow */

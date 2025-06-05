@@ -194,8 +194,6 @@
   "equipa.sudhir_juggernath.position": "CEO of TelCables South Africa",
   "equipa.sudhir_juggernath.bio": "Sudhir Juggernath is the CEO of TelCables Southern & East Africa, a subsidiary of Angola Cables, a global ICT solutions provider and Africa's most connected network operator. He is responsible for managing, developing, and expanding TelCables' operations in Southern and East Africa. With 20 years of experience in telecommunications and technology, Sudhir has held strategic positions at companies like Siemens, Neotel, BT Global Services, and Orange, focusing on business development. Appointed CEO in September 2023, he is known for his analytical vision and ability to negotiate and create market opportunities.",
   "equipa.mahen_mahido.name": "Mahen Naidu",
-
-
   "equipa.mahen_mahido.position": "Head of Business Solutions",
   "equipa.mahen_mahido.bio": "  Telecoms Professional with over 10 years’ experience in the areas of Solution Architecture, Product Development and Commercial Price Modeling. Excellent communication skills and extensive experience working with clients and partners. I thrive on bringing new ideas and solutions to achieve and drive specific business requirements. I strive to keep abreast of the networking landscape to add value to business requirements for both internal and external audiences. Organized and dependable candidate successful at managing multiple priorities with a positive attitude. Willingness to take on added responsibilities to meet team goals..",
   "artigo.escrito_por": "Written by",
@@ -259,7 +257,7 @@
   "gestao_simplificada_titulo": "Simplified management and maximized performance for your business",
   "sap_business_one_titulo": "SAP Business One",
   "sap_business_one_descricao": "SAP Business One helps in the profitable growth of your business with simplified processes and strategic decision-making based on real-time information.",
-   "cloud_titulo_pagina": "Cloud",
+  "cloud_titulo_pagina": "Cloud",
   "cloud_subtitulo_pagina": "The right cloud services for your company to grow without limits.",
   "clouds2africa_titulo": "Clouds2Africa",
   "clouds2africa_descricao": "Advanced storage, processing, and database management services, ensuring security, agility, cost optimization, and performance maximization. Customized solutions for companies seeking scalability, operational efficiency, and specialized technical support, with cutting-edge infrastructure and high availability for critical operations.",
@@ -270,21 +268,21 @@
   "backups2brasil_titulo": "Backups2Brasil",
   "backups2brasil_descricao": "The best gaming experience with reduced latencies, connecting directly to major global servers and ensuring superior performance, stability, quality, and a reliable connection for the most demanding players, with dedicated support, access to latest generation platforms, and optimized routing for maximum efficiency.",
   "vods2africa_titulo": "Vods2Africa",
-  "vods2africa_descricao": "Remote Peering allows remote connection to global Internet Exchange Points (IXPs), offering greater efficiency, cost reduction, and optimized latency. Ideal for companies seeking to directly interconnect with multiple networks, improving global performance and reach with robust and secure infrastructure.",
-    "seguranca_titulo_pagina": "Security",
+  "vods2africa_description": "Vods2Africa is a broadcasting solution developed by Angola Cables that allows operators and end users to efficiently distribute multimedia content. Through Angola Cables' IP network, it is possible to transmit linear TV, radio, newspapers, magazines, security cameras, and other services with high performance and reliability over the Internet.",
+  "seguranca_titulo_pagina": "Security",
   "seguranca_subtitulo_parte1": "Defend your infrastructure with intelligent",
   "seguranca_subtitulo_parte2": "cybersecurity solutions.",
   "shields2africa_titulo": "Shields2Africa",
   "shields2africa_descricao": "Shields2Africa is a robust and customized solution from Angola Cables, designed to effectively protect any content or company against cyber attacks.",
   "shields2brasil_titulo": "Shield2Brasil",
   "shields2brasil_descricao": "Shields2Africa is a robust and customized solution from Angola Cables, designed to effectively protect any content or company against cyber attacks.",
-   "virtualizacao_titulo_pagina": "Virtualization",
+  "virtualizacao_titulo_pagina": "Virtualization",
   "virtualizacao_subtitulo_pagina": "Redefine your infrastructure with advanced virtual network solutions.",
   "virtual_router_titulo": "Virtual Router",
   "virtual_router_descricao": "The Virtual Router is an economical solution that allows your company to expand its presence with minimal investment in logistical and Data Center resources (colocation, hardware, and power). In general, the client has remote access (anywhere, anytime) and full autonomy to manage the equipment.",
   "sd_wan_titulo": "SD-WAN",
   "sd_wan_descricao": "AC SD-WAN is an Angola Cables service that enhances networks with intelligence, maximizing gains in combining connectivity (MPLS, LTE, Internet, and other security features). It offers centralized management, cost reduction, and raises security levels by incorporating real-time SSL inspection.",
-    "centro_confianca_titulo_pagina": "Trust Center",
+  "centro_confianca_titulo_pagina": "Trust Center",
   "centro_confianca_subtitulo_pagina": "Our commitment is to provide High-Performance connectivity solutions.",
   "qualidade_titulo": "Quality",
   "seguranca_titulo": "Security",
@@ -294,11 +292,9 @@
   "premios_titulo_parte1": "WE DON'T SEEK AWARDS, BUT",
   "premios_titulo_parte2": "WE VALUE RECOGNITION",
   "Conectar": "Connect",
-
-
-"equipa.guilherme_vieira.name": "Guilherme Vieira",
-"equipa.guilherme_vieira.position": "Sales Director",
-"equipa.guilherme_vieira.bio": "Twenty-one years of experience in national and multinational companies in the Information and Communication Technology (ICT) sector, eighteen of which supporting organizational changes involving complex business processes; \n\n   \n\n Solid commercial and business development experience gained through extensive engagement in negotiating ICT solutions (software, hardware, and services) across the Southeast, Northeast, South, and Central-West regions of Brazil;\n\nConsistent performance and knowledge in all phases of the sales cycle for public and private organizations. "
-
-
+  "equipa.guilherme_vieira.name": "Guilherme Vieira",
+  "equipa.guilherme_vieira.position": "Sales Director",
+  "equipa.guilherme_vieira.bio": "Twenty-one years of experience in national and multinational companies in the Information and Communication Technology (ICT) sector, eighteen of which supporting organizational changes involving complex business processes; \n\n   \n\n Solid commercial and business development experience gained through extensive engagement in negotiating ICT solutions (software, hardware, and services) across the Southeast, Northeast, South, and Central-West regions of Brazil;\n\nConsistent performance and knowledge in all phases of the sales cycle for public and private organizations. ",
+  "slideshow.slide1.title": "Our submarine cables are installed in the depths of the ocean, respecting the habitat of sea turtles and preserving the ecosystem for future generations.",
+  "slideshow.slide1.description": "We make every possible investment to ensure that our operations continue to preserve the seas and oceans, as well as the species that inhabit them, especially the endangered Kitabanga turtles."
 }

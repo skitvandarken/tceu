@@ -1,4 +1,4 @@
-.border{
+.border {
     border-radius: 30px;
 }
 
@@ -19,37 +19,51 @@
 
 
 
-.fundo-cta{
+.fundo-cta {
 
-    background-image: url('/img/fundo-cta.png'); 
+    background-image: url('/img/fundo-cta.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 30px;
-    
+
 }
 
 
-.botao-ad{
+.botao-ad {
     cursor: pointer;
 }
 
+.uk-button {
+    padding: 8px 40px;
+    font-size: 14px;
+}
+
+
+
+.margem-texto {
+    width: 60%; ; margin: 0 auto;
+}
 
 
 @media (max-width: 767px) {
     .uk-visible\@m {
         display: none !important;
     }
-    
+
     .uk-hidden\@m {
         display: block !important;
     }
-    
+
     #offcanvas-nav .uk-offcanvas-bar {
         width: 300px;
-    
+
     }
-    
+
+    .margem-texto {
+    width: 100%; ; margin: 0 auto;
+}
+
     .uk-navbar-container {
         padding: 9px 0;
         backdrop-filter: blur(40px);
@@ -59,27 +73,27 @@
         justify-content: center;
         width: 100vw;
     }
-    
+
     #offcanvas-nav img {
         width: 200px !important;
         margin-bottom: 20px;
     }
-    
+
     .uk-form-custom button {
         padding: 0 8px;
         height: 36px;
     }
-    
+
     .uk-modal-dialog {
         width: 90%;
         margin: 0 auto;
     }
-    
+
     #search-modal .uk-modal-body {
         padding: 15px;
     }
-    
-    #offcanvas-nav .uk-nav-default > li > a {
+
+    #offcanvas-nav .uk-nav-default>li>a {
         font-size: 14px;
         padding: 8px 0;
     }
@@ -90,19 +104,19 @@
     #offcanvas-nav .uk-offcanvas-bar {
         width: 250px;
     }
-    
+
     #offcanvas-nav img {
         width: 180px !important;
     }
-    
+
     .uk-modal-dialog {
         padding: 10px;
     }
-    
+
     #search-modal input.uk-input {
         font-size: 14px;
     }
-    
+
     .uk-button {
         padding: 8px 12px;
         font-size: 14px;
