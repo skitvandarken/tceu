@@ -14,7 +14,8 @@
       <!-- Título e subtítulo traduzidos dinamicamente -->
       <div class="uk-container uk-margin-large-bottom">
         <h4 style="color:white">{{ 'centro_confianca_titulo_pagina' | translate }}</h4>
-        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'centro_confianca_subtitulo_pagina' | translate }}</h1>
+        <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'centro_confianca_subtitulo_pagina' | translate
+          }}</h1>
       </div>
     </div>
   </div>
@@ -25,181 +26,168 @@
 
 <!-- Seção de Certificações -->
 <div class="uk-container uk-margin-large-top">
-    <div class="fundo-selos">
-        <!-- Grid responsivo para exibir selos de certificação agrupados por categoria -->
-        <div class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-child-width-1-2@s uk-text-center" uk-grid>
-            <!-- Seção Qualidade -->
-            <div>
-                <div class="uk-card  uk-card-body">
-                    <h3 style="color: white;" class="uk-card-title"><b>{{ 'qualidade_titulo' | translate }}</b></h3>
-                    <div class="uk-flex uk-flex-column uk-flex-middle">
-                        <!-- Imagens das certificações de qualidade -->
-                        <div class="uk-child-width-expand@s uk-text-center uk-grid-small" uk-grid>
-                            <div>
-                                <img width="150px" class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso3.png"
-                                    alt="Certificação ISO 14064">
-                            </div>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso1.png"
-                                    alt="Certificação ISO 26000">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="fundo-selos">
+    <!-- Grid responsivo para exibir selos de certificação agrupados por categoria -->
+    <div class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-child-width-1-2@s uk-text-center" uk-grid>
+      <!-- Seção Qualidade -->
+      <div>
+        <div class="uk-card  uk-card-body">
+          <h3 style="color: white;" class="uk-card-title"><b>{{ 'qualidade_titulo' | translate }}</b></h3>
+          <div class="uk-flex uk-flex-column uk-flex-middle">
+            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
+              <div>
+                <img width="150px" class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso3.png"
+                  alt="Certificação ISO 14064">
+              </div>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso1.png" alt="Certificação ISO 26000">
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Seção Segurança -->
-            <div>
-                <div class="uk-card  uk-card-body">
-                    <h3 style="color: white;" class="uk-card-title"><b>{{ 'seguranca_titulo' | translate }}</b></h3>
-                    <div class="uk-flex uk-flex-column uk-flex-middle">
-                        <!-- Imagens das certificações de segurança -->
-                        <div class="uk-child-width-expand@s uk-text-center uk-grid-small" uk-grid>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso2.png"
-                                    alt="Certificação ISO 26000">
-                            </div>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso4.png"
-                                    alt="Certificação ISO 14064">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Seção Segurança -->
+      <div>
+        <div class="uk-card  uk-card-body">
+          <h3 style="color: white;" class="uk-card-title"><b>{{ 'seguranca_titulo' | translate }}</b></h3>
+          <div class="uk-flex uk-flex-column uk-flex-middle">
+            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso2.png" alt="Certificação ISO 26000">
+              </div>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso4.png" alt="Certificação ISO 14064">
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Seção Infraestrutura -->
-            <div>
-                <div class="uk-card  uk-card-body">
-                    <h3 style="color: white;" class="uk-card-title"><b>{{ 'infraestrutura_titulo' | translate }}</b></h3>
-                    <div class="uk-flex uk-flex-column uk-flex-middle">
-                        <!-- Imagens das certificações de infraestrutura -->
-                        <div class="uk-child-width-expand@s uk-text-center uk-grid-small" uk-grid>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/tier.png"
-                                    alt="Certificação Tier">
-                            </div>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso2.png"
-                                    alt="Certificação ISO 14064">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Seção Infraestrutura -->
+      <div>
+        <div class="uk-card  uk-card-body">
+          <h3 style="color: white;" class="uk-card-title"><b>{{ 'infraestrutura_titulo' | translate }}</b></h3>
+          <div class="uk-flex uk-flex-column uk-flex-middle">
+            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/tier.png" alt="Certificação Tier">
+              </div>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso2.png" alt="Certificação ISO 14064">
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Seção ESG (Ambiental, Social e Governança) -->
-            <div>
-                <div class="uk-card  uk-card-body">
-                    <h3 style="color: white;" class="uk-card-title"><b>{{ 'esg_titulo' | translate }}</b></h3>
-                    <div class="uk-flex uk-flex-column uk-flex-middle">
-                        <!-- Imagens das certificações ESG -->
-                        <div class="uk-child-width-expand@s uk-text-center uk-grid-small" uk-grid>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso7.png"
-                                    alt="Certificação ISO 26000">
-                            </div>
-                            <div>
-                                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/typeii.png"
-                                    alt="Certificação ISO 14064">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Seção ESG (Ambiental, Social e Governança) -->
+      <div>
+        <div class="uk-card  uk-card-body">
+          <h3 style="color: white;" class="uk-card-title"><b>{{ 'esg_titulo' | translate }}</b></h3>
+          <div class="uk-flex uk-flex-column uk-flex-middle">
+            <div class="uk-text-center uk-grid-small uk-flex-nowrap" uk-grid>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/iso7.png" alt="Certificação ISO 26000">
+              </div>
+              <div>
+                <img class="uk-width-1-1 uk-width-auto@m" src="img/iso/typeii.png" alt="Certificação ISO 14064">
+              </div>
             </div>
-        </div>
-    </div>  
-
-    <!-- Seção de Certificações de Parceiros -->
-    <div class="uk-container">
-      <h1 style="color: white;" class="uk-text-center"><b>{{ 'certificacoes_parceiros_titulo' | translate }}</b></h1>
-      <!-- Grid responsivo para exibir logos de certificações de parceiros -->
-      <div class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-child-width-1-5@s uk-text-center" uk-grid>
-        <!-- Cada div representa um parceiro certificado -->
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/agence-numerique.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/aicpa.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/aicpa1.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/cloud-sercurity-alliance.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/cyber-essentials.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/ens.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/eu-gdpr.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/hipaa.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/irap.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/it.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/nen-7510.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/part-iso2.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/part-iso3.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/part-iso4.png">
-          </div>
-        </div>
-        <div>
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-            <img src="img/cert-parceiros/partner-iso.png">
           </div>
         </div>
       </div>
     </div>
-</div>
+  </div>
+
+  <!-- Seção de Certificações de Parceiros -->
+  <div class="uk-container">
+    <h1 style="color: white;" class="uk-text-center"><b>{{ 'certificacoes_parceiros_titulo' | translate }}</b></h1>
+    <div class="uk-grid-column-small uk-grid-row-small uk-grid-match uk-text-center uk-child-width-1-2 uk-child-width-1-5@s" uk-grid>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/agence-numerique.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/aicpa.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/aicpa1.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/cloud-sercurity-alliance.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/cyber-essentials.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/ens.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/eu-gdpr.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/hipaa.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/irap.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/it.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/nen-7510.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/part-iso2.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/part-iso3.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/part-iso4.png">
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+          <img src="img/cert-parceiros/partner-iso.png">
+        </div>
+      </div>
+    </div>
+</div></div>
 
 <!-- Seção de Prêmios -->
 <div class="fundo-premios uk-margin-large-top">
   <div class="uk-padding">
     <!-- Título dos prêmios, dividido em duas partes para destaque -->
-    <h2 style="color:white" class="uk-text-center uk-margin-large-top">{{ 'premios_titulo_parte1' | translate }}<br><b style="color: #28C1FD;"> {{ 'premios_titulo_parte2' | translate }}</b></h2>
+    <h2 style="color:white" class="uk-text-center uk-margin-large-top">{{ 'premios_titulo_parte1' | translate }}<br><b
+        style="color: #28C1FD;"> {{ 'premios_titulo_parte2' | translate }}</b></h2>
   </div>
 
   <!-- Slider/carrossel de imagens dos prêmios recebidos -->

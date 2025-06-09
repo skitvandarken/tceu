@@ -295,9 +295,9 @@ select {
     #offcanvas-nav .uk-offcanvas-bar {
         width: 100%;
         /* Re-apply glassmorphism for smaller screens */
-        background-color: rgba(255, 255, 255, 0.15); /* Slightly less transparent */
-        backdrop-filter: blur(20px); /* Slightly less blur for smaller screens */
-        -webkit-backdrop-filter: blur(15px);
+        background-color: rgb(4,5,51); /* Slightly less transparent */
+         /*backdrop-filter: blur(20px); Slightly less blur for smaller screens
+        -webkit-backdrop-filter: blur(15px); */
         border-right: 1px solid rgba(255, 255, 255, 0.3); /* Slightly more prominent border */
         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2); /* Adjusted shadow */
     }

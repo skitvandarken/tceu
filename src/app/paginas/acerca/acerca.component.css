@@ -15,6 +15,8 @@
     width: auto;
 }
 
+
+
 .conteudo-cabecalho {
     position: absolute;
     bottom: 0;
@@ -235,6 +237,9 @@
     .responsive-description {
         font-size: 12px;
     }
+    .padding-mobile {
+    padding: 0px;
+}
 }
 
 /* Small mobile screens (up to 480px) */
