@@ -57,3 +57,21 @@
   right: 0;
   background: linear-gradient(to left, white, transparent);
 }
+
+
+@media (max-width: 767px) {
+
+  
+    .uk-margin-small-top {
+        margin-top: 0px !important;
+    }
+
+    .uk-margin-medium-top{
+        margin-top: 0px !important;
+    }
+
+    .margem-superior{
+      margin-top: 70px !important;
+    }
+
+}

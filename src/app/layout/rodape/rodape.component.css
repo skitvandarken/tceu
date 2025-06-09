@@ -89,4 +89,8 @@
   .social-icons {
     justify-content: center;
   }
+
+  .margem-superior{
+    margin-top: 30px !important ;
+  }
 }
