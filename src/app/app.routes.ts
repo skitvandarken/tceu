@@ -57,7 +57,7 @@ export const routes: Routes = [
     {path: 'artigos/ciberseguranca', component: CibersecComponent},
     {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent},
 
-        {path: 'dashboard', component:DashboardComponent},
+        {path: 'mkt-proibido', component:DashboardComponent},
 
 
 
