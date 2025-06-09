@@ -4,7 +4,7 @@
       @for (evento of eventos; track evento.id) {
         <div class="uk-transition-toggle" tabindex="0">
           <div class="uk-panel uk-text-center">
-            <img class="border-2" [src]="evento.imageUrl" alt="Imagem do evento" />
+            <img class="border-2" [src]="evento.imageUrl" alt="Imagem do evento" style="object-fit: cover; " />
             <div class="overlay">
               <a [href]="evento.eventoUrl" target="_blank" rel="noopener">
                 <p class="uk-transition-slide-bottom-small uk-button-default uk-button uk-border-pill">

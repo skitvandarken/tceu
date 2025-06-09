@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
-import { Ad2Component } from '../../layout/ad2/ad2.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
 
 @Component({
   selector: 'app-virtualizacao',
-  imports: [MenuComponent, RodapeComponent, Ad2Component, TranslatePipe], // Inserido
+  imports: [MenuComponent, RodapeComponent, TranslatePipe], // Inserido
   templateUrl: './virtualizacao.component.html',
   styleUrl: './virtualizacao.component.css'
 })

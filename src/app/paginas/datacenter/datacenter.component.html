@@ -2,16 +2,14 @@
 
 
 
-<div class="uk-padding fundo">
+<div class=" fundo ">
 
-  <div class="uk-margin-large-top uk-margin-large-left uk-margin-large-right  uk-child-width-expand@s uk-text-left"
+  <div class="uk-margin-large-top  uk-margin-large-left uk-margin-large-right  uk-child-width-expand@s uk-text-left"
     uk-grid>
-    <div>
+    <div class="uk-margin-large-top">
       <h1 style="color:white">
         <b> {{'datacenter.titulo' | translate }} </b>
       </h1>
-      <p style="color:white" class="uk-margin-small-top"> {{'datacenter.desc' | translate}} <br>
-        {{'datacenter.desc2' | translate}} </p>
     </div>
     <div>
     </div>
@@ -20,59 +18,74 @@
   </div>
 
 
-  <div class=" uk-margin-large-left uk-margin-large-right uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
+  <div class="uk-margin-large-left uk-margin-large-right uk-child-width-1-2@s uk-text-center uk-grid-match" uk-grid>
 
-    <div>
-      <div class="  uk-child-width-1-2 uk-text-center uk-grid-match" uk-grid>
-        <div>
+    <div class="uk-margin-large-bottom ">
+      <div class="uk-child-width-1-2@s uk-text-center uk-grid-match" uk-grid>
+        <div >
           <div class="border uk-card uk-card-primary uk-card-body">
-            <h3>AngoNAP I</h3>
-            <p>Luanda, Angola</p>
-             <a href="https://angolacables.rds.land/data-center"> <button class="uk-margin-small-top uk-button uk-button-default uk-border-pill"><span
-                class="uk-margin-small-right uk-margin-small-left"> {{'saiba.mais'|translate
-                }}</span></button></a>
+            <h3 style="color:#000026; font-weight: bold;" class="uk-text-left">AngoNAP I</h3>
+            <p style="font-size: 12px;color:#000026; " class="uk-text-left">Luanda, Angola</p>
+            <div class="uk-margin-small">
+              <p style="text-align: justify; color:white; color:#000026; "><b style="font-size: 12px;">Espaço de Hospedagem:</b><br>
+                Expansível até 1000 racks<br>
+                <b style="font-size: 12px; color:#000026; " >Dimensão das Racks:</b><br> 45 U<br>
+               <b style="font-size: 12px; color:#000026; "> Protecção contra incêndio:</b><br> Gás Novec e HSSD</p>
+            </div>
           </div>
         </div>
         <div>
           <div class="border uk-card uk-card-primary uk-card-body">
-            <h3>AngoNAP II</h3>
-            <p>Fortaleza, Brasil</p>
-           <a href="https://angolacables.rds.land/data-center"> <button class="uk-margin-small-top uk-button uk-button-default uk-border-pill"><span
-                class="uk-margin-small-right uk-margin-small-left"> {{'saiba.mais'|translate
-                }}</span></button></a>
+            <h3 style="color:#000026;  font-weight: bold;" class="uk-text-left">AngoNAP II</h3>
+            <p style="font-size: 12px; color:#000026;" class="uk-text-left">Fortaleza, Brasil</p>
+            <div class="uk-margin-small">
+              <p style="text-align: justify;color:#000026;"><b style="font-size: 12px;" >Espaço de Hospedagem:</b><br> Expansível até 400 racks<br>
+                <b style="font-size: 12px; color:#000026;">Dimensão das Racks:</b> <br>42 U<br>
+                <b style="font-size: 12px;color:#000026;">Protecção contra incêndio:</b><br> Gás FM 200 e HSSD</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div>
+    <div class="uk-margin-large-bottom">
       <div class="border fundo-cloud uk-card uk-card-default uk-card-body uk-text-left">
-        <h3 style="color:  white;"> {{'visita.virtual' | translate }} </h3>
-        <p style="color: white;">
-          {{'visita.desc' | translate }}</p>
-        <a href="#modal-visita" uk-toggle><button class="uk-button uk-button-primary uk-button-large uk-border-pill">
-            <span class="uk-margin-small-right uk-margin-small-left"> {{'visita.botao' |
-              translate}} </span> </button></a>
+        <h3 style="color: white;">{{'visita.virtual' | translate}}</h3>
+
+        <div class="uk-flex-middle">
+        </div>
+        <p style="color: white;">{{'visita.desc' | translate}}</p>
+        <div class="uk-position-bottom uk-padding">
+          <a href="#modal-visita" uk-toggle>
+            <button class="uk-button uk-button-primary uk-button-medium uk-border-pill">
+              <span class="uk-margin-small-right uk-margin-small-left">{{'visita.botao' | translate}}</span>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
+
   </div>
 
+</div>
 
 
-
-
-
+<div class=" bg-pattern">
+  <div class="uk-container uk-margin-large-top uk-margin-large-bottom " style="">
+    <p style="font-size: 1.55rem; color:#000026 " class="uk-text-center uk-container ">{{ 'datacenter.desc' | translate
+      }}</p>
+  </div>
 </div>
 
 
 
 <!-- This is the modal -->
 <div id="modal-visita" uk-modal>
-  <div class="uk-modal-dialog uk-modal-body uk-border-rounded">
-    <h2 class="uk-modal-title">Informações do visitante</h2>
+  <div class="uk-modal-dialog uk-modal-body uk-border-rounded fundo-form">
+    <p style="font-weight: bolder; color:#000026" class="uk-modal-title">Informações do visitante</p>
 
 
-    <form [formGroup]="visitForm" class="uk-form-stacked uk-border-rounded">
+    <form [formGroup]="visitForm" class=" uk-form-stacked uk-border-rounded uk-margin-small-top">
 
       <div
         *ngIf="visitForm.get('firstName')?.invalid && (visitForm.get('firstName')?.dirty || visitForm.get('firstName')?.touched)"
@@ -85,7 +98,7 @@
 
       <!-- Último Nome -->
       <div class="uk-margin">
-        <label class="texto uk-form-label" for="nome">{{ 'nome.completo' | translate }}</label>
+        <label style="color:#1B1B1B" class="texto uk-form-label" for="nome">{{ 'nome.completo' | translate }}</label>
         <div class="uk-form-controls">
           <input class="uk-border-rounded uk-input" id="nome" type="text" formControlName="nome" required />
         </div>
@@ -94,7 +107,7 @@
 
       <!-- Seu E-Mail -->
       <div class="uk-margin">
-        <label class="texto uk-form-label" for="email">{{ 'seu.email' | translate }}</label>
+        <label style="color:#1B1B1B" class="texto uk-form-label" for="email">{{ 'seu.email' | translate }}</label>
         <div class="uk-form-controls">
           <input class="uk-input uk-border-rounded" id="email" type="email" formControlName="email" required />
         </div>
@@ -110,7 +123,7 @@
 
 
       <div class="uk-margin">
-        <label class="uk-form-label" for="form-stacked-select"> {{ 'qual.datacenter' | translate }} </label>
+        <label style="color:#1B1B1B" class="uk-form-label" for="form-stacked-select"> {{ 'qual.datacenter' | translate }} </label>
         <div class="uk-form-controls">
           <select class="uk-select uk-border-rounded" id="form-stacked-select">
             <option>AngoNAP I (Luanda, Angola)</option>
@@ -122,7 +135,7 @@
 
     </form>
     <p class="uk-text-right">
-      <button (click)="submitForm($event)" class="uk-button uk-button-primary uk-border-rounded"
+      <button style="background-color: #28C1FD; margin: 10px;; color: #000026; font-weight: 600;" (click)="submitForm($event)" class="uk-button  uk-button-medium uk-border-pill"
         type="button">{{'comecar.visita' | translate }} </button>
     </p>
   </div>
@@ -138,7 +151,8 @@
         </div>
     </div>
 </div>
- --><div class="uk-margin-large-right uk-margin-large-left">
+ -->
+<div class="uk-margin-large-right uk-margin-large-left">
   <div
     class="uk-grid-column-small uk-grid-row-small uk-child-width-1-3@s uk-grid-match uk-text-left uk-margin-large-bottom uk-margin-large-top "
     uk-grid>
@@ -152,7 +166,8 @@
 
         </div>
         <a style="font-weight: bold;" href="https://angolacables.rds.land/data-center">
-          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' | translate }}</button>
+          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' |
+            translate }}</button>
         </a>
       </div>
     </div>
@@ -165,8 +180,9 @@
           <p>{{ 'managed_services_card_descricao' | translate }}</p>
         </div>
 
-        <a href="https://angolacables.rds.land/data-center" style="font-weight: bold;" >
-          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' | translate }}</button>
+        <a href="https://angolacables.rds.land/data-center" style="font-weight: bold;">
+          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' |
+            translate }}</button>
         </a>
       </div>
     </div>
@@ -180,13 +196,18 @@
           <p>{{ 'global_data_center_interconnection_card_descricao' | translate }}</p>
         </div>
 
-        <a href="https://angolacables.rds.land/data-center" style="font-weight: bold;" >
-          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' | translate }}</button>
+        <a href="https://angolacables.rds.land/data-center" style="font-weight: bold;">
+          <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">{{ 'guia_produto' |
+            translate }}</button>
         </a>
       </div>
     </div>
 
   </div>
+
+
+    <app-ad2></app-ad2>
+
 </div>
 
 <app-rodape></app-rodape>

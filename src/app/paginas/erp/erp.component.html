@@ -14,13 +14,16 @@
 <div class="uk-container">
   <div class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2@s uk-text-left uk-margin-large-top " uk-grid>
 
-    <div>
+    <div class="uk-margin-large-bottom">
       <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column">
         <div class="uk-card-media-top">
           <img class="border-2 card-image" src="img/erp.png" width="1800" height="1200" alt="">
-          <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>{{ 'sap_business_one_titulo' | translate }}</b>
-          </h2>
-          <p>{{ 'sap_business_one_descricao' | translate }}</p>
+          <div style="margin-top:15px;margin-bottom: 15px;">
+            <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>{{ 'sap_business_one_titulo' | translate }}</b>
+            </h2>
+            <br>
+            <p>{{ 'sap_business_one_descricao' | translate }}</p>
+          </div>
         </div>
 
         <a style="font-weight: bold;" href="https://angolacables.rds.land/erp">
@@ -29,13 +32,16 @@
         </a>
       </div>
     </div>
-       <div>
+    <div class="uk-margin-large-bottom">
       <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column">
         <div class="uk-card-media-top">
           <img class="border-2 card-image" src="img/servicos/ecobizz.png" width="1800" height="1200" alt="">
-          <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>{{ 'sap_ecobizz_titulo' | translate }}</b>
-          </h2>
-          <p>{{ 'sap_ecobizz_descricao' | translate }}</p>
+          <div style="margin-top:15px;margin-bottom: 15px;">
+            <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>{{ 'sap_ecobizz_titulo' | translate }}</b>
+            </h2>
+            <br>
+            <p>{{ 'sap_ecobizz_descricao' | translate }}</p>
+          </div>
         </div>
 
         <a style="font-weight: bold;" href="https://angolacables.rds.land/erp">
@@ -45,7 +51,6 @@
       </div>
     </div>
   </div>
-  <app-ad2></app-ad2>
 </div>
 
 <app-rodape></app-rodape>

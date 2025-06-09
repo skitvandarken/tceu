@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { MenuComponent } from '../../layout/menu/menu.component';
-import { Ad2Component } from '../../layout/ad2/ad2.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
 
 @Component({
   selector: 'app-erp',
-  imports: [RodapeComponent, MenuComponent, Ad2Component, TranslatePipe], // Inserido
+  imports: [RodapeComponent, MenuComponent, TranslatePipe], // Inserido
   templateUrl: './erp.component.html',
   styleUrl: './erp.component.css'
 })

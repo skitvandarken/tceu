@@ -67,7 +67,7 @@
 }
 
 .uk-card-primary {
-    background: linear-gradient(to top, #234d77, #1e87f0);
+    background: #28C1FD;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border-color: rgb(126, 195, 255);
     border-width: 1px;
@@ -88,3 +88,15 @@
     background-color: rgba(40, 193, 253, 1);
     color: rgba(0, 0, 78, 0.918);
 }
+
+
+.uk-modal-body{
+    border-radius: 20px;
+}
+
+.fundo-form{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    box-shadow: 0px -8px 0px rgba(39, 200, 227, 1);
+}
+

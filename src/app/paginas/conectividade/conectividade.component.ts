@@ -9,7 +9,8 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inseri
   imports: [
     MenuComponent,
     RodapeComponent,
-    TranslatePipe // Inserido
+    TranslatePipe, // Inserido
+  
   ],
   templateUrl: './conectividade.component.html',
   styleUrl: './conectividade.component.css'

@@ -24,7 +24,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+    background: linear-gradient(to top, rgb(4,5,51), rgb(4,5,51), rgba(4,5,51 0)); /* Blue to transparent */
 }
 
 
@@ -134,4 +134,23 @@
 .bt-enviar:active {
     transform: translateY(1px);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+  .rectangulo-vertical {
+        width: 9px;
+        height: 100px;
+        background: linear-gradient(1.37deg, #212E58 -34.4%, #29C8E3 137.13%);
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+.input-contacto{
+    border:0; margin-top:8px; height: 45px; border-radius: 10px;
+}
+
+.input-mensagem{
+    border:0; margin-top:8px;  border-radius: 10px;
 }

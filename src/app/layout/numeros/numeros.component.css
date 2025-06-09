@@ -5,3 +5,12 @@
     border-radius: 20px;
 
 }
+
+.display-numeros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 30px ;
+
+}

@@ -7,6 +7,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import UIkit from 'uikit';
+import { Ad2Component } from '../../layout/ad2/ad2.component';
 
 @Component({
   selector: 'app-datacenter',
@@ -15,7 +16,8 @@ import UIkit from 'uikit';
     MenuComponent,
     RodapeComponent,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ad2Component
   ],
   templateUrl: './datacenter.component.html',
   styleUrl: './datacenter.component.css'

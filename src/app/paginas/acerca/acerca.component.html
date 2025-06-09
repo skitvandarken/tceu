@@ -20,7 +20,7 @@
                 <b>{{ 'empresa.historia.title' | translate }}</b>
             </h2>
             <div class="">
-                <p style="font-size: 1.4rem;" ><b style="color:#28C1FD">Angola Cables</b> {{
+                <p style="font-size: 1.4rem;"><b style="color:#28C1FD">Angola Cables</b> {{
                     'empresa.historia.description' | translate }}</p>
             </div>
         </div>
@@ -34,8 +34,8 @@
             <div uk-slider>
                 <div class="uk-position-relative">
                     <!-- Navigation Arrows -->
-                    <a class="uk-position-center-left-out uk-hidden-hover" href="#"
-                        uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-left-out uk-hidden-hover" href="#" uk-slidenav-previous
+                        uk-slider-item="previous"></a>
                     <a class="uk-position-center-right-out  uk-hidden-hover" href="#" uk-slidenav-next
                         uk-slider-item="next"></a>
 
@@ -378,7 +378,7 @@
     <div class="uk-container uk-padding">
         <div style="margin-top: 60px;" class="uk-child-width-expand@s" uk-grid>
             <div class="uk-grid-item-match">
-                <div class="">
+                <div class="uk-flex  uk-flex-column  uk-flex-center">
                     <h1 style="color: rgba(40, 193, 253, 1); font-size: 2.3rem; font-weight: bolder;">
                         {{ 'empresa.valores.missao.title' | translate }}
                     </h1>
@@ -399,7 +399,7 @@
                 <img style="border-radius: 20px;" class=" missao-imagem" src="img/ac-visao.jpg">
             </div>
             <div class="uk-grid-item-match">
-                <div class="uk-card uk-margin-small-top">
+                <div class="uk-card uk-margin-small-top  uk-flex  uk-flex-column  uk-flex-center ">
                     <h1
                         style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 2.3rem; font-weight: bolder;">
                         {{ 'empresa.valores.visao.title' | translate }}
@@ -421,23 +421,29 @@
             <div>
                 <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
                     <h2 style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 1.7rem;">
+
                         <span class="uk-margin-small-right" uk-icon="icon: heart; ratio:2"></span>
                         {{ 'empresa.valores.paixao.title' | translate }}
                     </h2>
-                    <p style="color:white">
-                        {{ 'empresa.valores.paixao.text' | translate }}
-                    </p>
+                    <div style="margin-top: 10px;">
+                        <p style="color:white">
+                            {{ 'empresa.valores.paixao.text' | translate }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="uk-grid-item-match">
                 <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
+
                     <h2 style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 1.7rem;">
                         <span class="uk-margin-small-right" uk-icon="icon: lifesaver; ratio:2"></span>
                         {{ 'empresa.valores.sustentabilidade.title' | translate }}
                     </h2>
-                    <p style="color:white">
-                        {{ 'empresa.valores.sustentabilidade.text' | translate }}
-                    </p>
+                    <div style="margin-top: 10px;">
+                        <p style="color:white">
+                            {{ 'empresa.valores.sustentabilidade.text' | translate }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -449,9 +455,11 @@
                         <span class="uk-margin-small-right" uk-icon="icon: star; ratio:2"></span>
                         {{ 'empresa.valores.talento.title' | translate }}
                     </h2>
-                    <p style="color:white">
-                        {{ 'empresa.valores.talento.text' | translate }}
-                    </p>
+                    <div style="margin-top: 10px;">
+                        <p style="color:white">
+                            {{ 'empresa.valores.talento.text' | translate }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="uk-grid-item-match">
@@ -460,9 +468,13 @@
                         <span class="uk-margin-small-right" uk-icon="icon: cog; ratio:2"></span>
                         {{ 'empresa.valores.eficiencia.title' | translate }}
                     </h2>
-                    <p style="color:white">
-                        {{ 'empresa.valores.eficiencia.text' | translate }}
-                    </p>
+                    <div style="margin-top:10px">
+                        <p style="color:white">
+                            {{ 'empresa.valores.eficiencia.text' | translate }}
+                        </p>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -473,17 +485,23 @@
 </div>
 
 
-<div class="fundo-accionistas uk-container uk-margin-large-top">
+<div class="fundo-accionistas uk-container uk-margin-medium-top uk-margin-medium-bottom">
 
 
-    <div class="uk-padding uk-child-width-expand@s uk-grid-match " uk-grid>
+    <div class="uk-padding uk-child-width-expand@s  " uk-grid>
 
-        <div>
+        <div class="uk-margin-medium-top">
             <div class="">
-                <h2 style="color: rgba(5, 5, 51, 1);; font-weight: bolder;">{{ "estrutura.accionista" | translate }}
+                <h2 style="color: rgba(5, 5, 51, 1); font-weight: bolder;">{{ "estrutura.accionista" | translate }}
                 </h2>
-                <p>{{ "accionistas.description" | translate }} </p>
-                <img src="img/layout/acionistas-participaco.png">
+                <div style="margin-top: 15px">
+
+                    <p>{{ "accionistas.description" | translate }} </p>
+
+                </div>
+                <div class="uk-margin-medium-top">
+                    <img src="img/layout/participacao.svg">
+                </div>
             </div>
         </div>
         <div class="">
@@ -797,215 +815,229 @@
     <div id="modal-angelo" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.angelo_gama.name" | translate }}</b></h2>
-            <p>{{ "equipa.angelo_gama.bio" | translate }}</p>
-            <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
-            </p>
-            {{ "conectar" | translate }} <a target="_blank"
-                href="https://www.linkedin.com/in/%C3%A2ngelo-gama-943a071?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img
-                    src="img/social-icons/linkedin.png"> </a>
-
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.angelo_gama.bio' | translate"></p>
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/%C3%A2ngelo-gama-943a071?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img
+                        src="img/social-icons/linkedin.png"> </a>
+            </div>
         </div>
     </div>
 
     <div id="modal-laura" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.laura_carneiro.name" | translate }}</b></h2>
-            <p>{{ "equipa.laura_carneiro.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.laura_carneiro.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank" href="https://www.linkedin.com/in/laura-carneiro-25251755">
-                <img src="img/social-icons/linkedin.png"> </a>
-
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/laura-carneiro-25251755">
+                    <img src="img/social-icons/linkedin.png"> </a>
+            </div>
         </div>
     </div>
 
     <div id="modal-rui" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.rui_faria.name" | translate }}</b></h2>
-            <p>{{ "equipa.rui_faria.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.rui_faria.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank" href="https://www.linkedin.com/in/rui-a-faria-18610419">
-                <img src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/rui-a-faria-18610419">
+                    <img src="img/social-icons/linkedin.png"> </a>
+            </div>
         </div>
     </div>
 
     <div id="modal-lucenildo" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.lucenildo_junior.name" | translate }}</b></h2>
-            <p>{{ "equipa.lucenildo_junior.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.lucenildo_junior.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank"
-                href="https://www.linkedin.com/in/lucenildo-lins-de-aquino-j%C3%BAnior-8635ba92"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/lucenildo-lins-de-aquino-j%C3%BAnior-8635ba92"> <img
+                        src="img/social-icons/linkedin.png"> </a></div>
         </div>
     </div>
 
     <div id="modal-julio" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.julio_chilela.name" | translate }}</b></h2>
-            <p>{{ "equipa.julio_chilela.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.julio_chilela.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank"
-                href="https://www.linkedin.com/in/julio-gabriel-chilela-016578b4"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/julio-gabriel-chilela-016578b4"> <img
+                        src="img/social-icons/linkedin.png"> </a> </div>
         </div>
     </div>
 
     <div id="modal-artur" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.artur_mendes.name" | translate }}</b></h2>
-            <p>{{ "equipa.artur_mendes.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.artur_mendes.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank" href="https://www.linkedin.com/in/artur-mendes-0023ba">
-                <img src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top"> {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/artur-mendes-0023ba">
+                    <img src="img/social-icons/linkedin.png"> </a></div>
         </div>
     </div>
 
     <div id="modal-frederico" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.frederico_oliveira.name" | translate }}</b></h2>
-            <p>{{ "equipa.frederico_oliveira.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.frederico_oliveira.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank" href="https://www.linkedin.com/in/frederico-oliveira"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/frederico-oliveira">
+                    <img src="img/social-icons/linkedin.png"> </a> </div>
         </div>
     </div>
 
     <div id="modal-samuel" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.samuel_carvalho.name" | translate }}</b></h2>
-            <p>{{ "equipa.samuel_carvalho.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.samuel_carvalho.bio' | translate"></p>
             <p class="uk-text-right">
                 <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
                     "equipa.back_button" | translate }}</button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank"
-                href="https://www.linkedin.com/in/samuel-carvalhobranddirector2"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/samuel-carvalhobranddirector2"> <img
+                        src="img/social-icons/linkedin.png"> </a></div>
         </div>
     </div>
 
     <div id="modal-ariete" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.ariete_pereira.name" | translate }}</b></h2>
-            <p>{{ "equipa.ariete_pereira.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.ariete_pereira.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank"
-                href="https://www.linkedin.com/in/ariete-pereira-martins-4701b322"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/ariete-pereira-martins-4701b322"> <img
+                        src="img/social-icons/linkedin.png"> </a></div>
         </div>
     </div>
 
     <div id="modal-fernando" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.fernando_fernandes.name" | translate }}</b></h2>
-            <p>{{ "equipa.fernando_fernandes.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.fernando_fernandes.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }}: <a target="_blank" href="https://www.linkedin.com/in/laura-carneiro-25251755">
-                <img src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/laura-carneiro-25251755">
+                    <img src="img/social-icons/linkedin.png"> </a> </div>
         </div>
     </div>
 
     <div id="modal-virgilio" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.virgilio_alves.name" | translate }}</b></h2>
-            <p>{{ "equipa.virgilio_alves.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.virgilio_alves.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }} <a target="_blank" href="https://www.linkedin.com/in/virgiliotalves"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar" | translate }} <a target="_blank" href="https://www.linkedin.com/in/virgiliotalves"> <img
+                        src="img/social-icons/linkedin.png"> </a> </div>
         </div>
     </div>
 
     <div id="modal-sudhir" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.sudhir_juggernath.name" | translate }}</b></h2>
-            <p>{{ "equipa.sudhir_juggernath.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.sudhir_juggernath.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }} <a target="_blank"
-                href="https://www.linkedin.com/in/sudhir-juggernath-7545068"> <img src="img/social-icons/linkedin.png">
-            </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar" | translate }} <a target="_blank"
+                    href="https://www.linkedin.com/in/sudhir-juggernath-7545068"> <img
+                        src="img/social-icons/linkedin.png">
+                </a></div>
         </div>
     </div>
 
     <div id="modal-mahen" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.mahen_mahido.name" | translate }}</b></h2>
-            <p>{{ "equipa.mahen_mahido.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.mahen_mahido.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }} <a target="_blank" href="https://www.linkedin.com/in/mahen-naidu-aab8595a">
-                <img src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar" | translate }} <a target="_blank" href="https://www.linkedin.com/in/mahen-naidu-aab8595a">
+                    <img src="img/social-icons/linkedin.png"> </a> </div>
         </div>
     </div>
 
     <div id="modal-guilherme" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.guilherme_vieira.name" | translate }}</b></h2>
-
-            <!-- innerHTML binding for formatted bio -->
-            <p [innerHTML]="'equipa.guilherme_vieira.bio' | translate"></p>
-
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.guilherme_vieira.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-
-            {{ "conectar" | translate }}
-            <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-31561b4">
-                <img src="img/social-icons/linkedin.png">
-            </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar" | translate }}
+                <a target="_blank" href="https://www.linkedin.com/in/guilherme-vieira-31561b4">
+                    <img src="img/social-icons/linkedin.png">
+                </a>
+            </div>
         </div>
     </div>
-
 
     <div id="modal-sergio" uk-modal>
         <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
             <h2 class="uk-modal-title"><b>{{ "equipa.sergio_pozuelo.name" | translate }}</b></h2>
-            <p>{{ "equipa.sergio_pozuelo.bio" | translate }}</p>
+            <p class="uk-margin-small-top" style="text-align: justify;"
+                [innerHTML]="'equipa.sergio_pozuelo.bio' | translate"></p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close uk-border-rounded" type="button">{{
-                    "equipa.back_button" | translate }}</button>
+                <button class="uk-modal-close-default" type="button" uk-close></button>
             </p>
-            {{ "conectar" | translate }} <a target="_blank" href="https://www.linkedin.com/in/sergiopozuelo"> <img
-                    src="img/social-icons/linkedin.png"> </a>
+            <div class="uk-margin-medium-top">
+                {{ "conectar-texto" | translate }} <a target="_blank" href="https://www.linkedin.com/in/sergiopozuelo">
+                    <img src="img/social-icons/linkedin.png"> </a>
+            </div>
         </div>
     </div>
-
-
-
 </div>
 
 
@@ -1039,9 +1071,9 @@
 
             <!-- Slide 2: Image -->
             <div class="uk-width-1-1">
-                <div class="">
-                    <img src="img/sangano-escola-new.png" alt=""
-                        style="  border-radius: 20px;" uk-cover>
+                <div>
+                    <img src="img/sangano-escola-new.png" alt="" style="  border-radius: 20px; margin-left: 10px;"
+                        uk-cover>
                     <!-- You can add text overlays here if needed -->
                 </div>
             </div>
@@ -1049,7 +1081,7 @@
             <!-- Add more slides as needed -->
 
 
-             <!--
+            <!--
             <div class="uk-width-3-4">
                 <div class="uk-panel">
                     <img src="images/photo3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">

@@ -1,170 +1,186 @@
 <app-menu></app-menu>
 <div class="fundo-cabecalho">
 
-    <div class=" gradiente-texto-cabecalho">
+  <div class=" gradiente-texto-cabecalho">
 
-        <div class=" conteudo-cabecalho uk-margin-medium-top   ">
-            <div class="uk-container uk-margin-large-bottom">
+    <div class=" conteudo-cabecalho uk-margin-medium-top ">
+      <div class="uk-container uk-margin-large-bottom">
 
-                <h4 class="" style="color:white; font-size: 1.1rem;">Contacto</h4>
-                <h1 style="color:rgba(39, 200, 227, 1); font-weight: 800; margin-top: 20px; font-size: 2.43rem;"> Entre em contacto<br> connosco</h1>
-            </div>
-
-        </div>
+        <h4 class="" style="color:white; font-size: 1.1rem;">{{ 'contacto_titulo_pagina' | translate }}</h4>
+        <h1 style="color:rgba(39, 200, 227, 1); font-weight: 800; margin-top: 20px; font-size: 2.43rem;"> {{
+          'contacto_subtitulo_pagina' | translate }}</h1>
+      </div>
 
     </div>
+
+  </div>
 
 </div>
 
 
-
-
 <div class="fundo-artigo ">
-    <div class="uk-container ">
-        <div class="uk-grid-large uk-margin-large-bottom" uk-grid>
+  <div class="uk-container ">
+    <div class="uk-grid-large uk-margin-large-bottom uk-flex-middle" uk-grid>
 
+      <aside style="color:white; padding: 30px; border-radius: 8px;"
+        class="uk-width-1-3@m uk-margin-large-top uk-margin-left">
 
-            <!-- Sidebar Section for More Articles -->
+     <div class="uk-grid-small uk-flex-bottom uk-grid-match" uk-grid>
+  
+  <div class="uk-width-expand uk-flex uk-flex-column uk-flex-bottom">
+    <div style="margin-bottom: 8px;">
+    <p style="color:white; margin-bottom: 0;"><span>{{ 'pais_regiao' | translate }}</span></p>
 
-
-            <aside style="color:white; padding: 30px; border-radius: 8px;" class="uk-width-1-3@m uk-margin-large-top uk-margin-left">
-                <p style="color:white"><span>País/Região</span></p>
-              
-                <div style="margin-top: 8px;" class="uk-margin">
-                  <div uk-form-custom="target: > * > span:first-child">
-                    <div class="uk-form-controls">
-                      <select class="uk-select uk-border-rounded" 
-                              style="background-color: rgba(240, 240, 248, 1); text-align: left;
-                              padding: 5px 25px !important; text-transform: capitalize;
-                              border: 1px soli #28C1FD;
-                              border-radius: 10px;"
-                              (change)="onCountryChange($event)">
-                        @for (country of countries; track country.value) {
-                          <option [value]="country.name" [selected]="country.name === selectedCountry">
-                            {{ country.name }}
-                          </option>
-                        }
-                      </select>
-                    </div>
-                    <button class="uk-button uk-button-secondary" type="button" tabindex="-1">
-                      <span>{{ selectedCountry }}</span>
-                      <span uk-icon="icon: chevron-down"></span>
-                    </button>
-                  </div>
-                </div>
-              
-                <ul class="uk-list">
-                  @for (address of getCountryAddresses(selectedCountry); track address.title) {
-                    <li>
-                      <div class="uk-grid-small" uk-grid>
-                        <div class="uk-width-expand uk-margin-large-top">
-                          <p style="color: white;" class="uk-margin-remove-bottom">{{ address.title }}</p>
-                          <p style="margin-top: 50px !important" class="uk-margin-small-top" style="color: rgb(216, 216, 216);" [innerHTML]="address.address"></p>
-                          @if (address.phone) {
-                            <p style="color: rgb(216, 216, 216);">{{ address.phone }}</p>
-                          }
-                        </div>
-                      </div>
-                    </li>
-                  }
-              
-                  <!-- Common contact information -->
-              
-                  
-                  <li>
-                    <div class="uk-margin-medium-top">
-                      <a target="_blank" href="https://www.facebook.com/AngolaCables/" class="uk-margin-medium-right" uk-icon="facebook"></a>
-                      <a target="_blank" href="https://www.instagram.com/angolacables/" class="uk-margin-medium-right" uk-icon="instagram"></a>
-                      <a target="_blank" href="https://www.linkedin.com/company/angola-cables/" class="uk-margin-medium-right" uk-icon="linkedin"></a>
-                      <a target="_blank" href="https://www.youtube.com/@AngolaCablesTV" class="uk-margin-medium-right"  uk-icon="youtube"></a>
-                      <a target="_blank" class="uk-margin-medium-right" href="https://x.com/angola_cables" uk-icon="twitter"></a>
-                    </div>
-                  </li>
-                </ul>
-              </aside>
-
-            <!-- Main Article Section -->
-
-            <div class="uk-width-expand  uk-margin">
-                <form class="uk-grid-small uk-padding fundo-form" uk-grid>
-                    <h3 style="color:rgba(24, 24, 50, 1); font-weight: bold;">Somos rápidos a responder!</h3>
-                    <div class="uk-width-1-2@s">
-                        <p style="color: #1B1B1B; font-weight: 600;">Primeiro nome*</p>
-                        <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
-                    </div>
-                    <div class="uk-width-1-2@s">
-                        <p style="color: #1B1B1B; font-weight: 600;">Último nome*</p>
-                        <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
-                    </div>
-                    <div class="uk-width-1-1">
-                        <p style="color: #1B1B1B; font-weight: 600;">Número de telefone</p>
-                        <input class="uk-input" type="text" placeholder="" aria-label="100">
-                    </div>
-                    <div class="uk-width-1-2@s">
-                        <p style="color: #1B1B1B; font-weight: 600;">Região</p>
-                        <div class="uk-margin">
-                            <div class="uk-form-controls">
-                                <select class="uk-select uk-border-rounded" style="background-color: rgba(240, 240, 248, 1);">
-                                    <option value="">Selecionar região</option>
-                                    <option value="1">África Austral e Oriental (TelCables South Africa)</option>
-                                    <option value="2">África Subsariana (Angola Cables)</option>
-                                    <option value="3">África Ocidental (TelCables Nigéria)</option>
-                                    <option value="4">América do Norte (TelCables USA)</option>
-                                    <option value="4">América Latina (TelCables Brasil)</option>
-                                    <option value="4">Europa (TelCables Europa)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s">
-                        <p style="color: #1B1B1B; font-weight: 600;">Departamento</p>
-                        <div class="uk-margin">
-                            <div class="uk-form-controls">
-                                <select class="uk-select uk-border-rounded" style="background-color: rgba(240, 240, 248, 1);">
-                                    <option value="">Selecione um departamento</option>
-                                    <option value="1">Vendas</option>
-                                    <option value="2">Suporte</option>
-                                    <option value="3">Técnico</option>
-                                    <option value="4">Financeiro</option>
-                                    <option value="5">Recursos Humanos</option>
-                                    <option value="5">Outro departamento</option>
-
-
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@s">
-                        <p style="color: #1B1B1B; font-weight: 600;">Nome da empresa</p>
-                        <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
-                    </div>
-                    <div class="uk-width-1-2@s">
-                        <p style="color: #1B1B1B; font-weight: 600;">Cargo na empresa</p>
-                        <input class="uk-input uk-border-rounded" type="text" placeholder="" aria-label="50">
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <p style="color: #1B1B1B; font-weight: 600;">E-mail*</p>
-                        <input class="uk-input" type="text" placeholder="" aria-label="100">
-                    </div>
-
-                    <div class="uk-width-1-1">
-                        <p style="color: #1B1B1B; font-weight: 600;">Mensagem</p>
-                        <textarea class="uk-textarea uk-border-rounded" rows="5" placeholder="" aria-label=""></textarea>
-                    </div>
-                    <div class="uk-width-1-2@s">
-                       
-                    </div>
-                    <div class="uk-width-1-1@s uk-text-right">
-                        <a href=""><button  class="uk-button bt-enviar uk-button-large uk-border-pill "><b> Enviar </b></button> </a>
-                    </div>
-                    
-                </form>
-            </div>
-
-
-        </div>
     </div>
+    <div uk-form-custom="target: > * > span:first-child" style="margin-top: 8px;">
+     <div class="uk-form-controls">
+    <select class="uk-select uk-border-rounded uk-width-1-1" style="background-color: rgba(240, 240, 248, 1); text-align: left;
+                               padding: 5px 25px !important; text-transform: capitalize;
+                               /* These border/radius styles for the native select are typically not seen */
+                               /* border: 1px solid #28C1FD !important; */
+                               /* border-radius: 10px; */" (change)="onCountryChange($event)">
+        @for (country of countries; track country.value) {
+        <option [value]="country.name" [selected]="country.name === selectedCountry">
+            {{ country.name }}
+        </option>
+        }
+    </select>
+</div>
+
+<button class="uk-button uk-button-secondary uk-width-1-1 uk-flex uk-flex-middle uk-flex-between" type="button" tabindex="-1"
+    style="
+        background-color: rgba(240, 240, 248, 0.113); /* Match background */
+        border: 1px solid #28C1FD !important; /* This will make the border visible on the button */
+        border-radius: 10px; /* This will round the corners of the visible button */
+        padding: 5px 25px !important; /* Ensure consistent padding on the visible button */
+        color: #28C1FD; /* Default text color for the button, adjust if needed */
+        text-transform: capitalize; /* Apply text capitalization if needed for consistency */
+    ">
+    <span style="padding-left: 15px;">{{ selectedCountry }}</span>
+    <span uk-icon="icon: chevron-down"></span>
+</button>
+    </div>
+</div>
+</div>
+     
+
+        <ul class="uk-list">
+          @for (address of getCountryAddresses(selectedCountry); track address.title) {
+          <li>
+            <div class="uk-grid-small uk-flex-bottom" uk-grid uk-height-match="target: > div">
+              <div>
+                <div class="rectangulo-vertical"></div>
+              </div>
+              <div style="margin-top:30px" class="uk-width-expand ">
+                <p style="color: white; font-weight: 600;font-size: 21px;" class="uk-margin-remove-bottom">{{ address.title }}</p>
+                <p style="margin-top: 50px !important" class="uk-margin-small-top" style="color: rgb(216, 216, 216);"
+                  [innerHTML]="address.address"></p>
+                @if (address.phone) {
+                <p style="color: rgb(216, 216, 216);">{{ address.phone }}</p>
+                }
+              </div>
+            </div>
+          </li>
+          }
+
+          <li>
+            <div class="uk-margin-medium-top">
+              <a target="_blank" href="https://www.facebook.com/AngolaCables/" class="uk-margin-medium-right"
+                uk-icon="facebook"></a>
+              <a target="_blank" href="https://www.instagram.com/angolacables/" class="uk-margin-medium-right"
+                uk-icon="instagram"></a>
+              <a target="_blank" href="https://www.linkedin.com/company/angola-cables/" class="uk-margin-medium-right"
+                uk-icon="linkedin"></a>
+              <a target="_blank" href="https://www.youtube.com/@AngolaCablesTV" class="uk-margin-medium-right"
+                uk-icon="youtube"></a>
+              <a target="_blank" class="uk-margin-medium-right" href="https://x.com/angola_cables"
+                uk-icon="twitter"></a>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="uk-width-expand uk-margin ">
+        <form class="uk-grid-small uk-padding fundo-form " uk-grid>
+          <div class="uk-width-1-1">
+            <h3 style="color:rgba(24, 24, 50, 1); font-weight: bold;">{{ 'somos_rapidos_responder' | translate }}</h3>
+
+          </div>
+          <div class="uk-width-1-2@s">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'primeiro_nome_label' | translate }}</p>
+            <input  class="uk-input input-contacto " type="text" placeholder="" aria-label="50">
+          </div>
+          <div class="uk-width-1-2@s">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'ultimo_nome_label' | translate }}</p>
+            <input class="uk-input input-contacto " type="text" placeholder="" aria-label="50">
+          </div>
+          <div class="uk-width-1-1">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'numero_telefone_label' | translate }}</p>
+            <input class="uk-input input-contacto " type="text" placeholder="" aria-label="100">
+          </div>
+          <div class="uk-width-1-2@s">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'regiao_label' | translate }}</p>
+            <div >
+              <div class="uk-form-controls">
+                <select class="uk-select input-contacto " style="background-color: rgba(240, 240, 248, 1); height: 45px;">
+                  <option value="">{{ 'selecionar_regiao_option' | translate }}</option>
+                  <option value="1">{{ 'africa_austral_oriental_option' | translate }}</option>
+                  <option value="2">{{ 'africa_subsariana_option' | translate }}</option>
+                  <option value="3">{{ 'africa_ocidental_option' | translate }}</option>
+                  <option value="4">{{ 'america_norte_option' | translate }}</option>
+                  <option value="4">{{ 'america_latina_option' | translate }}</option>
+                  <option value="4">{{ 'europa_option' | translate }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-1-2@s">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'departamento_label' | translate }}</p>
+            <div >
+              <div class="uk-form-controls">
+                <select class="uk-select input-contacto " style="background-color: rgba(240, 240, 248, 1); height: 45px;">
+                  <option value="">{{ 'selecione_departamento_option' | translate }}</option>
+                  <option value="1">{{ 'vendas_option' | translate }}</option>
+                  <option value="2">{{ 'suporte_option' | translate }}</option>
+                  <option value="3">{{ 'tecnico_option' | translate }}</option>
+                  <option value="4">{{ 'financeiro_option' | translate }}</option>
+                  <option value="5">{{ 'recursos_humanos_option' | translate }}</option>
+                  <option value="5">{{ 'outro_departamento_option' | translate }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-1-2@s">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'nome_empresa_label' | translate }}</p>
+            <input class="uk-input input-contacto " type="text" placeholder="" aria-label="50">
+          </div>
+          <div class="uk-width-1-2@s">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'cargo_empresa_label' | translate }}</p>
+            <input class="uk-input input-contacto " type="text" placeholder="" aria-label="50">
+          </div>
+
+          <div class="uk-width-1-1">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'email_label' | translate }}</p>
+            <input class="uk-input input-contacto " type="text" placeholder="" aria-label="100">
+          </div>
+
+          <div class="uk-width-1-1">
+            <p style="color: #1B1B1B; font-weight: 600;">{{ 'mensagem_label' | translate }}</p>
+            <textarea  class="uk-textarea input-mensagem " rows="5" placeholder="" aria-label=""></textarea>
+          </div>
+          <div class="uk-width-1-2@s">
+
+          </div>
+          <div class="uk-width-1-1@s uk-text-right">
+            <a href=""><button style="padding: 2px; width: 150px;"
+                class="uk-button bt-enviar uk-button-large uk-border-pill "><b> {{ 'enviar_botao' | translate }}
+                </b></button> </a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
 <app-rodape></app-rodape>
