@@ -10,6 +10,7 @@
 
 }
 
+
 .fundo-cloud {
 
     background: rgba(255, 255, 255, 0.1); /* Light transparent background */
@@ -100,3 +101,32 @@
     box-shadow: 0px -8px 0px rgba(39, 200, 227, 1);
 }
 
+/*responsive*/
+@media (max-width: 768px) {
+    
+.uk-margin-large-left{
+    margin: 0px !important;
+    padding: 0  !important;
+
+}
+
+.uk-margin-large-right{
+    margin: 0px !important;
+    padding: 0px !important;
+
+
+
+}
+
+    .uk-grid
+ {
+    padding-left: 0px;
+}
+
+
+.margem-superior{
+    margin-top: 100px !important;
+    text-align:  center !important;
+}
+
+}

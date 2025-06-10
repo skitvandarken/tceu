@@ -27,12 +27,12 @@
     </div>
 </div>
 
-<div class="fundo-cronologia-abas">
-    <div class="uk-container">
+<div  class="fundo-cronologia-abas">
+    <div class="uk-container uk-padding">
         <div class="uk-padding">
             <!-- Slider Navigation -->
             <div uk-slider>
-                <div class="uk-position-relative">
+                <div class="uk-position-relative ">
                     <!-- Navigation Arrows -->
                     <a class="uk-position-center-left-out uk-hidden-hover" href="#" uk-slidenav-previous
                         uk-slider-item="previous"></a>
@@ -400,23 +400,29 @@
             </div>
             <div class="uk-grid-item-match">
                 <div class="uk-card uk-margin-small-top  uk-flex  uk-flex-column  uk-flex-center ">
+
                     <h1
-                        style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 2.3rem; font-weight: bolder;">
+                        style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 2.3rem; font-weight: bolder;r">
                         {{ 'empresa.valores.visao.title' | translate }}
                     </h1>
-                    <h4 style="color:white">
+
+
+                    <h4 style="color: white;">
                         {{ 'empresa.valores.visao.text' | translate }}
                     </h4>
+
+
                 </div>
             </div>
         </div>
     </div>
 
     <div class="uk-container uk-padding">
-        <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 2.3rem; margin-bottom: 35px;">
-            {{ 'empresa.valores.title' | translate }}
-        </h1>
-
+        <div style="padding-bottom: 15px;">
+            <h1 style="color: rgba(40, 193, 253, 1); font-weight: bolder; font-size: 2.3rem; margin-bottom: 35px;">
+                {{ 'empresa.valores.title' | translate }}
+            </h1>
+        </div>
         <div class="uk-child-width-expand@s uk-grid-match" uk-grid>
             <div>
                 <div class="uk-card fundo-card-valores uk-card-body uk-border-rounded">
