@@ -1,18 +1,3 @@
-/* Main Styles */
-#modal-video .uk-modal-close-default {
-    top: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    transition: 0.3s ease;
-}
-
-#modal-video .uk-modal-close-default:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 .uk-navbar-container {
     z-index: 1000;
     position: fixed;
@@ -22,31 +7,12 @@
     background-color: rgba(0, 95, 115, 0.4);
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
     border-radius: 0 0 20px 20px;
     height: 80px;
     margin: 0px;
-}
-
-.uk-navbar-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-.uk-navbar-nav {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.uk-navbar-nav>li {
-    margin: 0 10px;
 }
 
 .uk-navbar-nav>li>a {
@@ -59,6 +25,8 @@
     text-transform: none;
 }
 
+
+
 .uk-navbar-nav>li>a:hover {
     color: #050045;
 }
@@ -69,8 +37,14 @@
     border-top-style: solid;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding: 20px;
+    padding: 25px 25px 20px 20px;
+    top: 90px !important;
+   
 }
+
+
+
+
 
 .pesquisa {
     border-top-color: #050045;
@@ -99,69 +73,6 @@
     margin: 5px;
 }
 
-.uk-button-primary {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(125deg, rgb(0, 44, 110), rgba(0, 97, 187, 1), rgb(0, 63, 122)) !important;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.uk-button-primary:hover {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
-    color: #e6f7ff;
-}
-
-/* Glassmorphic look for Offcanvas Bar */
-.uk-offcanvas-bar {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(20px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(20px); /* For Safari compatibility */
-    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for depth */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Shadow for lift */
-    color: #ffffff; /* Ensure text is white for contrast */
-}
-
-/* Adjust Offcanvas navigation link colors for better readability on glassmorphic background */
-#offcanvas-nav .uk-nav-default li a {
-    color: #ffffff !important; /* Make sure links are white */
-    font-weight: bold; /* Keep them bold for prominence */
-    text-transform: none;}
-
-#offcanvas-nav .uk-nav-default li a:hover {
-    color: #e0e0e0 !important; /* Slightly lighter white on hover */
-}
-
-#offcanvas-nav .uk-nav-header {
-    color: #e0e0e0; /* Lighter color for headers */
-}
-
-
-.texto {
-    color: #fff;
-}
-
-.texto:hover {
-    color: #d0d0d0;
-}
-
-.icone-branco {
-    color: white;
-}
-
-div {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem 0rem;
-}
-
-p,
-.translated {
-    /* background-color: #d4f3ff;
-    padding: 0.5rem 1rem; */
-}
 
 button {
     border: none;
@@ -176,9 +87,31 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #005f73;
+/* Custom Styles based on extracted classes */
+
+.pesquisa {
+    border-top-color: #050045;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 20px;
 }
+
+.texto {
+    color: #fff;
+}
+
+.texto:hover {
+    color: #d0d0d0;
+}
+
+.icone-branco {
+    color: white;
+}
+
 
 .title {
     background-color: #bde8f8;
@@ -186,6 +119,32 @@ button:hover {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.bt {
+    background-color: #1AB8DD;
+    color: black;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #18a9cc;
+}
+
+
+.uk-navbar-toggle-icon {
+    color: white !important;
+}
+
+
+.uk-modal-dialog {
+
+    width: 900px;
+    height: auto;
+
 }
 
 /* Language Switcher Styles */
@@ -215,6 +174,7 @@ button:hover {
     color: white;
 }
 
+
 .uk-navbar-nav>li.uk-navbar-item {
     display: flex;
     align-items: center;
@@ -229,30 +189,45 @@ select {
     font-family: 'Noto Color Emoji', sans-serif !important;
 }
 
-.bt {
-    background-color: #1AB8DD;
-    color: black;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* Glassmorphic look for Offcanvas Bar */
+.uk-offcanvas-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white */
+    backdrop-filter: blur(20px);
+    /* Apply blur effect */
+    -webkit-backdrop-filter: blur(20px);
+    /* For Safari compatibility */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle border for depth */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Shadow for lift */
+    color: #ffffff;
+    /* Ensure text is white for contrast */
 }
 
-.bt:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background-color: #18a9cc;
+/* Adjust Offcanvas navigation link colors for better readability on glassmorphic background */
+#offcanvas-nav .uk-nav-default li a {
+    color: #ffffff !important;
+    /* Make sure links are white */
+    font-weight: bold;
+    /* Keep them bold for prominence */
+    text-transform: none;
 }
 
-.uk-navbar-toggle-icon {
-    color: white !important;
+#offcanvas-nav .uk-nav-default li a:hover {
+    color: #e0e0e0 !important;
+    /* Slightly lighter white on hover */
+}
+
+#offcanvas-nav .uk-nav-header {
+    color: #e0e0e0;
+    /* Lighter color for headers */
 }
 
 
-.uk-modal-dialog {
 
-    width: 900px;
-    height: auto;
 
-}
 
 /* Responsive Media Queries */
 /* Large screens (desktops, 1200px and up) */
@@ -295,11 +270,14 @@ select {
     #offcanvas-nav .uk-offcanvas-bar {
         width: 100%;
         /* Re-apply glassmorphism for smaller screens */
-        background-color: rgb(4,5,51); /* Slightly less transparent */
-         /*backdrop-filter: blur(20px); Slightly less blur for smaller screens
+        background-color: rgb(4, 5, 51);
+        /* Slightly less transparent */
+        /*backdrop-filter: blur(20px); Slightly less blur for smaller screens
         -webkit-backdrop-filter: blur(15px); */
-        border-right: 1px solid rgba(255, 255, 255, 0.3); /* Slightly more prominent border */
-        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        /* Slightly more prominent border */
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        /* Adjusted shadow */
     }
 
     #offcanvas-nav img {
@@ -327,7 +305,9 @@ select {
     }
 
     .uk-navbar-container {
-        height: 95px;
+        height: 72px;
+        padding: 5px 0;
+
     }
 }
 
@@ -352,6 +332,12 @@ select {
     .uk-button {
         padding: 8px 12px;
         font-size: 14px;
+    }
+
+    .uk-navbar-container {
+        height: 72px;
+        padding: 5px 0;
+
     }
 }
 

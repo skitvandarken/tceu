@@ -1,171 +1,185 @@
-<!-- Desktop Navigation (visible on medium+ screens) -->
-<nav class="uk-navbar-container uk-navbar uk-visible@m" uk-navbar>
+<nav class="uk-navbar-container uk-visible@m">
     <div class="uk-container">
-        <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav">
+        <div uk-navbar>
 
-                <!-- Logo -->
-                <li class="uk-logo">
-                    <a href="#inicio" uk-scroll="offset: 100" class="texto">
-                        <img class="uk-border-rounded" style="height: auto; width: 180px;" src="/img/logo-acsa-2.png">
-                    </a>
-                </li>
+            <div class="uk-navbar-left">
 
-                <!-- Company Menu -->
-                <li>
-                    <a href="#" uk-scroll>{{ 'menu-empresa' | translate }}</a>
-                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
-                        <div class="uk-drop-grid uk-child-width-1-2" uk-grid>
-                            <div>
-                                <ul class="uk-margin-medium-left uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/sobre"><b>{{
-                                                'menu-conheca' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/eventos"><b>{{
-                                                'menu-eventos' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/blog"><b>{{ 'menu-blog'
-                                                | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/noticias"><b>{{
-                                                'menu-noticias' | translate }}</b></a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/trust-center"><b>{{
-                                                'menu-trust' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/recrutamento"><b>{{
-                                                'menu-recrutamento' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a
-                                            href="https://talents-seedz.ao/"><b>{{ 'menu-talent' | translate }}</b></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-logo">
+                        <a href="#inicio" uk-scroll="offset: 100" class="texto">
+                            <img class="uk-border-rounded" style="height: auto; width: 180px;"
+                                src="/img/logo-acsa-2.png">
+                        </a>
+                    </li>
+                </ul>
 
-                <!-- Services Menu -->
-                <li>
-                    <a href="#" uk-scroll>{{ 'menu-servicos' | translate }}</a>
-                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
-                        <div class="uk-drop-grid uk-child-width-1-2" uk-grid>
-                            <div>
-                                <ul class="uk-margin-medium-left uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/conectividade"><b>{{
-                                                'menu-conectividade' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/cloud"><b>{{
-                                                'menu-cloud' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/seguranca"><b>{{
-                                                'menu-seguranca' | translate }}</b></a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/datacenter"><b>{{
-                                                'menu-datacenter' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/virtualizacao"><b>{{
-                                                'menu-virtual' | translate }}</b></a></li>
-                                    <li class="uk-margin-small-bottom uk-active"><a routerLink="/erp"><b>{{ 'menu-erp' |
-                                                translate }}</b></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+            </div>
 
-                <!-- Partners Link -->
-                <li>
-                    <a href="https://partners.angolacables.co.ao/" uk-scroll>{{ 'menu-parceiros' | translate }}</a>
-                </li>
+            <div class="uk-navbar-center">
 
-                <!-- Latencies Link -->
-                <li>
-                    <a href="https://acservices.atlanticconnect.com.br/latencies/one-way/" uk-scroll>{{ 'menu-latencias'
-                        | translate }}</a>
-                </li>
-
-                <!-- Icons Section -->
-                <li class="uk-flex uk-flex-middle">
-                    <div class="uk-flex uk-flex-middle">
-                        <!-- Contact Icon -->
-                        <a routerLink="/contacto" style="color:#fff" href="" class="uk-icon-link uk-margin-small-right"
-                            uk-icon="icon:question; ratio: 1.5"></a>
-
-                        <!-- World Icon with Dropdown -->
-                        <a style="color:#fff" href="" class="uk-icon-link uk-margin-small-right"
-                            uk-icon="icon:world; ratio: 1.5"></a>
-                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3" style="min-width: 700px;">
-                            <div class="uk-grid-collapse uk-text-center" uk-grid>
-                                <div class="uk-width-expand uk-margin-large-top">
-                                    <div
-                                        class="uk-card uk-card-body uk-margin-small-left uk-margin-small-right uk-padding">
-                                        <h2 style="font-weight: bold;" class="uk-text-left uk-margin-medium-left">{{
-                                            'menu-ac-title' | translate }}</h2>
-                                        <p class="uk-text-left uk-margin-medium-left">{{ 'menu-angolacables' | translate
-                                            }}</p>
-                                    </div>
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#" uk-scroll>{{ 'menu-empresa' | translate }}</a>
+                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                            <div class="uk-drop-grid uk-child-width-1-2" uk-grid>
+                                <div>
+                                    <ul class="uk-margin-medium-left uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/sobre"><b>{{
+                                                    'menu-conheca' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/eventos"><b>{{
+                                                    'menu-eventos' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/blog"><b>{{
+                                                    'menu-blog'
+                                                    | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/noticias"><b>{{
+                                                    'menu-noticias' | translate }}</b></a></li>
+                                    </ul>
                                 </div>
-                                <div class="uk-width-1-3">
-                                    <div class="uk-height-1-1 uk-flex uk-flex-column">
-                                        <div
-                                            class="uk-card uk-card-body uk-margin-small-left uk-margin-small-right uk-margin-auto-top uk-padding">
-                                            <ul
-                                                class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav uk-text-left">
-                                                <li class="uk-margin-small-bottom"><b>{{ 'menu-escritorios' | translate
-                                                        }}</b></li>
-                                                <li class="uk-margin-small-bottom"><a
-                                                        href="https://angolacables.co.ao/">Angola</a></li>
-                                                <li class="uk-margin-small-bottom"><a
-                                                        href="https://telcables.co.za/">África do Sul</a></li>
-                                                <li class="uk-margin-small-bottom"><a
-                                                        href="https://telcables.com.br/">Brasil</a></li>
-                                                <li class="uk-margin-small-bottom"><a
-                                                        href="https://telcables.net/">EUA</a></li>
-                                                <li class="uk-margin-small-bottom"><a
-                                                        href="https://telcables.ng/">Nigeria</a></li>
-                                                <li class="uk-margin-small-bottom"><a
-                                                        href="https://telcables.pt/">Portugal</a></li>
-                                            </ul>
+                                <div>
+                                    <ul class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/trust-center"><b>{{
+                                                    'menu-trust' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/recrutamento"><b>{{
+                                                    'menu-recrutamento' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a
+                                                href="https://talents-seedz.ao/"><b>{{ 'menu-talent' | translate
+                                                    }}</b></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" uk-scroll>{{ 'menu-servicos' | translate }}</a>
+                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                            <div class="uk-drop-grid uk-child-width-1-2" uk-grid>
+                                <div>
+                                    <ul class="uk-margin-medium-left uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-margin-small-bottom uk-active"><a
+                                                routerLink="/conectividade"><b>{{
+                                                    'menu-conectividade' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/cloud"><b>{{
+                                                    'menu-cloud' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/seguranca"><b>{{
+                                                    'menu-seguranca' | translate }}</b></a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/datacenter"><b>{{
+                                                    'menu-datacenter' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a
+                                                routerLink="/virtualizacao"><b>{{
+                                                    'menu-virtual' | translate }}</b></a></li>
+                                        <li class="uk-margin-small-bottom uk-active"><a routerLink="/erp"><b>{{
+                                                    'menu-erp' |
+                                                    translate }}</b></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="https://partners.angolacables.co.ao/" uk-scroll>{{ 'menu-parceiros' | translate }}</a>
+                    </li>
+
+                    <li>
+                        <a href="https://acservices.atlanticconnect.com.br/latencies/one-way/" uk-scroll>{{
+                            'menu-latencias'
+                            | translate }}</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="uk-navbar-right">
+
+                <ul class="uk-navbar-nav">
+                    <li class="uk-flex uk-flex-middle">
+                        <div class="uk-flex uk-flex-middle">
+                            <a routerLink="/contacto" style="color:#fff" href=""
+                                class="uk-icon-link uk-margin-small-right" uk-icon="icon:question; ratio: 1.5"></a>
+
+                            <a style="color:#fff" href="" class="uk-icon-link uk-margin-small-right"
+                                uk-icon="icon:world; ratio: 1.5"></a>
+                            <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3" style="min-width: 700px;">
+                                <div class="uk-grid-collapse uk-text-center" uk-grid>
+                                    <div class="uk-width-expand uk-margin-medium-top">
+                                        <div class="uk-card   uk-padding">
+                                            <h2 style="font-weight: bold;" class="uk-text-left uk-margin-medium-left">{{
+                                                'menu-ac-title' | translate }}</h2>
+                                            <p class="uk-text-left uk-margin-medium-left">{{ 'menu-angolacables' |
+                                                translate
+                                                }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-3">
+                                        <div class="uk-height-1-1 uk-flex uk-flex-column">
+                                            <div
+                                                class="uk-card uk-card-body uk-margin-small-left uk-margin-small-right uk-margin-auto-top uk-padding">
+                                                <ul
+                                                    class="uk-margin-medium-right uk-nav uk-navbar-dropdown-nav uk-text-left">
+                                                    <li class="uk-margin-small-bottom"><b>{{ 'menu-escritorios' |
+                                                            translate
+                                                            }}</b></li>
+                                                    <li class="uk-margin-small-bottom"><a
+                                                            href="https://angolacables.co.ao/">Angola</a></li>
+                                                    <li class="uk-margin-small-bottom"><a
+                                                            href="https://telcables.co.za/">África do Sul</a></li>
+                                                    <li class="uk-margin-small-bottom"><a
+                                                            href="https://telcables.com.br/">Brasil</a></li>
+                                                    <li class="uk-margin-small-bottom"><a
+                                                            href="https://telcables.net/">EUA</a></li>
+                                                    <li class="uk-margin-small-bottom"><a
+                                                            href="https://telcables.ng/">Nigeria</a></li>
+                                                    <li class="uk-margin-small-bottom"><a
+                                                            href="https://telcables.pt/">Portugal</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+                    </li>
 
-                        <!-- Search Icon with Modal
-                        <a style="color:#fff" href="#" class="uk-icon-link" uk-icon="icon: search; ratio: 1.5"
-                            uk-toggle="target: #search-modal"></a>  -->
-                    </div>
-                </li>
+                    <li class="uk-navbar-item">
+                        <div class="uk-navbar-item">
+                            <form class="uk-form uk-margin-remove">
+                                <div uk-form-custom="target: > * > span:first-child" class="uk-form-custom">
+                                    <select aria-label="Custom controls" (change)="onLanguageChange($event)"
+                                        class="uk-select">
+                                        <option value="pt">PT</option>
+                                        <option value="en">EN</option>
+                                        <option value="fr">FR</option>
+                                    </select>
+                                    <button class="uk-button uk-button-default uk-button-small" type="button"
+                                        tabindex="-1" style="height: 40px; padding: 0 12px;">
+                                        <span class="uk-flex uk-flex-middle">
+                                            <img class="bandeiras" [src]="selectedFlag" id="selected-flag"
+                                                style="height: 16px; width: auto; margin-right: 8px;">
+                                            <span id="selected-language" style="font-size: 14px; font-weight: bold;">{{
+                                                selectedLanguage }}</span>
+                                            <span uk-icon="icon: chevron-down" style="margin-left: 4px;"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
 
-                <!-- Language Selector -->
-                <li class="uk-navbar-item">
-                    <div class="uk-navbar-item">
-                        <form class="uk-form uk-margin-remove">
-                            <div uk-form-custom="target: > * > span:first-child" class="uk-form-custom">
-                                <select aria-label="Custom controls" (change)="onLanguageChange($event)"
-                                    class="uk-select">
-                                    <option value="pt">PT</option>
-                                    <option value="en">EN</option>
-                                    <option value="fr">FR</option>
-                                </select>
-                                <button class="uk-button uk-button-default uk-button-small" type="button" tabindex="-1"
-                                    style="height: 40px; padding: 0 12px;">
-                                    <span class="uk-flex uk-flex-middle">
-                                        <img class="bandeiras" [src]="selectedFlag" id="selected-flag"
-                                            style="height: 16px; width: auto; margin-right: 8px;">
-                                        <span id="selected-language" style="font-size: 14px; font-weight: bold;">{{
-                                            selectedLanguage }}</span>
-                                        <span uk-icon="icon: chevron-down" style="margin-left: 4px;"></span>
-                                    </span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-            </ul>
+            </div>
+
         </div>
     </div>
 </nav>
+
+
 
 <!-- Mobile Navigation (hidden on medium+ screens) -->
 <div class="uk-hidden@m">
@@ -179,7 +193,7 @@
 
                     <ul class="uk-navbar-nav">
 
-                        <li> <a  href="#inicio" uk-scroll="offset: 100" class="texto">
+                        <li> <a href="#inicio" uk-scroll="offset: 100" class="texto">
                                 <img class="uk-border-rounded" style="height: auto; width: 100px;"
                                     src="/img/logo-acsa-2.png">
                             </a></li>
@@ -190,7 +204,7 @@
                 <div style="margin-right: 2px" class="uk-navbar-right">
 
                     <ul class="uk-navbar-nav">
-                       
+
                         <li class="uk-navbar-item">
                             <div class="uk-navbar-item">
                                 <form class="uk-form uk-margin-remove">
@@ -218,7 +232,7 @@
                         </li>
 
 
-                         <li>
+                        <li>
                             <div class="uk-container">
                                 <div class="uk-navbar-left">
                                     <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#"
@@ -250,41 +264,45 @@
     </nav>   -->
 </div>
 
-<!-- Mobile Offcanvas Menu --><div id="offcanvas-nav" uk-offcanvas="overlay: true">
+<!-- Mobile Offcanvas Menu -->
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
         <ul class="uk-nav uk-nav-default uk-margin-medium-left">
             <li>
-                <a  href="#inicio" uk-scroll="offset: 100" class="texto">
+                <a href="#inicio" uk-scroll="offset: 100" class="texto">
                     <img class="uk-border-rounded" style="height: auto; width: 250px;" src="/img/logo-acsa-2.png">
                 </a>
             </li>
 
-            <li><a  routerLink="/sobre">{{ 'menu-conheca' | translate }}</a></li>
-            <li><a  routerLink="/eventos">{{ 'menu-eventos' | translate }}</a></li>
-            <li><a  routerLink="/blog">{{ 'menu-blog' | translate }}</a></li>
-            <li><a  routerLink="/noticias">{{ 'menu-noticias' | translate }}</a></li>
-            <li><a  routerLink="/trust-center">{{ 'menu-trust' | translate }}</a></li>
-            <li><a  routerLink="/recrutamento">{{ 'menu-recrutamento' | translate }}</a></li>
-            <li><a  href="https://talents-seedz.ao/">{{ 'menu-talent' | translate }}</a></li>
+            <li><a routerLink="/sobre">{{ 'menu-conheca' | translate }}</a></li>
+            <li><a routerLink="/eventos">{{ 'menu-eventos' | translate }}</a></li>
+            <li><a routerLink="/blog">{{ 'menu-blog' | translate }}</a></li>
+            <li><a routerLink="/noticias">{{ 'menu-noticias' | translate }}</a></li>
+            <li><a routerLink="/trust-center">{{ 'menu-trust' | translate }}</a></li>
+            <li><a routerLink="/recrutamento">{{ 'menu-recrutamento' | translate }}</a></li>
+            <li><a href="https://talents-seedz.ao/">{{ 'menu-talent' | translate }}</a></li>
 
             <li class="uk-parent uk-margin-top">
-                <a style="color:#ffffff85 !important; font-weight: normal !important;"  href="#"> {{ 'servicos' | translate }} </a>
+                <a style="color:#ffffff85 !important; font-weight: normal !important;" href="#"> {{ 'servicos' |
+                    translate }} </a>
                 <ul class="uk-nav-sub">
-                    <li><a  routerLink="/conectividade">{{ 'menu-conectividade' | translate }}</a></li>
-                    <li><a  routerLink="/cloud">{{ 'menu-cloud' | translate }}</a></li>
-                    <li><a  routerLink="/seguranca">{{ 'menu-seguranca' | translate }}</a></li>
-                    <li><a  routerLink="/datacenter">{{ 'menu-datacenter' | translate }}</a></li>
-                    <li><a  routerLink="/virtualizacao">{{ 'menu-virtual' | translate }}</a></li>
-                    <li><a  routerLink="/erp">{{ 'menu-erp' | translate }}</a></li>
+                    <li><a routerLink="/conectividade">{{ 'menu-conectividade' | translate }}</a></li>
+                    <li><a routerLink="/cloud">{{ 'menu-cloud' | translate }}</a></li>
+                    <li><a routerLink="/seguranca">{{ 'menu-seguranca' | translate }}</a></li>
+                    <li><a routerLink="/datacenter">{{ 'menu-datacenter' | translate }}</a></li>
+                    <li><a routerLink="/virtualizacao">{{ 'menu-virtual' | translate }}</a></li>
+                    <li><a routerLink="/erp">{{ 'menu-erp' | translate }}</a></li>
                 </ul>
             </li>
 
-            <li class="uk-margin-top"><a  href="https://partners.angolacables.co.ao/">{{ 'menu-parceiros' | translate }}</a></li>
+            <li class="uk-margin-top"><a href="https://partners.angolacables.co.ao/">{{ 'menu-parceiros' | translate
+                    }}</a></li>
 
-            <li class="uk-margin-top"><a  href="https://acservices.atlanticconnect.com.br/latencies/one-way/">{{ 'menu-latencias' | translate }}</a></li>
+            <li class="uk-margin-top"><a href="https://acservices.atlanticconnect.com.br/latencies/one-way/">{{
+                    'menu-latencias' | translate }}</a></li>
 
             <li class="uk-margin-top">
-                <a  routerLink="/contacto">{{ 'contato' | translate }}</a>
+                <a routerLink="/contacto">{{ 'contato' | translate }}</a>
             </li>
         </ul>
     </div>
