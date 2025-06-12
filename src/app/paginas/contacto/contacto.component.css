@@ -154,3 +154,11 @@
 .input-mensagem{
     border:0; margin-top:8px;  border-radius: 10px;
 }
+
+
+@media (max-width: 624px) {
+
+    .fundo-form{
+        margin: 10px;
+    }
+}

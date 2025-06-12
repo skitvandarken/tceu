@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from "@angular/core";
-import { provideRouter } from "@angular/router";
+import { provideRouter, withInMemoryScrolling } from "@angular/router";
 import { provideAuth0 } from "@auth0/auth0-angular";
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
@@ -14,7 +14,13 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 export const appConfig: ApplicationConfig = {
     providers: [
         provideZoneChangeDetection({ eventCoalescing: true }),
-        provideRouter(routes),
+        provideRouter(
+            routes,
+            withInMemoryScrolling({
+                scrollPositionRestoration: 'top', // This makes the page scroll to top on navigation
+                anchorScrolling: 'enabled' // Optional: enables anchor scrolling
+            })
+        ),
         provideHttpClient(),
         provideTranslateService({
             loader: {
@@ -39,8 +45,5 @@ export const appConfig: ApplicationConfig = {
             appId: "1:363516187651:web:a5241923f5ecd265dbaa36"
         })),
         provideFirestore(() => getFirestore())
-
     ],
-
-
 };

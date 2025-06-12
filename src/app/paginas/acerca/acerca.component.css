@@ -62,12 +62,15 @@
 
 }
 
+/*
 .uk-subnav-pill>.uk-active>a {
     border-radius: 5px;
     background-color: rgba(40, 193, 253, 1) !important;
     color: rgba(5, 5, 51, 1);
     font-weight: bolder;
-}
+}*/
+
+
 
 .fundo-valores {
     background-color: rgba(5, 5, 51, 1);
