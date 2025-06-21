@@ -32,7 +32,7 @@
 .fundo-cronologia {
     background-color: rgba(247, 247, 247, 1);
     position: relative;
-    min-height: 300px;
+    min-height: 250px;
     overflow-x: hidden;
     word-wrap: break-word;
     /* Legacy */
@@ -70,7 +70,32 @@
     font-weight: bolder;
 }*/
 
+.uk-slidenav-previous,
+.uk-slidenav-next {
+    background-color: rgba(0, 0, 78, 0.918);
+    /* Dark gray background */
+    border-radius: 50%;
+    /* Makes it circular */
+    width: 40px;
+    /* Adjust size as needed */
+    height: 40px;
+    /* Adjust size as needed, should be same as width for a perfect circle */
+    display: flex;
+    /* For centering the icon */
+    justify-content: center;
+    /* For centering the icon */
+    align-items: center;
+    /* For centering the icon */
+    color: rgba(26, 184, 221, 1);
+    /* Icon color */
+}
 
+/* Optional: Hover effect */
+.uk-slidenav-previous:hover,
+.uk-slidenav-next:hover {
+    background-color: #555;
+    /* Slightly lighter on hover */
+}
 
 .fundo-valores {
     background-color: rgba(5, 5, 51, 1);
@@ -81,7 +106,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-        word-wrap: break-word;
+    word-wrap: break-word;
     /* Legacy */
     overflow-wrap: break-word;
     /* Modern */
@@ -141,6 +166,8 @@
     opacity: 0.3;
 }
 
+
+
 /* Slider specific styles */
 .uk-slider-container {
     padding: 40px 40px;
@@ -158,16 +185,19 @@
     transition: all 0.3s ease;
 }
 
-.uk-slider-items li.uk-active a {
-    background-color: rgba(40, 193, 253, 1);
+.uk-slider-items li a {
     color: rgba(5, 5, 51, 1);
     border-radius: 5px;
     font-weight: bolder;
 }
 
+.uk-slider-items li.uk-active a {
+    background-color: rgba(40, 193, 253, 1);
+    
+}
 
 /* Style the close button */
- .uk-modal-close-default {
+.uk-modal-close-default {
     top: 10px;
     right: 10px;
     background-color: #16607c;
@@ -203,6 +233,9 @@
 .uk-dotnav {
     color: #fff !important;
 }
+
+
+
 
 
 
@@ -243,9 +276,10 @@
     .responsive-description {
         font-size: 12px;
     }
+
     .padding-mobile {
-    padding: 0px;
-}
+        padding: 0px;
+    }
 }
 
 /* Small mobile screens (up to 480px) */
