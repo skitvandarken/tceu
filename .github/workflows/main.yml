@@ -1,37 +1,60 @@
-name: Deploy to cPanel Web Disk
+name: Deploy Angular App to Web Disk
 
 on:
   push:
     branches:
-      - dashboard
+      - main  # Trigger on push to main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      # Add build steps here if needed, e.g.:
-      # - name: Install dependencies
-      #   run: npm install
-      # - name: Build project
-      #   run: npm run build
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
 
-      - name: Deploy to cPanel Web Disk via WebDAV
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Angular App
+        run: npm run build -- --configuration production
+
+      - name: Deploy via WebDAV
         env:
-          WEBDAV_URL: ${{ secrets.WEBDAV_URL }}
-          WEBDAV_USERNAME: ${{ secrets.WEBDAV_USERNAME }}
-          WEBDAV_PASSWORD: ${{ secrets.WEBDAV_PASSWORD }}
+          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
+          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
-          # Find all files except those in the files/ directory at root
-          find . -type f ! -path "./.git/*" ! -path "./.github/*" ! -path "./files/*" | while read file; do
-            remote_path="${file#./}"
-            # Create directory structure if needed (WebDAV requires directories to exist)
-            if [[ "$remote_path" == *"/"* ]]; then
-              dir_path=$(dirname "$remote_path")
-              curl -u "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" -X MKCOL --create-dirs "$WEBDAV_URL/$dir_path" || true
+          BUILD_DIR="dist/part/browser"
+          WEBDISK_URL="https://angolacables.co.ao:2078"
+
+          find "$BUILD_DIR" -type f | while read -r file; do
+            RELATIVE_PATH="${file#"$BUILD_DIR/"}"
+            REMOTE_PATH="${WEBDISK_URL}/${RELATIVE_PATH}"
+
+            echo "Uploading $file to $REMOTE_PATH"
+
+            # Create remote directories if needed
+            DIR_PATH=$(dirname "$RELATIVE_PATH")
+            if [ "$DIR_PATH" != "." ]; then
+              IFS='/' read -ra DIR_PARTS <<< "$DIR_PATH"
+              PARTIAL_PATH=""
+              for PART in "${DIR_PARTS[@]}"; do
+                PARTIAL_PATH="$PARTIAL_PATH/$PART"
+                curl -k -s -S -u "$WEBDISK_USERNAME:$WEBDISK_PASSWORD" -X MKCOL "${WEBDISK_URL}${PARTIAL_PATH}" || true
+              done
             fi
-            # Upload file
-            curl -T "$file" --user "$WEBDAV_USERNAME:$WEBDAV_PASSWORD" "$WEBDAV_URL/$remote_path"
+
+            curl -k -s -S -u "$WEBDISK_USERNAME:$WEBDISK_PASSWORD" -T "$file" "$REMOTE_PATH"
+
+            if [ $? -ne 0 ]; then
+              echo "❌ Failed to upload: $file"
+              exit 1
+            else
+              echo "✅ Uploaded: $file"
+            fi
           done
