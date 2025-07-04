@@ -88,14 +88,10 @@
     /* For centering the icon */
     color: rgba(26, 184, 221, 1);
     /* Icon color */
+    padding: 10px;
 }
 
-/* Optional: Hover effect */
-.uk-slidenav-previous:hover,
-.uk-slidenav-next:hover {
-    background-color: #555;
-    /* Slightly lighter on hover */
-}
+
 
 .fundo-valores {
     background-color: rgba(5, 5, 51, 1);

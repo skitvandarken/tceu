@@ -64,6 +64,10 @@
      .texto-eventos-1{
         text-align: center !important;
     }
+    .uk-text-large{
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
 
 
 }

@@ -31,6 +31,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -58,20 +59,25 @@
   background: linear-gradient(to left, white, transparent);
 }
 
+.margem-superior {
+  margin-top: 70px !important;
+  margin-bottom: 2px !important;
+}
 
 @media (max-width: 767px) {
 
-  
-    .uk-margin-small-top {
-        margin-top: 0px !important;
-    }
 
-    .uk-margin-medium-top{
-        margin-top: 0px !important;
-    }
+  .uk-margin-small-top {
+    margin-top: 0px !important;
+  }
 
-    .margem-superior{
-      margin-top: 70px !important;
-    }
+  .uk-margin-medium-top {
+    margin-top: 0px !important;
+  }
+
+  .margem-superior {
+    margin-top: 70px !important;
+    margin-bottom: 5px !important;
+  }
 
 }
