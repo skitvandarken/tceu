@@ -2,7 +2,7 @@ name: 🚀 Build & Deploy Angular App
 on:
   push:
     branches:
-      - main  # 🌿 Trigger on push to main branch
+      - mvp  # 🌿 Trigger on push to main branch
 
 jobs:
   build-and-deploy:
