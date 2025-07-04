@@ -1,8 +1,8 @@
-name: 🚀 Build & Deploy Angular App
+name: 🧹 Clean Deploy Angular App
 on:
   push:
     branches:
-      - mvp  # 🌿 Trigger on push to main branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -10,54 +10,31 @@ jobs:
     steps:
       - name: 🛠️ Checkout Repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # 🔍 Get full git history for debugging
 
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22' # ⚙️ Version compatible with Angular
-          cache: 'npm'       # 🔄 Cache node_modules for faster builds
-
-      - name: 🔍 Debug - Show Environment
-        run: |
-          echo "📅 Date: $(date)"
-          echo "🏠 Home: $HOME"
-          echo "📂 PWD: $(pwd)"
-          echo "🐍 Node: $(node -v)"
-          echo "📦 npm: $(npm -v)"
-          echo "🔍 ls -la:"
-          ls -la
+          node-version: '22'
+          cache: 'npm'
 
       - name: 📌 Install Dependencies
         run: npm ci
-        env:
-          NODE_ENV: development  # 🔧 Install all devDependencies
-
-      - name: 🔍 Debug - Show Installed Packages
-        run: npm list --depth=0
 
       - name: 🏗️ Build Angular App
         run: npm run build -- --configuration production
         env:
-          NODE_OPTIONS: "--max_old_space_size=4096"  # 🐘 Increase memory for large apps
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: 🔍 Debug - Show Build Output
-        run: |
-          echo "📂 Build directory contents:"
-          ls -la dist/part/browser
-          echo "📄 Size of built assets:"
-          du -sh dist/part/browser/*
-
-      - name: 🚀 Deploy via WebDAV
+      - name: 🧨 Nuclear Clean & Deploy
         env:
           WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
+          # ===== CONFIGURATION =====
           BUILD_DIR="dist/part/browser"
           WEBDISK_URL="https://angolacables.co.ao:2078"
           
-          # 📋 List of protected files and folders
+          # Protected items (won't be touched)
           EXCLUDE_LIST=(
             "cgi-bin"
             ".well-known"
@@ -71,68 +48,56 @@ jobs:
             ".htaccess_bak"
             "old_angolacables.co.ao.zip"
           )
-          
-          echo "🛡️ Protected items:"
-          printf " - 🛡️ %s\n" "${EXCLUDE_LIST[@]}"
-          
-          # 🔐 Test WebDAV connection first
+          # =========================
+
           echo "🔐 Testing WebDAV connection..."
-          if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent --show-error --fail >/dev/null; then
-            echo "❌ FATAL: WebDAV authentication failed!"
-            echo "ℹ️ Check your WEBDISK_USERNAME and WEBDISK_PASSWORD secrets"
-            exit 1
-          fi
-          echo "✅ WebDAV connection successful!"
-          
-          echo "🔍 Finding files to upload..."
-          find $BUILD_DIR -type f | while read -r file; do
-            RELATIVE_PATH="${file#"$BUILD_DIR/"}"
+          curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --fail --silent --show-error || {
+            echo "❌ WebDAV authentication failed!";
+            exit 1;
+          }
+
+          echo "💣 Starting aggressive cleanup..."
+          ITEMS_TO_DELETE=$(curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent | \
+            xmllint --xpath "//d:response/d:href/text()" - 2>/dev/null | \
+            sed "s|$WEBDISK_URL/||" | \
+            grep -v "^$")
+
+          echo "🛡️ Protected items:"
+          printf " - %s\n" "${EXCLUDE_LIST[@]}"
+
+          while IFS= read -r item; do
+            # Skip root directory
+            [[ -z "$item" ]] && continue
             
-            # 🚫 Check if file should be excluded
-            exclude=false
-            for item in "${EXCLUDE_LIST[@]}"; do
-              if [[ "$RELATIVE_PATH" == "$item"* ]]; then
-                echo "⏭️ Skipping protected: $RELATIVE_PATH (matches $item)"
-                exclude=true
+            # Check protection status
+            protected=false
+            for protected_item in "${EXCLUDE_LIST[@]}"; do
+              if [[ "$item" == "$protected_item"* ]]; then
+                protected=true
                 break
               fi
             done
-            
-            if [ "$exclude" = false ]; then
-              REMOTE_PATH="${WEBDISK_URL}/${RELATIVE_PATH}"
-              echo "⬆️ Uploading: $RELATIVE_PATH"
-              
-              # Create directory structure if needed
-              REMOTE_DIR=$(dirname "$REMOTE_PATH")
-              if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$REMOTE_DIR" --silent --show-error --fail >/dev/null 2>&1; then
-                echo "⚠️ Directory creation failed (might already exist)"
-              fi
-              
-              # Upload with retry logic
-              MAX_RETRIES=3
-              RETRY_DELAY=5
-              attempt=1
-              while [ $attempt -le $MAX_RETRIES ]; do
-                if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH" --silent --show-error --fail; then
-                  echo "✅ Upload succeeded (attempt $attempt)"
-                  break
-                else
-                  echo "⚠️ Upload attempt $attempt failed for $RELATIVE_PATH"
-                  if [ $attempt -eq $MAX_RETRIES ]; then
-                    echo "❌ Max retries reached for $RELATIVE_PATH"
-                    exit 1
-                  fi
-                  sleep $RETRY_DELAY
-                  ((attempt++))
-                fi
-              done
-            fi
-          done
-          
-          echo "✅ Deployment complete! All non-protected files uploaded."
 
-      - name: 📝 Final Status
-        run: |
-          echo "🎉 Deployment workflow completed successfully!"
-          echo "🕒 $(date)"
-          echo "🌐 https://angolacables.co.ao should be updated"
+            if [ "$protected" = false ]; then
+              echo "🧹 Deleting: $item"
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item" --silent --show-error --fail
+            else
+              echo "🛡️ Preserving: $item"
+            fi
+          done <<< "$ITEMS_TO_DELETE"
+
+          echo "🚀 Deploying fresh build..."
+          find $BUILD_DIR -type f | while read -r file; do
+            remote_path="${file#$BUILD_DIR/}"
+            remote_dir=$(dirname "$remote_path")
+            
+            # Create directory structure
+            if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error --fail >/dev/null 2>&1; then
+              echo "📁 Directory exists: $remote_dir"
+            fi
+            
+            echo "⬆️ Uploading: $remote_path"
+            curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail
+          done
+
+          echo "🎉 Clean deploy completed successfully!"
