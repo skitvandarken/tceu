@@ -2,7 +2,7 @@ name: 🧹 Clean Deploy Angular App
 on:
   push:
     branches:
-      - main
+      - mvp
 
 jobs:
   build-and-deploy:
