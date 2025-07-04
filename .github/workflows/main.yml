@@ -75,6 +75,15 @@ jobs:
           echo "🛡️ Protected items:"
           printf " - 🛡️ %s\n" "${EXCLUDE_LIST[@]}"
           
+          # 🔐 Test WebDAV connection first
+          echo "🔐 Testing WebDAV connection..."
+          if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent --show-error --fail >/dev/null; then
+            echo "❌ FATAL: WebDAV authentication failed!"
+            echo "ℹ️ Check your WEBDISK_USERNAME and WEBDISK_PASSWORD secrets"
+            exit 1
+          fi
+          echo "✅ WebDAV connection successful!"
+          
           echo "🔍 Finding files to upload..."
           find $BUILD_DIR -type f | while read -r file; do
             RELATIVE_PATH="${file#"$BUILD_DIR/"}"
@@ -92,10 +101,31 @@ jobs:
             if [ "$exclude" = false ]; then
               REMOTE_PATH="${WEBDISK_URL}/${RELATIVE_PATH}"
               echo "⬆️ Uploading: $RELATIVE_PATH"
-              if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH" --fail --silent --show-error; then
-                echo "❌ Failed to upload $RELATIVE_PATH"
-                exit 1
+              
+              # Create directory structure if needed
+              REMOTE_DIR=$(dirname "$REMOTE_PATH")
+              if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$REMOTE_DIR" --silent --show-error --fail >/dev/null 2>&1; then
+                echo "⚠️ Directory creation failed (might already exist)"
               fi
+              
+              # Upload with retry logic
+              MAX_RETRIES=3
+              RETRY_DELAY=5
+              attempt=1
+              while [ $attempt -le $MAX_RETRIES ]; do
+                if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$REMOTE_PATH" --silent --show-error --fail; then
+                  echo "✅ Upload succeeded (attempt $attempt)"
+                  break
+                else
+                  echo "⚠️ Upload attempt $attempt failed for $RELATIVE_PATH"
+                  if [ $attempt -eq $MAX_RETRIES ]; then
+                    echo "❌ Max retries reached for $RELATIVE_PATH"
+                    exit 1
+                  fi
+                  sleep $RETRY_DELAY
+                  ((attempt++))
+                fi
+              done
             fi
           done
           
