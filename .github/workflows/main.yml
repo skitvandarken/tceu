@@ -25,7 +25,7 @@ jobs:
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: 🧨 Nuclear Clean & Deploy
+      - name: 🧹 Nuclear Clean & Fresh Deploy
         env:
           WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
@@ -35,7 +35,7 @@ jobs:
           WEBDISK_URL="https://angolacables.co.ao:2078"
           
           # Protected items (won't be touched)
-          EXCLUDE_LIST=(
+          PROTECTED_ITEMS=(
             "cgi-bin"
             ".well-known"
             ".tmb"
@@ -50,28 +50,39 @@ jobs:
           )
           # =========================
 
+          # 🔐 Verify WebDAV connection
           echo "🔐 Testing WebDAV connection..."
-          curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --fail --silent --show-error || {
-            echo "❌ WebDAV authentication failed!";
-            exit 1;
-          }
+          if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --fail --silent --show-error >/dev/null; then
+            echo "❌ FATAL: WebDAV authentication failed!"
+            echo "ℹ️ Check your WEBDISK_USERNAME and WEBDISK_PASSWORD secrets"
+            exit 1
+          fi
 
-          echo "💣 Starting aggressive cleanup..."
-          ITEMS_TO_DELETE=$(curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent | \
-            xmllint --xpath "//d:response/d:href/text()" - 2>/dev/null | \
-            sed "s|$WEBDISK_URL/||" | \
-            grep -v "^$")
+          # 🗑️ Get all remote items using XMLStarlet for proper XML parsing
+          echo "📡 Fetching remote file list..."
+          if ! command -v xmlstarlet &>/dev/null; then
+            sudo apt-get update && sudo apt-get install -y xmlstarlet
+          fi
 
-          echo "🛡️ Protected items:"
-          printf " - %s\n" "${EXCLUDE_LIST[@]}"
+          REMOTE_ITEMS=$(curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent --show-error | \
+            xmlstarlet sel -t -v "//a:href" -n | \
+            sed "s|$WEBDISK_URL||" | \
+            sed 's|^/||' | \
+            grep -v '^$' | \
+            sort -ur)
 
-          while IFS= read -r item; do
-            # Skip root directory
+          echo "🛡️ PROTECTED ITEMS:"
+          printf " - %s\n" "${PROTECTED_ITEMS[@]}"
+
+          # 💣 Delete everything except protected items
+          echo "🧹 Starting aggressive cleanup..."
+          for item in $REMOTE_ITEMS; do
+            # Skip empty items
             [[ -z "$item" ]] && continue
             
-            # Check protection status
+            # Check if item is protected
             protected=false
-            for protected_item in "${EXCLUDE_LIST[@]}"; do
+            for protected_item in "${PROTECTED_ITEMS[@]}"; do
               if [[ "$item" == "$protected_item"* ]]; then
                 protected=true
                 break
@@ -79,25 +90,48 @@ jobs:
             done
 
             if [ "$protected" = false ]; then
-              echo "🧹 Deleting: $item"
-              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item" --silent --show-error --fail
+              echo "🗑️ Deleting: $item"
+              if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item" --silent --show-error --fail; then
+                echo "⚠️ Failed to delete $item (may not exist or is non-empty)"
+                # Try deleting as directory if file delete failed
+                curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item/" --silent --show-error --fail || true
+              fi
             else
               echo "🛡️ Preserving: $item"
             fi
-          done <<< "$ITEMS_TO_DELETE"
+          done
 
-          echo "🚀 Deploying fresh build..."
+          # 🚀 Deploy fresh build
+          echo "🚀 Deploying new version..."
           find $BUILD_DIR -type f | while read -r file; do
             remote_path="${file#$BUILD_DIR/}"
             remote_dir=$(dirname "$remote_path")
             
-            # Create directory structure
-            if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error --fail >/dev/null 2>&1; then
-              echo "📁 Directory exists: $remote_dir"
+            # Create directory structure if needed
+            if [[ "$remote_dir" != "." ]]; then
+              if ! curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error --fail >/dev/null 2>&1; then
+                echo "📁 Directory exists: $remote_dir"
+              fi
             fi
             
-            echo "⬆️ Uploading: $remote_path"
-            curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail
+            # Upload with retry logic
+            MAX_RETRIES=3
+            attempt=1
+            while [ $attempt -le $MAX_RETRIES ]; do
+              echo "⬆️ Uploading [$attempt/$MAX_RETRIES]: $remote_path"
+              if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail; then
+                echo "✅ Upload succeeded"
+                break
+              else
+                if [ $attempt -eq $MAX_RETRIES ]; then
+                  echo "❌ FATAL: Failed to upload $remote_path after $MAX_RETRIES attempts"
+                  exit 1
+                fi
+                sleep $((attempt * 2))  # Exponential backoff
+                ((attempt++))
+              fi
+            done
           done
 
-          echo "🎉 Clean deploy completed successfully!"
+          echo "🎉 Deployment completed successfully!"
+          echo "🌐 Site should now be live at: https://angolacables.co.ao"
