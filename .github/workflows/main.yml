@@ -60,21 +60,11 @@ jobs:
         run: |
           # ===== CONFIGURATION =====
           BUILD_DIR="dist/part/browser"
-          WEBDISK_URL="https://angolacables.co.ao:2078"
+          WEBDISK_URL="https://stage.marketing.host2africa.com:2078"
           
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(
-            "cgi-bin"
-            ".well-known"
-            ".tmb"
-            "partners.angolacables.co.ao"
-            "old_angolacables.co.ao"
-            "angular.angolacables.co.ao"
-            "old2_angolacables.co.ao"
-            "site_update"
-            ".user.ini"
-            ".htaccess_bak"
-            "old_angolacables.co.ao.zip"
+         
           )
           # =========================
 
