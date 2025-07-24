@@ -1,22 +1,29 @@
-<div id="inicio" style="margin-top: 67px"
-     class="uk-visible-toggle"
-     tabindex="-1"
-     uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4000; min-height: 300; max-height: 690">
+<div style=" position: relative; overflow: hidden;" class="uk-position-relative">
+    <video src="https://marketing.host2africa.com/drive/bg-tcng-2.mp4" autoplay muted loop playsinline uk-cover
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"></video>
 
-    <div class="uk-slideshow-items">
-        <!-- Slide 1 -->
-        <div style="width: 100%; overflow: hidden;">
-            <video
-                autoplay
-                muted
-                loop
-                playsinline
-                id="promoVideo"
-                style="width: 100%; height: auto; min-height: 300px; background: #000; object-fit: cover; pointer-events: none;"
-                poster="placeholder.jpg">
-                <source src="https://marketing.host2africa.com/files/cabos-angolacables.mp4" type="video/mp4" />
-                Seu navegador não suporta vídeo HTML5.
-            </video>
+    <div class="uk-container uk-position-relative uk-visible-toggle" tabindex="-1"
+        uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 3000">
+        <div class="uk-slideshow-items">
+            <div>
+                <div class="uk-position-center-left uk-position-small uk-text-left uk-light">
+                    <p style="font-size:4.4rem; font-weight: 800; color: white">Premium connectivity for companies that
+                        can't afford downtime.</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="uk-position-center uk-position-small uk-text-left uk-light">
+                    <p style="font-size:4.4rem; font-weight: 800; color: white">We shield your business from surprises and failures.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-light">
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous
+                uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next
+                uk-slideshow-item="next"></a>
         </div>
     </div>
 </div>

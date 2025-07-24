@@ -337,5 +337,10 @@
   "cargo_empresa_label": "Position in company",
   "email_label": "Email*",
   "mensagem_label": "Message",
-  "enviar_botao": "Send"
+  "enviar_botao": "Send",
+
+  "connectivity": "Business Connectivity",
+  "cloud-iaas": "Cloud and IaaS",
+  "colocation": "Colocation",
+  "security": "Security" 
 }

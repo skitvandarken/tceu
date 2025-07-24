@@ -15,7 +15,7 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   private preloadFlags() {
-    ['ao', 'usa', 'fr'].forEach(flag => {
+    ['usa', 'en', 'fr'].forEach(flag => {
       new Image().src = `/img/bandeiras/${flag}.png`;
     });
   }
@@ -52,7 +52,7 @@ export class MenuComponent implements OnInit {
 
 
     selectedFlag: string = 'img/bandeiras/ao.png'; // Default flag for PT
-  selectedLanguage: string = 'PT'; // Default language text
+  selectedLanguage: string = 'EN'; // Default language text
   private updateLanguageDisplay(language: string): void {
     if (language === 'pt') {
         this.selectedFlag = 'img/bandeiras/ao.png';

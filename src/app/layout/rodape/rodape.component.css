@@ -4,8 +4,13 @@
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
+  background: linear-gradient(180deg, #004f5b, #002561);
+
 }
 
+b{
+  color: white;
+}
 .site-footer .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -37,7 +42,7 @@
 
 .footer-links a {
   text-decoration: none;
-  color: rgba(8, 8, 8, 1);
+  color: #fff;
   transition: color 0.3s;
 }
 
@@ -53,7 +58,7 @@
 }
 
 .social-icons a {
-  color: #000000;
+  color: #fff;
   font-size: 20px;
 }
 
@@ -90,7 +95,7 @@
     justify-content: center;
   }
 
-  .margem-superior{
-    margin-top: 30px !important ;
+  .margem-superior {
+    margin-top: 30px !important;
   }
 }

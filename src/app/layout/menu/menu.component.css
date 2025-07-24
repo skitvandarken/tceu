@@ -3,8 +3,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(180deg, rgba(129, 148, 170, 0.4), rgba(99, 122, 146, 0.4));
-    background-color: rgba(0, 95, 115, 0.4);
+    background: linear-gradient(180deg, #004f5b, #002561);
+    background-color: #002561;
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
     justify-content: center;
@@ -28,21 +28,51 @@
 
 
 .uk-navbar-nav>li>a:hover {
-    color: #050045;
+    color:  #00899e
 }
+
+
+
+
+.uk-navbar-dropdown-nav li a {
+    color: black !important;
+}
+
+
+.uk-navbar-dropdown-nav li a:hover {
+    color: #00899e !important;
+}
+
+
 
 .uk-navbar-dropdown {
-    border-top-color: #050045;
-    border-top-width: 10px;
-    border-top-style: solid;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 25px 25px 20px 20px;
+
     top: 90px !important;
-   
+
+
 }
 
+/* Custom CSS to make dropdown items wider */
+.uk-navbar-dropdown-width-1 .uk-drop-grid>div {
+    width: 400px !important;
+    /* Adjust this value as needed */
+}
 
+/* Or if you want to target specific columns */
+.uk-navbar-dropdown-width-1 .uk-drop-grid>div:first-child {
+    width: 450px !important;
+    /* Make first column wider */
+}
+
+.uk-navbar-dropdown-width-1 .uk-drop-grid>div:nth-child(2) {
+    width: 350px !important;
+    /* Make second column wider */
+}
+
+/* Ensure text doesn't wrap unnecessarily */
+.uk-navbar-dropdown-nav li a {
+    white-space: nowrap;
+}
 
 
 
@@ -73,6 +103,16 @@
     margin: 5px;
 }
 
+
+.botao-contacto:hover{
+
+    background-color: #1AB8DD;
+    color: black;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    translate: 0 -2px;
+
+}
 
 button {
     border: none;

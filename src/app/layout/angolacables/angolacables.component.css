@@ -1,3 +1,334 @@
+.bg-tcng {
+
+    background-color: #022561;
+}
+
+
+.uk-subnav .uk-subnav-pill {
+    color: transparent !important;
+}
+
+
+.uk-tab>*>a {
+    display: flex;
+    text-align: left;
+    align-items: left;
+    column-gap: .25em;
+    justify-content: left;
+    padding: 5px 10px;
+    border-bottom: 1px solid transparent;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color .1s ease-in-out;
+    font-weight: 600;
+ 
+    
+}
+.uk-tab>.uk-active>a{
+    background: linear-gradient(180deg, #24c1ff, #00a6ff);
+    border-radius: 0px 20px 0px 20px;
+
+    color: white !important;
+    border-radius: 20px 0px 20px 0px;
+    
+}
+
+.fundo-cabecalho{
+    background-image: url('/img/eventos-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-color: #000;
+    position: relative;
+    min-height: 200px; /* Adjust based on design */
+        margin-top: 67px;
+
+}
+
+.bg-div {
+    background-image: url('/img/produtos/ip-transit.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Animation properties */
+    animation: bgPulse 15s ease-in-out infinite;
+}
+
+
+.bg-div2 {
+    background-image: url('/img/storage.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Animation properties */
+    animation: bgPulse 15s ease-in-out infinite;
+}
+
+.bg-div3 {
+    background-image: url('/img/storage.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Animation properties */
+    animation: bgPulse 15s ease-in-out infinite;
+}
+
+
+.bg-div4 {
+    background-image: url('/img/produtos/anti-ddos.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Animation properties */
+    animation: bgPulse 15s ease-in-out infinite;
+}
+
+.bg-div5 {
+    background-image: url('/img/kubernetes.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Animation properties */
+    animation: bgPulse 15s ease-in-out infinite;
+}
+
+
+.bg-div6 {
+    background-image: url('/img/backups2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* Animation properties */
+    animation: bgPulse 15s ease-in-out infinite;
+}
+
+
+@keyframes bgPulse {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 105%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+
+.uk-tab>.uk-active>a {
+    color: #333 !important;
+    border-color: #1e87f0;
+
+}
+
+.card-tcng {
+    border-radius: 20px;
+    background: linear-gradient(135deg, #011944 0%, #18437b 50%, #006065 100%) !important;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.modern-gradient-bg {
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #022561 0%, #0f315e 50%, #02060b 100%);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+.modern-gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: patternMove 20s linear infinite;
+}
+
+.modern-gradient-bg::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(50px);
+    top: 20%;
+    left: 10%;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+}
+
+
+.fundo-numeros {
+    background: linear-gradient(-180deg, #015F8433, #0084B8);
+    height: auto;
+    /* Background color for the navbar */
+    border-radius: 20px;
+
+}
+
+.display-numeros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+
+}
+
+.fundo-contador {
+
+    background: linear-gradient(180deg, #004f5b, #002561);
+    background-color: #002561;
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+}
+
+/* Optional: Add a pseudo-element for extra glass effect */
+.fundo-contador::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+.fundo-dia {
+    background-image: url('/img/produtos/fibra.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+
+.fundo-cloud {
+    background-image: url('/img/produtos/cloud-iaas.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+
+.fundo-datacenter {
+    background-image: url('/img/produtos/gdi.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+
+.fundo-security {
+    background-image: url('/img/produtos/anti-ddos.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+
+.display-numeros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 30px;
+
+}
+
 .fundo-div {
     background-color: rgba(2, 0, 38) !important;
 
@@ -27,154 +358,6 @@
     border-radius: 30px;
 }
 
-
-.bg-pattern {
-
-    background-image: url('/img/bg-pattern.jpg');
-    background-size: cover;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-
-
-
-
-
-
-
-}
-
-
-.fundo-dc {
-    background-image: url('/img/conectividade_angolacables.jpeg');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-.fundo-acess {
-    background-image: url('/img/acess_angolacables.jpeg');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-
-.fundo-dc2 {
-    background-image: url('/img/acess_angolacables.jpeg');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-
-
-.fundo-dc3 {
-    background-image: url('/img/datacenter-1.png');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-.fundo-dc4 {
-    background-image: url('/img/seguranca.jpeg');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-
-
-.fundo-dc5 {
-    background-image: url('/img/cloud.jpeg');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-
-
-.fundo-dc6 {
-    background-image: url('/img/virtualizacao.jpeg');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
-
-.fundo-dc7 {
-    background-image: url('/img/erp.png');
-    background-position: center;
-    border-color: #fff;
-    border-width: 1px;
-    border-style: solid;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-}
 
 .madcix-bg {
     background: linear-gradient(-180deg, #00a2ff, #003796);
@@ -233,45 +416,11 @@
 }
 
 
-.fundo-connectivity {
-    background-image: url('/img/sacs.jpg');
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-    padding-top: 20px;
-
-}
 
 
-.fundo-datacenter {
-    background-image: url('/img/fundo-datacenter.jpg');
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-    padding-top: 20px;
 
-}
 
-.fundo-cloud {
-    background-image: url('/img/cloud.jpg');
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(5, 0, 100, 0.788);
-    background-blend-mode: darken;
-    padding-top: 20px;
 
-}
 
 .fundo-grid {
     background: linear-gradient(180deg, rgb(0, 25, 49), rgb(0, 6, 27), rgb(0, 25, 49));
@@ -328,7 +477,7 @@ h1 {
 }
 
 .angola-cables-texto {
-    font-size: 1.55rem;
+    font-size: 1.3rem;
     color: #000026
 }
 
@@ -407,7 +556,7 @@ h1 {
         font-size: 1.2rem;
     }
 
-    .sobre-angola-cables{
+    .sobre-angola-cables {
         text-align: center !important;
     }
 

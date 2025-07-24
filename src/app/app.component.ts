@@ -11,15 +11,15 @@ import { TranslateModule, TranslateService, TranslatePipe, TranslateDirective } 
   standalone: true, 
 })
 export class AppComponent {
-  title = 'part';
+  title = 'tcng';
   
 
   
 
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['pt','en']);
-    this.translate.setDefaultLang('pt');
-    this.translate.use('pt');
+    this.translate.addLangs(['en','pt']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
 
 
   

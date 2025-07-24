@@ -1,0 +1,195 @@
+.map-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #1a237e;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filter-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-control label {
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-control select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+}
+
+.toggle-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.toggle-controls label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  padding: 8px 16px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.clear-btn:hover {
+  background-color: #b71c1c;
+  transform: translateY(-1px);
+}
+
+.map-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nigeria-map {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.nigeria {
+  fill: #000;
+  stroke: #2E7D32;
+  stroke-width: 2;
+  fill-opacity: 0.8;
+}
+
+.neighboring-country {
+  stroke: #424242;
+  stroke-width: 1;
+  stroke-dasharray: 2,2;
+  fill-opacity: 0.6;
+}
+
+.country-label {
+  font-size: 12px;
+  font-weight: bold;
+  fill: #333;
+}
+
+.river {
+  fill: none;
+  stroke: #2196F3;
+  stroke-width: 1.5;
+  stroke-dasharray: 3,3;
+}
+
+circle.north {
+  fill: #1565C0;
+}
+
+circle.central {
+  fill: #7B1FA2;
+}
+
+circle.south {
+  fill: #D32F2F;
+}
+
+circle.selected {
+  stroke: #FFC107;
+  stroke-width: 3;
+  r: 8;
+  filter: drop-shadow(0 0 4px rgba(255, 193, 7, 0.7));
+}
+
+circle.hovered {
+  stroke: #000;
+  stroke-width: 2;
+  r: 8;
+}
+
+.city-label {
+  font-size: 12px;
+  font-weight: bold;
+  text-anchor: middle;
+  fill: #333;
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.city-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.city-info h3 {
+  color: #1A237E;
+  margin-top: 0;
+  border-bottom: 2px solid #E8EAF6;
+  padding-bottom: 10px;
+}
+
+.city-info p {
+  margin: 8px 0;
+  color: #424242;
+}
+
+.city-info p strong {
+  color: #303F9F;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-control {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .toggle-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

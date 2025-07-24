@@ -1,33 +1,33 @@
 import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './slider.component.html',
-  styleUrl: './slider.component.css'
+  styleUrls: ['./slider.component.css']
 })
-export class SliderComponent implements OnInit, AfterViewInit {
-
+export class SliderComponent implements AfterViewInit {
   @ViewChild('promoVideo') promoVideoRef!: ElementRef<HTMLVideoElement>;
 
   constructor(private translate: TranslateService) {}
 
-  ngOnInit(): void {}
-
   ngAfterViewInit(): void {
     const video = this.promoVideoRef.nativeElement;
-    video.muted = true;
-    video.playsInline = true;
-    video.autoplay = true;
-    video.loop = true;
-
-    // Try to force play in modern browsers
-    video.play().catch((err) => {
-      console.warn('Autoplay failed:', err);
-    });
+    
+    // Ensure video plays even if autoplay is blocked
+    const playPromise = video.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // Autoplay was prevented - show fallback or try again
+        video.muted = true;
+        video.play().catch(e => console.warn('Video play failed:', e));
+      });
+    }
   }
 
   useLanguage(language: string): void {
