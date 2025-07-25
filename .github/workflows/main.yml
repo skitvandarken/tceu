@@ -41,7 +41,7 @@ jobs:
       - name: 📌 Install Dependencies
         run: npm ci
 
-      - name: � Build Angular App
+      - name: 🏗️ Build Angular App
         run: npm run build -- --configuration production
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
@@ -51,7 +51,7 @@ jobs:
           echo "Build directory contents:"
           ls -la dist/tcng/browser
           echo "Checking for Firebase config in main.js:"
-          grep -o "apiKey" dist/part/browser/main.js || echo "No API key found in build"
+          grep -o "apiKey" dist/tcng/browser/main.js || echo "No API key found in build"
 
       - name: 🧹 Secure Clean & Deploy via WebDAV
         env:
@@ -59,13 +59,12 @@ jobs:
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           # ===== CONFIGURATION =====
-          BUILD_DIR="dist/part/browser"
+          BUILD_DIR="dist/tcng/browser"
           WEBDISK_URL="https://stage.marketing.host2africa.com:2078"
           
-          # Protected items (won't be deleted)
+          # Protected items (won't be touched)
           PROTECTED_ITEMS=(
-            ".well-known"
-            "cgi-bin"
+         
           )
           # =========================
 
@@ -76,28 +75,25 @@ jobs:
             exit 1
           fi
 
-          # 🗑️ Perform initial cleanup of all non-protected files
-          echo "🧹 Starting initial cleanup of all non-protected files..."
+          # 🗑️ Get remote items using xmlstarlet
+          echo "📡 Fetching remote file list..."
           sudo apt-get update && sudo apt-get install -y xmlstarlet
           REMOTE_ITEMS=$(curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X PROPFIND $WEBDISK_URL/ --silent | \
             xmlstarlet sel -t -v "//a:href" -n | \
             sed "s|$WEBDISK_URL||" | sed 's|^/||' | grep -v '^$' | sort -ur)
 
           # 💣 Delete non-protected items
+          echo "🧹 Starting cleanup..."
           for item in $REMOTE_ITEMS; do
             [[ -z "$item" ]] && continue
             
             protected=false
             for protected_item in "${PROTECTED_ITEMS[@]}"; do
-              if [[ "$item" == "$protected_item"* ]]; then
-                protected=true
-                break
-              fi
+              [[ "$item" == "$protected_item"* ]] && protected=true && break
             done
 
             if ! $protected; then
               echo "🗑️ Deleting: $item"
-              # Try deleting as both file and directory
               curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item" --silent --show-error --fail || \
               curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item/" --silent --show-error --fail || true
             else
@@ -111,27 +107,21 @@ jobs:
             remote_path="${file#$BUILD_DIR/}"
             remote_dir=$(dirname "$remote_path")
             
-            # Create directory structure if needed
-            if [[ "$remote_dir" != "." ]]; then
-              mkdir -p "$remote_dir"  # Local temp structure
-              echo "📂 Ensuring remote directory: $remote_dir"
+            [[ "$remote_dir" != "." ]] && \
               curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X MKCOL "$WEBDISK_URL/$remote_dir" --silent --show-error --fail >/dev/null 2>&1 || true
-            fi
             
-            # Upload with retry logic
             for attempt in {1..3}; do
               if curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error --fail; then
-                echo "✅ Uploaded: $remote_path (attempt $attempt)"
+                echo "✅ Uploaded: $remote_path"
                 break
               elif [[ $attempt -eq 3 ]]; then
-                echo "❌ Failed to upload: $remote_path after 3 attempts"
+                echo "❌ Failed to upload: $remote_path"
                 exit 1
               else
-                echo "⚠️ Upload attempt $attempt failed for $remote_path, retrying..."
                 sleep $((attempt * 2))
               fi
             done
           done
 
           echo "🎉 Deployment completed successfully!"
-          echo "🌐 Live at: https://angolacables.co.ao"
+          echo "🌐 Live at: https://stage.marketing.host2africa.com"
