@@ -3,11 +3,28 @@
     background-color: #022561;
 }
 
+.bg-clouds2{
+
+    background: url('/img/clouds2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 20px 0px 20px;
+
+    }
+
 
 .uk-subnav .uk-subnav-pill {
     color: transparent !important;
 }
 
+
+
+.bg-lista {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 0.8rem;
+}
 
 .uk-tab>*>a {
     display: flex;
@@ -21,19 +38,20 @@
     text-transform: uppercase;
     transition: color .1s ease-in-out;
     font-weight: 600;
- 
-    
+
+
 }
-.uk-tab>.uk-active>a{
+
+.uk-tab>.uk-active>a {
     background: linear-gradient(180deg, #24c1ff, #00a6ff);
     border-radius: 0px 20px 0px 20px;
 
     color: white !important;
     border-radius: 20px 0px 20px 0px;
-    
+
 }
 
-.fundo-cabecalho{
+.fundo-cabecalho {
     background-image: url('/img/eventos-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,8 +59,9 @@
 
     background-color: #000;
     position: relative;
-    min-height: 200px; /* Adjust based on design */
-        margin-top: 67px;
+    min-height: 200px;
+    /* Adjust based on design */
+    margin-top: 67px;
 
 }
 
@@ -55,7 +74,7 @@
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    
+
     /* Animation properties */
     animation: bgPulse 15s ease-in-out infinite;
 }
@@ -70,7 +89,7 @@
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    
+
     /* Animation properties */
     animation: bgPulse 15s ease-in-out infinite;
 }
@@ -84,7 +103,7 @@
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    
+
     /* Animation properties */
     animation: bgPulse 15s ease-in-out infinite;
 }
@@ -99,7 +118,7 @@
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    
+
     /* Animation properties */
     animation: bgPulse 15s ease-in-out infinite;
 }
@@ -113,7 +132,7 @@
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    
+
     /* Animation properties */
     animation: bgPulse 15s ease-in-out infinite;
 }
@@ -128,7 +147,7 @@
 
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    
+
     /* Animation properties */
     animation: bgPulse 15s ease-in-out infinite;
 }
@@ -138,9 +157,11 @@
     0% {
         background-size: 100%;
     }
+
     50% {
         background-size: 105%;
     }
+
     100% {
         background-size: 100%;
     }
