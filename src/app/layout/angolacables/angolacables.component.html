@@ -1,7 +1,140 @@
+<div>
+  <div class=" fundo-contador  uk-padding">
+    <div class="uk-container ">
+
+      <div class="uk-text-center">
+        <h1 style="color: white">Key numbers</h1>
+
+      </div>
+      <div
+        class="uk-child-width-1-5@m uk-grid-small uk-grid-match  uk-margin-small-left uk-margin-small-right uk-margin-small-top"
+        uk-grid>
+        <div>
+          <div class="uk-card  display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="0" [targetValue]="2" [interval]="50"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.nodes' | translate }}</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card  display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="0" [targetValue]="5" [interval]="50"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.metro' | translate }}</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="uk-card  display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="0" [targetValue]="30" [interval]="50"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.pops' | translate }}</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card  display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="600" [targetValue]="644" [interval]="20"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.fiber' | translate }}</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="uk-card display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="600" [targetValue]="930" [interval]="1"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.datacenters' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="uk-container uk-margin-large-top">
+  <div class="uk-grid-small uk-grid-match uk-grid-match-height " uk-grid>
+    <!-- First Column (1 row, spans 2 rows) -->
+    <div
+      style="background-image: url('/img/core-service.jpg'); background-repeat: no-repeat; background-size: cover; z-index: 1; border-radius: 20px"
+      class="uk-width-1-3">
+      <div class="uk-card uk-card-body tall-cell">
+        <div class="uk-flex uk-flex-bottom">
+          <p class="" style="color: white; " class="uk-heading"> CORE Services & Solutions
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Column (2 rows) -->
+    <div class="uk-width-1-3">
+      <div class="uk-grid-small  uk-grid-match-height" uk-grid>
+        <div class="uk-width-1-1">
+          <div class=" card-border uk-card uk-card-default uk-card-body  small-cell">
+            <p class="uk-card-title">
+              <b> Connectivity </b>
+            </p>
+            <p class="uk-margin-small-top">Connectivity solutions to different endpoints - internet, global nodes or
+              cloud infrastructure.
+            </p>
+          </div>
+        </div>
+        <div class="uk-width-1-1">
+          <div class="card-border uk-card uk-card-default uk-card-body  small-cell">
+            <p class="uk-card-title">
+              <b> Cloud </b>
+            </p>
+            <p class="uk-margin-small-top">100% Locally Resident cloud / billed in Nigerian Naira delivered in different
+              model including dedicated private cloud
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Column (2 rows) -->
+    <div class="uk-width-1-3">
+      <div class="uk-grid-small uk-grid-match" uk-grid>
+        <div class="uk-width-1-1">
+          <div class="card-border uk-card uk-card-default uk-card-body  small-cell">
+            <p class="uk-card-title">
+              <b> Security </b>
+            </p>
+            <p class="uk-margin-small-top">DDoS Protection and Firewall-as-a-Service / security solution for physical
+              and cloud infrastrucutre
+
+            </p>
+          </div>
+        </div>
+        <div class="uk-width-1-1">
+          <div class="card-border uk-card uk-card-default uk-card-body  small-cell">
+            <p class="uk-card-title">
+              <b> Data Centers
+              </b>
+            </p>
+            <p class="uk-margin-small-top">Reliable Data centers in Lagos / host your physical infrastructure in our
+              facility in Lekki
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
 <div class="uk-padding uk-text-center uk-margin-large-top uk-container ">
-
-
-
   <div class="uk-child-width-1-3@s uk-grid-match uk-card-small" uk-grid>
     <div>
       <div
@@ -89,7 +222,8 @@
               <span style="color:white !important" uk-icon="icon: world; ratio: 2"></span>
               <h4 style="color: #fff;"><b>Dedicated and protected Connectivity</b></h4>
               <ul class="uk-list uk-margin-small-top" style="color: white; font-weight: 200;">
-                <li class="bg-lista">Connectivity solutions to different endpoints - internet, global nodes or cloud infrastructure.</li>
+                <li class="bg-lista">Connectivity solutions to different endpoints - internet, global nodes or cloud
+                  infrastructure.</li>
               </ul>
             </div>
             <div class="uk-margin" style="position: absolute; bottom: 20px;">
@@ -212,59 +346,6 @@
 
 
 
-<div>
-  <div class=" fundo-contador uk-margin-large-top uk-padding">
-    <div class="uk-text-center">
-      <h1 style="color: white">Key global numbers</h1>
-
-    </div>
-    <div
-      class="uk-child-width-1-5@m uk-grid-small uk-grid-match  uk-margin-small-left uk-margin-small-right uk-margin-small-top"
-      uk-grid>
-      <div>
-        <div class="uk-card  display-numeros uk-text-center">
-          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
-            <app-contador [startValue]="0" [targetValue]="4" [interval]="200"></app-contador>
-          </h1>
-          <p class="uk-margin-remove" style="color: white;">{{ 'num.continentes' | translate }}</p>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card  display-numeros uk-text-center">
-          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
-            <app-contador [startValue]="0" [targetValue]="27" [interval]="50"></app-contador>
-          </h1>
-          <p class="uk-margin-remove" style="color: white;">{{ 'num.ixp' | translate }}</p>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card  display-numeros uk-text-center">
-          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
-            <app-contador [startValue]="900" [targetValue]="930" [interval]="50"></app-contador>
-          </h1>
-          <p class="uk-margin-remove" style="color: white;">{{ 'num.datacenters' | translate }}</p>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card  display-numeros uk-text-center">
-          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
-            <app-contador [startValue]="0" [targetValue]="30" [interval]="50"></app-contador>
-          </h1>
-          <p class="uk-margin-remove" style="color: white;">{{ 'num.pops' | translate }}</p>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card display-numeros uk-text-center">
-          <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
-            <app-contador [startValue]="5500" [targetValue]="6000" [interval]="1"></app-contador>
-          </h1>
-          <p class="uk-margin-remove" style="color: white;">{{ 'num.peering' | translate }}</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 <div class="modern-gradient-bg ">
   <div>
@@ -286,7 +367,8 @@
 
           <p class="uk-margin angola-cables-texto" style="color:#fff">
             TelCables Nigeria, powered by the global Angola Cables network, is Africa’s leading carriers’ carrier. We
-            set industry benchmark for performance, resilience, and innovation. Through continuous investment in a fully
+            set industry benchmark for performance, resilience, and innovation. Through continuous investment in a
+            fully
             integrated and interconnected digital ecosystem, we deliver world-class connectivity, cloud solutions,
             colocation services, and international data capacity via advanced submarine cable systems enabling digital
             transformation, and driving sustainable growth for businesses across Nigeria, Africa and beyond.
