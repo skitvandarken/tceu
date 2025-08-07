@@ -1,8 +1,8 @@
 <div class="uk-container uk-margin-top">
   @if (eventos$ | async; as eventos) {
     @if (eventos.length > 0) {
-      <div class="uk-grid uk-child-width-1-5@m uk-grid-medium uk-text-center uk-light" uk-grid>
-        @for (evento of eventos; track evento.id) {
+      <div class="uk-grid uk-child-width-1-1@m uk-grid-medium uk-text-center uk-light" uk-grid>
+        @for (evento of eventos | slice: 0:1; track evento.id) {
           <div class="uk-transition-toggle" tabindex="0">
             <div class="uk-panel uk-text-center">
               <img class="border-2" [src]="evento.imageUrl" alt="Imagem do evento" style="object-fit: cover;" />
