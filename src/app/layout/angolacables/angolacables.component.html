@@ -2,8 +2,8 @@
   <div class=" fundo-contador  uk-padding">
     <div class="uk-container ">
 
-      <div class="uk-text-center">
-        <h1 style="color: white">Key numbers</h1>
+      <div class="uk-text-left">
+        <h1 style="color: white; font-weight: 600">Key numbers</h1>
 
       </div>
       <div
@@ -16,6 +16,15 @@
             </h1>
             <p class="uk-margin-remove" style="color: white;">{{ 'num.nodes' | translate }}</p>
           </div>
+
+          <!-- 
+          <div class="uk-card  display-numeros uk-text-center">
+            <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
+              <app-contador [startValue]="0" [targetValue]="2" [interval]="50"></app-contador>
+            </h1>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.nodes' | translate }}</p>
+          </div>-->
+
         </div>
         <div>
           <div class="uk-card  display-numeros uk-text-center">
@@ -74,7 +83,8 @@
           <p style="font-weight: 700;">Global connectivity, enterprise cloud, storage, network and security made local,
             easy and affordable.</p>
 
-          <div class="uk-margin-small-top"> <a hres="#"><button style="color: #20530a; background-color: white;"
+          <div class="uk-margin-small-top"> <a hres="#"><button
+                style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;"
                 class="uk-button  uk-border-pill uk-button-small uk-padding uk-margin">Learn more</button> </a>
           </div>
         </div>
@@ -90,9 +100,13 @@
               <span style="color:  #20530a" class="uk-margin-xsmall-right" uk-icon="icon: world; ratio: 2"></span>
               <b> Connectivity </b>
             </p>
-            <p class="uk-margin-small-top">Connectivity solutions to different endpoints - internet, global nodes or
+            <p style="color: #000 !important;" class="uk-margin-small-top">Connectivity solutions to different endpoints
+              - internet, global nodes or
               cloud infrastructure.
             </p>
+            <a href="" uk-icon="arrow-right "><span style="color: #20530a; margin-top: 20px; font-weight: 600px;">Learn
+                more </span> </a>
+
           </div>
         </div>
         <div class="uk-width-1-1">
@@ -107,6 +121,9 @@
               model including dedicated private cloud
 
             </p>
+
+            <a href="" uk-icon="arrow-right">Learn more</a>
+
           </div>
         </div>
       </div>
@@ -125,6 +142,8 @@
               and cloud infrastrucutre
 
             </p>
+            <a href="" uk-icon="arrow-right">Learn more</a>
+
           </div>
         </div>
         <div class="uk-width-1-1">
@@ -136,9 +155,9 @@
             </p>
             <p class="uk-margin-small-top">Reliable Data centers in Lagos / host your physical infrastructure in our
               facility in Lekki
-
-
             </p>
+            <a href="" uk-icon="arrow-right">Learn more</a>
+
           </div>
         </div>
       </div>
@@ -149,7 +168,7 @@
   </div>
 </div>
 
-<div style="margin-top: 140px" class="fundo-contador ">
+<div style="margin-top: 140px; background-image: url('/img/serviceproviders.png'); object-fit: cover;" class="">
   <div class="uk-container uk-padding">
     <div class="uk-grid-collapse uk-child-width-1-2@m" uk-grid>
       <!-- Column 1 (Left - Text) -->
@@ -162,9 +181,9 @@
       <!-- Column 2 (Right - Button) -->
       <div class="uk-flex uk-flex-middle uk-flex-right@m"> <!-- Right-align button on medium+ screens -->
         <a href="#">
-          <button class="uk-button uk-width-1-1 uk-button-large uk-border-pill"
-            style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 0 20px;">
-            Book a meeting
+          <button class="uk-button uk-width-1-1 uk-button-medium uk-border-pill"
+            style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;">
+            <span style="margin: 5px">Book a meeting</span>
           </button>
         </a>
       </div>
@@ -182,7 +201,7 @@
     <div>
       <div
         style=" border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
-        class="uk-card uk-card-default uk-card-hover uk-card-body">
+        class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left">
         <h3 class="uk-card-title"> <b> 99.95% SLA </b> </h3>
 
       </div>
@@ -190,7 +209,7 @@
     <div>
       <div
         style="border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
-        class="uk-card uk-card-default uk-card-hover uk-card-body">
+        class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left">
         <h3 class="uk-card-title"> <b> 24x7</b> </h3>
         <p>Local Support and dedicated suport team
         </p>
@@ -199,7 +218,7 @@
     <div>
       <div
         style=" border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
-        class="uk-card uk-card-default uk-card-hover uk-card-body">
+        class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left">
         <h3 class="uk-card-title"><b> Payments in Local Currency ₦ </b> </h3>
         <p>Make All Your Payments in Naira!</p>
       </div>
@@ -207,7 +226,7 @@
     <div>
       <div
         style="border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
-        class="uk-card uk-card-default uk-card-hover uk-card-body ">
+        class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left ">
         <h3 class="uk-card-title"><b> Interconnected and Secure </b> </h3>
         <p>Backed by Angola Cables global metro networks</p>
       </div>
@@ -230,26 +249,52 @@
 
       <!-- Card 1 -->
       <div class="">
-        <div class="uk-text-left uk-margin-large-top uk-height-1-1">
-          <p style="color:white">We are TelCables Nigeria</p>
-          <h1 style="font-weight: bolder; color:#fff " class="uk-text-left uk-margin-small-bottom uk-margin-small-top ">
-            <b>
-              Africa's Most
-              Interconnected Operator
-            </b>
+        <div class="uk-text-left uk-margin-medium-top uk-height-1-1">
+
+          <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 3000;">
+
+            <div class="uk-slideshow-items">
+              <div>
+
+                <p style="color:white">We are TelCables Nigeria</p>
+                <h1 style="font-weight: bolder; color:#fff "
+                  class="uk-text-left uk-margin-small-bottom uk-margin-small-top ">
+                  <b>
+                    Africa's Most
+                    Interconnected Operator
+                  </b>
+                </h1>
+
+                <p class=" angola-cables-texto" style="color:#fff">
+                  TelCables Nigeria, powered by the global Angola Cables network, is Africa’s leading carriers’ carrier.
+                  We
+                  set industry benchmark for performance, resilience, and innovation.
+                </p>
+                <a href="/sobre" class="">
+                  <button style="background-color: #FAA61A; color: #002561; font-weight: 700; padding: 8px 40px;"
+                    class=" uk-button  uk-button-small uk-border-pill uk-padding uk-margin-small-top"> <span class="uk-padding"> + More
+                      about
+                      us</span> </button>
+                </a>
+
+              </div>
+              <div>
+                Text here
+              </div>
+              <div>
+                Text here
+              </div>
+            </div>
+
+          </div>
 
 
-          </h1>
 
-          <span uk-icon="icon: globe; ratio: 3.5"></span>
 
-          <p class=" angola-cables-texto" style="color:#fff">
-            TelCables Nigeria, powered by the global Angola Cables network, is Africa’s leading carriers’ carrier.
-            We
-            set industry benchmark for performance, resilience, and innovation.
-          </p>
+        </div>
+      </div>
 
-          <!-- 
+      <!-- 
           Through continuous investment in a
             fully
             integrated and interconnected digital ecosystem, we deliver world-class connectivity, cloud solutions,
@@ -257,21 +302,6 @@
             digital
             transformation, and driving sustainable growth for businesses across Nigeria, Africa and beyond.
           -->
-
-          <div class="uk-margin-medium-top uk-margin-medium-bottom">
-            <a href="/sobre" class="uk-text-decoration-none">
-              <button style="background-color: #fff; color:#000"
-                class=" uk-button  uk-button-small uk-border-pill uk-padding"> <span class="uk-padding"> + More
-                  about
-                  us</span> </button>
-            </a>
-          </div>
-
-
-        </div>
-      </div>
-
-
 
       <!-- Card 2 -->
       <div>
@@ -483,16 +513,16 @@
     <!-- Left Column (Main Content - Events) -->
     <div class="uk-width-2-3@m">
 
-            <h2 class="uk-heading">News and <b>Media</b></h2>
+      <h2 class="uk-heading">News and <b>Media</b></h2>
 
-<app-blog></app-blog>
+      <app-blog></app-blog>
     </div>
 
     <!-- Right Column (Aside Panel) -->
     <div class="uk-width-1-3@m">
       <div class="uk-card  ">
-      <h2 class="uk-heading">Upcoming <b>Events</b></h2>
-       <app-eventos-listar></app-eventos-listar>
+        <h2 class="uk-heading">Upcoming <b>Events</b></h2>
+        <app-eventos-listar></app-eventos-listar>
 
       </div>
     </div>

@@ -54,10 +54,7 @@ export class MenuComponent implements OnInit {
     selectedFlag: string = 'img/bandeiras/ao.png'; // Default flag for PT
   selectedLanguage: string = 'EN'; // Default language text
   private updateLanguageDisplay(language: string): void {
-    if (language === 'pt') {
-        this.selectedFlag = 'img/bandeiras/ao.png';
-        this.selectedLanguage = 'PT';
-    } else if (language === 'en') {
+     if (language === 'en') {
         this.selectedFlag = 'img/bandeiras/usa.png';
         this.selectedLanguage = 'EN';
     } else if (language === 'fr') {
