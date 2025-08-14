@@ -1,5 +1,5 @@
 .fundo-cabecalho {
-    background-image: url('/img/nossasinformacoes.jpg');
+    background-image: url('/img/sobre.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,6 +137,15 @@
     width: 100%;
     object-fit: cover;
 }
+
+.fundo-contador {
+
+    background: linear-gradient(180deg, #004f5b, #002561);
+    background-color: #002561;
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+}
+
 
 .video-container {
     position: relative;

@@ -3,14 +3,15 @@ import { TelcablesComponent } from '../../layout/telcables/telcables.component';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Ad2Component } from "../../layout/ad2/ad2.component";
 
 @Component({
   selector: 'app-acerca',
   imports: [
-
     MenuComponent,
-    TelcablesComponent, RodapeComponent, TranslatePipe
-  ],
+    TelcablesComponent, RodapeComponent, TranslatePipe,
+    Ad2Component
+],
   templateUrl: './acerca.component.html',
   styleUrl: './acerca.component.css'
 })
