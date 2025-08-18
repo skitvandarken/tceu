@@ -16,54 +16,55 @@
 <!-- 2 Colunas | Presença Global & Vídeo Institucional AC -->
 
 <div class="uk-container uk-margin-large-bottom uk-margin-large-top">
-  <div class=" uk-child-width-1-2@m uk-grid-medium uk-child-width-1-2@s uk-grid-match-height uk-grid uk-text-left">
+    <div class=" uk-child-width-1-2@m uk-grid-medium uk-child-width-1-2@s uk-grid-match-height uk-grid uk-text-left">
 
-    <!--Lado esquerdo-->
-    <div class=" uk-width-1-2@m  uk-margin-small-bottom ">
-      <div class="uk-text-left ">
-        <div class=" uk-border-rounded fundo-forma  ">
-          <div style="color: #000026; font-size: 1.7rem; " class=" presenca-global ">
-             <b>{{ 'ac.presenca' | translate }}</b>
-          </div>
-        </div>
-        <p style="color: #000026; font-size: 1.1rem;" class=" sobre-angola-cables uk-margin-small-right uk-margin-medium-top">{{
-          'ac.presencadescricao' |
-          translate }}</p>
-      </div>
-
-
-    
-
-     
-    </div>
+        <!--Lado esquerdo-->
+        <div class=" uk-width-1-2@m  uk-margin-small-bottom ">
+            <div class="uk-text-left ">
+                <div class=" uk-border-rounded fundo-forma  ">
+                    <div style="color: #000026; font-size: 1.7rem; " class=" presenca-global ">
+                        <b>{{ 'ac.presenca' | translate }}</b>
+                    </div>
+                </div>
+                <p style="color: #000026; font-size: 1.1rem;"
+                    class=" sobre-angola-cables uk-margin-small-right uk-margin-medium-top">{{
+                    'ac.presencadescricao' |
+                    translate }}</p>
+            </div>
 
 
-    <!-- Right Side | Video About Angola Cables -->
-    <div class="uk-width-1-2@m uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-top">
-      <div class="uk-text-center">
 
-        <!-- Button to toggle the modal -->
-        <a href="#modal-video" uk-toggle>
-          <img src="img/video-miniatura.png" alt="Video Thumbnail">
-        </a>
 
-        <!-- Modal -->
-        <div id="modal-video" uk-modal>
-          <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body uk-border-rounded">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
 
-            <video controls loop muted id="promoVideo" class="promo-video uk-border-rounded">
-              <source src="https://marketing.host2africa.com/files/AC-Angolaoutlook-EN-2025%202-new.mp4"
-                type="video/mp4" />
-              Seu navegador não suporta o vídeo em falta.
-            </video>
-          </div>
         </div>
 
-      </div>
+
+        <!-- Right Side | Video About Angola Cables -->
+        <div class="uk-width-1-2@m uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-top">
+            <div class="uk-text-center">
+
+                <!-- Button to toggle the modal -->
+                <a href="#modal-video" uk-toggle>
+                    <img src="img/video-miniatura.png" alt="Video Thumbnail">
+                </a>
+
+                <!-- Modal -->
+                <div id="modal-video" uk-modal>
+                    <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body uk-border-rounded">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                        <video controls loop muted id="promoVideo" class="promo-video uk-border-rounded">
+                            <source src="https://marketing.host2africa.com/files/AC-Angolaoutlook-EN-2025%202-new.mp4"
+                                type="video/mp4" />
+                            Seu navegador não suporta o vídeo em falta.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div> 
+</div>
 
 
 
@@ -230,7 +231,7 @@
     <div class="uk-padding uk-container">
         <h2 class="uk-text-center" style="color: #fff; font-weight: 800;">{{ "equipa.title" | translate }}
         </h2>
-       
+
     </div>
 
     <div class="uk-container uk-padding">
@@ -238,6 +239,23 @@
         <!-- First Row -->
         <div class="uk-child-width-expand@s" uk-grid>
             <!-- Angelo Gama -->
+            <div>
+                <div style="background-color: white; border-radius: 20px;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/fernando-fernandes-min.png" uk-img>
+                    <div style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
+                        class="uk-padding gradiente-nome-equipa">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.fernando_fernandes.name" |
+                            translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{
+                            "equipa.fernando_fernandes.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-rounded"
+                            type="button" uk-toggle="target: #modal-jonadab">{{ "equipa.bio_button" | translate
+                            }}</button>
+                    </div>
+                </div>
+            </div>
+
             <div>
                 <div style="background-color: white; border-radius: 20px;"
                     class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
@@ -256,6 +274,35 @@
             </div>
 
             <!-- Laura Carneiro -->
+
+
+            <!-- Rui Faria -->
+            <div>
+                <div style="background-color: white; border-radius: 20px;"
+                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
+                    data-src="img/equipa/osibanjo.png" uk-img>
+                    <div style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
+                        class="uk-padding gradiente-nome-equipa uk-border-rounded">
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.osibanjo.name" |
+                            translate }}</b>
+                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{
+                            "equipa.osibanjo.position" | translate }}</p>
+                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-rounded"
+                            type="button" uk-toggle="target: #modal-osibanjo">{{ "equipa.bio_button" | translate
+                            }}</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sergio Pozuelo -->
+
+
+        </div>
+
+
+        <!-- First Row -->
+        <div class="uk-child-width-expand@s" uk-grid>
+
             <div>
                 <div style="background-color: white; border-radius: 20px;"
                     class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light "
@@ -273,24 +320,6 @@
                 </div>
             </div>
 
-            <!-- Rui Faria -->
-            <div>
-                <div style="background-color: white; border-radius: 20px;"
-                    class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
-                    data-src="img/equipa/osibanjo.png" uk-img>
-                    <div style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
-                        class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.osibanjo.name" |
-                            translate }}</b>
-                        <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{
-                            "equipa.osibanjo.position" | translate }}</p>
-                        <button class="uk-button uk-button-default uk-margin-remove uk-button-small uk-border-rounded"
-                            type="button" uk-toggle="target: #modal-osibanjo">{{ "equipa.bio_button" | translate }}</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sergio Pozuelo -->
             <div>
                 <div style="background-color: white; border-radius: 20px;"
                     class="uk-height-large uk-flex uk-flex-bottom uk-flex-middle uk-background-cover uk-light uk-border-rounded"
@@ -308,7 +337,7 @@
                 </div>
             </div>
 
-            
+
             <!-- Sergio Pozuelo -->
             <div>
                 <div style="background-color: white; border-radius: 20px;"
@@ -328,89 +357,88 @@
             </div>
         </div>
 
-            <!-- Empty div for layout balance -->
-            <div></div>
-        </div>
+        <!-- Empty div for layout balance -->
+        <div></div>
     </div>
 
-    <!-- All Modals -->
-    <div id="modal-jonadab" uk-modal>
-        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title"><b>{{ "equipa.jonadab" | translate }}</b></h2>
-            <p class="uk-margin-small-top" style="text-align: justify;"
-                [innerHTML]="'equipa.jonadab.bio' | translate"></p>
+
+
+
+
+
+</div>
+
+<!-- All Modals -->
+<div id="modal-jonadab" uk-modal>
+    <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"><b>{{ "equipa.jonadab" | translate }}</b></h2>
+        <p class="uk-margin-small-top" style="text-align: justify;" [innerHTML]="'equipa.jonadab.bio' | translate"></p>
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-margin-medium-top">
+            {{ "conectar-texto" | translate }} <a target="_blank"
+                href="https://www.linkedin.com/in/jonadab-brown-b7b32066"><img src="img/social-icons/linkedin.png"> </a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-israel" uk-modal>
+    <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"><b>{{ "equipa.israel.name" | translate }}</b></h2>
+        <p class="uk-margin-small-top" style="text-align: justify;" [innerHTML]="'equipa.israel.bio' | translate"></p>
+        <p class="uk-text-right">
             <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-margin-medium-top">
-                {{ "conectar-texto" | translate }} <a target="_blank"
-                    href="https://www.linkedin.com/in/jonadab-brown-b7b32066"><img
-                        src="img/social-icons/linkedin.png"> </a>
-            </div>
+        </p>
+        <div class="uk-margin-medium-top">
+            {{ "conectar-texto" | translate }} <a target="_blank" href="https://www.linkedin.com/in/israelogboi">
+                <img src="img/social-icons/linkedin.png"> </a>
         </div>
     </div>
+</div>
 
-    <div id="modal-israel" uk-modal>
-        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title"><b>{{ "equipa.israel.name" | translate }}</b></h2>
-            <p class="uk-margin-small-top" style="text-align: justify;"
-                [innerHTML]="'equipa.israel.bio' | translate"></p>
-            <p class="uk-text-right">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-            </p>
-            <div class="uk-margin-medium-top">
-                {{ "conectar-texto" | translate }} <a target="_blank"
-                    href="https://www.linkedin.com/in/israelogboi">
-                    <img src="img/social-icons/linkedin.png"> </a>
-            </div>
+<div id="modal-osibanjo" uk-modal>
+    <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"><b>{{ "equipa.osibanjo.name" | translate }}</b></h2>
+        <p class="uk-margin-small-top" style="text-align: justify;" [innerHTML]="'equipa.osibanjo.bio' | translate"></p>
+        <p class="uk-text-right">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+        </p>
+        <div class="uk-margin-medium-top">
+            {{ "conectar-texto" | translate }} <a target="_blank"
+                href="https://www.linkedin.com/in/osibanjo-olalekan-nim-mmp-asf-844a6382">
+                <img src="img/social-icons/linkedin.png"> </a>
         </div>
     </div>
+</div>
 
-    <div id="modal-osibanjo" uk-modal>
-        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title"><b>{{ "equipa.osibanjo.name" | translate }}</b></h2>
-            <p class="uk-margin-small-top" style="text-align: justify;"
-                [innerHTML]="'equipa.osibanjo.bio' | translate"></p>
-            <p class="uk-text-right">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-            </p>
-            <div class="uk-margin-medium-top">
-                {{ "conectar-texto" | translate }} <a target="_blank"
-                    href="https://www.linkedin.com/in/osibanjo-olalekan-nim-mmp-asf-844a6382">
-                    <img src="img/social-icons/linkedin.png"> </a>
-            </div>
+
+<div id="modal-eric" uk-modal>
+    <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"><b>{{ "equipa.eric.name" | translate }}</b></h2>
+        <p class="uk-margin-small-top" style="text-align: justify;" [innerHTML]="'equipa.eric.bio' | translate"></p>
+        <p class="uk-text-right">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+        </p>
+        <div class="uk-margin-medium-top">
+            {{ "conectar-texto" | translate }} <a target="_blank"
+                href="https://www.linkedin.com/in/eric-owusu-647491110"> <img src="img/social-icons/linkedin.png"> </a>
         </div>
     </div>
+</div>
 
-    
-    <div id="modal-eric" uk-modal>
-        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title"><b>{{ "equipa.eric.name" | translate }}</b></h2>
-            <p class="uk-margin-small-top" style="text-align: justify;"
-                [innerHTML]="'equipa.eric.bio' | translate"></p>
-            <p class="uk-text-right">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-            </p>
-            <div class="uk-margin-medium-top">
-                {{ "conectar-texto" | translate }} <a target="_blank"
-                    href="https://www.linkedin.com/in/eric-owusu-647491110"> <img
-                        src="img/social-icons/linkedin.png"> </a></div>
-        </div>
+
+<div id="modal-babatunde" uk-modal>
+    <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"><b>{{ "equipa.babatunde.name" | translate }}</b></h2>
+        <p class="uk-margin-small-top" style="text-align: justify;" [innerHTML]="'equipa.babatunde.bio' | translate">
+        </p>
+        <p class="uk-text-right">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+        </p>
+        <div class="uk-margin-medium-top">
+            {{ "conectar-texto" | translate }} <a target="_blank" href="https://www.linkedin.com/in/tundeadeoye"> <img
+                    src="img/social-icons/linkedin.png"> </a></div>
     </div>
-
-
-    <div id="modal-babatunde" uk-modal>
-        <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
-            <h2 class="uk-modal-title"><b>{{ "equipa.babatunde.name" | translate }}</b></h2>
-            <p class="uk-margin-small-top" style="text-align: justify;"
-                [innerHTML]="'equipa.babatunde.bio' | translate"></p>
-            <p class="uk-text-right">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-            </p>
-            <div class="uk-margin-medium-top">
-                {{ "conectar-texto" | translate }} <a target="_blank"
-                    href="https://www.linkedin.com/in/tundeadeoye"> <img
-                        src="img/social-icons/linkedin.png"> </a></div>
-        </div>
-    </div>
+</div>
 
 
 

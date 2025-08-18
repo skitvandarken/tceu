@@ -11,13 +11,14 @@ import { Ad2Component } from '../ad2/ad2.component';
 import { ArtigoListaComponent } from '../artigo-lista/artigo-lista.component';
 import { EventosComponent } from '../eventos/eventos.component';
 import { BlogComponent } from '../blog/blog.component';
+import { SlideshowComponent } from '../slideshow/slideshow.component';
 
 declare const UIkit: any; // To access UIkit globally
 
 @Component({
   selector: 'app-angolacables',
   standalone: true,
-  imports: [  CommonModule, EventosAcComponent, BlogComponent,  EventosComponent, Ad2Component, ArtigoListaComponent,  EventosListarComponent, ParceirosComponent, TranslatePipe, RouterLink, ContadorComponent, CaracteristicasComponent],
+  imports: [  CommonModule, EventosAcComponent, SlideshowComponent, BlogComponent,  EventosComponent, Ad2Component, ArtigoListaComponent,  EventosListarComponent, ParceirosComponent, TranslatePipe, RouterLink, ContadorComponent, CaracteristicasComponent],
   templateUrl: './angolacables.component.html',
   styleUrl: './angolacables.component.css'
 })
