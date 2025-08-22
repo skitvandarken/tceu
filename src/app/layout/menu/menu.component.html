@@ -20,10 +20,10 @@
                                 <div class="uk-drop-grid uk-child-width-1-3" uk-grid>
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav ">
-                                            <li class=" uk-padding-bottom-small uk-nav-header"><b><span
+                                            <li class=" uk-padding-bottom-small uk-nav-header"><a routerLink="/connectivity"><b><span
                                                         class="uk-margin-small-right" uk-icon="world"></span>
-                                                    CONNECTIVITY</b></li>
-                                            <li class="uk-active uk-margin-small-top"><a uk-switcher-item="1"  href="#">Internet
+                                                    CONNECTIVITY</b></a></li>
+                                            <li class="uk-active uk-margin-small-top"><a uk-switcher-item="1" routerLink="/connectivity"  href="#">Internet
                                                     Connections</a></li>
                                             <li class="uk-nav-divider">Dedicated Internet Acess</li>
                                             <li class="">IP Transit </li>
@@ -50,8 +50,8 @@
 
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header"><b><span class="uk-margin-small-right"
-                                                        uk-icon="cloud-upload"></span> CLOUD </b></li>
+                                            <li  class=" uk-nav-header"><a routerLink="/cloud"> <b><span class="uk-margin-small-right"
+                                                        uk-icon="cloud-upload"></span> CLOUD </b> </a></li>
                                             <li class="uk-active uk-margin-small-top"><a href="#">Virtual Infrastructure
                                                     (IaaS)</a></li>
                                             <li class="uk-nav-divider">Compute</li>
@@ -75,8 +75,8 @@
 
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header"><b><span class="uk-margin-small-right"
-                                                        uk-icon="cloud-upload"></span> DATA CENTER </b></li>
+                                            <li class=" uk-nav-header"><a routerLink="/data-center"><b><span class="uk-margin-small-right"
+                                                        uk-icon="cloud-upload"></span> DATA CENTER </b> </a> </li>
                                             <li class="uk-active uk-margin-small-top"><a href="#">Colocation</a></li>
                                             <li class="uk-nav-divider">Rack Colocation</li>
                                             <li class="">Interconnectivity </li>
@@ -88,9 +88,9 @@
                                         </ul>
 
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header uk-margin-small-top "><b><span
+                                            <li class=" uk-nav-header uk-margin-small-top "><a routerLink="/security"><b><span
                                                         class="uk-margin-small-right" uk-icon="lock"></span> SECURITY
-                                                </b></li>
+                                                </b></a></li>
                                             <li class="uk-active uk-margin-small-top"><a href="#">Anti-DDoS</a></li>
                                             <li class="uk-nav-divider">Maximize your network security from DDOS attacks
                                             </li>
