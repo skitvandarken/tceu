@@ -2,12 +2,14 @@ import { Component, inject } from '@angular/core';
 import { Ad2Component } from '../../layout/ad2/ad2.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
+import { RodapeComponent } from '../../layout/rodape/rodape.component';
+import { MenuComponent } from '../../layout/menu/menu.component';
 
 @Component({
   selector: 'app-datacentersevices',
   imports: [
     Ad2Component,
-    TranslatePipe // Inserido
+    TranslatePipe, RodapeComponent, MenuComponent// Inserido
   ],
   templateUrl: './datacentersevices.component.html',
   styleUrl: './datacentersevices.component.css'

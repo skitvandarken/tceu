@@ -3,6 +3,7 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
+import { Ad2Component } from '../../layout/ad2/ad2.component';
 
 @Component({
   selector: 'app-cloudservices',
@@ -10,6 +11,7 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inseri
    
     MenuComponent,
     RodapeComponent,
+    Ad2Component,
   
     TranslatePipe // Inserido
   ],

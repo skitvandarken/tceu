@@ -1,130 +1,250 @@
+<app-menu></app-menu>
 <div class="fundo-cabecalho">
     <div class="gradiente-texto-cabecalho">
         <div class="conteudo-cabecalho uk-margin-medium-top">
             <div class="uk-container uk-margin-large-bottom">
-                <h4 style="color:white">Data Center</h4>
-                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">Infraestrutura robusta para um mundo
-                    digital <br> sempre conectado.</h1>
+                <h4 style="color:white">{{ 'seguranca_titulo_pagina' | translate }}</h4>
+                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'seguranca_subtitulo_parte1' |
+                    translate
+                    }}<br>{{ 'seguranca_subtitulo_parte2' | translate }}</h1>
             </div>
         </div>
     </div>
 </div>
 
-<div class="uk-container">
-    <div class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2@s uk-text-left uk-margin-large-top " uk-grid>
 
-        <div>
-            <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column uk-flex-stretch">
-                <div class="uk-card-media-top">
-                    <img class="border-2 card-image" src="img/servicos/cloud.jpeg" width="1800" height="1200" alt="">
-                    <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>AngoNAP</b></h2>
-                    <p>Infraestrutura projetada com elevados padrões de segurança, capacidade de expansão e redundância
-                        energética, garantindo serviços de alojamento e conectividade contínua. Ideal para empresas que
-                        buscam alta disponibilidade, desempenho otimizado e soluções escaláveis, com suporte técnico
-                        especializado e infraestrutura de ponta para operações críticas.</p>
-                </div>
-                <div
-                    class="uk-margin-small-left uk-margin-small-right uk-margin-large-top uk-flex-1 uk-flex uk-flex-column">
-                    <ul class="uk-subnav uk-subnav-pill" uk-switcher>
-                        <li style="font-weight: bold"><a class="texto-abas-cronologia">Benefícios</a></li>
-                        <li><a class="texto-abas-cronologia">Características</a></li>
-                    </ul>
-                    <div class="uk-switcher uk-flex-1">
-                        <div style="background-color: white;" class="uk-child-width-expand@s" uk-grid>
-                            <div class="uk-grid-item-match">
-                                - O nosso serviço de IP Trânsito proporciona conectividade internacional
-                                <br>- O nosso serviço de IP Trânsito proporciona conectividade internacional
-                                <br>- O nosso serviço de IP Trânsito proporciona conectividade internacional
-                            </div>
-                        </div>
-                        <div>Hello again!</div>
+<!-- Services Tabs Section -->
+<div class="fundo-cronologia-abas">
+    <div class="uk-container ">
+        <div class="">
+            <!-- Slider Navigation -->
+            <div uk-slider>
+                <div class="uk-position-relative">
+                    <!-- Navigation Arrows -->
+                    <a class="uk-position-center-left-out uk-hidden-hover uk-margin-small-right" href="#"
+                        uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right-out uk-hidden-hover uk-margin-small-left" href="#"
+                        uk-slidenav-next uk-slider-item="next"></a>
+
+                    <!-- Slider Container -->
+                    <div class="uk-slider-container">
+                        <ul class="uk-slider-items uk-child-width-auto uk-grid uk-grid-small"
+                            uk-switcher="connect: .timeline-content">
+                            <li><a class="texto-abas-cronologia">Rack Colocation</a></li>
+
+                            <li><a class="texto-abas-cronologia">Interconnectivity</a></li>
+                            <li><a class="texto-abas-cronologia">Remote Hands & Support</a></li>
+
+                        </ul>
                     </div>
-                </div>
-                <div class="uk-text-center uk-margin-auto-top">
-                    <a style="font-weight: bold;" href="#">
-                        <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">Guia do
-                            produto</button>
-                    </a>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column uk-flex-stretch">
-                <div class="uk-card-media-top">
-                    <img class="border-2 card-image" src="img/servicos/cloud.jpeg" width="1800" height="1200" alt="">
-                    <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>Managed Services</b></h2>
-                    <p>O serviço de Managed Services permite à sua empresa ter suporte para itens como routing,
-                        switching, segurança, VoIP, infraestrutura e outros a serem desenhados, implementados e geridos
-                        por um time de especialistas da Angola Cables, lhe poupando de erros na sua rede ou suprindo a
-                        necessidade de mão-de-obra para tal.</p>
-                </div>
-                <div
-                    class="uk-margin-small-left uk-margin-small-right uk-margin-large-top uk-flex-1 uk-flex uk-flex-column">
-                    <ul class="uk-subnav uk-subnav-pill" uk-switcher>
-                        <li style="font-weight: bold"><a class="texto-abas-cronologia">Benefícios</a></li>
-                        <li><a class="texto-abas-cronologia">Características</a></li>
-                    </ul>
-                    <div class="uk-switcher uk-flex-1">
-                        <div style="background-color: white;" class="uk-child-width-expand@s" uk-grid>
-                            <div class="uk-grid-item-match"><p>
-                                - O nosso serviço de IP Trânsito proporciona conectividade internacional 
-                                <br>- O nosso serviço de IP Trânsito proporciona conectividade internacional
-                                <br>- O nosso serviço de IP Trânsito proporciona conectividade internacional 
-                                </p>
+            <!-- Content Switcher -->
+            <div class="timeline-content uk-switcher ">
+                <!-- Internet Connections -->
+                <div class="uk-child-width-1-2@m" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-body">
+                            <h2 class="service-title">Securely host, power and connect your critical infrastructure
+                            </h2>
+                            <div class="industry-list">
+                                <span class="industry-tag">Technology</span>
+                                <span class="industry-tag">Energy, Oil & Gas</span>
+                                <span class="industry-tag">Manufacturing</span>
+                                <span class="industry-tag">Finance Sector</span>
+                                <span class="industry-tag">Public Sector</span>
+                                <span class="industry-tag">General Markets</span>
+                            </div>
+                            <ul class="benefits-list uk-margin-small-top">
+                                <li> Enhanced security and power supply</li>
+                                <li>Managed and reduced operational overhead</li>
+                                <li> Interconnection point with submarine cable systems,
+                                    IXP´s, OTT´s, national and international operators</li>
+                                <li>Uptime</li>
+                                <li>Expert support and 24x7 NOC support</li>
+
+                            </ul>
+                            <div class="uk-margin">
+                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                                    <span style="font-weight: 600;">Talk to an expert</span>
+                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                                </a>
                             </div>
                         </div>
-                        <div>Hello again!</div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-body uk-text-left">
+                            <ul uk-accordion="collapsible: false">
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href><b>Rack Colocation</b></a>
+                                    <div class="uk-accordion-content">
+                                        <p>Colocate your infrastructure within any of our facilites in Lagos, Luanda and
+                                            Fortaleza with high
+                                            availability, diverse provider choice with high security for business
+                                            continuity.</p>
+
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="uk-text-center uk-margin-auto-top">
-                    <a style="font-weight: bold;" href="#">
-                        <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">Guia do
-                            produto</button>
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        <div>
-            <div class="uk-card uk-card-default uk-card-body border-2 uk-flex uk-flex-column uk-flex-stretch">
-                <div class="uk-card-media-top">
-                    <img class="border-2 card-image" src="img/servicos/backups.png" width="1800" height="1200" alt="">
-                    <h2 style="color: rgba(9, 0, 67, 1); font-weight: bolder;"><b>Global Data Center Interconnection</b>
-                    </h2>
-                  
-                </div>
-                  <p>O GDI é um serviço dedicado multiponto que conecta Pontos de Presença (PoPs) dentro da rede
-                        global da Angola Cables, garantindo alta performance, segurança e confiabilidade para operações
-                        críticas em escala internacional, com suporte técnico especializado e infraestrutura de ponta
-                        para máxima eficiência e disponibilidade.</p>
-                <div
-                    class="uk-margin-small-left uk-margin-small-right uk-margin-large-top uk-flex-1 uk-flex uk-flex-column">
-                    <ul class="uk-subnav uk-subnav-pill" uk-switcher>
-                        <li style="font-weight: bold"><a class="texto-abas-cronologia">Benefícios</a></li>
-                        <li><a class="texto-abas-cronologia">Características</a></li>
-                    </ul>
-                    <div class="uk-switcher uk-flex-1">
-                        <div style="background-color: white;" class="uk-child-width-expand@s" uk-grid>
-                            <div class="uk-grid-item-match">
-                                - O nosso serviço de IP Trânsito proporciona conectividade internacional
-                                <br>- O nosso serviço de IP Trânsito proporciona conectividade internacional
-                                <br>- O nosso serviço de IP Trânsito proporciona conectividade internacional
+                <!-- Private Metro Connections -->
+                <div class="uk-child-width-1-2@m" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-body">
+                            <h2 class="service-title">Securely host, power and connect your critical infrastructure</h2>
+                            <div class="industry-list">
+                                <span class="industry-tag">Technology</span>
+                                <span class="industry-tag">Energy, Oil & Gas</span>
+                                <span class="industry-tag">Manufacturing</span>
+                                <span class="industry-tag">Finance Sector</span>
+                                <span class="industry-tag">Public Sector</span>
+                                <span class="industry-tag">General Markets</span>
+                            </div>
+                            <ul class="benefits-list uk-margin-small-top">
+                                <li> Enhanced security and power supply</li>
+                                <li>Managed and reduced operational overhead</li>
+                                <li> Interconnection point with submarine cable systems,
+                                    IXP´s, OTT´s, national and international operators</li>
+                                <li>Uptime</li>
+                                <li>Expert support and 24x7 NOC support</li>
+
+                            </ul>
+                            <div class="uk-margin">
+                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                                    <span style="font-weight: 600;">Talk to an expert</span>
+                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                                </a>
                             </div>
                         </div>
-                        <div>Hello again!</div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-body uk-text-left">
+                            <ul uk-accordion="collapsible: false">
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href><b>Interconnectivity</b></a>
+                                    <div class="uk-accordion-content">
+                                        <p>Access our diverse connectivity portfolio when you colocate within our data
+                                            centers and connect
+                                            to other service providers and customers.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="uk-text-center uk-margin-auto-top">
-                    <a style="font-weight: bold;" href="#">
-                        <button class="botao-guia uk-margin-medium-top uk-button uk-border-pill uk-width-1-1">Guia do
-                            produto</button>
-                    </a>
+
+                <!-- International Private Circuit -->
+                <div class="uk-child-width-1-2@m" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-body">
+                            <h2 class="service-title">Securely host, power and connect your critical infrastructure
+                            </h2>
+                            <div class="industry-list">
+                                <span class="industry-tag">Finance Sector</span>
+                                <span class="industry-tag">Technology</span>
+                                <span class="industry-tag">Energy, Oil & Gas</span>
+                                <span class="industry-tag">Manufacturing</span>
+                                <span class="industry-tag">Finance Sector</span>
+                                <span class="industry-tag">Public Sector</span>
+                                <span class="industry-tag">General Markets</span>
+                            </div>
+                            <ul class="benefits-list uk-margin-small-top">
+                                <li> Enhanced security and power supply</li>
+                                <li>Managed and reduced operational overhead</li>
+                                <li> Interconnection point with submarine cable systems,
+                                    IXP´s, OTT´s, national and international operators</li>
+                                <li>Uptime</li>
+                                <li>Expert support and 24x7 NOC support</li>
+
+                            </ul>
+                            <div class="uk-margin">
+                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                                    <span style="font-weight: 600;">Talk to an expert</span>
+                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-body uk-text-left">
+                            <ul uk-accordion="collapsible: false">
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href><b>Remote Hands & Support</b></a>
+                                    <div class="uk-accordion-content">
+                                        <p>An on-demand service that provides technical assistance and maintenance for
+                                            hosted infrastructure
+                                            at the DC.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACloudConnect -->
+                <div class="uk-child-width-1-2@m" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-body">
+                            <h2 class="service-title">Secured connections to Public Cloud Service Providers from Nigeria
+                            </h2>
+                            <div class="industry-list ">
+                                <span class="industry-tag">Technology</span>
+                                <span class="industry-tag">Energy, Oil & Gas</span>
+                                <span class="industry-tag">Manufacturing</span>
+                                <span class="industry-tag">Finance Sector</span>
+                                <span class="industry-tag">Public Sector</span>
+                                <span class="industry-tag">General Markets</span>
+                            </div>
+                            <ul class="benefits-list uk-margin-small-top">
+                                <li> Enhanced security and power supply</li>
+                                <li>Managed and reduced operational overhead</li>
+                                <li> Interconnection point with submarine cable systems,
+                                    IXP´s, OTT´s, national and international operators</li>
+                                <li>Uptime</li>
+                                <li>Expert support and 24x7 NOC support</li>
+
+                            </ul>
+                            <div class="uk-margin">
+                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                                    <span style="font-weight: 600;">Talk to an expert</span>
+                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-body uk-text-left">
+                            <ul uk-accordion="collapsible: false">
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href><b>ACloudConnect</b></a>
+                                    <div class="uk-accordion-content">
+                                        <p>Leased capacity connections from a customer site to one or multiple
+                                            International Cloud Service Providers from over +290 cloud zones in ROA,
+                                            EMEA, Americas and Asia.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div style="background-color: white;">
-    <app-ad2></app-ad2>
-</div>
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
+
+
+
+
+
+
+<app-ad2></app-ad2>
+<app-rodape></app-rodape>

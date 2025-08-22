@@ -7,7 +7,7 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inseri
 
 @Component({
   selector: 'app-seguranca',
-  imports: [Ad2Component, MenuComponent, RodapeComponent, TranslatePipe], // Inserido
+  imports: [Ad2Component, MenuComponent, RodapeComponent, Ad2Component, TranslatePipe], // Inserido
   templateUrl: './seguranca.component.html',
   styleUrl: './seguranca.component.css'
 })

@@ -28,60 +28,60 @@ import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component'
 
 
 export const routes: Routes = [
-  
-    {path:'',component: InicioComponent},
-    {path: 'inicio', component: InicioComponent},
-    {path: 'sobre', component: AcercaComponent},
 
-    {path: 'conta', component: SignupComponent},
-    {path: 'indicador', component:IndicadorComponent},
-    {path: 'agente', component: AgenteComponent},
-    {path: 'datacenter', component: DatacenterComponent},
-    {path: 'angonap2', component: Angonap2Component},
-    {path:'eventos', component: EventosAcComponent},
-    {path: 'blog', component: BlogComponent},
-    {path: 'artigo', component: ArtigoComponent},
-    {path: 'conectividade', component: ConectividadeComponent},
-    {path: 'cloud', component: CloudservicesComponent},
-    {path: 'data-center', component: DatacentersevicesComponent},
-    {path: 'seguranca', component: SegurancaComponent},
-    {path: 'noticias', component: NoticiasComponent},
-    {path: 'contacto', component: ContactoComponent},
-    {path: 'recrutamento', component: RecrutamentoComponent},
-    {path: 'datacenter', component: DatacentersevicesComponent},
-    {path: 'virtualizacao', component: VirtualizacaoComponent},
-    {path: 'erp', component: ErpComponent},
-    {path: 'trust-center', component: TrustCenterComponent},
+  { path: '', component: InicioComponent },
+  { path: 'inicio', component: InicioComponent },
+  { path: 'sobre', component: AcercaComponent },
 
-    {path: 'artigos/ip-transit-chave', component: IptransitComponent},
-    {path: 'artigos/ciberseguranca', component: CibersecComponent},
-    {path: 'artigos/cloud2-como-montar', component:Cloud2MontagemComponent},
+  { path: 'conta', component: SignupComponent },
+  { path: 'indicador', component: IndicadorComponent },
+  { path: 'agente', component: AgenteComponent },
+  { path: 'datacenter', component: DatacenterComponent },
+  { path: 'angonap2', component: Angonap2Component },
+  { path: 'eventos', component: EventosAcComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'artigo', component: ArtigoComponent },
+  { path: 'conectividade', component: ConectividadeComponent },
+  { path: 'cloud', component: CloudservicesComponent },
+  { path: 'data-center', component: DatacentersevicesComponent },
+  { path: 'seguranca', component: SegurancaComponent },
+  { path: 'noticias', component: NoticiasComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'recrutamento', component: RecrutamentoComponent },
+  { path: 'datacenter', component: DatacentersevicesComponent },
+  { path: 'virtualizacao', component: VirtualizacaoComponent },
+  { path: 'erp', component: ErpComponent },
+  { path: 'trust-center', component: TrustCenterComponent },
 
-        {path: 'mkt-proibido', component:DashboardComponent},
+  { path: 'artigos/ip-transit-chave', component: IptransitComponent },
+  { path: 'artigos/ciberseguranca', component: CibersecComponent },
+  { path: 'artigos/cloud2-como-montar', component: Cloud2MontagemComponent },
+
+  { path: 'mkt-proibido', component: DashboardComponent },
 
 
 
-    
-  { 
-    path: 'artigos', 
-    loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent) 
+
+  {
+    path: 'artigos',
+    loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent)
   },
-  { 
-    path: 'artigo/:id', 
-    loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent) 
-  },
-  
-    { 
-    path: 'postar', 
-    loadComponent: () => import('./layout/artigo-postar/artigo-postar.component').then(m => m.ArtigoPostarComponent) 
-  },
-  
-      { 
-    path: 'postar-vaga', 
-    loadComponent: () => import('./layout/vagas-criar/vagas-criar.component').then(m => m.VagasCriarComponent) 
+  {
+    path: 'artigo/:id',
+    loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent)
   },
 
+  {
+    path: 'postar',
+    loadComponent: () => import('./layout/artigo-postar/artigo-postar.component').then(m => m.ArtigoPostarComponent)
+  },
 
-  
+  {
+    path: 'postar-vaga',
+    loadComponent: () => import('./layout/vagas-criar/vagas-criar.component').then(m => m.VagasCriarComponent)
+  },
+
+
+
 
 ];

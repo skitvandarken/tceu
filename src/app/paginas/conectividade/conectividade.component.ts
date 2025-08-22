@@ -1,21 +1,49 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild } from '@angular/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
+import { Ad2Component } from '../../layout/ad2/ad2.component';
+declare const UIkit: any;
 
 @Component({
   selector: 'app-conectividade',
   imports: [
     MenuComponent,
     RodapeComponent,
-    TranslatePipe, // Inserido
+    TranslatePipe,
+    Ad2Component // Inserido
   
   ],
   templateUrl: './conectividade.component.html',
   styleUrl: './conectividade.component.css'
 })
-export class ConectividadeComponent {
+export class ConectividadeComponent implements AfterViewInit {
+
+  ngAfterViewInit(): void {
+        this.switcher = UIkit.switcher(this.servicesTabs.nativeElement);
+
+  }
+
+  
+  switchTab(tabIndex: number) {
+    if (this.switcher) {
+      this.switcher.show(tabIndex);
+    }
+  }
+
+  
+  
+  @ViewChild('servicesTabs') servicesTabs: any;
+  private switcher: any;
+
+
+  @Output() tabSelected = new EventEmitter<number>(); // Define tabSelected as an EventEmitter
+
+selectTab(tabIndex: number, event: Event) {
+    event.preventDefault();
+    this.tabSelected.emit(tabIndex);
+  }
 
   private translate = inject(TranslateService); // Inserido
 
