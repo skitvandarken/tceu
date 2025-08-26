@@ -10,8 +10,8 @@ import { tap, map } from 'rxjs/operators';
 })
 export class BlogService {
   private firestore = inject(Firestore);
-  private postsCollection = collection(this.firestore, 'posts');
-  
+  private postsCollection = collection(this.firestore, 'postsNg'); // ✅ renamed
+
   posts = signal<Post[]>([]);
 
   constructor() {
@@ -23,7 +23,7 @@ export class BlogService {
   }
 
   getPosts(): Observable<Post[]> {
-    console.log('Fetching all posts');
+    console.log('Fetching all postsNg');
     return collectionData(this.postsCollection, { idField: 'id' }).pipe(
       map((posts: any[]) => posts.map(post => post as Post)),
       tap(posts => console.log('Posts from Firestore:', posts))
@@ -31,8 +31,8 @@ export class BlogService {
   }
 
   getPostById(id: string): Observable<Post | undefined> {
-    console.log('Fetching post with ID:', id);
-    const postDoc = doc(this.firestore, `posts/${id}`);
+    console.log('Fetching postNg with ID:', id);
+    const postDoc = doc(this.firestore, `postsNg/${id}`); // ✅ renamed
     return docData(postDoc, { idField: 'id' }).pipe(
       map(post => {
         if (!post) {

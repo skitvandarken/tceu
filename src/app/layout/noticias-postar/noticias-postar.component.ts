@@ -61,7 +61,7 @@ export class NoticiasPostarComponent {
     this.isSubmitting = true;
 
     try {
-      const postsCollection = collection(this.firestore, 'noticias');
+      const postsCollection = collection(this.firestore, 'noticiasNg');
       await addDoc(postsCollection, {
         title: this.newNoticia.title,
         content: this.editorContent,

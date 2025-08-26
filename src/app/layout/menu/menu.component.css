@@ -35,12 +35,21 @@
 
 
 .uk-navbar-dropdown-nav li a {
-    color: black !important;
+    color: #20530a !important;
 }
 
 
 .uk-navbar-dropdown-nav li a:hover {
     color: #00899e !important;
+}
+
+
+.uk-navbar-dropdown {
+  display: none !important;
+}
+
+.uk-navbar-dropdown.uk-open {
+  display: block !important;
 }
 
 

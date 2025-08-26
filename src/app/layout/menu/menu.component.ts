@@ -14,12 +14,17 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent implements OnInit {
+
+ // Close dropdowns on scroll
+
   private preloadFlags() {
     ['usa', 'en', 'fr'].forEach(flag => {
       new Image().src = `/img/bandeiras/${flag}.png`;
     });
   }
 
+
+  
   constructor(
     public auth: AuthService,
     private router: Router,
@@ -30,6 +35,13 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.preloadFlags();
+
+     // Close dropdowns on scroll
+  window.addEventListener('scroll', () => {
+    const openDrops = document.querySelectorAll('.uk-navbar-dropdown.uk-open');
+    openDrops.forEach(drop => drop.classList.remove('uk-open'));
+  });
+  
     this.auth.isAuthenticated$.subscribe(isAuthenticated => {
       if (isAuthenticated) {
         this.router.navigate(['/painel']);
@@ -55,14 +67,12 @@ export class MenuComponent implements OnInit {
   selectedLanguage: string = 'EN'; // Default language text
   private updateLanguageDisplay(language: string): void {
      if (language === 'en') {
-        this.selectedFlag = 'img/bandeiras/usa.png';
-        this.selectedLanguage = 'EN';
-    } else if (language === 'fr') {
-        this.selectedFlag = 'img/bandeiras/fr.png';
-        this.selectedLanguage = 'FR';
-    }
-
-    
+    this.selectedFlag = 'img/bandeiras/usa.png';
+    this.selectedLanguage = 'EN';
+  } else if (language === 'fr') {
+    this.selectedFlag = 'img/bandeiras/fr.png';
+    this.selectedLanguage = 'FR';
+  }
 
     this.cdr.detectChanges();
   }

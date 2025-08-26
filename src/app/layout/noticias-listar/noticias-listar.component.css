@@ -29,6 +29,15 @@ button {
   margin-bottom: 1.5rem;
 }
 
+.truncate-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* show max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3.2em; /* ensures equal height */
+}
+
 
 
 .botao-azul {

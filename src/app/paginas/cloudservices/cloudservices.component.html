@@ -40,9 +40,9 @@
       <!-- Content Switcher -->
       <div class="timeline-content uk-switcher ">
         <!-- Internet Connections -->
-        <div class="uk-child-width-1-2@m" uk-grid>
+        <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
           <div>
-            <div class="uk-card uk-card-body">
+            <div id="iaas" class="uk-card uk-card-body">
               <h2 class="service-title">Virtualized computing resources such as servers, storage, and networking
               </h2>
               <div class="industry-list">
@@ -61,13 +61,15 @@
                 <li>Service upgrade ondemand</li>
               </ul>
 
-              <div class="uk-margin-small-top">
-                <a href="" uk-icon="icon:heart; ratio:3.0"><p>Talk with an expert</p> </a>
-
+              <div class="uk-margin">
+                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                  <span style="font-weight: 600;">Talk to an expert</span>
+                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                </a>
               </div>
             </div>
           </div>
-          <div>
+          <div class="scroll-target" id="iaas">
             <div class="uk-card uk-card-body uk-text-left">
               <ul uk-accordion="collapsible: false">
                 <li class="uk-open">
@@ -87,7 +89,7 @@
         </div>
 
         <!-- Private Metro Connections -->
-        <div class="uk-child-width-1-2@m" uk-grid>
+        <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
           <div>
             <div class="uk-card uk-card-body">
               <h2 class="service-title">Centralized management for cloud backups and recovery strategy</h2>
@@ -105,7 +107,7 @@
               </ul>
             </div>
           </div>
-          <div>
+          <div class="scroll-target" id="backup">
             <div class="uk-card uk-card-body uk-text-left">
               <ul uk-accordion="collapsible: false">
                 <li class="uk-open">
@@ -121,7 +123,7 @@
         </div>
 
         <!-- International Private Circuit -->
-        <div class="uk-child-width-1-2@m" uk-grid>
+        <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
           <div>
             <div class="uk-card uk-card-body">
               <h2 class="service-title">Flexible and affordable storage for large data management
@@ -132,8 +134,8 @@
                 <span class="industry-tag">Finance</span>
                 <span class="industry-tag">Manufacturing</span>
                 <span class="industry-tag">Public Sector</span>
-                                <span class="industry-tag">Education</span>
-                                                                <span class="industry-tag">General Markets</span>
+                <span class="industry-tag">Education</span>
+                <span class="industry-tag">General Markets</span>
 
 
 
@@ -147,11 +149,11 @@
             </div>
           </div>
           <div>
-            <div class="uk-card uk-card-body uk-text-left">
+            <div id="storage" class="uk-card uk-card-body uk-text-left">
               <ul uk-accordion="collapsible: false">
                 <li class="uk-open">
                   <a class="uk-accordion-title" href><b>Storage-as-a-Service
-</b></a>
+                    </b></a>
                   <div class="uk-accordion-content">
                     <p>Provides scalable and flexible data storage capabilities to organizations to store, manage, and
                       access their data in a secure, cost-effective, and efficient manner without the need to invest in
@@ -163,41 +165,7 @@
           </div>
         </div>
 
-        <!-- ACloudConnect -->
-        <div class="uk-child-width-1-2@m" uk-grid>
-          <div>
-            <div class="uk-card uk-card-body">
-              <h2 class="service-title">Secured connections to Public Cloud Service Providers from Nigeria
-              </h2>
-              <div class="industry-list ">
-                <span class="industry-tag">Entertainment</span>
-                <span class="industry-tag">Financial Sector</span>
-                <span class="industry-tag">Education</span>
-                <span class="industry-tag">Technology</span>
-                <span class="industry-tag">Multinationals</span>
-              </div>
-              <ul class="benefits-list uk-margin-small-top">
-                <li>Improved Quality of Service</li>
-                <li>Dedicated, low-latency links to Cloud Service Provider</li>
-                <li>Private & secured connection to customer premises (optional)</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <div class="uk-card uk-card-body uk-text-left">
-              <ul uk-accordion="collapsible: false">
-                <li class="uk-open">
-                  <a class="uk-accordion-title" href><b>ACloudConnect</b></a>
-                  <div class="uk-accordion-content">
-                    <p>Leased capacity connections from a customer site to one or multiple
-                      International Cloud Service Providers from over +290 cloud zones in ROA,
-                      EMEA, Americas and Asia.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

@@ -1,10 +1,12 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'; // 👈 Needed for fragment detection
+
 import { Ad2Component } from '../../layout/ad2/ad2.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { MenuComponent } from '../../layout/menu/menu.component';
-
+declare const UIkit: any;
 @Component({
   selector: 'app-datacentersevices',
   imports: [
@@ -14,16 +16,72 @@ import { MenuComponent } from '../../layout/menu/menu.component';
   templateUrl: './datacentersevices.component.html',
   styleUrl: './datacentersevices.component.css'
 })
-export class DatacentersevicesComponent {
+export class DatacentersevicesComponent implements AfterViewInit {
 
-  private translate = inject(TranslateService); // Inserido
+  @ViewChild('servicesTabs') servicesTabs: any;
+  private switcher: any;
 
-  constructor() { // Construtor adicionado/modificado para incluir a lógica de tradução
-    this.translate.setDefaultLang('pt'); // Inserido
-    this.translate.use(this.translate.currentLang || 'pt'); // Inserido
+  @Output() tabSelected = new EventEmitter<number>();
+
+  private translate = inject(TranslateService);
+  private route = inject(ActivatedRoute); // 👈 Inject Angular route
+
+  constructor() {
+    this.translate.setDefaultLang('pt');
+    this.translate.use(this.translate.currentLang || 'pt');
   }
 
-  useLanguage(language: string): void { // Inserido
-    this.translate.use(language); // Inserido
-  } // Inserido
+
+  ngAfterViewInit(): void {
+    // ✅ Init UIkit switcher on the real container
+    this.switcher = UIkit.switcher('.timeline-content');
+
+    this.route.fragment.subscribe(fragment => {
+      if (!fragment) return;
+
+      // Map fragment to switcher index
+      switch (fragment) {
+        case 'rack-colocation':
+          this.switchTab(0);
+          break;
+        case 'interconnectivity':
+          this.switchTab(1);
+          break;
+        case 'remote-hands':
+          this.switchTab(2);
+          break;
+      }
+
+      // Scroll to fragment target
+      const target = document.getElementById(fragment);
+      if (target) {
+        const headerOffset = 180;
+        const elementPosition =
+          target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+
+  switchTab(tabIndex: number) {
+    if (this.switcher) {
+      this.switcher.show(tabIndex);
+    }
+  }
+
+  selectTab(tabIndex: number, event: Event) {
+    event.preventDefault();
+    this.tabSelected.emit(tabIndex);
+    this.switchTab(tabIndex);
+  }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
+
 }

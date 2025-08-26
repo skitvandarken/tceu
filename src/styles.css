@@ -6,10 +6,12 @@ body, a, p, h1, h2, h3, h4, li, ul {
     font-style: normal;
     
  margin: 0 !important;
-    padding: 0;
+
 }   
 
-
+html {
+  scroll-behavior: smooth;
+}
 .border {
     border-radius: 30px;
 }

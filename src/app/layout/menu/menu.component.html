@@ -1,7 +1,7 @@
 <div class="uk-position-relative">
     <nav class="uk-navbar-container">
         <div class="uk-container">
-            <div uk-navbar="dropbar: true; dropbar-anchor: !.uk-navbar-container; target-y: !.uk-navbar-container">
+<div uk-navbar="dropbar: true; dropbar-anchor: !.uk-navbar-container; target-y: !.uk-navbar-container; delay-hide: 0; delay-show: 0">
 
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav">
@@ -20,26 +20,34 @@
                                 <div class="uk-drop-grid uk-child-width-1-3" uk-grid>
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav ">
-                                            <li class=" uk-padding-bottom-small uk-nav-header"><a routerLink="/connectivity"><b><span
-                                                        class="uk-margin-small-right" uk-icon="world"></span>
-                                                    CONNECTIVITY</b></a></li>
-                                            <li class="uk-active uk-margin-small-top"><a uk-switcher-item="1" routerLink="/connectivity"  href="#">Internet
+                                            <li class=" uk-padding-bottom-small uk-nav-header"><a
+                                                    routerLink="/connectivity"><b><span class="uk-margin-small-right"
+                                                            uk-icon="world"></span>
+                                                        CONNECTIVITY</b></a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="internet">Internet
                                                     Connections</a></li>
-                                            <li class="uk-nav-divider">Dedicated Internet Acess</li>
+
+                                            <li class="uk-nav-divider" routerLink="/connectivity" fragment="dia">
+                                                Dedicated Internet Acess</li>
                                             <li class="">IP Transit </li>
 
-                                            <li class="uk-active uk-margin-small-top"><a href="#">Private Metro
-                                                    Connections</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="private-metro">Private
+                                                    Metro Connections</a></li>
+
                                             <li class="uk-nav-divider">Layer 2 VPN</li>
                                             <li class=""> Layer 3 VPN </li>
 
-                                            <li class="uk-active uk-margin-small-top"><a href="#">International Private
+                                            <li class=" uk-margin-small-top"><a [routerLink]="['/connectivity']"
+                                                    fragment="ipc">International Private
                                                     Circuit</a> </li>
                                             <li class="uk-nav-divider">Dedicated international circuits for global sites
                                                 interconnections</li>
 
 
-                                            <li class="uk-active uk-margin-small-top"><a href="#"> ACcloudConnect </a>
+                                            <li class="uk-active uk-margin-small-top"><a
+                                                    [routerLink]="['/connectivity']" fragment="acloudconnect">ACloud
+                                                    Connect
+                                                </a>
                                             </li>
                                             <li class="uk-nav-divider">Secured connections to Public Cloud Service
                                                 Providers from Nigeria</li>
@@ -50,21 +58,35 @@
 
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li  class=" uk-nav-header"><a routerLink="/cloud"> <b><span class="uk-margin-small-right"
-                                                        uk-icon="cloud-upload"></span> CLOUD </b> </a></li>
-                                            <li class="uk-active uk-margin-small-top"><a href="#">Virtual Infrastructure
-                                                    (IaaS)</a></li>
+                                            <li class=" uk-nav-header"><a routerLink="/cloud"> <b><span
+                                                            class="uk-margin-small-right" uk-icon="cloud-upload"></span>
+                                                        CLOUD </b> </a></li>
+
+                                            <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
+                                                    fragment="IaaS">Virtual
+                                                    Infrastructure
+                                                    (IaaS)
+                                                </a>
+                                            </li>
                                             <li class="uk-nav-divider">Compute</li>
                                             <li class="">Storage </li>
                                             <li class="">Network </li>
 
-                                            <li class="uk-active uk-margin-small-top"><a href="#">Cloud Backup
-                                                    (Backups2Africa)</a></li>
+
+                                            <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
+                                                    fragment="backup">
+                                                    Cloud Backup
+                                                    (Backups2Africa)
+                                                </a>
+                                            </li>
+
                                             <li class="uk-nav-divider">Centralized management for cloud backups and
                                                 recovery strategy</li>
 
-                                            <li class="uk-active uk-margin-small-top"><a
-                                                    href="#">Storage-as-a-Service</a></li>
+                                                <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
+                                                    fragment="backup">Storage-as-a-service
+                                                </a>
+                                            </li>
                                             <li class="uk-nav-divider">Flexible and affordable storage for large data
                                                 management </li>
 
@@ -75,9 +97,10 @@
 
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header"><a routerLink="/data-center"><b><span class="uk-margin-small-right"
-                                                        uk-icon="cloud-upload"></span> DATA CENTER </b> </a> </li>
-                                            <li class="uk-active uk-margin-small-top"><a href="#">Colocation</a></li>
+                                            <li class=" uk-nav-header"><a routerLink="/data-center"><b><span
+                                                            class="uk-margin-small-right" uk-icon="cloud-upload"></span>
+                                                        DATA CENTER </b> </a> </li>
+                                            <li class="uk-active uk-margin-small-top"><a routerLink="/data-center">Colocation</a></li>
                                             <li class="uk-nav-divider">Rack Colocation</li>
                                             <li class="">Interconnectivity </li>
                                             <li class="">Remote Hands & Support </li>
@@ -88,10 +111,11 @@
                                         </ul>
 
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header uk-margin-small-top "><a routerLink="/security"><b><span
-                                                        class="uk-margin-small-right" uk-icon="lock"></span> SECURITY
-                                                </b></a></li>
-                                            <li class="uk-active uk-margin-small-top"><a href="#">Anti-DDoS</a></li>
+                                            <li class=" uk-nav-header uk-margin-small-top "><a
+                                                    routerLink="/security"><b><span class="uk-margin-small-right"
+                                                            uk-icon="lock"></span> SECURITY
+                                                    </b></a></li>
+                                            <li class="uk-active uk-margin-small-top"><a routerLink="/security">Anti-DDoS</a></li>
                                             <li class="uk-nav-divider">Maximize your network security from DDOS attacks
                                             </li>
 
@@ -178,7 +202,7 @@
 
                                         </ul>
 
-     <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> e-GOVERNMENT
                                                 </b></li>
                                             <li class="">Dedicated Government cloud node</li>
@@ -196,11 +220,10 @@
                                     </div>
 
                                     <div>
-                                   
+
 
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header "><b><span class=""
-                                                        uk-icon=""></span> GENERAL
+                                            <li class=" uk-nav-header "><b><span class="" uk-icon=""></span> GENERAL
                                                     SALES & CAMPAIGNS
                                                 </b></li>
                                             <li class="">SAP Consultations</li>
@@ -239,7 +262,7 @@
                 <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav">
                         <li>
-                            <a href="#" style="color: #002561 ;" href="#"><button
+                            <a routerLink="/contacto" style="color: #002561 ;" href="#"><button
                                     style="background-color: transparent; color: #fff ; border-color: white; border-style: solid; border-width: 0.5px;"
                                     class="uk-button botao-contacto">Contact Us</button> </a>
 

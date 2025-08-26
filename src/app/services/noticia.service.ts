@@ -10,7 +10,7 @@ import { tap, map } from 'rxjs/operators';
 })
 export class NoticiaService{
   private firestore = inject(Firestore);
-  private noticiasCollection = collection(this.firestore, 'noticias');
+  private noticiasCollection = collection(this.firestore, 'noticiasNg');
   
   noticias = signal<Noticia[]>([]);
 

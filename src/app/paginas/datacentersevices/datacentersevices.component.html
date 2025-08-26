@@ -3,10 +3,9 @@
     <div class="gradiente-texto-cabecalho">
         <div class="conteudo-cabecalho uk-margin-medium-top">
             <div class="uk-container uk-margin-large-bottom">
-                <h4 style="color:white">{{ 'seguranca_titulo_pagina' | translate }}</h4>
-                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'seguranca_subtitulo_parte1' |
-                    translate
-                    }}<br>{{ 'seguranca_subtitulo_parte2' | translate }}</h1>
+                <h4 style="color:white">{{ 'datacenter_titulo_pagina' | translate }}</h4>
+                <h1 style="color:rgba(39, 200, 227, 1); font-weight: bolder;">{{ 'datacenter.titulo' | translate }}
+                </h1>
             </div>
         </div>
     </div>
@@ -26,25 +25,15 @@
                     <a class="uk-position-center-right-out uk-hidden-hover uk-margin-small-left" href="#"
                         uk-slidenav-next uk-slider-item="next"></a>
 
-                    <!-- Slider Container -->
-                    <div class="uk-slider-container">
-                        <ul class="uk-slider-items uk-child-width-auto uk-grid uk-grid-small"
-                            uk-switcher="connect: .timeline-content">
-                            <li><a class="texto-abas-cronologia">Rack Colocation</a></li>
 
-                            <li><a class="texto-abas-cronologia">Interconnectivity</a></li>
-                            <li><a class="texto-abas-cronologia">Remote Hands & Support</a></li>
-
-                        </ul>
-                    </div>
                 </div>
             </div>
 
-            <!-- Content Switcher -->
-            <div class="timeline-content uk-switcher ">
-                <!-- Internet Connections -->
-                <div class="uk-child-width-1-2@m" uk-grid>
-                    <div>
+            <!-- Rack Colocation Switcher -->
+            <div class="timeline-content uk-switcher " #servicesTabs>
+
+                <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
+                    <div >
                         <div class="uk-card uk-card-body">
                             <h2 class="service-title">Securely host, power and connect your critical infrastructure
                             </h2>
@@ -76,7 +65,7 @@
                     <div>
                         <div class="uk-card uk-card-body uk-text-left">
                             <ul uk-accordion="collapsible: false">
-                                <li class="uk-open">
+                                <li id="rack-colocation" class="uk-open">
                                     <a class="uk-accordion-title" href><b>Rack Colocation</b></a>
                                     <div class="uk-accordion-content">
                                         <p>Colocate your infrastructure within any of our facilites in Lagos, Luanda and
@@ -86,152 +75,31 @@
 
                                     </div>
                                 </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Private Metro Connections -->
-                <div class="uk-child-width-1-2@m" uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-body">
-                            <h2 class="service-title">Securely host, power and connect your critical infrastructure</h2>
-                            <div class="industry-list">
-                                <span class="industry-tag">Technology</span>
-                                <span class="industry-tag">Energy, Oil & Gas</span>
-                                <span class="industry-tag">Manufacturing</span>
-                                <span class="industry-tag">Finance Sector</span>
-                                <span class="industry-tag">Public Sector</span>
-                                <span class="industry-tag">General Markets</span>
-                            </div>
-                            <ul class="benefits-list uk-margin-small-top">
-                                <li> Enhanced security and power supply</li>
-                                <li>Managed and reduced operational overhead</li>
-                                <li> Interconnection point with submarine cable systems,
-                                    IXP´s, OTT´s, national and international operators</li>
-                                <li>Uptime</li>
-                                <li>Expert support and 24x7 NOC support</li>
-
-                            </ul>
-                            <div class="uk-margin">
-                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                                    <span style="font-weight: 600;">Talk to an expert</span>
-                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-body uk-text-left">
-                            <ul uk-accordion="collapsible: false">
-                                <li class="uk-open">
+                                <li id="interconnectivity" class="uk-margin-small-top">
                                     <a class="uk-accordion-title" href><b>Interconnectivity</b></a>
                                     <div class="uk-accordion-content">
                                         <p>Access our diverse connectivity portfolio when you colocate within our data
                                             centers and connect
                                             to other service providers and customers.</p>
+
                                     </div>
                                 </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- International Private Circuit -->
-                <div class="uk-child-width-1-2@m" uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-body">
-                            <h2 class="service-title">Securely host, power and connect your critical infrastructure
-                            </h2>
-                            <div class="industry-list">
-                                <span class="industry-tag">Finance Sector</span>
-                                <span class="industry-tag">Technology</span>
-                                <span class="industry-tag">Energy, Oil & Gas</span>
-                                <span class="industry-tag">Manufacturing</span>
-                                <span class="industry-tag">Finance Sector</span>
-                                <span class="industry-tag">Public Sector</span>
-                                <span class="industry-tag">General Markets</span>
-                            </div>
-                            <ul class="benefits-list uk-margin-small-top">
-                                <li> Enhanced security and power supply</li>
-                                <li>Managed and reduced operational overhead</li>
-                                <li> Interconnection point with submarine cable systems,
-                                    IXP´s, OTT´s, national and international operators</li>
-                                <li>Uptime</li>
-                                <li>Expert support and 24x7 NOC support</li>
-
-                            </ul>
-                            <div class="uk-margin">
-                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                                    <span style="font-weight: 600;">Talk to an expert</span>
-                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-body uk-text-left">
-                            <ul uk-accordion="collapsible: false">
-                                <li class="uk-open">
+                                <li id="remote-hands"  class="uk-margin-small-top">
                                     <a class="uk-accordion-title" href><b>Remote Hands & Support</b></a>
                                     <div class="uk-accordion-content">
                                         <p>An on-demand service that provides technical assistance and maintenance for
                                             hosted infrastructure
                                             at the DC.</p>
+
                                     </div>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- ACloudConnect -->
-                <div class="uk-child-width-1-2@m" uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-body">
-                            <h2 class="service-title">Secured connections to Public Cloud Service Providers from Nigeria
-                            </h2>
-                            <div class="industry-list ">
-                                <span class="industry-tag">Technology</span>
-                                <span class="industry-tag">Energy, Oil & Gas</span>
-                                <span class="industry-tag">Manufacturing</span>
-                                <span class="industry-tag">Finance Sector</span>
-                                <span class="industry-tag">Public Sector</span>
-                                <span class="industry-tag">General Markets</span>
-                            </div>
-                            <ul class="benefits-list uk-margin-small-top">
-                                <li> Enhanced security and power supply</li>
-                                <li>Managed and reduced operational overhead</li>
-                                <li> Interconnection point with submarine cable systems,
-                                    IXP´s, OTT´s, national and international operators</li>
-                                <li>Uptime</li>
-                                <li>Expert support and 24x7 NOC support</li>
 
-                            </ul>
-                            <div class="uk-margin">
-                                <a href="#contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                                    <span style="font-weight: 600;">Talk to an expert</span>
-                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-body uk-text-left">
-                            <ul uk-accordion="collapsible: false">
-                                <li class="uk-open">
-                                    <a class="uk-accordion-title" href><b>ACloudConnect</b></a>
-                                    <div class="uk-accordion-content">
-                                        <p>Leased capacity connections from a customer site to one or multiple
-                                            International Cloud Service Providers from over +290 cloud zones in ROA,
-                                            EMEA, Americas and Asia.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

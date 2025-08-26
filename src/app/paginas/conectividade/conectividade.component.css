@@ -206,6 +206,11 @@ stroke: #fff;
 }
 
 
+.fundo-cronologia-abas {
+  scroll-margin-top: 80px; /* adjust to your header height */
+}
+
+
 
 
 
