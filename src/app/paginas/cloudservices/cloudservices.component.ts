@@ -52,9 +52,7 @@ export class CloudservicesComponent implements AfterViewInit {
         case 'storage':       // ✅ 
           this.switchTab(2);
           break;
-        case 'acloudconnect': // ✅ 
-          this.switchTab(3);
-          break;
+       
       }
 
       // ✅ smooth scroll into view

@@ -171,6 +171,15 @@
     opacity: 0.3;
 }
 
+.texto-banner {
+    color: white;
+   
+    bottom: 20px;
+    position: absolute;
+    padding: 9px 0px 10px 0px ;
+    font-size: 1.2rem;
+
+}
 
 
 /* Slider specific styles */

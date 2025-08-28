@@ -10,6 +10,10 @@
     animation: gradientMove 15s ease infinite;
 }
 
+.modern-gradient-bg-cloud {
+   
+}
+
 .modern-gradient-bg::before {
     content: '';
     position: absolute;

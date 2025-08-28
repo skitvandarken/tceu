@@ -1,5 +1,5 @@
 import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'; // 👈 Needed for fragment detection
+import { ActivatedRoute, RouterLink } from '@angular/router'; // 👈 Needed for fragment detection
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
@@ -12,8 +12,9 @@ declare const UIkit: any;
     MenuComponent,
     RodapeComponent,
     TranslatePipe,
-    Ad2Component
-  ],
+    Ad2Component,
+    RouterLink
+],
   templateUrl: './conectividade.component.html',
   styleUrl: './conectividade.component.css'
 })

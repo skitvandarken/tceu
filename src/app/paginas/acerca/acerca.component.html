@@ -15,7 +15,7 @@
 
 <!-- 2 Colunas | Presença Global & Vídeo Institucional AC -->
 
-<div class="uk-container uk-margin-large-bottom uk-margin-large-top">
+<div class="uk-container uk-margin-small-bottom uk-margin-large-top">
     <div class=" uk-child-width-1-2@m uk-grid-medium uk-child-width-1-2@s uk-grid-match-height uk-grid uk-text-left">
 
         <!--Lado esquerdo-->
@@ -43,12 +43,13 @@
 
 
         <!-- Right Side | Video About Angola Cables -->
-        <div class="uk-width-1-2@m uk-margin-medium-bottom uk-flex uk-flex-center uk-flex-top">
+        <div class="uk-width-1-2@m uk-margin-small-bottom uk-flex uk-flex-center uk-flex-top">
             <div class="uk-text-center">
 
                 <!-- Button to toggle the modal -->
                 <a href="#modal-video" uk-toggle>
-                    <img style="border-radius: 20px;" src="img/video-miniatura.png" alt="Video Thumbnail">
+                    <img style="border-radius: 20px;" height="200px" width="auto" src="img/video-miniatura.png"
+                        alt="Video Thumbnail">
                 </a>
 
                 <!-- Modal -->
@@ -229,6 +230,84 @@
 </div>
 
 -->
+
+
+<div class="uk-container ">
+
+        <div class="uk-margin-medium-bottom uk-margin-medium-top">
+            <p style="font-weight: 900; font-size:35px; color: rgba(0, 0, 38, 1) " class="uk-text-center texto-div">
+                {{ 'nossas_certificacoes' | translate }}
+            </p>
+        </div>
+
+    <div class="uk-grid-small uk-grid-match uk-grid-match-height " uk-grid>
+        <!-- First Column (1 row, spans 2 rows) -->
+        <div style="background-image: url('/img/bg-selos.png'); background-repeat: no-repeat; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-size: cover; z-index: 1; border-radius: 20px"
+            class="uk-width-1-3">
+            <div class="uk-card uk-card-body tall-cell">
+                <div class=" texto-banner">
+                    <div style=" border-radius: 10px; right: 20px;">
+                        <p style="font-size: 0.8rem;"> CORE SERVICES & SOLUTIONS
+                        </p>
+                    </div>
+
+                    <p style="font-weight: 700;">Global connectivity, enterprise cloud, storage, network and security
+                        made local,
+                        easy and affordable.</p>
+
+                    <div class="uk-margin-small-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Column (2 rows) -->
+        <div class="uk-width-1-3">
+            <div class="uk-grid-small  uk-grid-match-height" uk-grid>
+
+                <div class="uk-width-1-1">
+                    <div style="border-radius: 12px; background-color: #000026;"
+                        class="fundo-contador  uk-card uk-card-default uk-card-body  small-cell">
+
+                        <div>
+                            <img src=" img/conectada-mundo.png" style="width: 100%;">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Third Column (2 rows) -->
+        <div class="uk-width-1-3">
+
+
+            <div class="uk-grid-small uk-grid-match" uk-grid>
+                <div class="uk-width-1-1">
+
+                    <div class="uk-width-1-1">
+                        <div style="border-radius: 12px;"
+                            class="fundo-contador uk-card uk-card-default uk-card-body  small-cell">
+
+                            <div>
+                                <img src=" img/first-interconected-angola-cables.png" style="width: 100%;">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
 
 <app-slideshow></app-slideshow>
 
