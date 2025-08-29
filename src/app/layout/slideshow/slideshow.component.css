@@ -10,9 +10,18 @@
     animation: gradientMove 15s ease infinite;
 }
 
-.modern-gradient-bg-cloud {
-   
+
+.modern-gradient-bg img,
+.uk-panel img {
+    max-width: 100%;
+    height: auto;
+    /* keeps aspect ratio */
+    object-fit: contain;
+    /* prevents cropping */
+    display: block;
+    margin: 0 auto;
 }
+
 
 .modern-gradient-bg::before {
     content: '';

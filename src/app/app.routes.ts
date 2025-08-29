@@ -46,7 +46,6 @@ export const routes: Routes = [
   { path: 'cloud', component: CloudservicesComponent },
   { path: 'data-center', component: DatacentersevicesComponent },
   { path: 'security', component: SegurancaComponent },
-  { path: 'noticias', component: NoticiasComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'recrutamento', component: RecrutamentoComponent },
   { path: 'datacenter', component: DatacentersevicesComponent },
@@ -58,6 +57,8 @@ export const routes: Routes = [
   { path: 'artigos/ciberseguranca', component: CibersecComponent },
   { path: 'artigos/cloud2-como-montar', component: Cloud2MontagemComponent },
   { path: 'service-contact', component: ServiceFormComponent},
+
+  { path: 'news', component: NoticiasComponent},
 
   { path: 'mkt-proibido', component: DashboardComponent },
 

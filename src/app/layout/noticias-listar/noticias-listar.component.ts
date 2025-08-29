@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NoticiaService } from '../../services/noticia.service';
 import { AsyncPipe, CommonModule, DatePipe, NgFor, NgIf } from '@angular/common';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -15,6 +15,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
     CommonModule,
     DatePipe,
     TruncatePipe,
+    TranslatePipe,
     NgIf,
 
   ],
@@ -26,6 +27,7 @@ export class NoticiasListarComponent implements OnInit {
 
   safeContent: SafeHtml = '';
   private noticiaService = inject(NoticiaService);
+  
   noticias$ = this.noticiaService.getNoticias();
 
   constructor(

@@ -5,8 +5,16 @@
   position: relative;
   width: 100%;
   background: linear-gradient(180deg, #004f5b, #002561);
-
 }
+
+.site-footer,
+.site-footer p,
+.site-footer li,
+.site-footer a,
+.site-footer b {
+  line-height: 1.8; /* Try values between 1.6 – 2 for readability */
+}
+
 
 b{
   color: white;

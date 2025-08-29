@@ -63,7 +63,7 @@
 
 
             <div class="uk-grid-small" uk-grid>
-              <!--  
+
               <div class="uk-width-1-2@s">
                 <div class="uk-margin">
                   <label for="firstName" class="uk-form-label"><b> {{ 'primeiro_nome' | translate }} </b></label>
@@ -77,7 +77,7 @@
                   <input id="lastName" formControlName="lastName" type="text" class="uk-input" />
                 </div>
               </div>
--->
+
               <div class="uk-width-1-2@s">
                 <div class="uk-margin">
                   <label for="email" class="uk-form-label"><b> {{'business-email' | translate}} </b></label>
@@ -162,20 +162,24 @@
                 </div>
 
 
-                <div class="uk-margin">
-                  <label for="numColab" class="uk-form-label"><b> {{'numero_colaboradores' | translate }} </b></label>
-                  <select id="numColab" formControlName="numColab"
-                    class="uk-select uk-form-width-medium uk-border-rounded">
-                    <option value="" disabled selected></option>
-                    <option value="0-5 employees">0 – 50</option>
-                    <option value="50-200 employees">50 – 200</option>
-                    <option value="200-500 employees">200 – 500</option>
-                    <option value="500 - 1000 employees">500 – 1000</option>
-                    <option value=" + 1000 employees">+ 1000</option>
-                  </select>
-
-
+                <div class="uk-width-1-1">
+                  <label for="servicoInteresse" class="uk-form-label"><b>{{ 'servico_interesse_revender'| translate
+                      }}</b>
+                  </label>
+                  <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                    <label><input class="uk-checkbox" type="checkbox" />
+                      {{'conectividade' | translate}} </label>
+                    <label><input class="uk-checkbox" type="checkbox" /> {{'acesso_a_internet' | translate }}
+                    </label>
+                    <label><input class="uk-checkbox" type="checkbox" /> {{'data_center' | translate}}
+                    </label>
+                    <label><input class="uk-checkbox" type="checkbox" /> {{'cloud' | translate }} </label>
+                    <label><input class="uk-checkbox" type="checkbox" /> {{'seguranca' | translate}}</label>
+                    <label><input class="uk-checkbox" type="checkbox" />
+                      {{'virtualizacao' | translate}}</label>
+                  </div>
                 </div>
+
 
                 <div class="uk-width-1-1">
                   <label class="uk-form-label" style="color: #1B1B1B; border-radius: 12px; font-weight: 600;">{{
@@ -193,9 +197,6 @@
                 <!-- Submit Button -->
                 <div class="uk-width-1-1">
                   <div class="uk-margin-medium-top uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                    <label><input class="uk-checkbox" type="checkbox" /> {{'confirmar_informacoes' | translate }}
-                      <br />
-                      <a href="#"><b> {{ 'consultar_termos' | translate }}</b></a></label>
                   </div>
                   <button type="submit"
                     class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
@@ -629,30 +630,40 @@
                   </div>
 
 
-                  <div class="uk-width-1-1">
-                    <label class="uk-form-label" style="color: #1B1B1B; border-radius: 12px; font-weight: 600;">{{
-                      'mensagem_label' | translate }}</label>
-                    <textarea class="uk-textarea input-mensagem "
-                      [class.uk-form-danger]="partnershipForm.get('message')?.invalid && partnershipForm.get('message')?.touched"
-                      formControlName="message" rows="5" aria-label="Message"></textarea>
-                    <small class="uk-text-danger"
-                      *ngIf="partnershipForm.get('message')?.invalid && partnershipForm.get('message')?.touched">
-                      {{ 'mensagem_required' | translate }}
-                    </small>
+
+                </div>
+
+
+                <div class="uk-width-1-1@s">
+
+
+                  <div class="uk-width-1-1 uk-margin-small-top uk-margin-large-bottom">
+
+                    <div class="uk-width-1-1">
+                      <label class="uk-form-label" style="color: #1B1B1B; border-radius: 12px; font-weight: 600;">{{
+                        'mensagem_label' | translate }}</label>
+                      <textarea class="uk-textarea input-mensagem "
+                        [class.uk-form-danger]="partnershipForm.get('message')?.invalid && partnershipForm.get('message')?.touched"
+                        formControlName="message" rows="5" aria-label="Message"></textarea>
+                      <small class="uk-text-danger"
+                        *ngIf="partnershipForm.get('message')?.invalid && partnershipForm.get('message')?.touched">
+                        {{ 'mensagem_required' | translate }}
+                      </small>
+                    </div>
+
+
                   </div>
 
                   <!-- Submit Button -->
-                  <div class="uk-width-1-1 uk-margin-medium-top">
 
 
-
-                    <button type="submit" class="uk-button botao-service uk-button-default uk-margin-small-right"
-                      [disabled]="isSubmitting">
-                      <span *ngIf="!isSubmitting">{{'solicitar' | translate}}</span>
-                      <span *ngIf="isSubmitting" uk-spinner></span>
-                    </button>
-                  </div>
+                  <button type="submit" class="uk-button botao-service uk-button-default uk-margin-small-right"
+                    [disabled]="isSubmitting">
+                    <span *ngIf="!isSubmitting">{{'solicitar' | translate}}</span>
+                    <span *ngIf="isSubmitting" uk-spinner></span>
+                  </button>
                 </div>
+
               </div>
             </div>
           </form>
