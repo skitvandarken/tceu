@@ -69,7 +69,7 @@ export class ArtigoPostarComponent {
     this.isSubmitting = true;
 
     try {
-      const postsCollection = collection(this.firestore, 'posts');
+      const postsCollection = collection(this.firestore, 'postsNg');
       await addDoc(postsCollection, {
         title: this.newPost.title,
         content: this.editorContent,

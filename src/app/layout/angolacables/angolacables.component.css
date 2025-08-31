@@ -3,7 +3,7 @@
     background-color: #022561;
 }
 
-.bg-clouds2{
+.bg-clouds2 {
 
     background: url('/img/clouds2.png');
     background-position: center;
@@ -11,23 +11,71 @@
     background-repeat: no-repeat;
     border-radius: 0px 20px 0px 20px;
 
-    }
+}
 
 
 .uk-subnav .uk-subnav-pill {
     color: transparent !important;
 }
 
-.texto-banner {
-    color: white;
-   
-    bottom: 20px;
-    position: absolute;
-    padding: 9px 0px 10px 0px ;
-    font-size: 1.2rem;
-
+.core-services-block {
+    position: relative;
+    min-height: 250px;
 }
 
+@media (min-width: 768px) {
+    .core-services-block {
+        min-height: 350px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .core-services-block {
+        min-height: 450px;
+    }
+}
+
+.core-services-card {
+  background-image: url('/img/core-services.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2),
+              0 6px 20px rgba(0,0,0,0.19);
+  height: 100%;
+  position: relative;
+  min-height: 220px; /* mobile default */
+}
+
+.texto-banner {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .texto-banner {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .core-services-card {
+    min-height: 320px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .core-services-card {
+    min-height: 400px;
+  }
+}
 
 .card-border {
     border: 2px solid #20530a;

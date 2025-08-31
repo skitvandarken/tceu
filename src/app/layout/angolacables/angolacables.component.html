@@ -3,7 +3,7 @@
     <div class="uk-container ">
 
       <div class="uk-text-left">
-        <h1 style="color: white; font-weight: 600">Key numbers</h1>
+        <h1 style="color: white; font-weight: 600">{{'key.numbers' | translate}}</h1>
 
       </div>
       <div
@@ -66,154 +66,151 @@
   </div>
 </div>
 
+<div style="margin-top: 140px" class="uk-container">
+  <div class="uk-grid-small uk-grid-match" uk-grid>
 
-<div style="margin-top: 140px" class="uk-container ">
-  <div class="uk-grid-small uk-grid-match uk-grid-match-height " uk-grid>
-    <!-- First Column (1 row, spans 2 rows) -->
-    <div
-      style="background-image: url('/img/core-services.png'); background-repeat: no-repeat; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-size: cover; z-index: 1; border-radius: 20px"
-      class="uk-width-1-3">
-      <div class="uk-card uk-card-body tall-cell">
-        <div class=" texto-banner">
-          <div style=" border-radius: 10px; right: 20px;">
-            <p style="font-size: 0.8rem;"> CORE SERVICES & SOLUTIONS
-            </p>
-          </div>
+    <div class="uk-width-1-1 uk-width-1-2@m uk-width-1-3@l">
 
-          <p style="font-weight: 700;">Global connectivity, enterprise cloud, storage, network and security made local,
-            easy and affordable.</p>
-
-          <div class="uk-margin-small-top"> 
-          </div>
+      <div class="card-border uk-card uk-card-body small-cell core-services-card">
+        <div class="texto-banner">
+          <p style="font-size: 0.8rem;">{{'core-services' | translate}}</p>
+          <p style="font-weight: 700;">{{'core-services-description' | translate }}</p>
         </div>
       </div>
+
     </div>
 
-    <!-- Second Column (2 rows) -->
-    <div class="uk-width-1-3">
-      <div class="uk-grid-small  uk-grid-match-height" uk-grid>
-        <div class="uk-width-1-1">
-          <div class=" card-border uk-card uk-card-default uk-card-body  small-cell">
-            <p style="color:  #20530a" class="uk-card-title">
-              <span style="color:  #20530a" class="uk-margin-xsmall-right" uk-icon="icon: world; ratio: 2"></span>
-              <b> Connectivity </b>
-            </p>
-            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top "> IP Transit | DIA | Metro
-              Network</p>
-            <p style="color: #000 !important;"
-              class="uk-margin-small-top uk-margin-small-top uk-margin-small-top uk-margin-small-bottom">Connectivity
-              solutions to
-              different endpoints
-              - internet, global nodes or
-              cloud infrastructure.
-            </p>
-            <a routerLink="/connectivity" ><button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
-                style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;">Learn
-                more</button> </a>
-
-          </div>
-        </div>
-        <div class="uk-width-1-1">
-          <div class="card-border uk-card uk-card-default uk-card-body  small-cell">
 
 
-            <p style="color:  #20530a" class="uk-card-title"> <span style="color:  #20530a"
-                class="uk-margin-xsmall-right" uk-icon="icon: cloud-upload; ratio: 2"></span>
-              <b> Cloud </b>
-            </p>
-            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top "> IaaS | Backup | SaaS</p>
-            <p style="color: #000 !important;" class="uk-margin-small-top uk-margin-small-top">100% Locally Resident
-              cloud / billed in Nigerian Naira
-              delivered in different
-              model including dedicated private cloud
 
-            </p>
-
-            <a routerLink="/cloud"><button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
-                style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;">Learn
-                more</button> </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Third Column (2 rows) -->
-    <div class="uk-width-1-3">
+    <!-- Second Column -->
+    <div class="uk-width-1-1 uk-width-1-2@m uk-width-1-3@l">
       <div class="uk-grid-small uk-grid-match" uk-grid>
+
+        <!-- Connectivity -->
         <div class="uk-width-1-1">
-          <div class="card-border uk-card uk-card-default uk-card-body  small-cell">
-            <p style="color:  #20530a" class="uk-card-title"> <span style="color:  #20530a"
-                class="uk-margin-xsmall-right" uk-icon="icon: lock; ratio: 2"></span>
-              <b> Security </b>
+          <div class="card-border uk-card uk-card-default uk-card-body small-cell">
+            <p class="uk-card-title" style="color: #20530a">
+              <span uk-icon="icon: world; ratio: 2" class="uk-margin-xsmall-right"></span>
+              <b>{{'service-connectivity' | translate }}</b>
             </p>
-            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top "> Anti-DDoS | WAF |FSaaS</p>
-
-            <p style="color: #000 !important;" class="uk-margin-small-top uk-margin-small-top">DDoS Protection and
-              Firewall-as-a-Service / security
-              solution for physical
-              and cloud infrastrucutre
-
+            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top">
+              {{'connectivity-service-headline' | translate }}
             </p>
-
-            <a routerLink="/security" ><button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
-                style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;">Learn
-                more</button> </a>
-
+            <a routerLink="/connectivity">
+              <button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
+                style="background-color:#FAA61A; color:#003283; font-weight:700; padding:8px 40px;">
+                {{ 'learn-more' | translate }}
+              </button>
+            </a>
           </div>
         </div>
+
+        <!-- Cloud -->
         <div class="uk-width-1-1">
-          <div class="card-border uk-card uk-card-default uk-card-body  small-cell">
-            <p style="color:  #20530a" class="uk-card-title"> <span style="color:  #20530a"
-                class="uk-margin-xsmall-right" uk-icon="icon: server; ratio: 2"></span>
-              <b> Data Centers
-              </b>
+          <div class="card-border uk-card uk-card-default uk-card-body small-cell">
+            <p class="uk-card-title" style="color: #20530a">
+              <span uk-icon="icon: cloud-upload; ratio: 2" class="uk-margin-xsmall-right"></span>
+              <b>{{'servicos.cloud' | translate }}</b>
             </p>
-
-            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top "> Colocation | GDI | Managed
-              Services</p>
-
-            <p style="color: #000 !important;" class="uk-margin-small-top uk-margin-small-top">Reliable Data centers in
-              Lagos / host your physical
-              infrastructure in our
-              facility in Lekki
+            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top">
+              {{'servicos.cloud.headline' | translate }}
             </p>
-
-            <a routerLink="/data-center" ><button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
-                style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;">Learn
-                more</button> </a>
-
+            <p style="color: #000 !important;" class="uk-margin-small-top">
+              {{'servicos.cloud.desc' | translate }}
+            </p>
+            <a routerLink="/cloud">
+              <button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
+                style="background-color:#FAA61A; color:#003283; font-weight:700; padding:8px 40px;">
+                {{ 'learn-more' | translate }}
+              </button>
+            </a>
           </div>
         </div>
+
       </div>
     </div>
 
+    <!-- Third Column -->
+    <div class="uk-width-1-1 uk-width-1-2@m uk-width-1-3@l">
+      <div class="uk-grid-small uk-grid-match" uk-grid>
 
+        <!-- Security -->
+        <div class="uk-width-1-1">
+          <div class="card-border uk-card uk-card-default uk-card-body small-cell">
+            <p class="uk-card-title" style="color:#20530a">
+              <span uk-icon="icon: lock; ratio: 2" class="uk-margin-xsmall-right"></span>
+              <b>{{'servicos.seguranca' | translate }}</b>
+            </p>
+            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top">
+              {{'servicos.seguranca.headline' | translate }}
+            </p>
+            <a routerLink="/security">
+              <button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
+                style="background-color:#FAA61A; color:#003283; font-weight:700; padding:8px 40px;">
+                {{ 'learn-more' | translate }}
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Data Centers -->
+        <div class="uk-width-1-1">
+          <div class="card-border uk-card uk-card-default uk-card-body small-cell">
+            <p class="uk-card-title" style="color:#20530a">
+              <span uk-icon="icon: server; ratio: 2" class="uk-margin-xsmall-right"></span>
+              <b>{{'data-centers' | translate}}</b>
+            </p>
+            <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top">
+              {{'data-center-services' | translate }}
+            </p>
+            <p style="color: #000 !important;" class="uk-margin-small-top">
+              {{'data-center-services-description' | translate }}
+            </p>
+            <a routerLink="/data-center">
+              <button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
+                style="background-color:#FAA61A; color:#003283; font-weight:700; padding:8px 40px;">
+                {{ 'learn-more' | translate }}
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </div>
 
-<div style="margin-top: 140px; background-image: url('/img/serviceproviders.png'); object-fit: cover;" class="">
+
+<!-- Service Provider Ad -->
+<div
+  style="margin-top: 140px; background-image: url('/img/serviceproviders.png'); background-size: cover; background-position: center;"
+  class="uk-section">
   <div class="uk-container uk-padding">
-    <div class="uk-grid-collapse uk-child-width-1-2@m" uk-grid>
+    <div class="uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+
       <!-- Column 1 (Left - Text) -->
-      <div class="uk-flex uk-flex-middle"> <!-- Align text vertically -->
+      <div class="uk-text-center uk-text-left@m">
         <h1 class="uk-margin-remove" style="color: white; font-weight: 700;">
-          For service providers and partners
+          {{ 'for.service-providers' | translate }}
         </h1>
       </div>
 
       <!-- Column 2 (Right - Button) -->
-      <div class="uk-flex uk-flex-middle uk-flex-right@m"> <!-- Right-align button on medium+ screens -->
+      <div class="uk-flex uk-flex-center uk-flex-right@m uk-margin-top uk-margin-remove-top@m">
         <a routerLink="/contacto">
-          <button class="uk-button uk-width-1-1 uk-button-medium uk-border-pill"
-            style="background-color:#FAA61A ; color:#003283 ;font-weight: 700; padding: 8px 40px;">
-            <span style="margin: 5px">Book a meeting</span>
+          <button class="uk-button uk-width-auto uk-button-medium uk-border-pill"
+            style="background-color:#FAA61A; color:#003283; font-weight: 700; padding: 8px 40px;">
+            <span style="margin: 5px">{{ 'book.meeting' | translate }}</span>
           </button>
         </a>
       </div>
+
     </div>
   </div>
 </div>
+
 
 
 
@@ -226,7 +223,8 @@
       <div
         style=" border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
         class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left">
-        <h3 class="uk-card-title"> <b> 99.95% SLA </b> </h3>
+        <h3 class="uk-card-title"> <b> {{'sla.headline' | translate}}</b> </h3>
+        <p> {{'sla.desc' | translate}} </p>
 
       </div>
     </div>
@@ -235,7 +233,7 @@
         style="border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
         class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left">
         <h3 class="uk-card-title"> <b> 24x7</b> </h3>
-        <p>Local Support and dedicated suport team
+        <p>{{'support.desc' | translate}}
         </p>
       </div>
     </div>
@@ -243,215 +241,27 @@
       <div
         style=" border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
         class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left">
-        <h3 class="uk-card-title"><b> Payments in Local Currency ₦ </b> </h3>
-        <p>Make All Your Payments in Naira!</p>
+        <h3 class="uk-card-title"><b> {{'payments.headline' | translate}} </b> </h3>
+        <p> {{'payments.desc' | translate}} </p>
       </div>
     </div>
     <div>
       <div
         style="border-radius: 20px 0px 20px 0px ; border-left-color: #20530a; border-left-width: 20px; border-left-style: solid; "
         class="uk-card uk-card-default uk-card-hover uk-card-body uk-text-left ">
-        <h3 class="uk-card-title"><b> Interconnected and Secure </b> </h3>
-        <p>Backed by Angola Cables global metro networks</p>
+        <h3 class="uk-card-title"><b>{{'interconnected.secure' | translate}} </b> </h3>
+        <p>{{ 'interconnected.secure.desc' | translate}}</p>
       </div>
     </div>
 
   </div>
 
-
 </div>
-
-
-
-
 
 
 
 <app-slideshow></app-slideshow>
 
-<!-- 
-<div class="uk-container">
-
-  <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-text-center uk-grid-match-height uk-grid-small" uk-grid>
-
-    <div>
-      <div class="uk-container uk-margin-large-top">
-        <h2 class="uk-text-left uk-heading">Global Connectivity, Enterprise Cloud, Storage, Network and Security made
-          local, easy and affordable.​</h2>
-        <p class="uk-text-left  uk-margin-small-top">Whether you’re a multinational corporation or a fast-growing
-          enterprise, we
-          deliver flexible, innovative solutions ranging from security and cloud services to IP transit and data
-          storage—designed to fit your budget and meet your unique resource requirements.</p>
-
-      </div>
-    </div>
-
-    <div>
-      <div class="uk-container uk-margin-large-top">
-        <div class=" uk-text-left bg-clouds2 uk-padding uk-light">
-          <img src="/img/cl2.png" alt="Angola Cables Logo" class="uk-margin-small-bottom"
-            style="width: 150px; height: auto;">
-          <h3>Launch a virtual machine in less than 5 minutes in Clouds2Africa</h3>
-          <p>Our cloud is built to meet all your business needs
-          </p>
-          <div class="uk-margin-small-top">
-            <button class="uk-button uk-button-small uk-border-pill uk-button-default uk-padding">Get started
-              now</button>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-
--->
-
-<!-- 
-<div class="uk-container uk-margin-large-top">
-  <div class="uk-child-width-1-1 uk-child-width-1-1@m uk-text-center  uk-grid-small">
-   
-    <div>
-      <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-4@m" uk-grid>
-      
-        <div class="uk-card">
-          <div class="card-tcng uk-text-left uk-padding uk-height-1-1" style="position: relative; ">
-            <div>
-              <span style="color:white !important" uk-icon="icon: world; ratio: 2"></span>
-              <h4 style="color: #fff;"><b>Dedicated and protected Connectivity</b></h4>
-              <ul class="uk-list uk-margin-small-top" style="color: white; font-weight: 200;">
-                <li class="bg-lista">Connectivity solutions to different endpoints - internet, global nodes or cloud
-                  infrastructure.</li>
-              </ul>
-            </div>
-            <div class="uk-margin" style="position: absolute; bottom: 20px;">
-              <a href="">
-                <button style="background-color: #fff; color: #000;"
-                  class="uk-button uk-button-small uk-border-pill uk-padding">
-                  Request a Proposal
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-       
-        <div class="uk-card">
-          <div class="card-tcng uk-text-left uk-padding uk-height-1-1" style="position: relative; ">
-            <div>
-              <span style="color:white !important" uk-icon="icon: cloud-upload; ratio: 2"></span>
-              <h4 style="color: #fff;"><b>100% Locally Resident cloud</b></h4>
-              <ul class="uk-list uk-margin-small-top" style="color: white; font-weight: 200;">
-                <li>Billed in Nigerian Naira delivered in different model including dedicated private cloud</li>
-
-
-              </ul>
-            </div>
-            <div class="uk-margin" style="position: absolute; bottom: 20px;">
-              <a href="">
-                <button style="background-color: #fff; color: #000;"
-                  class="uk-button uk-button-small uk-border-pill uk-padding">
-                  Migrate to Clouds2Africa
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        
-        <div class="uk-card">
-          <div class="card-tcng uk-text-left uk-padding uk-height-1-1" style="position: relative; ">
-            <div>
-              <span style="color:white !important" uk-icon="icon: server; ratio: 2"></span>
-              <h4 style="color: #fff;"><b>Reliable data centers in Lagos</b></h4>
-              <ul class="uk-list uk-margin-small-top" style="color: white; font-weight: 200;">
-                <li class="bg-lista">Host your physical infrastructure in our facility in Lekki</li>
-              </ul>
-            </div>
-            <div class="uk-margin" style="position: absolute; bottom: 20px;">
-              <a href="">
-                <button style="background-color: #fff; color: #000;"
-                  class="uk-button uk-button-small uk-border-pill uk-padding">
-                  Book a Visit
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-       
-        <div class="uk-card">
-          <div class="card-tcng uk-text-left uk-padding uk-height-1-1" style="position: relative; min-height: 400px;">
-            <div>
-              <span style="color:white !important" uk-icon="icon: lock; ratio: 2"></span>
-              <h4 style="color: #fff;"><b>DoS Protection and Firewall-as-a-Service</b></h4>
-              <ul class="uk-list uk-margin-small-top" style="color: white; font-weight: 200;">
-                <li class="bg-lista">Security solution for physical and cloud infrastrucutre</li>
-              </ul>
-            </div>
-            <div class="uk-margin" style="position: absolute; bottom: 20px;">
-              <a href="">
-                <button style="background-color: #fff; color: #000;"
-                  class="uk-button uk-button-small uk-border-pill uk-padding">
-                  Get Started
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
--->
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<div class="uk-container uk-margin-large-top">
-
-  <div class="uk-container uk-margin-large-top ">
-
-    <div class="uk-grid-divider uk-flex-center uk-text-center uk-child-width-expand@s" uk-grid>
-      <div class="uk-width-1-4">
-        <p class="uk-margin-small-top"
-          style=" font-size: 1.8rem; text-align: left !important; font-weight: 800; color: rgba(0, 0, 38, 1);"> Global
-          Presence with Local Business</p>
-      </div>
-      <div class="uk-width-1-4">
-        <img style="width: 80px;" class="uk-border-rounded" src="img/conectada-mundo.png" />
-        <p class="uk-margin-small-top" style="line-height: normal; font-size: 1rem; color: rgba(0, 0, 38, 1);"> 23rd
-          most interconnected
-          operator in the world</p>
-      </div>
-      <div class="uk-width-1-4">
-        <img style="width: 80px;" class="uk-border-rounded" src="img/first-interconected-angola-cables.png" />
-        <p class="uk-margin-small-top" style=" font-size: 1rem; color: rgba(0, 0, 38, 1);">Most interconnected
-          operator in Africa</p>
-      </div>
-      <div class="uk-width-1-4">
-        <img style="height: 80px;" class="uk-border-rounded" src="img/selocplp-pt-2024.png" />
-        <p class="uk-margin-small-top" style=" font-size: 1rem; color: rgba(0, 0, 38, 1);"> Most interconnected
-          operator in CPLP</p>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
--->
 
 <div class="uk-container uk-padding">
   <!-- Main Grid Layout -->
@@ -459,14 +269,14 @@
     <!-- Left Column (Main Content - Events) -->
     <div class="uk-width-2-3@m">
 
-      <h2 class="uk-heading">News and <b>Media</b></h2>
+      <h2 class="uk-heading">{{'news.and' | translate}} <b> {{'media' | translate}}</b></h2>
       <app-noticias-listar></app-noticias-listar>
     </div>
 
     <!-- Right Column (Aside Panel) -->
     <div class="uk-width-1-3@m">
       <div class="uk-card  ">
-        <h2 class="uk-heading">Upcoming <b>Events</b></h2>
+        <h2 class="uk-heading">{{'upcomming' | translate}} <b>{{'events' | translate}}</b></h2>
         <app-eventos-listar></app-eventos-listar>
 
       </div>

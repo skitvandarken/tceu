@@ -7,8 +7,11 @@
 
                 <!-- Featured Image -->
                 <div *ngIf="noticia.imageUrl" class="uk-card-media-top">
-                    <img [src]="noticia.imageUrl" class="" alt="Imagem de destaque"
-                        style="border-top-left-radius: 20px; border-top-right-radius: 20px; height: 150px; width: auto; object-fit: cover;" />
+                    <img [src]="noticia.imageUrl" alt="Imagem de destaque" style="border-top-left-radius: 20px; 
+           border-top-right-radius: 20px; 
+           width: 100%; 
+           height: 150px; 
+           object-fit: cover;" />
                 </div>
 
                 <div class=" "
@@ -17,22 +20,23 @@
                         style="font-size: 0.9rem; margin-bottom: 5px;">
                         {{ noticia.createdAt?.toDate() | date: 'dd/MM/yyyy ' }}
                     </p>
-                    <a style="color: #1A1A1A;" target="_blank" href="{{ noticia.noticiaUrl }}" >
-<p style="color: white !important; min-height: 60px;" class="uk-light"
-   [innerHTML]="noticia.title | truncate:60">
-</p>
+                    <a style="color: #1A1A1A;" target="_blank" href="{{ noticia.noticiaUrl }}">
+                        <p style="color: white !important; min-height: 60px;" class="uk-light"
+                            [innerHTML]="noticia.title | truncate:60">
+                        </p>
 
-   </a>
+                    </a>
                     <div class="uk-child-width-expand@s" uk-grid>
                         <div>
                             <div class=" ">
-                                <p style="font-size: .8rem; color: #C2C4D1;" class="uk-text-left">{{ noticia.author }}</p>
+                                <p style="font-size: .8rem; color: #C2C4D1;" class="uk-text-left">{{ noticia.author }}
+                                </p>
                             </div>
                         </div>
                         <div>
                             <div class="">
-                                <a style="color:  #28C1FD; font-size: 0.95rem;"
-                                    href="{{ noticia.noticiaUrl }}" target="_blank">
+                                <a style="color:  #28C1FD; font-size: 0.95rem;" href="{{ noticia.noticiaUrl }}"
+                                    target="_blank">
                                     <p class="uk-text-right">Ler Mais</p>
                                 </a>
 
@@ -66,14 +70,14 @@
 
 
 
-  <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
-    <div>
-      <div class="uk-card uk-text-left " style="padding-top: 30px;">
-        <a style="color: rgba(69, 69, 69, 1); border-color: rgba(69, 69, 69, 1); font-weight:600; border-width: 2px; border-style: solid; padding: 2.5px 40px;"
-          class="uk-button uk-button-default uk-border-pill" routerLink="/news">
-          {{ 'ver.todos' | translate }} </a>
-      </div>
+    <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+        <div>
+            <div class="uk-card uk-text-left " style="padding-top: 30px;">
+                <a style="color: rgba(69, 69, 69, 1); border-color: rgba(69, 69, 69, 1); font-weight:600; border-width: 2px; border-style: solid; padding: 2.5px 40px;"
+                    class="uk-button uk-button-default uk-border-pill" routerLink="/news">
+                    {{ 'ver.todos' | translate }} </a>
+            </div>
+        </div>
     </div>
-  </div>
 
 </div>

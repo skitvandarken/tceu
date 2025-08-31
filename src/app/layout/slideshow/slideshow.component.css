@@ -85,3 +85,78 @@
         transform: translateY(-20px) translateX(20px);
     }
 }
+
+@media (max-width: 640px) {
+    .modern-gradient-bg .uk-padding {
+        padding-left: 15px !important;
+        /* smaller padding */
+        padding-right: 15px !important;
+    }
+
+    .uk-slider-items.uk-grid {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+.modern-gradient-bg .uk-text-left {
+    max-width: 600px;       /* prevents text from going too wide */
+    word-wrap: break-word;  /* breaks very long words if needed */
+}
+
+@media (max-width: 960px) {
+    .modern-gradient-bg .uk-text-left {
+        max-width: 90%;     /* keep good padding on smaller screens */
+    }
+}
+
+@media (max-width: 640px) {
+    .modern-gradient-bg .uk-text-left {
+        max-width: 100%;
+        padding-right: 20px; /* ensures space on right edge */
+    }
+}
+
+
+.uk-button {
+    white-space: nowrap; /* keeps text on one line when possible */
+}
+
+.uk-button span {
+    font-size: 1rem; /* base size */
+}
+
+@media (max-width: 960px) {
+    .uk-button span {
+        font-size: 0.9rem;  /* slightly smaller */
+    }
+    .uk-button {
+        padding: 6px 30px; /* reduce horizontal padding */
+    }
+}
+
+@media (max-width: 640px) {
+    .uk-button span {
+        font-size: 0.8rem;  /* smaller on phones */
+    }
+    .uk-button {
+        padding: 5px 20px; /* more compact */
+    }
+}
+
+.modern-gradient-bg h1 {
+    font-size: 2rem;
+}
+
+@media (max-width: 960px) {
+    .modern-gradient-bg h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .modern-gradient-bg h1 {
+        font-size: 1.3rem;
+    }
+}
