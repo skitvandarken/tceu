@@ -1,7 +1,8 @@
 <div class="uk-position-relative">
     <nav class="uk-navbar-container">
         <div class="uk-container">
-<div uk-navbar="dropbar: true; dropbar-anchor: !.uk-navbar-container; target-y: !.uk-navbar-container; delay-hide: 0; delay-show: 0">
+            <div
+                uk-navbar="dropbar: true; dropbar-anchor: !.uk-navbar-container; target-y: !.uk-navbar-container; delay-hide: 0; delay-show: 0">
 
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav">
@@ -63,7 +64,7 @@
                                                         CLOUD </b> </a></li>
 
                                             <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
-                                                    fragment="IaaS">Virtual
+                                                    fragment="iaas">Virtual
                                                     Infrastructure
                                                     (IaaS)
                                                 </a>
@@ -83,8 +84,8 @@
                                             <li class="uk-nav-divider">Centralized management for cloud backups and
                                                 recovery strategy</li>
 
-                                                <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
-                                                    fragment="backup">Storage-as-a-service
+                                            <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
+                                                    fragment="storage">Storage-as-a-service
                                                 </a>
                                             </li>
                                             <li class="uk-nav-divider">Flexible and affordable storage for large data
@@ -100,7 +101,8 @@
                                             <li class=" uk-nav-header"><a routerLink="/data-center"><b><span
                                                             class="uk-margin-small-right" uk-icon="cloud-upload"></span>
                                                         DATA CENTER </b> </a> </li>
-                                            <li class="uk-active uk-margin-small-top"><a routerLink="/data-center">Colocation</a></li>
+                                            <li class="uk-active uk-margin-small-top"><a
+                                                    routerLink="/data-center">Colocation</a></li>
                                             <li class="uk-nav-divider">Rack Colocation</li>
                                             <li class="">Interconnectivity </li>
                                             <li class="">Remote Hands & Support </li>
@@ -115,7 +117,8 @@
                                                     routerLink="/security"><b><span class="uk-margin-small-right"
                                                             uk-icon="lock"></span> SECURITY
                                                     </b></a></li>
-                                            <li class="uk-active uk-margin-small-top"><a routerLink="/security">Anti-DDoS</a></li>
+                                            <li class="uk-active uk-margin-small-top"><a
+                                                    routerLink="/security">Anti-DDoS</a></li>
                                             <li class="uk-nav-divider">Maximize your network security from DDOS attacks
                                             </li>
 
@@ -138,10 +141,13 @@
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> SERVICE
                                                     PROVIDERS </b></li>
-                                            <li class="">Bulk Capacity </li>
-                                            <li class="">Cloud Partner </li>
+                                            <li class=""> <a routerLink="/solution/W6TKykQybafg9iVfYzrh"> Bulk Capacity
+                                                </a> </li>
+                                            <li class=""><a routerLink="/solution/R446yVwVh58fu47SWfqz"> Cloud Partner
+                                                </a> </li>
 
-                                            <li class="">Africa Digital Bridge </li>
+                                            <li class=""><a routerLink="/solution/UxSwnLK8v0tTjLXtwW07">Africa Digital
+                                                    Bridge</a> </li>
 
 
 
@@ -153,11 +159,12 @@
                                             <li class=" uk-nav-header uk-margin-small-top "><b><span class=""
                                                         uk-icon=""></span> TECHNOLOGY
                                                 </b></li>
-                                            <li class="">Virtual server room </li>
-                                            <li class="">Uptime assurance, Disaster Recovery and Global Content Delivery
+                                            <li class=""><a routerLink="/solution/aGazTik0cU33m9Ply2R4">Virtual server
+                                                    room </a></li>
+                                            <li class=""><a routerLink="/solution/n5Xftlth6X6Gz8YsGf35"> Uptime
+                                                    assurance, Disaster Recovery<br> and Global Content Delivery</a>
                                             </li>
 
-                                            <li class="">AI Interconnections </li>
 
 
 
@@ -167,12 +174,13 @@
 
 
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header uk-margin-small-top "><b><span class=""
-                                                        uk-icon=""></span> ENERGY
-                                                </b></li>
+                                            <li class=" uk-nav-header uk-margin-small-top "> <b>ENERGY</b>
+                                            </li>
 
-                                            <li class="">Point-to-Point/multipoints circuits</li>
-                                            <li class="">Private cloud as an alternative to physical infrastructure</li>
+                                            <li><a routerLink="/solution/xmgZtnpcULyfJn4S5CoU">
+                                                    Point-to-Point/Multipoints circuits</a></li>
+                                            <li class=""><a routerlink="/solution/IkS1RLuNtKt7syLSDfHc"> Private cloud
+                                                    as an alternative to physical infrastructure </a></li>
 
 
 
@@ -188,11 +196,15 @@
                                             <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> FINANCE
                                                     SERVICES & INSURANCE
                                                     (FSI) </b></li>
-                                            <li class="">Premium connectivity </li>
-                                            <li class="">Private cloud for inhouse management </li>
+                                            <li class=""><a routerLink="/solution/r6N5oiZ8kNGtsoBckh1G">Premium
+                                                    connectivity</a> </li>
+                                            <li class=""><a routerLink="/solution/IkS1RLuNtKt7syLSDfHc">Private cloud
+                                                    for inhouse management </a></li>
 
-                                            <li class="">Secured infrastructure against attack </li>
-                                            <li class="">Financial Ais and global finance exchange connections</li>
+                                            <li class=""><a routerLink="/solution/gmxOyIYW80aGNnp95xsM">Secured
+                                                    infrastructure against attack </a> </li>
+                                            <li class=""><a routerLink="/solution/v9Tr2HSReshEXglN603y"> Financial Ais
+                                                    and global finance exchange connections</a></li>
 
 
 
@@ -204,9 +216,12 @@
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> e-GOVERNMENT
                                                 </b></li>
-                                            <li class="">Dedicated Government cloud node</li>
-                                            <li class="">Private communications</li>
-                                            <li class="">Private cloud as an alternative to physical infrastructure</li>
+                                            <li class=""><a routerLink="/solution/PJBrln5DGSupIWqjs03Y">Dedicated
+                                                    Government cloud node </a></li>
+                                            <li class=""><a routerLink="/solution/RnBSDi3fKPpcvdfjrr8r">Private
+                                                    communications</a></li>
+                                            <li class=""><a routerLink="/solution/bUkeL79XHUhhvEBNNugN"> Private cloud
+                                                    as an alternative to physical infrastructure</a></li>
 
 
 
@@ -220,7 +235,7 @@
 
                                     <div>
 
-
+<!-- 
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class=" uk-nav-header "><b><span class="" uk-icon=""></span> GENERAL
                                                     SALES & CAMPAIGNS
@@ -234,7 +249,7 @@
 
                                         </ul>
 
-
+                                    -->
 
                                     </div>
 
@@ -252,7 +267,7 @@
                         </li>
 
                         <li>
-                            <a routerLink="/sobre" href="#">Company</a>
+                            <a routerLink="/about" href="#">Company</a>
                         </li>
                     </ul>
                 </div>
@@ -260,13 +275,14 @@
                 <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav">
                         <li>
-                            <a routerLink="/contacto" style="color: #002561 ;" href="#"><button
+                            <a routerLink="/contact" style="color: #002561 ;" href="#"><button
                                     style="background-color: transparent; color: #fff ; border-color: white; border-style: solid; border-width: 0.5px;"
                                     class="uk-button botao-contacto">Contact Us</button> </a>
 
                         </li>
 
                         <li class="uk-navbar-item">
+                            <!-- 
                             <div class="uk-navbar-item">
                                 <form class="uk-form uk-margin-remove">
                                     <div uk-form-custom="target: > * > span:first-child" class="uk-form-custom">
@@ -281,7 +297,7 @@
                                             <span class="uk-flex uk-flex-middle">
                                                 <!-- 
                                             <img class="bandeiras" [src]="selectedFlag" id="selected-flag"
-                                                style="height: 16px; width: auto; margin-right: 8px;"> -->
+                                                style="height: 16px; width: auto; margin-right: 8px;"> 
                                                 <span id="selected-language"
                                                     style="font-size: 14px; font-weight: bold;">{{
                                                     selectedLanguage }}</span>
@@ -291,6 +307,7 @@
                                     </div>
                                 </form>
                             </div>
+                            -->
                         </li>
                     </ul>
                 </div>

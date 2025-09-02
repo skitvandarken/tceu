@@ -4,10 +4,11 @@ import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 
 import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-seguranca',
-  imports: [Ad2Component, MenuComponent, RodapeComponent, Ad2Component, TranslatePipe], // Inserido
+  imports: [RouterLink, Ad2Component, MenuComponent, RodapeComponent, Ad2Component, TranslatePipe], // Inserido
   templateUrl: './seguranca.component.html',
   styleUrl: './seguranca.component.css'
 })

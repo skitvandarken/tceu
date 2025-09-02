@@ -7,6 +7,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 import { ChangeDetectorRef } from '@angular/core';
 
+declare var UIkit: any; // add at the top of your component .ts file
+
+
 @Component({
   selector: 'app-menu',
   imports: [RouterLink, CommonModule, TranslateModule,],
@@ -23,7 +26,24 @@ export class MenuComponent implements OnInit {
     });
   }
 
+closeDropdowns(): void {
+  // Close all dropdowns
+  const openDrops = document.querySelectorAll('.uk-navbar-dropdown.uk-open');
+  openDrops.forEach(drop => drop.classList.remove('uk-open'));
 
+  // Properly hide the dropbar via UIkit
+  const dropbar = document.querySelector('.uk-navbar-dropbar');
+  if (dropbar) {
+    dropbar.classList.remove('uk-open');
+(dropbar as HTMLElement).style.height = '0px';  }
+
+  // If you want to fully reset the component:
+  const nav = document.querySelector('[uk-navbar]'); 
+  if (nav) {
+    const navbar = UIkit.navbar(nav);
+    navbar.$emit('hide'); // force close
+  }
+}
   
   constructor(
     public auth: AuthService,
@@ -40,6 +60,14 @@ export class MenuComponent implements OnInit {
   window.addEventListener('scroll', () => {
     const openDrops = document.querySelectorAll('.uk-navbar-dropdown.uk-open');
     openDrops.forEach(drop => drop.classList.remove('uk-open'));
+  });
+
+    // Close dropdowns on click inside
+  document.addEventListener('click', (event: Event) => {
+    const target = event.target as HTMLElement;
+    if (target.closest('.uk-navbar-dropdown a')) {
+      this.closeDropdowns();
+    }
   });
   
     this.auth.isAuthenticated$.subscribe(isAuthenticated => {

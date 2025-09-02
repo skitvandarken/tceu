@@ -5,20 +5,20 @@ import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { RouterLink } from "@angular/router";
 
 
 @Component({
   selector: 'app-noticias-listar',
   imports: [
-
     AsyncPipe,
     CommonModule,
     DatePipe,
     TruncatePipe,
     TranslatePipe,
     NgIf,
-
-  ],
+    RouterLink
+],
   templateUrl: './noticias-listar.component.html',
   styleUrl: './noticias-listar.component.css'
 })

@@ -1,22 +1,21 @@
-import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'; // 👈 Needed for fragment detection
+import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild, NgZone, OnDestroy } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
-declare const UIkit: any;
-
-
-import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { Ad2Component } from '../../layout/ad2/ad2.component';
+import { Subject, takeUntil } from 'rxjs';
+
+declare const UIkit: any;
 
 @Component({
   selector: 'app-cloudservices',
   imports: [
-
     MenuComponent,
     RodapeComponent,
     Ad2Component,
-
-    TranslatePipe // Inserido
+    TranslatePipe,
+    RouterLink
   ],
   templateUrl: './cloudservices.component.html',
   styleUrl: './cloudservices.component.css'
@@ -42,23 +41,24 @@ export class CloudservicesComponent implements AfterViewInit {
     this.route.fragment.subscribe(fragment => {
       if (!fragment) return;
 
+      // Switch UIkit tab
       switch (fragment) {
-        case 'iaas':          // ✅ 
+        case 'iaas':
           this.switchTab(0);
           break;
-        case 'backup':        // ✅ 
+        case 'backup':
           this.switchTab(1);
           break;
-        case 'storage':       // ✅ 
+        case 'storage':
           this.switchTab(2);
           break;
-       
+      
       }
 
-      // ✅ smooth scroll into view
+      // Scroll to the actual target element by fragment id
       const target = document.getElementById(fragment);
       if (target) {
-        const headerOffset = 180;
+        const headerOffset = 180; // 👈 height of your fixed header
         const elementPosition = target.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerOffset;
 

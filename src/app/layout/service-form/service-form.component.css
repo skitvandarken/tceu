@@ -83,23 +83,24 @@
 
 
 
-
 .botao-service {
   background-color: #fff;        /* white background */
   color: #002561;               /* dark blue text */
   font-weight: 700;
   padding: 8px 40px;
   border-radius: 14px;
-  border: 2px solid #002561;    /* add border for better contrast */
+  border: 2px solid #002561;    /* border */
   transition: all 0.3s ease;    /* smooth effect */
+  cursor: pointer;
 }
 
-/* When selected (Angular applies uk-button-primary) */
+/* When selected */
 .botao-service.uk-button-primary {
   background-color: #002561;    /* dark blue background */
-  color: #fff;                 /* white text */
+  color: #fff;                  /* white text */
   border-color: #002561;
 }
+
 
 
 

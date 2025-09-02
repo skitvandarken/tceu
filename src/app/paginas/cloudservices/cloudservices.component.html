@@ -40,9 +40,9 @@
       <!-- Content Switcher -->
       <div class="timeline-content uk-switcher ">
         <!-- Internet Connections -->
-        <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
-          <div>
-            <div  class="uk-card uk-card-body">
+        <div id="iaas" class=" scroll-target uk-child-width-1-2@m uk-grid-divider" uk-grid>
+          <div class="">
+            <div class="uk-card uk-card-body">
               <h2 class="service-title">Virtualized computing resources such as servers, storage, and networking
               </h2>
               <div class="industry-list">
@@ -69,11 +69,11 @@
               </div>
             </div>
           </div>
-          <div class="scroll-target" id="iaas">
+          <div>
             <div class="uk-card uk-card-body uk-text-left">
               <ul uk-accordion="collapsible: false">
                 <li class="uk-open">
-                  <a class="uk-accordion-title" href><b>Virtual Infrastructure (IaaS)</b></a>
+                  <a class="uk-accordion-title"><b>Virtual Infrastructure (IaaS)</b></a>
                   <div class="uk-accordion-content">
                     <p>On demand virtualized computing resources over the internet, such as compute servers, storage,
                       and networking on our B2B management portal; flexible and scalable. Built to meet and support
@@ -84,12 +84,20 @@
 
 
               </ul>
+
+
+              <div class="uk-margin">
+                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                  <span style="font-weight: 600;">Talk to an expert</span>
+                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Private Metro Connections -->
-        <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
+        <div id="backup" class="scroll-target uk-child-width-1-2@m uk-grid-divider" uk-grid>
           <div>
             <div class="uk-card uk-card-body">
               <h2 class="service-title">Centralized management for cloud backups and recovery strategy</h2>
@@ -105,13 +113,20 @@
                 <li>Continuous data protection </li>
                 <li>RTOs close to zero for a protected workloads</li>
               </ul>
+
+              <div class="uk-margin">
+                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
+                  <span style="font-weight: 600;">Talk to an expert</span>
+                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="scroll-target" id="backup">
+          <div>
             <div class="uk-card uk-card-body uk-text-left">
               <ul uk-accordion="collapsible: false">
                 <li class="uk-open">
-                  <a class="uk-accordion-title" href><b>Cloud Backup (Backups2Africa)</b></a>
+                  <a class="uk-accordion-title"><b>Cloud Backup (Backups2Africa)</b></a>
                   <div class="uk-accordion-content">
                     <p>Offers automation and the centralised management of backups and data recovery (disaster recovery)
                       with secure cloud data storage to enable a simply and quick means to recover your data.</p>
@@ -123,8 +138,8 @@
         </div>
 
         <!-- International Private Circuit -->
-        <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
-          <div>
+        <div class="scroll-target uk-child-width-1-2@m uk-grid-divider" uk-grid>
+          <div id="storage" class="scroll-target">
             <div class="uk-card uk-card-body">
               <h2 class="service-title">Flexible and affordable storage for large data management
               </h2>
@@ -146,38 +161,49 @@
                 <li>Zero ingress/egress/IOPs charges</li>
                 <li>Business Continuity</li>
               </ul>
+
+
+
+              <div class="uk-margin">
+                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn">
+                  <span style="font-weight: 600;">Talk to an expert</span>
+                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
+                </a>
+              </div>
             </div>
           </div>
           <div>
-            <div id="storage" class="uk-card uk-card-body uk-text-left">
-              <ul uk-accordion="collapsible: false">
-                <li class="uk-open">
-                  <a class="uk-accordion-title" href><b>Storage-as-a-Service
-                    </b></a>
-                  <div class="uk-accordion-content">
-                    <p>Provides scalable and flexible data storage capabilities to organizations to store, manage, and
-                      access their data in a secure, cost-effective, and efficient manner without the need to invest in
-                      or maintain physical storage infrastructure.</p>
-                  </div>
-                </li>
-              </ul>
+            <div>
+              <div class="uk-card uk-card-body uk-text-left">
+                <ul uk-accordion="collapsible: false">
+                  <li class="uk-open">
+                    <a class="uk-accordion-title"><b>Storage-as-a-Service
+                      </b></a>
+                    <div class="uk-accordion-content">
+                      <p>Provides scalable and flexible data storage capabilities to organizations to store, manage, and
+                        access their data in a secure, cost-effective, and efficient manner without the need to invest
+                        in
+                        or maintain physical storage infrastructure.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+
+
         </div>
-
-
       </div>
     </div>
   </div>
-</div>
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
-
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
 
 
-<app-ad2></app-ad2>
+
+  <app-ad2></app-ad2>
 
 
-<app-rodape></app-rodape>
+  <app-rodape></app-rodape>

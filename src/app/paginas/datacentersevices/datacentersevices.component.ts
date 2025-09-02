@@ -1,5 +1,5 @@
 import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'; // 👈 Needed for fragment detection
+import { ActivatedRoute, RouterLink } from '@angular/router'; // 👈 Needed for fragment detection
 
 import { Ad2Component } from '../../layout/ad2/ad2.component';
 
@@ -11,8 +11,10 @@ declare const UIkit: any;
   selector: 'app-datacentersevices',
   imports: [
     Ad2Component,
-    TranslatePipe, RodapeComponent, MenuComponent// Inserido
-  ],
+    TranslatePipe, RodapeComponent, MenuComponent // Inserido
+    ,
+    RouterLink
+],
   templateUrl: './datacentersevices.component.html',
   styleUrl: './datacentersevices.component.css'
 })

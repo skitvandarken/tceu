@@ -20,9 +20,7 @@ import { RecrutamentoComponent } from './paginas/recrutamento/recrutamento.compo
 import { VirtualizacaoComponent } from './paginas/virtualizacao/virtualizacao.component';
 import { ErpComponent } from './paginas/erp/erp.component';
 import { TrustCenterComponent } from './paginas/trust-center/trust-center.component';
-import { IptransitComponent } from './dummy/artigos/iptransit/iptransit.component';
-import { CibersecComponent } from './dummy/artigos/cibersec/cibersec.component';
-import { Cloud2MontagemComponent } from './dummy/artigos/cloud2-montagem/cloud2-montagem.component';
+
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
 import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component';
 import { ServiceFormComponent } from './layout/service-form/service-form.component';
@@ -32,7 +30,7 @@ export const routes: Routes = [
 
   { path: '', component: InicioComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'sobre', component: AcercaComponent },
+  { path: 'about', component: AcercaComponent },
 
   { path: 'conta', component: SignupComponent },
   { path: 'indicador', component: IndicadorComponent },
@@ -46,19 +44,16 @@ export const routes: Routes = [
   { path: 'cloud', component: CloudservicesComponent },
   { path: 'data-center', component: DatacentersevicesComponent },
   { path: 'security', component: SegurancaComponent },
-  { path: 'contacto', component: ContactoComponent },
+  { path: 'contact', component: ContactoComponent },
   { path: 'recrutamento', component: RecrutamentoComponent },
   { path: 'datacenter', component: DatacentersevicesComponent },
   { path: 'virtualizacao', component: VirtualizacaoComponent },
   { path: 'erp', component: ErpComponent },
   { path: 'trust-center', component: TrustCenterComponent },
 
-  { path: 'artigos/ip-transit-chave', component: IptransitComponent },
-  { path: 'artigos/ciberseguranca', component: CibersecComponent },
-  { path: 'artigos/cloud2-como-montar', component: Cloud2MontagemComponent },
+  
   { path: 'service-contact', component: ServiceFormComponent},
 
-  { path: 'news', component: NoticiasComponent},
 
   { path: 'mkt-proibido', component: DashboardComponent },
 
@@ -66,11 +61,16 @@ export const routes: Routes = [
 
 
   {
-    path: 'artigos',
+    path: 'solution',
     loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent)
   },
+
+    {
+    path: 'news',
+    loadComponent: () => import('./paginas/noticias/noticias.component').then(m => m.NoticiasComponent)
+  },
   {
-    path: 'artigo/:id',
+    path: 'solution/:id',
     loadComponent: () => import('./layout/artigo/artigo.component').then(m => m.ArtigoComponent)
   },
 

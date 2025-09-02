@@ -1,5 +1,5 @@
 .fundo-cabecalho {
-    background-image: url('/img/infraestrutura-cloud.jpg');
+    background-image: url('/img/adslider/7.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -13,6 +13,7 @@
     height: 40px;
     width: auto;
 }
+
 
 .uk-switcher {
     background: linear-gradient(180deg, #004f5b, #002561);

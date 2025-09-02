@@ -60,10 +60,11 @@ export class ServiceFormComponent {
         region: [''],
         experienceYears: [''],
       }),
-      resellerDetails: this.fb.group({
+      serviceProvider: this.fb.group({
         storeName: [''],
         productSpecialty: [''],
       }),
+      
     });
 
     this.partnershipForm.get('partnershipType')?.valueChanges.subscribe(value => {

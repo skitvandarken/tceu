@@ -31,36 +31,9 @@
           <form [formGroup]="partnershipForm" (ngSubmit)="submitForm($event)"
             class="uk-form-stacked uk-padding fundo-form">
 
-            <!-- Partnership Type (Radio buttons) will span full width -->
-            <div class="uk-width-1-1">
-              <div class="uk-margin">
-                <label class="uk-form-label uk-margin-small-top uk-margin-medium-bottom">
-                  <b>{{ 'what_you' | translate}}</b>
-                </label>
-
-                <div class="uk-form-controls uk-flex uk-flex-wrap">
-
-                  <!-- Business Indicator -->
-                  <button type="button"
-                    class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
-                    [class.uk-button-primary]="partnershipForm.get('partnershipType')?.value === 'businessIndicator'"
-                    (click)="partnershipForm.get('partnershipType')?.setValue('businessIndicator')">
-                    {{ 'negocio' | translate }}
-                  </button>
-
-                  <!-- Authorized Agent -->
-
-                  <button type="button"
-                    class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
-                    [class.uk-button-primary]="partnershipForm.get('partnershipType')?.value === 'authorizedAgent'"
-                    (click)="partnershipForm.get('partnershipType')?.setValue('reseller')">
-                    {{ 'provedor_servico' | translate }}
-                  </button>
-
-                </div>
-              </div>
+            <div class="uk-width-1-1 uk-margin-medium-bottom">
+              <h3 class="uk-heading-divider"><b> {{ 'personal_detalhes' | translate }} </b></h3>
             </div>
-
 
             <div class="uk-grid-small" uk-grid>
 
@@ -114,6 +87,35 @@
                 </div>
               </div>
 
+              <!-- What are you ? -->
+              <div class="uk-width-1-1">
+                <div class="uk-margin">
+                  <label class="uk-form-label uk-margin-small-top uk-margin-medium-bottom">
+                    <b>{{ 'what_you' | translate}}</b>
+                  </label>
+
+                  <div class="uk-form-controls uk-flex uk-flex-wrap">
+
+                    <!-- Business Indicator -->
+                    <button type="button"
+                      class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
+                      [class.uk-button-primary]="partnershipForm.get('partnershipType')?.value === 'businessIndicator'"
+                      (click)="partnershipForm.get('partnershipType')?.setValue('businessIndicator')">
+                      {{ 'negocio' | translate }}
+                    </button>
+
+                    <!-- Authorized Agent -->
+                    <button type="button"
+                      class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
+                      [class.uk-button-primary]="partnershipForm.get('partnershipType')?.value === 'serviceProvider'"
+                      (click)="partnershipForm.get('partnershipType')?.setValue('serviceProvider')">
+                      {{ 'provedor_servico' | translate }}
+                    </button>
+
+                  </div>
+
+                </div>
+              </div>
 
 
               <!-- Business Indicator details (conditional) -->
@@ -231,33 +233,7 @@
                     <option value="outros">{{'outro' | translate }}</option>
                   </select>
                 </div>
-                <!-- 
-                <div class="uk-width-1-2@s">
-                  <label for="subsidiariaEscolhida" class="uk-form-label"><b> {{'subsidiaria_trabalhar' | translate }}
-                    </b></label>
-                  <select id="subsidiariaEscolhida" formControlName="subsidiariaEscolhida"
-                    class="uk-select uk-form-width-large uk-border-rounded">
-                    <option value="" disabled selected></option>
-                    <option value=" África Austral e Oriental (TelCables South Africa)">
-                      África Austral e Oriental (TelCables South Africa)
-                    </option>
-                    <option value="África Subsariana (Angola Cables)">
-                      África Subsariana (Angola Cables)
-                    </option>
-                    <option value="África Ocidental (TelCables Nigéria)">
-                      África Ocidental (TelCables Nigéria)
-                    </option>
-                    <option value="América do Norte (TelCables USA)">
-                      América do Norte (TelCables USA)
-                    </option>
-                    <option value="América Latina (TelCables Brasil)">
-                      América Latina (TelCables Brasil)
-                    </option>
-                    <option value="telcablesEuropa">Europa (TelCables Europa)</option>
-                  </select>
-                </div>
--->
-
+           
 
                 <div class="uk-width-1-2@s">
                   <div class="uk-margin">
@@ -304,7 +280,7 @@
               </div>
 
               <!-- Authorized Agent details (conditional) -->
-              <div *ngIf="selectedPartnership === 'reseller'" class="uk-margin-large-top uk-width-1-1 uk-grid-small"
+              <div *ngIf="selectedPartnership === 'serviceProvider'" class="uk-margin-large-top uk-width-1-1 uk-grid-small"
                 uk-grid>
                 <div class="uk-width-1-1">
                   <h3 class="uk-heading-divider">

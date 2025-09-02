@@ -172,15 +172,34 @@
 }
 
 .texto-banner {
-    color: white;
-   
+     position: absolute;
     bottom: 20px;
-    position: absolute;
-    padding: 9px 0px 10px 0px ;
-    font-size: 1.2rem;
+    left: 20px;
+    right: 20px;
+    color: white;
+    font-size: 1rem;
 
 }
 
+
+
+.video-thumbnail {
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #004f5b;
+  }
+  50% {
+    box-shadow: 0 0 20px #004f5b, 0 0 20px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px #004f5b;
+  }
+}
 
 /* Slider specific styles */
 .uk-slider-container {

@@ -235,7 +235,7 @@
   "dashboard-welcome": "Welcome ",
   "artigo.escrito_por": "Written by",
   "publicado_em": "Published on",
-  "mais_artigos": "More Articles",
+  "mais_artigos": "More Solutions",
   "artigo.ver_todos": "View all",
   "datacenter.titulo_principal": "Tier III internet access infrastructure with flexible capacity within a global, efficient and low-latency network.",
   "datacenter.descricao_principal": "ANGONAP Datacenters from Angolacables are designed with high security standards, expansion capacity and energy redundancy capable of providing hosting services and continuous connectivity.",
@@ -466,6 +466,8 @@
   "agente_vendads_form": "Authorized Sales Agent",
   "revendedor_titulo_form": "Reseller Agent",
   "indicador_detalhes": "Business Details",
+    "personal_detalhes": "Personal Details",
+
   "indicador_subsidiaria": "Which subsidiary would you like to work with?",
   "sel_opcao_form": "Select an option",
   "potencial_cliente_form": "Potential customer name:",
