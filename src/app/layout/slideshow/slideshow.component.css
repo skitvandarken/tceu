@@ -160,3 +160,46 @@
         font-size: 1.3rem;
     }
 }
+
+
+
+
+/* fix button */
+
+/* Ensure buttons are clickable and above other elements */
+.uk-button {
+  position: relative;
+  z-index: 100;
+  cursor: pointer !important;
+}
+
+/* Make sure links are clickable */
+a {
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* Prevent any overlay from blocking clicks */
+.uk-panel, .modern-gradient-bg {
+  position: relative;
+}
+
+/* Ensure the pseudo-elements don't block clicks */
+.modern-gradient-bg::before,
+.modern-gradient-bg::after {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content should be above the background effects */
+.modern-gradient-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Specific fix for slider items */
+.uk-slider-items > * {
+  position: relative;
+  z-index: 10;
+}

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuComponent } from '../../layout/menu/menu.component';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -15,69 +15,73 @@ declare var UIkit: any;
 })
 export class ServiceFormComponent {
   isSubmitting: boolean = false;
-
   translations: any;
 
-  useLanguage(language: string): void {
-    this.translate.use(language);
-    this.translations.use(language);
-  }
+  // List of available services
+  servicesList = [
+    { id: 'conectividade', label: 'Interconnection' },
+    { id: 'acesso_internet', label: 'Internet Acess' },
+    { id: 'data_center', label: 'Data Center' },
+    { id: 'cloud', label: 'Cloud' },
+    { id: 'seguranca', label: 'Security' },
+    { id: 'virtualizacao', label: 'virtualizacao' }
+  ];
 
-  partnershipForm: FormGroup;
-  selectedPartnership: string = '';
-
-
+  serviceContact: FormGroup;
+  selectedContactType: string = '';
 
   constructor(private fb: FormBuilder, private translate: TranslateService) {
-
-
-
-    this.partnershipForm = this.fb.group({
+    this.serviceContact = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email, Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]],
+      email: ['', [
+        Validators.required,
+        Validators.email,
+        Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
+      ]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{9,15}$/)]],
       message: ['', [Validators.required, Validators.minLength(10)]],
-
+      contactType: [''],
       potCliente: [''],
-      numColab: [''],
-      numeroColaboradores: [''],
-      receitaAnual: [''],
-      volVendas: [''],
-      subsidiariaEscolhida: [''],
-      partnershipType: [''],
-      paisForm: [''],
-      tipoEmpresa: [''],
       nomeEmpresa: [''],
-      equipaVendas: [''],
-      servicoInteress: [''],
-      anosOperacoes: [''],
-      businessIndicatorDetails: this.fb.group({
-        referralCount: [''],
-        keyIndustries: [''],
-      }),
-      authorizedAgentDetails: this.fb.group({
-        region: [''],
-        experienceYears: [''],
-      }),
-      serviceProvider: this.fb.group({
-        storeName: [''],
-        productSpecialty: [''],
-      }),
-      
+      paisForm: [''],
+      clienteAngolaCables: [''],
+
+      // ✅ Proper FormArray for services
+      servicoInteresse: this.fb.array([])
     });
 
-    this.partnershipForm.get('partnershipType')?.valueChanges.subscribe(value => {
-      this.selectedPartnership = value;
+    // Keep selectedContactType synchronized
+    this.serviceContact.get('contactType')?.valueChanges.subscribe(value => {
+      this.selectedContactType = value;
     });
   }
 
+  // Getter for FormArray
+  get servicoInteresse(): FormArray {
+    return this.serviceContact.get('servicoInteresse') as FormArray;
+  }
 
+  // Handle checkbox changes
+  onCheckboxChange(event: any) {
+    const formArray: FormArray = this.servicoInteresse;
+
+    if (event.target.checked) {
+      formArray.push(this.fb.control(event.target.value));
+    } else {
+      const index = formArray.controls.findIndex(x => x.value === event.target.value);
+      if (index !== -1) {
+        formArray.removeAt(index);
+      }
+    }
+  }
+
+  // Submit form
   submitForm(event: Event) {
     event.preventDefault();
-    this.partnershipForm.markAllAsTouched();
+    this.serviceContact.markAllAsTouched();
 
-    if (this.partnershipForm.invalid) {
+    if (this.serviceContact.invalid) {
       UIkit.modal('#validation-modal').show();
       return;
     }
@@ -85,80 +89,34 @@ export class ServiceFormComponent {
     this.isSubmitting = true;
     UIkit.modal('#loading-modal').show();
 
-    const formData = this.partnershipForm.value;
+    // Prepare form data with selected services
+   const formData = {
+  ...this.serviceContact.value,
+  servicoInteresse: this.serviceContact.value.servicoInteresse.join(', ')
+};
+    console.log('Submitting form data:', formData);
 
-    emailjs.send('service_hxge11t', 'template_52yj2o5', formData, {
-      publicKey: '8zvRzqg96H44z9txo'
+    emailjs.send('service_9il6xco', 'template_m8oz3tg', formData, {
+      publicKey: 'F-p5Ny3ufMaRfCSgR'
     })
       .then(() => {
-        console.log('SUCESSO');
+        console.log('SUCCESS');
         UIkit.modal('#loading-modal').hide();
         UIkit.modal('#success-modal').show();
-        this.partnershipForm.reset();
+        this.serviceContact.reset();
+        this.servicoInteresse.clear(); // ✅ Clear FormArray as well
         this.isSubmitting = false;
       })
       .catch((error: EmailJSResponseStatus) => {
-        console.error('Falhou...', error.text);
+        console.error('FAILED...', error.text);
         UIkit.modal('#loading-modal').hide();
         UIkit.modal('#error-modal').show();
         this.isSubmitting = false;
       });
   }
 
-  /* AQUI É SÓ COM O MODAL
-    submitForm(event: Event) {
-    event.preventDefault();
-    this.partnershipForm.markAllAsTouched();
-  
-    if (this.partnershipForm.invalid) {
-      UIkit.modal('#validation-modal').show();
-      return;
-    }
-  
-    const formData = this.partnershipForm.value;
-  
-    emailjs.send('service_hxge11t', 'template_52yj2o5', formData, {
-      publicKey: '8zvRzqg96H44z9txo'
-    })
-    .then(() => {
-      console.log('SUCESSO');
-      UIkit.modal('#success-modal').show();
-      this.partnershipForm.reset();
-    })
-    .catch((error: EmailJSResponseStatus) => {
-      console.error('Falhou...', error.text);
-      UIkit.modal('#error-modal').show();
-    });
+  useLanguage(language: string): void {
+    this.translate.use(language);
+    this.translations.use(language);
   }
-  
-  */
-
-  /*
-  submitForm(event: Event) {
-    event.preventDefault();
-
-    this.partnershipForm.markAllAsTouched();
-
-
-    if (this.partnershipForm.invalid) {
-      window.alert('Por favor, preencha correctamente todos os campos obrigatórios.');
-      return;
-    }
-
-    const formData = this.partnershipForm.value;
-
-    emailjs.send('service_hxge11t', 'template_52yj2o5', formData, {
-      publicKey: '8zvRzqg96H44z9txo'
-    })
-    .then(() => {
-      console.log('SUCESSO');
-      window.alert('Registo solicitado com sucesso! 🎉. Em breve será contactado.');
-      this.partnershipForm.reset();
-    })
-    .catch((error: EmailJSResponseStatus) => {
-      console.error('Falhou...', error.text);
-      window.alert('Não foi possível enviar sua candidatura.');
-    });
-  } */
-
 }

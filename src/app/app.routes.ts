@@ -22,15 +22,16 @@ import { ErpComponent } from './paginas/erp/erp.component';
 import { TrustCenterComponent } from './paginas/trust-center/trust-center.component';
 
 import { DashboardComponent } from './paginas/dashboard/dashboard.component';
-import { VagasCriarComponent } from './layout/vagas-criar/vagas-criar.component';
 import { ServiceFormComponent } from './layout/service-form/service-form.component';
+import { PrivacypolicyComponent } from './paginas/privacypolicy/privacypolicy.component';
+import { TermsandconditionsComponent } from './paginas/termsandconditions/termsandconditions.component';
 
 
 export const routes: Routes = [
 
   { path: '', component: InicioComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'about', component: AcercaComponent },
+  { path: 'company', component: AcercaComponent },
 
   { path: 'conta', component: SignupComponent },
   { path: 'indicador', component: IndicadorComponent },
@@ -56,6 +57,9 @@ export const routes: Routes = [
 
 
   { path: 'mkt-proibido', component: DashboardComponent },
+
+  { path: 'privacypolicy', component: PrivacypolicyComponent},
+  { path: 'termsandconditions', component: TermsandconditionsComponent },
 
 
 

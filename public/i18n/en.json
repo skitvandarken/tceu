@@ -336,9 +336,9 @@
   "contacto_titulo_pagina": "Contact",
   "contacto_subtitulo_pagina": "Get in touch with us",
   "pais_regiao": "Country/Region",
-  "somos_rapidos_responder": "We respond quickly!",
-  "primeiro_nome_label": "First name*",
-  "ultimo_nome_label": "Last name*",
+  "somos_rapidos_responder": "We will respond to your message as soon as possible.",
+  "primeiro_nome_label": "First name",
+  "ultimo_nome_label": "Last name",
   "numero_telefone_label": "Phone number",
   "regiao_label": "Region",
   "selecionar_regiao_option": "Select region",
@@ -358,7 +358,7 @@
   "outro_departamento_option": "Other",
   "nome_empresa_label": "Company name",
   "cargo_empresa_label": "Position",
-  "email_label": "Email*",
+  "email_label": "E-mail",
   "mensagem_label": "Message:",
   "enviar_botao": "Send",
   "connectivity": "Business Connectivity",
@@ -368,7 +368,7 @@
   "procurement_option": "Procurement",
   "primeiro_nome_required": "First name is required",
   "ultimo_nome_required": "Last name is required",
-  "email_required": "Email is required",
+  "email_required": "E-mail is required",
   "email_invalid": "Please enter a valid email address",
   "pais_required": "Country is required",
   "regiao_required": "Region is required",
@@ -479,13 +479,13 @@
   "mensagem": "Message",
   "formato_invalido": "Invalid format",
   "sucesso": "Sucesss!",
-  "registro_sucesso": "Your registration request was sent successfully .",
+  "registro_sucesso": "Your message was sent successfully .",
   "contatado_em_breve": "You will be contacted shortly.",
   "erro": "Error",
-  "envio_falhou": "Your request could not be sent. Try again later.",
+  "envio_falhou": "Your message could not be sent. Try again later.",
   "erro_validacao": "Validation error",
   "preencha_corretamente": "Please fill in the form correctly.",
-  "enviando": "Sending request ...",
+  "enviando": "Sending message ...",
   "painel_usuario": "User Dashboard",
   "bem_vindo_de_volta": "Welcome back",
   "em_construcao": "Under Construction",
@@ -535,5 +535,23 @@
   "news.and": "News and",
   "media": "Media",
 "upcomming": "Upcoming",
-"Events": "Events"
+"Events": "Events",
+"news.media": "News and Media",
+"solutions": "Solutions",
+"connectivity.mobile": "Connectivity",
+"cloud.mobile": "Cloud",
+"datacenter.mobile": "Data Center",
+"security.mobile": "Security",
+"privacy.policy": "Privacy Policy",
+"terms.and.conditions": "Website  & Services Terms and Conditions",
+"cookies.policy": "Cookies Policy",
+"contact": "Contact",
+"about": "About",
+"faq": "FAQ"
+
+
+
+
+
+ 
 }
