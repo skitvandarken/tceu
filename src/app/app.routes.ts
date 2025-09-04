@@ -39,7 +39,7 @@ export const routes: Routes = [
   { path: 'datacenter', component: DatacenterComponent },
   { path: 'angonap2', component: Angonap2Component },
   { path: 'eventos', component: EventosAcComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: 'solutions', component: BlogComponent },
   { path: 'artigo', component: ArtigoComponent },
   { path: 'connectivity', component: ConectividadeComponent },
   { path: 'cloud', component: CloudservicesComponent },
@@ -48,8 +48,6 @@ export const routes: Routes = [
   { path: 'contact', component: ContactoComponent },
   { path: 'recrutamento', component: RecrutamentoComponent },
   { path: 'datacenter', component: DatacentersevicesComponent },
-  { path: 'virtualizacao', component: VirtualizacaoComponent },
-  { path: 'erp', component: ErpComponent },
   { path: 'trust-center', component: TrustCenterComponent },
 
   

@@ -6,16 +6,16 @@
       <div class="uk-card  uk-card-small uk-border-rounded">
 
         <!-- Featured Image -->
-        <div *ngIf="post.imageUrl" class="uk-card-media-top">
-          <img [src]="post.imageUrl" class="" alt="Imagem de destaque" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; height: auto; object-fit: cover; width: 100%;" />
+        <div *ngIf="post.imageUrl" class="uk-card-media-top thumbnail">
+          <img [src]="post.imageUrl" alt="Imagem de destaque" />
         </div>
-       
+
         <div class="uk-card-header">
-           <p class="uk-text-meta" style="font-size: 0.9rem; margin-bottom: 5px;">
+          <!--   <p class="uk-text-meta" style="font-size: 0.9rem; margin-bottom: 5px;">
           {{ post.createdAt?.toDate() | date: 'dd/MM/yyyy' }}
-        </p>
+        </p> -->
           <a style="color: #1A1A1A;" [routerLink]="['/solution', post.id]">
-            <p style="font-size: 1.3rem; font-weight: 500;" class="uk-card-title uk-text-left">{{ post.title }}</p>
+            <p style="font-size: 1.5rem; font-weight: 600;" class="uk-card-title uk-text-left">{{ post.title }}</p>
           </a>
         </div>
         <!-- 
@@ -38,5 +38,3 @@
   </div>
   }
 </div>
-
-
