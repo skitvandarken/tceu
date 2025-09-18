@@ -23,16 +23,17 @@
         <div class="uk-width-expand">
           <article style="color:white" class="uk-article uk-margin-large-top">
             <div class="">
+              <!--    
               <p style="font-size: 0.9rem; color: #A2A2B2;">{{ 'artigo.escrito_por' | translate }}:
                 <b style="color: white;"> {{ post.author}} </b>
               </p>
 
+           <p style="color: #A2A2B2;">{{ 'publicado_em' | translate }}: <b style="color: white;"> {{ post.createdAt?.toDate() | date:
+                  'dd/MM/yyyy' }} </b></p> -->
 
-              <p style="color: #A2A2B2;">{{ 'publicado_em' | translate }}: <b style="color: white;"> {{ post.createdAt?.toDate() | date:
-                  'dd/MM/yyyy' }} </b></p>
 
             </div>
-            <div class="uk-article " [innerHTML]="safeContent"></div>
+            <div class="uk-article uk-margin-large-top " [innerHTML]="safeContent"></div>
           </article>
         </div>
 
