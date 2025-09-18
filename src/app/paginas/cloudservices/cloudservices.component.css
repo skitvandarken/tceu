@@ -20,7 +20,7 @@
     background-color: #002561;
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
-    border-radius: 10px;
+    border-radius:  0px 0px 10px 10px;
 }
 
 .fundo-contador {
