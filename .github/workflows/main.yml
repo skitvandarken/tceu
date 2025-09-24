@@ -60,7 +60,7 @@ jobs:
         run: |
           # ===== CONFIGURATION =====
           BUILD_DIR="dist/tcng/browser"
-          WEBDISK_URL="https://stage.marketing.host2africa.com:2078"
+          WEBDISK_URL="https://telcables.ng:2078"
           
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(
@@ -124,4 +124,4 @@ jobs:
           done
 
           echo "🎉 Deployment completed successfully!"
-          echo "🌐 Live at: https://stage.marketing.host2africa.com"
+          echo "🌐 Live at: https://telcables.ng"

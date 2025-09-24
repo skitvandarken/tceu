@@ -4,8 +4,8 @@
 
       <div class="uk-text-left">
         <h1 style="color: white; font-weight: 600">{{'key.numbers' | translate}}</h1>
-
       </div>
+      
       <div
         class="uk-child-width-1-5@m uk-grid-small uk-grid-match  uk-margin-small-left uk-margin-small-right uk-margin-small-top"
         uk-grid>
@@ -145,6 +145,10 @@
             <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top">
               {{'servicos.seguranca.headline' | translate }}
             </p>
+
+                 <p style="color: #000 !important;" class="uk-margin-small-top">
+              {{'servicos.seguranca.desc' | translate }}
+            </p>
             <a routerLink="/security">
               <button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
                 style="background-color:#FAA61A; color:#003283; font-weight:700; padding:8px 40px;">
@@ -201,7 +205,7 @@
       <div class="uk-flex uk-flex-center uk-flex-right@m uk-margin-top uk-margin-remove-top@m">
         <a routerLink="/contact">
           <button class="uk-button uk-width-auto uk-button-medium uk-border-pill"
-            style="background-color:#FAA61A; color:#003283; font-weight: 700; padding: 8px 40px;">
+            style="background-color:#fad11a; color:#003283; font-weight: 700; padding: 8px 40px;">
             <span style="margin: 5px">{{ 'book.meeting' | translate }}</span>
           </button>
         </a>
