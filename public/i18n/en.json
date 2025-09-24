@@ -11,7 +11,7 @@
   "ver.mapa": "View interactive map",
   "mais.sobre": "More about TelCables",
   "num.continentes": "Continents",
-  "num.nodes": "Clouds2Africa Nodes (in country)",
+  "num.nodes": "Clouds2Africa Nodes",
   "num.metro": "Metro PoPs",
   "num.fiber": "Km of Terrestrial fiber network",
   "num.ixp": "IXPs",
@@ -23,6 +23,7 @@
   "servicos.cloud": "Cloud",
   "servicos.cloud.headline": "IaaS | Backup | STaaS",
   "servicos.cloud.desc": "100% Locally Resident cloud; billed in Nigerian Naira delivered in different model including dedicated private cloud",
+  "servicos.connectivity.desc": "High-performance connectivity solutions to support the needs of enterprises and service providers",
   "servicos.virtualizacao": "Virtualization",
   "servicos.erp": "ERP",
   "servicos.datacenter": "Data Center",
@@ -466,8 +467,7 @@
   "agente_vendads_form": "Authorized Sales Agent",
   "revendedor_titulo_form": "Reseller Agent",
   "indicador_detalhes": "Business Details",
-    "personal_detalhes": "Personal Details",
-
+  "personal_detalhes": "Personal Details",
   "indicador_subsidiaria": "Which subsidiary would you like to work with?",
   "sel_opcao_form": "Select an option",
   "potencial_cliente_form": "Potential customer name:",
@@ -534,24 +534,18 @@
   "interconnected.secure.desc": "Backed by Angola Cables global metro networks",
   "news.and": "News and",
   "media": "Media",
-"upcomming": "Upcoming",
-"Events": "Events",
-"news.media": "News and Media",
-"solutions": "Solutions",
-"connectivity.mobile": "Connectivity",
-"cloud.mobile": "Cloud",
-"datacenter.mobile": "Data Center",
-"security.mobile": "Security",
-"privacy.policy": "Privacy Policy",
-"terms.and.conditions": "Website  & Services Terms and Conditions",
-"cookies.policy": "Cookies Policy",
-"contact": "Contact",
-"about": "About",
-"faq": "FAQ"
-
-
-
-
-
- 
+  "upcomming": "Upcoming",
+  "Events": "Events",
+  "news.media": "News and Media",
+  "solutions": "Solutions",
+  "connectivity.mobile": "Connectivity",
+  "cloud.mobile": "Cloud",
+  "datacenter.mobile": "Data Center",
+  "security.mobile": "Security",
+  "privacy.policy": "Privacy Policy",
+  "terms.and.conditions": "Website  & Services Terms and Conditions",
+  "cookies.policy": "Cookies Policy",
+  "contact": "Contact",
+  "about": "About",
+  "faq": "FAQ"
 }

@@ -3,23 +3,12 @@ import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { MenuComponent } from '../../layout/menu/menu.component';
 import { AngolacablesComponent } from '../../layout/angolacables/angolacables.component';
-import { ServicosComponent } from '../../layout/servicos/servicos.component';
 import { RodapeComponent } from '../../layout/rodape/rodape.component';
 import { SliderComponent } from '../../layout/slider/slider.component';
-import { ParceirosComponent } from '../../layout/parceiros/parceiros.component';
-import { BlogComponent } from '../../layout/blog/blog.component';
-import { NumerosComponent } from '../../layout/numeros/numeros.component';
-import { EventosComponent } from '../../layout/eventos/eventos.component';
-import { TelcablesComponent } from "../../layout/telcables/telcables.component";
-import { AdComponent } from "../../layout/ad/ad.component";
-import { CaracteristicasComponent } from '../../layout/caracteristicas/caracteristicas.component';
-import { Ad2Component } from "../../layout/ad2/ad2.component";
-import { CertificacoesComponent } from '../../layout/certificacoes/certificacoes.component';
-import { TestmenuComponent } from '../../testmenu/testmenu.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [MenuComponent, TestmenuComponent, NumerosComponent, CertificacoesComponent, ServicosComponent, EventosComponent, NumerosComponent, AdComponent, CaracteristicasComponent, BlogComponent, Ad2Component, AngolacablesComponent, ServicosComponent, RodapeComponent, SliderComponent, ParceirosComponent, TelcablesComponent, AdComponent ],
+  imports: [MenuComponent, AngolacablesComponent, RodapeComponent, SliderComponent ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

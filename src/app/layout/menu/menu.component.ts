@@ -95,10 +95,10 @@ closeDropdowns(): void {
   selectedLanguage: string = 'EN'; // Default language text
   private updateLanguageDisplay(language: string): void {
      if (language === 'en') {
-    this.selectedFlag = 'img/bandeiras/usa.png';
+    this.selectedFlag = '/img/bandeiras/usa.png';
     this.selectedLanguage = 'EN';
   } else if (language === 'fr') {
-    this.selectedFlag = 'img/bandeiras/fr.png';
+    this.selectedFlag = '/img/bandeiras/fr.png';
     this.selectedLanguage = 'FR';
   }
 

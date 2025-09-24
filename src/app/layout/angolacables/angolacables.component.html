@@ -5,7 +5,7 @@
       <div class="uk-text-left">
         <h1 style="color: white; font-weight: 600">{{'key.numbers' | translate}}</h1>
       </div>
-      
+
       <div
         class="uk-child-width-1-5@m uk-grid-small uk-grid-match  uk-margin-small-left uk-margin-small-right uk-margin-small-top"
         uk-grid>
@@ -14,7 +14,7 @@
             <h1 style="color: white; font-size: 3.5rem;" class="uk-card-title">
               <app-contador [startValue]="0" [targetValue]="2" [interval]="50"></app-contador>
             </h1>
-            <p class="uk-margin-remove" style="color: white;">{{ 'num.nodes' | translate }}</p>
+            <p class="uk-margin-remove" style="color: white;">{{ 'num.nodes' | translate }} <br> (in country)</p>
           </div>
 
           <!-- 
@@ -97,6 +97,9 @@
             <p style="font-size: 1.3rem; font-weight: 600;" class="uk-margin-small-top">
               {{'connectivity-service-headline' | translate }}
             </p>
+            <p style="color: #000 !important;" class="uk-margin-small-top">
+              {{'servicos.connectivity.desc' | translate }}
+            </p>
             <a routerLink="/connectivity">
               <button class="uk-button uk-button-medium uk-border-pill uk-margin-small-top"
                 style="background-color:#FAA61A; color:#003283; font-weight:700; padding:8px 40px;">
@@ -146,7 +149,7 @@
               {{'servicos.seguranca.headline' | translate }}
             </p>
 
-                 <p style="color: #000 !important;" class="uk-margin-small-top">
+            <p style="color: #000 !important;" class="uk-margin-small-top">
               {{'servicos.seguranca.desc' | translate }}
             </p>
             <a routerLink="/security">
@@ -297,7 +300,7 @@
 </div>
 
 <div class="uk-margin-large-top">
-  
+
   <app-certificacoes></app-certificacoes>
 
 </div>
