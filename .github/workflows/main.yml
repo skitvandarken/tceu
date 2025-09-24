@@ -2,7 +2,7 @@ name: 🚀 Secure Angular Deploy with Firebase
 on:
   push:
     branches:
-      - main
+      - mvp
 
 jobs:
   build-and-deploy:
@@ -14,8 +14,8 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
-          cache: "npm"
+          node-version: '22'
+          cache: 'npm'
 
       - name: 🔐 Inject Firebase Secrets
         run: |
@@ -34,7 +34,7 @@ jobs:
             }
           };
           EOF
-
+          
           # Verify file was created (without exposing secrets)
           grep "production:" src/environments/environment.prod.ts
 
@@ -49,9 +49,9 @@ jobs:
       - name: 🐛 Verify Build Output
         run: |
           echo "Build directory contents:"
-          ls -la dist/tcng/browser
+          ls -la dist/part/browser
           echo "Checking for Firebase config in main.js:"
-          grep -o "apiKey" dist/tcng/browser/main.js || echo "No API key found in build"
+          grep -o "apiKey" dist/part/browser/main.js || echo "No API key found in build"
 
       - name: 🧹 Secure Clean & Deploy via WebDAV
         env:
@@ -59,12 +59,23 @@ jobs:
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           # ===== CONFIGURATION =====
-          BUILD_DIR="dist/tcng/browser"
+          BUILD_DIR="dist/part/browser"
           WEBDISK_URL="https://telcables.ng:2078"
-
+          
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(
-
+            "cgi-bin"
+            ".well-known"
+            ".tmb"
+            "partners.angolacables.co.ao"
+            "old_angolacables.co.ao"
+            "angular.angolacables.co.ao"
+            "old2_angolacables.co.ao"
+            "site_update"
+            ".user.ini"
+            ".htaccess_bak"
+            "old_angolacables.co.ao.zip"
+            "routes-table"
           )
           # =========================
 
@@ -94,8 +105,8 @@ jobs:
 
             if ! $protected; then
               echo "🗑️ Deleting: $item"
-          curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$remote_path" --silent --fail || true
-          curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -T "$file" "$WEBDISK_URL/$remote_path" --silent --show-error
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item" --silent --show-error --fail || \
+              curl -u $WEBDISK_USERNAME:$WEBDISK_PASSWORD -X DELETE "$WEBDISK_URL/$item/" --silent --show-error --fail || true
             else
               echo "🛡️ Preserving: $item"
             fi
