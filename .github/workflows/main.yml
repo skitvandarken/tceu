@@ -14,8 +14,8 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: "22"
+          cache: "npm"
 
       - name: 🔐 Inject Firebase Secrets
         run: |
@@ -34,7 +34,7 @@ jobs:
             }
           };
           EOF
-          
+
           # Verify file was created (without exposing secrets)
           grep "production:" src/environments/environment.prod.ts
 
@@ -61,7 +61,7 @@ jobs:
           # ===== CONFIGURATION =====
           BUILD_DIR="dist/part/browser"
           WEBDISK_URL="https://telcables.ng:2078"
-          
+
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(
             "cgi-bin"
