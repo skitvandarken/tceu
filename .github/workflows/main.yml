@@ -2,7 +2,7 @@ name: 🚀 Secure Angular Deploy with Firebase
 on:
   push:
     branches:
-      - mvp
+      - main
 
 jobs:
   build-and-deploy:
