@@ -1,6 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Firestore, addDoc, collection, serverTimestamp } from '@angular/fire/firestore';
+import {
+  Firestore,
+  addDoc,
+  collection,
+  serverTimestamp,
+} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { EditorModule } from '@tinymce/tinymce-angular';
@@ -9,10 +14,9 @@ import { EditorModule } from '@tinymce/tinymce-angular';
   selector: 'app-eventos-postar',
   imports: [FormsModule, CommonModule, EditorModule],
   templateUrl: './eventos-postar.component.html',
-  styleUrl: './eventos-postar.component.css'
+  styleUrl: './eventos-postar.component.css',
 })
 export class EventosPostarComponent {
-
   // Data models
   editorContent: string = '';
   author: string = '';
@@ -22,7 +26,6 @@ export class EventosPostarComponent {
     title: '',
     author: '',
     eventoUrl: '',
-
   };
 
   isSubmitting = false;
@@ -33,14 +36,31 @@ export class EventosPostarComponent {
     height: 400,
     menubar: true,
     plugins: [
-      'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
-      'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
-      'media', 'table', 'emoticons', 'help'
+      'advlist',
+      'autolink',
+      'link',
+      'image',
+      'lists',
+      'charmap',
+      'preview',
+      'anchor',
+      'pagebreak',
+      'searchreplace',
+      'wordcount',
+      'visualblocks',
+      'visualchars',
+      'code',
+      'fullscreen',
+      'insertdatetime',
+      'media',
+      'table',
+      'emoticons',
+      'help',
     ],
     toolbar:
       'undo redo | formatselect | bold italic backcolor | ' +
       'alignleft aligncenter alignright alignjustify | ' +
-      'bullist numlist outdent indent | removeformat | help'
+      'bullist numlist outdent indent | removeformat | help',
   };
 
   private firestore = inject(Firestore);
@@ -63,7 +83,7 @@ export class EventosPostarComponent {
     this.isSubmitting = true;
 
     try {
-      const eventosCollection = collection(this.firestore, 'eventos');
+      const eventosCollection = collection(this.firestore, 'eventosNg');
       await addDoc(eventosCollection, {
         title: this.newEvento.title,
         content: this.editorContent,
@@ -71,7 +91,7 @@ export class EventosPostarComponent {
         imageUrl: this.featuredImageUrl || null,
         eventoUrl: this.eventoUrl || null,
         createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp()
+        updatedAt: serverTimestamp(),
       });
 
       // Reset form
@@ -79,7 +99,6 @@ export class EventosPostarComponent {
       this.editorContent = '';
       this.featuredImageUrl = '';
       this.router.navigate(['/']);
-
     } catch (error) {
       console.error('Erro ao salvar o artigo:', error);
       this.errorMessage = this.getFirestoreError(error);

@@ -244,3 +244,10 @@ color: #fff !important;
 .talk-to-expert-btn .uk-icon svg {
 stroke: #fff;
 }
+
+.uk-grid, 
+.uk-grid>.uk-grid-margin,
+*+.uk-grid-margin,
+.uk-grid+.uk-grid {
+    margin-top: 0 !important;
+}

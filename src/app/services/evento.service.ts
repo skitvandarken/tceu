@@ -9,7 +9,7 @@ import { tap, map } from 'rxjs/operators';
 })
 export class EventoService {
   private firestore = inject(Firestore);
-  private eventosCollection = collection(this.firestore, 'eventos');
+private eventosCollection = collection(this.firestore, 'eventosNg');
   
   eventos = signal<Evento[]>([]);
 

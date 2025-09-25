@@ -244,3 +244,11 @@ stroke: #fff;
     font-size: 1.1rem;
     color: #fff;
 }
+
+
+.uk-grid, 
+.uk-grid>.uk-grid-margin,
+*+.uk-grid-margin,
+.uk-grid+.uk-grid {
+    margin-top: 0 !important;
+}
