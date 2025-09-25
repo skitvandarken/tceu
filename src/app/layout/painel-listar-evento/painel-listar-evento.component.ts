@@ -6,15 +6,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 
 @Component({
-  selector: 'app-eventos-listar',
-  imports: [
-    AsyncPipe,
-    CommonModule,
-  ],
-  templateUrl: './eventos-listar.component.html',
-  styleUrl: './eventos-listar.component.css'
+  selector: 'app-painel-listar-evento',
+  imports: [ AsyncPipe, CommonModule],
+  templateUrl: './painel-listar-evento.component.html',
+  styleUrl: './painel-listar-evento.component.css'
 })
-export class EventosListarComponent implements OnInit {
+export class PainelListarEventoComponent implements OnInit {
 
 
   safeContent: SafeHtml = '';

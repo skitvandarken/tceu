@@ -1,15 +1,17 @@
 
-import { Injectable, inject, signal } from '@angular/core';
-import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
+
+  import { Injectable, inject, signal } from '@angular/core';
+import { Firestore, collection, collectionData, doc, docData, deleteDoc } from '@angular/fire/firestore';
 import { Evento } from '../models/evento.models';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
 export class EventoService {
   private firestore = inject(Firestore);
-private eventosCollection = collection(this.firestore, 'eventosNg');
+  private eventosCollection = collection(this.firestore, 'eventosNg');
   
   eventos = signal<Evento[]>([]);
 
@@ -31,7 +33,7 @@ private eventosCollection = collection(this.firestore, 'eventosNg');
 
   getEventoById(id: string): Observable<Evento | undefined> {
     console.log('Fetching evento with ID:', id);
-    const postDoc = doc(this.firestore, `vagas/${id}`);
+    const postDoc = doc(this.firestore, `eventosNg/${id}`); // corrigido "vagas" → "eventosNg"
     return docData(postDoc, { idField: 'id' }).pipe(
       map(evento => {
         if (!evento) {
@@ -42,4 +44,13 @@ private eventosCollection = collection(this.firestore, 'eventosNg');
       tap(evento => console.log('Retrieved evento:', evento))
     ) as Observable<Evento>;
   }
+
+  /** NOVO MÉTODO → Deletar evento por ID */
+  async deleteEvento(id: string): Promise<void> {
+    console.log('Deletando evento com ID:', id);
+    const eventoDoc = doc(this.firestore, `eventosNg/${id}`);
+    return deleteDoc(eventoDoc);
+  }
+
+  
 }
