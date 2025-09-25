@@ -237,3 +237,13 @@ stroke: #fff;
 .uk-grid+.uk-grid {
     margin-top: 0 !important;
 }
+
+
+/* Prevent slider items from forcing page wider */
+.uk-slider-items {
+  flex-wrap: wrap;          /* allow wrapping */
+}
+
+.uk-slider-items li a {
+  white-space: normal !important; /* let text wrap */
+}
