@@ -152,6 +152,9 @@
         font-size: 14px !important;
         padding: 8px 12px;
     }
+
+
+
 }
 
 
@@ -246,4 +249,120 @@ stroke: #fff;
 
 .uk-slider-items li a {
   white-space: normal !important; /* let text wrap */
+}
+
+
+
+
+
+
+
+
+/* --------- Scoped fixes for the "fundo-cronologia-abas" section ---------- */
+
+/* 1) Safer box-sizing only inside this section so padding won't add to width */
+.fundo-cronologia-abas,
+.fundo-cronologia-abas * {
+    box-sizing: border-box;
+}
+
+/* 2) Prevent this section from pushing the whole page horizontally */
+.fundo-cronologia-abas,
+.fundo-cronologia-abas .uk-container {
+    max-width: 100%;
+    overflow-x: hidden;
+    /* scope-only - safer than applying to body */
+}
+
+/* 3) Remove UIkit grid negative side margins only in this section (common overflow culprit) */
+.fundo-cronologia-abas .uk-grid,
+.fundo-cronologia-abas .uk-slider-items.uk-grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 4) Make slider container clamp to viewport and use box-sizing */
+.fundo-cronologia-abas .uk-slider-container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* 5) Prevent the slider list from forcing the page width; allow inner scrolling instead */
+.fundo-cronologia-abas .uk-slider-items {
+    max-width: 100%;
+    overflow-x: auto;
+    /* scroll inside slider only */
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* 6) Make each item flexible and prevent extremely wide items */
+.fundo-cronologia-abas .uk-slider-items li {
+    flex: 0 0 auto;
+    min-width: auto;
+    max-width: calc(100% - 16px);
+}
+
+
+.card-accordion {
+    margin-left: 20px;
+}
+
+/* 7) On small screens: wrap items so they don't stretch page width (and hide arrows) */
+@media (max-width: 768px) {
+    .fundo-cronologia-abas .uk-slider-items {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .card-accordion {
+        margin-left: 0px;
+    }
+
+
+    .fundo-cronologia-abas .uk-slider-items li {
+        flex: 0 0 calc(50% - 8px);
+        /* two items per row - adjust if you prefer one-per-row */
+        min-width: 0;
+        /* let calc() work */
+    }
+
+    /* hide the out-of-flow nav arrows that can stick out of the viewport */
+    .fundo-cronologia-abas .uk-position-center-left-out,
+    .fundo-cronologia-abas .uk-position-center-right-out {
+        display: none !important;
+    }
+
+    .fundo-cronologia-abas .uk-slider-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* let the anchor text wrap on mobile */
+    .fundo-cronologia-abas .uk-slider-items li a {
+        white-space: normal;
+    }
+}
+
+/* 8) Extra safe rule: ensure images inside this section can't overflow */
+.fundo-cronologia-abas img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+/*problema de espaços e margens*/
+
+.uk-grid-divider>* {
+    padding-left: 10px;
 }
