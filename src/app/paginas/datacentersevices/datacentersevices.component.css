@@ -251,3 +251,11 @@ stroke: #fff;
 .uk-grid+.uk-grid {
     margin-top: 0 !important;
 }
+
+
+.uk-grid-divider.uk-grid-stack>.uk-grid-margin::before {
+    top: -20px;
+    left: 0px;
+}
+
+

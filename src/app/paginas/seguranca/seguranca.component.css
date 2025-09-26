@@ -187,6 +187,11 @@ stroke: #fff;
         font-size: 14px !important;
         padding: 8px 12px;
     }
+
+    .uk-grid-divider>* {
+    padding-left: 10px;
+}
+
 }
 
 
@@ -251,4 +256,15 @@ stroke: #fff;
 *+.uk-grid-margin,
 .uk-grid+.uk-grid {
     margin-top: 0 !important;
+}
+
+
+.uk-grid-divider.uk-grid-stack>.uk-grid-margin::before {
+    top: -20px;
+    left: 0px;
+}
+
+
+.uk-grid-divider>* {
+    padding-left: 30px;
 }

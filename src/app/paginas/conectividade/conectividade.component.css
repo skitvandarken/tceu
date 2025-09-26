@@ -163,7 +163,7 @@
 .uk-accordion-title {
     font-weight: 700;
     color: var(--primary-blue);
-    padding: 15px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
 }
@@ -205,6 +205,10 @@
         font-size: 14px !important;
         padding: 8px 12px;
     }
+
+        .uk-grid-divider>* {
+    padding-left: 10px !important;
+}
 }
 
 
@@ -289,7 +293,6 @@
 /* 2) Prevent this section from pushing the whole page horizontally */
 .fundo-cronologia-abas,
 .fundo-cronologia-abas .uk-container {
-    max-width: 100%;
     overflow-x: hidden;
     /* scope-only - safer than applying to body */
 }
@@ -346,6 +349,11 @@
         margin-left: 0px;
     }
 
+    .uk-grid-divider>* {
+    padding-left: 10px !important;
+}
+
+
     .fundo-cronologia-abas .uk-slider-items li {
         flex: 0 0 calc(50% - 8px);
         /* two items per row - adjust if you prefer one-per-row */
@@ -383,5 +391,11 @@
 /*problema de espaços e margens*/
 
 .uk-grid-divider>* {
-    padding-left: 10px;
+    padding-left: 30px;
+}
+
+
+.uk-grid-divider.uk-grid-stack>.uk-grid-margin::before {
+    top: -20px;
+    left: 0px;
 }
