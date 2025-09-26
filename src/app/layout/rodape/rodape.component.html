@@ -8,27 +8,41 @@
             <div class="footer-column">
                 <ul class="footer-links">
                     <li>
-                        <img  class="footer-logo" src="/img/logo-tcng.png" alt="Angola Cables Logo">
+                        <img class="footer-logo" src="/img/logo-tcng.png" alt="Angola Cables Logo">
                     </li>
 
 
                 </ul>
             </div>
 
-      
+
 
             <!-- Column 3: About Us -->
             <div class="footer-column ">
 
-                 <ul class="footer-links">
+                <ul class="footer-links">
                     <li><b>Network</b></li>
                     <li><a href="https://www.angonix.net/">> Lagos Metro</a></li>
-                   
+
                     <li><a href="https://clouds2africa.com/#!/">> Global map and Cloud presence</a></li>
                     <a href="#remote-peering-modal" uk-toggle> > Remote peering locations</a>
 
                 </ul>
-                
+
+                <!-- This is the modal -->
+
+
+
+                <div id="remote-peering-modal" class="uk-flex-top" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                        <img src="img/remotepeering-map.png">
+                    </div>
+                </div>
+            
+
                 <ul class="footer-links">
                     <li class="uk-margin-small-top"><b>Terms and Conditions</b></li>
                     <li><a routerLink="/privacypolicy">> Privacy Policy</a> </li>
@@ -38,6 +52,9 @@
                 </ul>
             </div>
 
+
+
+
             <!-- Column 4: Offices -->
             <div class="footer-column">
 
@@ -46,7 +63,8 @@
                     <li><b>Contact Us</b></li>
                     <li style="color: white"> Become a partner: <br>><b> partner&#64;telcables.ng </b></li>
 
-                    <li style="color: white">Purchase products and services: <br>> <b> sales.<ng-content select="[selector]"></ng-content>&#64;telcables.ng
+                    <li style="color: white">Purchase products and services: <br>> <b> sales.<ng-content
+                                select="[selector]"></ng-content>&#64;telcables.ng
                         </b></li>
 
                 </ul>
@@ -62,7 +80,7 @@
                             <a target="_blank" href="https://twitter.com/telcablesng" uk-icon="twitter"></a>
                         </div>
                     </li>
-                    <li class="uk-margin-small-top" ><b>{{'escritorios' | translate }}</b></li>
+                    <li class="uk-margin-small-top"><b>{{'escritorios' | translate }}</b></li>
                     <li style="color: white"><span class="uk-margin-small-right" uk-icon="location"></span>
                         5, Jeremaiah Ugwu street, off babatunde anjous, Lekki,
                         Lagos</li>

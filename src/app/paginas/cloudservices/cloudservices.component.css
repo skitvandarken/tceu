@@ -154,6 +154,10 @@
     }
 
 
+        .card-accordion {
+        margin-left: 10px;
+    }
+
 
 }
 
@@ -323,7 +327,7 @@ stroke: #fff;
     }
 
     .card-accordion {
-        margin-left: 0px;
+        margin-left: 10px;
     }
 
 
