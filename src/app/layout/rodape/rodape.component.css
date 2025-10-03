@@ -4,7 +4,8 @@
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%;
-  background: linear-gradient(180deg, #004f5b, #002561);
+  background-color: #fff ;
+  border-radius: 40px 40px 0 0;
 }
 
 .site-footer,
@@ -17,12 +18,12 @@
 
 
 b{
-  color: white;
+  color: #002561;
 }
 .site-footer .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 /* Footer Grid Layout */
@@ -50,7 +51,7 @@ b{
 
 .footer-links a {
   text-decoration: none;
-  color: #fff;
+  color: #002561;
   transition: color 0.3s;
 }
 
@@ -66,13 +67,13 @@ b{
 }
 
 .social-icons a {
-  color: #fff;
+  color: #002561;
   font-size: 20px;
 }
 
 /* Logo */
 .footer-logo {
-  width: 400px;
+  width: 300px;
   height: auto;
   margin-bottom: 15px;
 }
@@ -80,7 +81,7 @@ b{
 /* Copyright */
 .copyright {
   margin-top: 20px;
-  color: #ffffff;
+  color: #002561;
 }
 
 /* Responsive Adjustments */

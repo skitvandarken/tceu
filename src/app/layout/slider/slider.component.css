@@ -16,9 +16,8 @@
   color: #fff;
   margin-bottom: 12px;
   line-height: 1.25;
-  max-width: 95%;
+  max-width: 100%;
   /* safeguard so it doesn’t overshoot container */
-    max-width: 95%; /* safeguard so it doesn’t overshoot container */
 
 
 }
@@ -124,4 +123,74 @@
     max-width: 260px;
     /* prevent oversized buttons */
   }
+}
+
+/* fundo cards */
+
+
+/* Container card */
+.glassy-card {
+  border-radius: 15px;
+  color: #f7fbff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(8px) saturate(120%);
+  /* frosted effect */
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: var(--shadow);
+  border: 1px solid rgb(255, 255, 255);
+  ;
+  /* The radial gradient 'glassy' background */
+  background:
+    radial-gradient(1200px 600px at 10% 20%, var(--accent-blue) 0%, transparent 22%),
+    radial-gradient(900px 400px at 80% 80%, var(--accent-dark) 0%, transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  /* small soft inner-glow */
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s;
+  min-height: 80px;
+  /* ensures equal height */
+
+}
+
+/* Slight hover/active lift */
+.glassy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(18, 30, 54, 0.34);
+}
+
+/* Content styling (optional) */
+.glassy-card h3 {
+  margin: 0 0 .5rem 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.glassy-card p {
+  margin: 0 0 1rem 0;
+  font-size: .95rem;
+  line-height: 1.35;
+  color: rgba(247, 251, 255, 0.9);
+}
+
+.glassy-card button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eaf2ff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: .5rem .9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: none;
+  transition: background .18s, transform .12s;
+}
+
+.glassy-card button:active {
+  transform: translateY(1px);
+}
+
+
+.glassy-card h1, 
+.glassy-card p:first-child {
+  font-weight: 800;
+  font-size: 2rem; /* unify big number text */
+  color: white;
 }

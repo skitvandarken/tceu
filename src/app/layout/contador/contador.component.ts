@@ -1,16 +1,24 @@
-import { Component, Input, OnInit, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  ElementRef,
+  AfterViewInit,
+  OnDestroy,
+} from '@angular/core';
 
 @Component({
   selector: 'app-contador',
   imports: [],
   templateUrl: './contador.component.html',
-  styleUrl: './contador.component.css'
+  styleUrl: './contador.component.css',
 })
 export class ContadorComponent implements AfterViewInit, OnDestroy {
   @Input() startValue: number = 0;
   @Input() targetValue: number = 10;
   @Input() interval: number = 1000; // Default: 1 second
-
+  @Input() prefix: string = '';
+  @Input() suffix: string = 'ms';
 
   count: number = 0;
   intervalId: any;
@@ -19,15 +27,17 @@ export class ContadorComponent implements AfterViewInit, OnDestroy {
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit() {
-    
     this.count = this.startValue;
-    this.observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        this.startCounting();
-      } else {
-        this.stopCounting();
-      }
-    }, { threshold: 0.5 }); // Starts when at least 50% is visible
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          this.startCounting();
+        } else {
+          this.stopCounting();
+        }
+      },
+      { threshold: 0.5 }
+    ); // Starts when at least 50% is visible
 
     this.observer.observe(this.elementRef.nativeElement);
   }

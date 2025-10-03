@@ -48,3 +48,11 @@ button {
     border-radius: 20px;
 }
 
+.botao-azul-2 {
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #022561;
+  font-weight: 600;
+
+}
+

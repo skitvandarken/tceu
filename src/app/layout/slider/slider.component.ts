@@ -2,11 +2,13 @@ import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angula
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
+import { NumerosComponent } from '../numeros/numeros.component';
+import { ContadorComponent } from '../contador/contador.component';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, NumerosComponent, ContadorComponent, RouterLink],
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })

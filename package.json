@@ -32,6 +32,8 @@
     "ngx-countries-dropdown": "^3.0.1",
     "part": "file:",
     "rxjs": "~7.8.0",
+    "three": "^0.180.0",
+    "three-globe": "^2.44.0",
     "tinymce": "^7.8.0",
     "tslib": "^2.3.0",
     "uikit": "^3.23.1",

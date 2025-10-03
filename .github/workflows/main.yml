@@ -49,9 +49,9 @@ jobs:
       - name: 🐛 Verify Build Output
         run: |
           echo "Build directory contents:"
-          ls -la dist/tcng/browser
+          ls -la dist/tceu/browser
           echo "Checking for Firebase config in main.js:"
-          grep -o "apiKey" dist/tcng/browser/main.js || echo "No API key found in build"
+          grep -o "apiKey" dist/tceu/browser/main.js || echo "No API key found in build"
 
       - name: 🧹 Secure Clean & Deploy via WebDAV
         env:
@@ -59,8 +59,8 @@ jobs:
           WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
         run: |
           # ===== CONFIGURATION =====
-          BUILD_DIR="dist/tcng/browser"
-          WEBDISK_URL="https://telcables.ng:2078"
+          BUILD_DIR="dist/tceu/browser"
+          WEBDISK_URL="https://https://stage.marketing.host2africa.com:2078"
 
           # Protected items (won't be touched)
           PROTECTED_ITEMS=(

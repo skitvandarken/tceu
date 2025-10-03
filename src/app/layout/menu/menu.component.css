@@ -3,20 +3,22 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(180deg, #004f5b, #002561);
-    background-color: #002561;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
+    background-color: #ffffff;
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
     justify-content: center;
     align-items: center;
     padding: 10px 0;
     border-radius: 0 0 20px 20px;
     height: 80px;
     margin: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+    
 }
 
 .uk-navbar-nav>li>a {
-    color: #ffffff;
+    color: #050045;
     font-weight: bold;
     font-family: inherit;
     display: flex;
