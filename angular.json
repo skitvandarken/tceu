@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tcng": {
+    "tceu": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tcng",
+            "outputPath": "dist/tceu",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -107,10 +107,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tcng:build:production"
+              "buildTarget": "tceu:build:production"
             },
             "development": {
-              "buildTarget": "tcng:build:development"
+              "buildTarget": "tceu:build:development"
             }
           },
           "defaultConfiguration": "development"
