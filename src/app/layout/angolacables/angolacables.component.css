@@ -285,7 +285,7 @@
 .botao-azul {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     color: #002561;
-    background-color: #28C1FD ;
+    background-color: #28C1FD;
     font-weight: bold;
     padding: 10px 30px;
 }
@@ -647,19 +647,29 @@
     z-index: 1;
 }
 
-.uk-input:focus, .uk-select:focus, .uk-text-area:focus {
+.uk-input:focus,
+.uk-select:focus,
+.uk-text-area:focus {
     border-color: #002561;
     box-shadow: 0 0 8px rgba(0, 37, 97, 0.6);
 
-    
+
 }
 
 
-.uk-input, .uk-select, .uk-text-area:focus {
+.uk-input,
+.uk-select,
+.uk-text-area:focus {
     border-color: #002561;
-        border-width: 2px;
+    border-width: 2px;
     border-style: solid;
     transition: ease-in-out 0.2s;
+}
+
+
+.uk-background-muted {
+    box-shadow: 2px 24px 90px rgba(0, 53, 103, 0.559);
+
 }
 
 /* Gradient animation */
