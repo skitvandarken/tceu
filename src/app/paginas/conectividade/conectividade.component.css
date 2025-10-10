@@ -15,7 +15,7 @@
 }
 
 .uk-switcher {
-    background: linear-gradient(180deg, #004f5b, #002561);
+  
     background-color: #002561;
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
@@ -129,7 +129,7 @@
 }
 
 .industry-tag {
-    background-color: #FAA61A;
+    background-color: rgba(40, 193, 253, 1);
     color: rgba(0, 0, 78, 0.918);
     padding: 4px 12px;
     border-radius: 20px;
@@ -240,13 +240,13 @@
 
 .uk-slider-items li a {
     color: rgba(5, 5, 51, 1);
-    border-radius: 5px;
+    border-radius: 20px;
     font-weight: bolder;
 }
 
 .uk-slider-items li.uk-active a {
-    background-color: #20530a;
-    color: #fff;
+    background-color: rgba(40, 193, 253, 1);
+    color: rgba(5, 5, 51, 1);
 
 }
 

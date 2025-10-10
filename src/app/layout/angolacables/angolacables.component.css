@@ -335,7 +335,7 @@
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.15);
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.109);
+    box-shadow: 0 5px 30px rgba(0, 53, 103, 0.559);
     position: relative;
 }
 
@@ -626,7 +626,7 @@
     /* Animated gradient */
     background-size: 300% 300%;
     animation: gradientShift 15s ease infinite;
-    box-shadow: 0 14px 60px rgba(0, 53, 103, 0.105);
+    box-shadow: 2px 24px 90px rgba(0, 53, 103, 0.559);
 }
 
 /* Overlay pattern (circuits/dots) */
@@ -645,6 +645,21 @@
 .gradient-bg>* {
     position: relative;
     z-index: 1;
+}
+
+.uk-input:focus, .uk-select:focus, .uk-text-area:focus {
+    border-color: #002561;
+    box-shadow: 0 0 8px rgba(0, 37, 97, 0.6);
+
+    
+}
+
+
+.uk-input, .uk-select, .uk-text-area:focus {
+    border-color: #002561;
+        border-width: 2px;
+    border-style: solid;
+    transition: ease-in-out 0.2s;
 }
 
 /* Gradient animation */
