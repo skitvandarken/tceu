@@ -37,7 +37,7 @@
 
 
 .uk-navbar-dropdown-nav li a {
-    color: #20530a !important;
+    color: #050045 !important;
 }
 
 
@@ -65,18 +65,16 @@
 
 /* Custom CSS to make dropdown items wider */
 .uk-navbar-dropdown-width-1 .uk-drop-grid>div {
-    width: 400px !important;
+ 
     /* Adjust this value as needed */
 }
 
 /* Or if you want to target specific columns */
 .uk-navbar-dropdown-width-1 .uk-drop-grid>div:first-child {
-    width: 450px !important;
     /* Make first column wider */
 }
 
 .uk-navbar-dropdown-width-1 .uk-drop-grid>div:nth-child(2) {
-    width: 350px !important;
     /* Make second column wider */
 }
 
@@ -277,7 +275,10 @@ select {
 }
 
 
-
+.uk-navbar-dropdown-nav .uk-nav-header {
+    color: #050045!important;
+    /* Lighter color for headers */
+}
 
 
 /* Responsive Media Queries */

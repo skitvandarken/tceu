@@ -1,127 +1,131 @@
-<app-menu></app-menu>
-<div class="fundo-cabecalho">
+
+  <app-menu></app-menu>
+
+  <!-- Header -->
+  <div class="fundo-cabecalho">
     <div class="gradiente-texto-cabecalho">
-        <div class="conteudo-cabecalho uk-margin-medium-top">
-            <div class="uk-container uk-margin-large-bottom">
-                <h4 style="color:white">{{ 'datacenter_titulo_pagina' | translate }}</h4>
-                <h1 style="color:#fff; font-weight: bolder;">{{ 'datacenter.titulo' | translate }}
-                </h1>
-            </div>
+      <div class="conteudo-cabecalho uk-margin-medium-top">
+        <div class="uk-container uk-margin-large-bottom">
+          <h1 style="color:#fff; margin-top:20px; font-weight:800;">Data Center</h1>
+          <h2 style="color:white;">Secure, connected, and high-performance facilities for your mission-critical infrastructure.</h2>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
+  <!-- Main Content -->
+  <div class="uk-container uk-margin-large-top">
 
-<!-- Services Tabs Section -->
-<div class="fundo-cronologia-abas">
-    <div class="uk-container ">
-        <div class="">
-            <!-- Slider Navigation -->
-            <div uk-slider>
-                <div class="uk-position-relative">
-                    <!-- Navigation Arrows -->
-                    <a class="uk-position-center-left-out uk-hidden-hover uk-margin-small-right" href="#"
-                        uk-slidenav-previous uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right-out uk-hidden-hover uk-margin-small-left" href="#"
-                        uk-slidenav-next uk-slider-item="next"></a>
-
-
-                </div>
-            </div>
-
-
-            
-
-      <div class="uk-container">
-        <img src="/img/servicos/data-center.png" alt="Cloud Services"
-          style="filter: brightness(50%) ; width: 100%; height: 120px;  border-radius: 10px 10px  0px 0px; object-fit: cover;">
+    <div class="uk-grid-large uk-grid-match" uk-grid>
+      <!-- Sidebar -->
+      <div class="uk-width-1-4@m uk-margin-small-top">
+        <ul
+          class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
+          style="background:#fff;"
+          uk-switcher="connect: #component-nav; animation: uk-animation-fade"
+        >
+          <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
+          <li><a href="#" class="uk-text-bold">Colocation</a></li>
+          <li><a href="#" class="uk-text-bold">Interconnectivity</a></li>
+          <li><a href="#" class="uk-text-bold">Remote Hands & Support</a></li>
+        </ul>
       </div>
 
+      <!-- Content -->
+      <div class="uk-width-expand@m">
+        <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
 
-            <!-- Rack Colocation Switcher -->
-            <div class="timeline-content uk-switcher " #servicesTabs>
+          <!-- Colocation -->
+          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Colocation</h1>
+            <p class="uk-margin-small-bottom" >
+              Colocate your infrastructure within any of our facilities in Lisbon, London, and Marseille with high availability,
+              diverse provider choice, and strong physical and network security — ensuring full business continuity.
+            </p>
 
-                <div class="uk-child-width-1-2@m uk-grid-divider" uk-grid>
-                    <div class="uk-margin-medium-bottom" >
-                        <div class="uk-card uk-card-body">
-                            <h2 class="service-title">Securely host, power and connect your critical infrastructure
-                            </h2>
-                            <div class="industry-list">
-                                <span class="industry-tag">Technology</span>
-                                <span class="industry-tag">Energy, Oil & Gas</span>
-                                <span class="industry-tag">Manufacturing</span>
-                                <span class="industry-tag">Finance Sector</span>
-                                <span class="industry-tag">Public Sector</span>
-                                <span class="industry-tag">General Markets</span>
-                            </div>
-                            <ul class="benefits-list uk-margin-small-top">
-                                <li> Enhanced security and power supply</li>
-                                <li>Managed and reduced operational overhead</li>
-                                <li> Interconnection point with submarine cable systems,
-                                    IXP´s, OTT´s, national and international operators</li>
-                                <li>Uptime</li>
-                                <li>Expert support and 24x7 NOC support</li>
-
-                            </ul>
-                            <div class="uk-margin">
-                               <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                                    <span style="font-weight: 600;">Talk to an expert</span>
-                                    <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-body uk-text-left">
-                            <ul uk-accordion="collapsible: false">
-                                <li id="rack-colocation" class="uk-open">
-                                    <a class="uk-accordion-title" href><b>Rack Colocation</b></a>
-                                    <div class="uk-accordion-content">
-                                        <p>Colocate your infrastructure within any of our facilites in Lagos, Luanda and
-                                            Fortaleza with high
-                                            availability, diverse provider choice with high security for business
-                                            continuity.</p>
-
-                                    </div>
-                                </li>
-                                <li id="interconnectivity" class="uk-margin-small-top">
-                                    <a class="uk-accordion-title" href><b>Interconnectivity</b></a>
-                                    <div class="uk-accordion-content">
-                                        <p>Access our diverse connectivity portfolio when you colocate within our data
-                                            centers and connect
-                                            to other service providers and customers.</p>
-
-                                    </div>
-                                </li>
-                                <li id="remote-hands"  class="uk-margin-small-top">
-                                    <a class="uk-accordion-title" href><b>Remote Hands & Support</b></a>
-                                    <div class="uk-accordion-content">
-                                        <p>An on-demand service that provides technical assistance and maintenance for
-                                            hosted infrastructure
-                                            at the DC.</p>
-
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
+            <ul uk-accordion="multiple:true">
+              <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Key Benefits</a>
+                <div class="uk-accordion-content">
+                  <ul class="uk-list uk-list-bullet uk-margin-small">
+                    <li>Enhanced security and reliable power supply</li>
+                    <li>Managed and reduced operational overhead</li>
+                    <li>Direct interconnection with submarine cable systems, IXPs, OTTs, and global operators</li>
+                    <li>High uptime and resilient environment</li>
+                    <li>24x7 expert NOC support</li>
+                  </ul>
                 </div>
+              </li>
+            </ul>
 
-
+            <div class="uk-margin-small-top">
+              Ideal for:
+              <span class="tag">Technology</span>
+              <span class="tag">Energy</span>
+              <span class="tag">Oil & Gas</span>
+              <span class="tag">Manufacturing</span>
+              <span class="tag">Finance</span>
+              <span class="tag">Public Sector</span>
+              <span class="tag">General Markets</span>
             </div>
+          </div>
+
+          <!-- Interconnectivity -->
+          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Interconnectivity</h1>
+            <p class="uk-margin-small-bottom">
+              Access our diverse connectivity portfolio when you colocate within our data centers and connect seamlessly with
+              other service providers and customers across our global ecosystem.
+            </p>
+
+            <ul uk-accordion="multiple:true">
+              <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Key Advantages</a>
+                <div class="uk-accordion-content">
+                  <ul class="uk-list uk-list-bullet uk-margin-small">
+                    <li>Direct connections to multiple carriers and cloud providers</li>
+                    <li>High-speed inter-site and inter-customer links</li>
+                    <li>Reduced latency and improved service delivery</li>
+                    <li>Access to IXPs, submarine cables, and global peering points</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Remote Hands & Support -->
+          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Remote Hands & Support</h1>
+            <p class="uk-margin-small-bottom">
+              An on-demand service providing technical assistance and maintenance for hosted infrastructure at the data center,
+              ensuring smooth operation without requiring on-site presence.
+            </p>
+
+            <ul uk-accordion="multiple:true">
+              <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Available Services</a>
+                <div class="uk-accordion-content">
+                  <ul class="uk-list uk-list-bullet uk-margin-small">
+                    <li>Rack installations and hardware replacement</li>
+                    <li>Power and connectivity checks</li>
+                    <li>Device reboots, diagnostics, and visual inspections</li>
+                    <li>Hands-on technical support by trained professionals</li>
+                    <li>24x7 availability for emergency interventions</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
         </div>
+      </div>
     </div>
-</div>
+  </div>
+
 
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
-
-
-
-
-
 
 <app-ad2></app-ad2>
 <app-rodape></app-rodape>

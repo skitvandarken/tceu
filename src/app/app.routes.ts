@@ -48,7 +48,7 @@ export const routes: Routes = [
 
   {
     path: 'solution',
-    loadComponent: () => import('./layout/artigo-lista/artigo-lista.component').then(m => m.ArtigoListaComponent)
+    loadComponent: () => import('./paginas/solutions/solutions.component').then(m => m.SolutionsComponent)
   },
 
     {

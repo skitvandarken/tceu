@@ -1,49 +1,24 @@
-.fundo-cabecalho{
-    background-image: url('/img/datacenter.png');
-
+.fundo-cabecalho {
+    background-image: url('/img/datacenter-telcacbles-europe.jpg');
+    position: relative;
+    min-height: 400px;
+    /* Adjust based on design */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
     background-color: #000;
     position: relative;
-    min-height: 400px; /* Adjust based on design */
-        margin-top: 67px;
+    min-height: 400px;
+    /* Adjust based on design */
+    margin-top: 67px;
 
 }
 
-.logo-cabecalho-pagina{
+
+
+.logo-cabecalho-pagina {
     height: 40px;
     width: auto;
-
-}
-
-.conteudo-cabecalho{
-    
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
-}
-
-
-
-.uk-switcher {
-    background: linear-gradient(180deg, #004f5b, #002561);
-    background-color: #002561;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
-    border-radius: 0px 0px 10px 10px;
-}
-
-.fundo-contador {
-
-    background: linear-gradient(180deg, #004f5b, #002561);
-    background-color: #002561;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
 }
 
 .conteudo-cabecalho {
@@ -52,210 +27,94 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0)); /* Blue to transparent */
+    background: linear-gradient(to top, rgba(0, 0, 78, 0.918), rgba(0, 0, 78, 0.918), rgba(0, 0, 255, 0));
+    /* Blue to transparent */
+}
+
+.fundo-servicos {
+    background-color: rgb(247, 247, 247);
 }
 
 
 
-.container-wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+
+
+
+
+
+/* Smooth highlight effect on sidebar links */
+.uk-nav-default>li>a {
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: rgba(0, 0, 78, 0.918);
 }
 
-.service-title {
-    color: var(--primary-blue);
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 1.5rem;
+.uk-nav-default>li.uk-active>a,
+.uk-nav-default>li>a:hover {
+    background: rgba(0, 0, 78, 0.918);
+    color: #fff !important;
 }
 
-.feature-item {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.uk-card-title {
+    font-weight: 700;
 }
 
-.feature-item:last-child {
-    border-bottom: none;
+.uk-text-primary {
+    color: rgba(0, 0, 78, 0.918) !important;
 }
 
-.industry-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.industry-tag {
-    background-color: #FAA61A;
-    color:rgba(0, 0, 78, 0.918);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.benefits-list {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-    color: #fff;
-}
-
-.benefits-list li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 12px;
-    line-height: 1.5;
-}
-
-.benefits-list li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--accent-blue);
-    font-weight: bold;
-    font-size: 1.2rem;
+.uk-text-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: -5px;
+    margin-bottom: 15px;
 }
 
 .uk-accordion-title {
-    font-weight: 700;
-    color: var(--primary-blue);
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
+    background: #f8f8f8;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+   
+    /* ← Adds space between accordion titles */
+    line-height: 1.4;
 }
 
-.uk-open .uk-accordion-title {
-    background-color: var(--primary-blue);
-    color: white;
+.uk-open>.uk-accordion-title {
+    background: rgba(0, 0, 78, 0.918);
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
 
 .uk-accordion-content {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 0 0 5px 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 0 5px 10px 5px;
 }
 
-.uk-slidenav-previous,
-.uk-slidenav-next {
-    background-color: var(--primary-blue);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.tag {
+    display: inline-block;
+    background: rgba(0, 0, 78, 0.918);
     color: #fff;
-    padding: 10px;
-}
-
-@media (max-width: 960px) {
-    .fundo-cabecalho {
-        min-height: 300px;
-    }
-
-    .gradiente-texto-cabecalho {
-        min-height: 300px;
-    }
-
-    .texto-abas-cronologia {
-        font-size: 14px !important;
-        padding: 8px 12px;
-    }
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    margin-right: 6px;
+    margin-bottom: 5px;
 }
 
 
 
-
-
-/* Slider specific styles */
-.uk-slider-container {
-    padding: 40px 40px;
-    margin-bottom: 20px;
-}
-
-.uk-slider-items li {
-    margin: 0 2px;
-}
-
-.uk-slider-items li a {
-    padding: 8px 16px;
-    display: block;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-
-.uk-slider-items li a {
-    color: rgba(5, 5, 51, 1);
-    border-radius: 5px;
-    font-weight: bolder;
-}
-
-.uk-slider-items li.uk-active a {
-    background-color: #20530a;
-    color: #fff;
+.uk-box-shadow-small {
+    box-shadow: 2px 24px 90px rgba(0, 53, 103, 0.559);
 
 }
 
-.uk-tab-left>*>a:hover {
-    background-color: rgba(0, 0, 78, 0.918);
-    color: #0369c1 !important;
+.sombra {
+    box-shadow: 2px 24px 90px rgba(0, 53, 103, 0.559);
+
 }
-
-.uk-tab-left>*>a:hover {
-    background-color: rgba(0, 0, 78, 0.918);
-    color: #0369c1;
-}
-
-.uk-tab-left>*>a h4 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.uk-tab-left>*>a h4:hover {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #fff;
-}
-
-.talk-to-expert-btn {
-color: #fff !important;
-background: transparent;
-border: none;
-text-decoration: none;
-padding: 0;
-}
-
-
-.talk-to-expert-btn:hover {
-text-decoration: underline;
-background: transparent;
-color: #fff !important;
-}
-
-
-.talk-to-expert-btn .uk-icon svg {
-stroke: #fff;
-}
-
-.uk-grid, 
-.uk-grid>.uk-grid-margin,
-*+.uk-grid-margin,
-.uk-grid+.uk-grid {
-    margin-top: 0 !important;
-}
-
-
-.uk-grid-divider.uk-grid-stack>.uk-grid-margin::before {
-    top: -20px;
-    left: 0px;
-}
-
-

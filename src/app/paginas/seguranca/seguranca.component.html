@@ -1,105 +1,83 @@
-<app-menu></app-menu>
-<div class="fundo-cabecalho">
-  <div class="gradiente-texto-cabecalho">
-    <div class="conteudo-cabecalho uk-margin-medium-top">
-      <div class="uk-container uk-margin-large-bottom">
-        <h4 style="color:white">{{ 'seguranca_titulo_pagina' | translate }}</h4>
-        <h1 style="color:#fff; font-weight: bolder;">{{ 'seguranca_subtitulo_parte1' | translate
-          }}<br>{{ 'seguranca_subtitulo_parte2' | translate }}</h1>
+
+  <app-menu></app-menu>
+
+  <!-- Header -->
+  <div class="fundo-cabecalho">
+    <div class="gradiente-texto-cabecalho">
+      <div class="conteudo-cabecalho uk-margin-medium-top">
+        <div class="uk-container uk-margin-large-bottom">
+          <h1 style="color:#fff; margin-top:20px; font-weight:800;">Security</h1>
+          <h2 style="color:white;">Protect your network and online infrastructure from DDoS attacks and malicious traffic with Shields2Europe.</h2>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <!-- Main Content -->
+  <div class="uk-container uk-margin-large-top">
 
-<!-- Services Tabs Section -->
-<div class="fundo-cronologia-abas">
-  <div class="uk-container ">
-    <div class="">
-      <!-- Slider Navigation -->
-      <div uk-slider>
-        <div class="uk-position-relative">
-          <!-- Navigation Arrows -->
-          <a class="uk-position-center-left-out uk-hidden-hover uk-margin-small-right" href="#" uk-slidenav-previous
-            uk-slider-item="previous"></a>
-          <a class="uk-position-center-right-out uk-hidden-hover uk-margin-small-left" href="#" uk-slidenav-next
-            uk-slider-item="next"></a>
+    <div class="uk-grid-large uk-grid-match" uk-grid>
+      <!-- Sidebar -->
+      <div class="uk-width-1-4@m uk-margin-small-top">
+        <ul
+          class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
+          style="background:#fff;"
+          uk-switcher="connect: #component-nav; animation: uk-animation-fade"
+        >
+          <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
+          <li><a href="#" class="uk-text-bold">Anti-DDoS, Firewall-as-a-Service, WAF</a></li>
+        </ul>
+      </div>
 
-          <!-- Slider Container -->
-          <div class="uk-slider-container">
-            <ul class="uk-slider-items uk-child-width-auto uk-grid uk-grid-small"
-              uk-switcher="connect: .timeline-content">
-              <li><a class="texto-abas-cronologia">Anti-DDoS</a></li>
+      <!-- Content -->
+      <div class="uk-width-expand@m">
+        <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
 
+          <!-- Anti-DDoS / Firewall-as-a-Service / WAF -->
+          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
+              Anti-DDoS, Firewall-as-a-Service, and Web Application Firewall (WAF)
+            </h1>
+            <p>
+              <b>Shields2Europe</b> is a comprehensive security service designed to safeguard your online infrastructure
+              against malicious traffic and DDoS attacks. Protection spans layers 3 to 7, supporting both IPv4 and IPv6 environments
+              to ensure business continuity and optimal performance.
+            </p>
 
+            <ul uk-accordion="multiple:true">
+              <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Key Benefits</a>
+                <div class="uk-accordion-content">
+                  <ul class="uk-list uk-list-bullet uk-margin-small">
+                    <li>24/7 Monitoring and Detection</li>
+                    <li>Protection against server bandwidth overload</li>
+                    <li>Defense against resource exhaustion and machine-level attacks</li>
+                    <li>Real-time mitigation of malicious traffic</li>
+                    <li>Layer 3–7 coverage with IPv4 and IPv6 support</li>
+                    <li>Firewall-as-a-Service and WAF integration for complete protection</li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-          </div>
-        </div>
-      </div>
 
-
-      
-      <div class="uk-container">
-        <img src="/img/servicos/security.png" alt="Security Services"
-          style="filter: brightness(50%) ; width: 100%; height: 120px;  border-radius: 10px 10px  0px 0px; object-fit: cover;">
-      </div>
-
-      <!-- Content Switcher -->
-      <div class="timeline-content uk-switcher ">
-        <!-- Internet Connections -->
-        <div class="uk-child-width-1-2@m" uk-grid>
-          <div>
-            <div class="uk-card uk-card-body">
-              <h2 class="service-title">Maximize your network security from DDOS attacks
-              </h2>
-              <div class="industry-list">
-                <span class="industry-tag">Technology</span>
-                <span class="industry-tag">Energy, Oil & Gas</span>
-                <span class="industry-tag">Manufacturing</span>
-                <span class="industry-tag">Finance Sector</span>
-                <span class="industry-tag">Public Sector</span>
-                <span class="industry-tag">General Markets</span>
-              </div>
-              <ul class="benefits-list uk-margin-small-top">
-                <li>24/7 Monitoring and Detection</li>
-                <li>Protection against server bandwidth overload</li>
-                <li>Protection against machine resources state-exhaustion</li>
-                <li>Mitigation of malicious traffic</li>
-              </ul>
-
-              <div class="uk-margin">
-                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                  <span style="font-weight: 600;">Talk to an expert</span>
-                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                </a>
-              </div>
+            <div class="uk-margin-small-top">
+              Ideal for:
+              <span class="tag">Technology</span>
+              <span class="tag">Finance Sector</span>
+              <span class="tag">Public Sector</span>
+              <span class="tag">Service Providers</span>
+              <span class="tag">General Markets</span>
             </div>
           </div>
-          <div>
-            <div class="uk-card uk-card-body uk-text-left">
-              <ul uk-accordion="collapsible: false">
-                <li class="uk-open">
-                  <a class="uk-accordion-title" href><b>Anti-DDoS</b></a>
-                  <div class="uk-accordion-content">
-                    <p>Colocate your infrastructure within any of our facilites in Lagos, Luanda and Fortaleza with high
-                      availability, diverse provider choice with high security for business continuity.</p>
 
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-          </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
-
-
-
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
 
 <app-ad2></app-ad2>
 <app-rodape></app-rodape>

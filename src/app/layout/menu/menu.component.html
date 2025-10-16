@@ -17,41 +17,37 @@
                     <ul class="uk-navbar-nav uk-text-left uk-visible@m">
                         <li>
                             <a href="#" class="uk-navbar-toggle" uk-toggle="target: #products-dropdown">Products</a>
-                            <div style="display: none !important;" id="products-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-1" hidden>
-                                <div class="uk-drop-grid uk-child-width-1-3" uk-grid>
+                            <div style="" id="products-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-4"
+                                hidden>
+                                <div class="uk-drop-grid uk-child-width-1-4" uk-grid>
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav ">
                                             <li class=" uk-padding-bottom-small uk-nav-header"><a
                                                     routerLink="/"><b><span class="uk-margin-small-right"
                                                             uk-icon="world"></span>
                                                         CONNECTIVITY</b></a></li>
-                                            <li><a [routerLink]="['/']" fragment="internet">Internet
-                                                    Connections</a></li>
-
-                                            <li class="uk-nav-divider" routerLink="/connectivity" fragment="dia">
-                                                Dedicated Internet Acess</li>
-                                            <li class="">IP Transit </li>
-
-                                            <li><a [routerLink]="['/connectivity']" fragment="private-metro">Private
-                                                    Metro Connections</a></li>
-
-                                            <li class="uk-nav-divider">Layer 2 VPN</li>
-                                            <li class=""> Layer 3 VPN </li>
-
-                                            <li class=" uk-margin-small-top"><a [routerLink]="['/connectivity']"
-                                                    fragment="ipc">International Private
-                                                    Circuit</a> </li>
-                                            <li class="uk-nav-divider">Dedicated international circuits for global sites
-                                                interconnections</li>
 
 
-                                            <li class="uk-active uk-margin-small-top"><a
-                                                    [routerLink]="['/connectivity']" fragment="acloudconnect">ACloud
-                                                    Connect
+
+                                            <li><a [routerLink]="['/connectivity']" fragment="private-metro">Internet
+                                                    Acess</a></li>
+
+
+                                            <li class=" "><a [routerLink]="['/connectivity']" fragment="ipc">Private
+                                                    Metro Connections</a> </li>
+
+
+                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
+                                                    fragment="acloudconnect">International Private Circuit
                                                 </a>
                                             </li>
-                                            <li class="uk-nav-divider">Secured connections to Public Cloud Service
-                                                Providers from Nigeria</li>
+                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
+                                                    fragment="acloudconnect">Public
+                                                    Cloud Acess
+                                                </a>
+                                            </li>
+
+
 
                                         </ul>
                                     </div>
@@ -63,57 +59,50 @@
                                                             class="uk-margin-small-right" uk-icon="cloud-upload"></span>
                                                         CLOUD </b> </a></li>
 
-                                            <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
-                                                    fragment="iaas">Virtual
+                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Virtual
                                                     Infrastructure
                                                     (IaaS)
                                                 </a>
                                             </li>
-                                            <li class="uk-nav-divider">Compute</li>
-                                            <li class="">Storage </li>
-                                            <li class="">Network </li>
 
 
-                                            <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
-                                                    fragment="backup">
-                                                    Cloud Backup
-                                                    (Backups2Africa)
+
+                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="backup">
+                                                    Storage-as-a-service
                                                 </a>
                                             </li>
 
-                                            <li class="uk-nav-divider">Centralized management for cloud backups and
-                                                recovery strategy</li>
-
-                                            <li class="uk-active uk-margin-small-top"><a [routerLink]="['/cloud']"
-                                                    fragment="storage">Storage-as-a-service
-                                                </a>
-                                            </li>
-                                            <li class="uk-nav-divider">Flexible and affordable storage for large data
-                                                management </li>
                                         </ul>
                                     </div>
 
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class=" uk-nav-header"><a routerLink="/data-center"><b><span
-                                                            class="uk-margin-small-right" uk-icon="cloud-upload"></span>
+                                                            class="uk-margin-small-right" uk-icon="server"></span>
                                                         DATA CENTER </b> </a> </li>
-                                            <li class="uk-active uk-margin-small-top"><a
-                                                    routerLink="/data-center">Colocation</a></li>
-                                            <li class="uk-nav-divider">Rack Colocation</li>
-                                            <li class="">Interconnectivity </li>
-                                            <li class="">Remote Hands & Support </li>
+                                            <li class="uk-active "><a routerLink="/data-center">Interconnectivity</a>
+                                            </li>
+                                            <li class="uk-active "><a routerLink="/data-center">Colocation</a></li>
+                                            <li class="uk-active "><a routerLink="/data-center">Remote Hands &
+                                                    Support</a></li>
+
                                         </ul>
 
+
+                                    </div>
+
+                                    <div>
+
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header uk-margin-small-top "><a
-                                                    routerLink="/security"><b><span class="uk-margin-small-right"
-                                                            uk-icon="lock"></span> SECURITY
+                                            <li class=" uk-nav-header"><a routerLink="/security"><b><span
+                                                            class="uk-margin-small-right" uk-icon="lock"></span>
+                                                        SECURITY
                                                     </b></a></li>
-                                            <li class="uk-active uk-margin-small-top"><a
-                                                    routerLink="/security">Anti-DDoS</a></li>
-                                            <li class="uk-nav-divider">Maximize your network security from DDOS attacks
+                                            <li class=" uk-active"><a routerLink="/security">Anti-DDoS</a>
                                             </li>
+                                            <li class="uk-active "><a routerLink="/security">Web
+                                                    Application Firewall (WAF)</a></li>
+
                                         </ul>
                                     </div>
 
@@ -122,85 +111,78 @@
                         </li>
 
                         <li>
-                            <a href="#" class="uk-navbar-toggle" uk-toggle="target: #solutions-dropdown">Solutions</a>
-                            <div  style="display: none !important;" id="solutions-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-1" hidden>
+                            <a routerLink="/solution"  >Solutions</a>
+
+                            <!-- 
+                            <div id="solutions-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-1" hidden>
                                 <div class="uk-drop-grid uk-child-width-1-3" uk-grid>
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> SERVICE
-                                                    PROVIDERS </b></li>
+                                            <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> GLOBAL
+                                                    CONNECTIVITY SOLUTIONS </b></li>
                                             <li class=""> <a routerLink="/solution/W6TKykQybafg9iVfYzrh"> Bulk Capacity
                                                 </a> </li>
-                                            <li class=""><a routerLink="/solution/R446yVwVh58fu47SWfqz"> Cloud Partner
-                                                </a> </li>
-                                            <li class=""><a routerLink="/solution/UxSwnLK8v0tTjLXtwW07">Africa Digital
+
+                                            <li class=""><a routerLink="/solution/UxSwnLK8v0tTjLXtwW07">Europe Digital
                                                     Bridge</a> </li>
                                         </ul>
 
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header uk-margin-small-top "><b><span class=""
-                                                        uk-icon=""></span> TECHNOLOGY
-                                                </b></li>
-                                            <li class=""><a routerLink="/solution/aGazTik0cU33m9Ply2R4">Virtual server
-                                                    room </a></li>
-                                            <li class=""><a routerLink="/solution/n5Xftlth6X6Gz8YsGf35"> Uptime
-                                                    assurance, Disaster Recovery<br> and Global Content Delivery</a>
-                                            </li>
-                                        </ul>
+                                       
+
+                             
+                                    </div>
+
+
+                       
+
+
+                                         <div>
+                                
 
 
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header uk-margin-small-top "> <b>ENERGY</b>
+                                            <li class=" uk-nav-header  "> <b>LOCAL BUSINESS</b>
                                             </li>
                                             <li><a routerLink="/solution/xmgZtnpcULyfJn4S5CoU">
-                                                    Point-to-Point/Multipoints circuits</a></li>
-                                            <li class=""><a routerlink="/solution/IkS1RLuNtKt7syLSDfHc"> Private cloud
-                                                    as an alternative to physical infrastructure </a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> FINANCE
-                                                    SERVICES & INSURANCE
-                                                    (FSI) </b></li>
-                                            <li class=""><a routerLink="/solution/r6N5oiZ8kNGtsoBckh1G">Premium
-                                                    connectivity</a> </li>
-                                            <li class=""><a routerLink="/solution/IkS1RLuNtKt7syLSDfHc">Private cloud
-                                                    for inhouse management </a></li>
-
-                                            <li class=""><a routerLink="/solution/gmxOyIYW80aGNnp95xsM">Secured
-                                                    infrastructure against attack </a> </li>
-                                            <li class=""><a routerLink="/solution/v9Tr2HSReshEXglN603y"> Financial Ais
-                                                    and global finance exchange connections</a></li>
-                                        </ul>
-
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> e-GOVERNMENT
-                                                </b></li>
-                                            <li class=""><a routerLink="/solution/PJBrln5DGSupIWqjs03Y">Dedicated
-                                                    Government cloud node </a></li>
-                                            <li class=""><a routerLink="/solution/RnBSDi3fKPpcvdfjrr8r">Private
-                                                    communications</a></li>
-                                            <li class=""><a routerLink="/solution/bUkeL79XHUhhvEBNNugN"> Private cloud
-                                                    as an alternative to physical infrastructure</a></li>
+                                                    Private Cloud <br> for In-house Management </a></li>
 
                                         </ul>
                                     </div>
 
                                     <div>
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class=" uk-nav-header"><b><span class="" uk-icon=""></span> CUSTOMIZED
+                                                    SOLUTION </b></li>
+                                            <li class=""><a routerLink="/solution/r6N5oiZ8kNGtsoBckh1G">Integrated
+                                                    Telecom Solutions</a> </li>
+                                            <li class=""><a routerLink="/solution/IkS1RLuNtKt7syLSDfHc">High Capacity
+                                                    Telecom Solutions </a></li>
 
-                                        <!-- 
+                                            <li class=""><a routerLink="/solution/gmxOyIYW80aGNnp95xsM">Enterprise
+                                                    Telecom Solutionsk </a> </li>
+                                            <li class=""><a routerLink="/solution/v9Tr2HSReshEXglN603y"> Managed Telecom
+                                                    Solutions</a></li>
+                                            <li class=""><a routerLink="/solution/v9Tr2HSReshEXglN603y">Multi-Cloud Network Solution</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div>
+
+                                        
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class=" uk-nav-header "><b><span class="" uk-icon=""></span> GENERAL
                                                     SALES & CAMPAIGNS
                                                 </b></li>
                                             <li class="">VMWare alternative - Clouds2Africa</li>
                                         </ul>
-                                    -->
+                                    
                                     </div>
                                 </div>
                             </div>
+
+                            -->
                         </li>
 
                         <li>
@@ -220,7 +202,7 @@
                 <div class="uk-navbar-right uk-visible@m">
                     <ul class="uk-navbar-nav">
                         <li>
-                            <a routerLink="/"  href="#"><button
+                            <a routerLink="/" href="#"><button
                                     style="background-color: #6fe0fc; color: #002561 ; border-radius:40px; padding: 5px 20px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); "
                                     class="uk-button botao-contacto">Contact Us</button> </a>
 
@@ -351,7 +333,8 @@
             <ul class="uk-nav uk-nav-default uk-margin-medium-left">
                 <li>
                     <a href="#inicio" uk-scroll="offset: 100" class="texto">
-                        <img class="uk-border-rounded" style="height: auto; width: 250px;" src="/img/telcableseuropa-logotipo-azul.png">
+                        <img class="uk-border-rounded" style="height: auto; width: 250px;"
+                            src="/img/telcableseuropa-logotipo-azul.png">
                     </a>
                 </li>
 

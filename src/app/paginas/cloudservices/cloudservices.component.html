@@ -1,215 +1,121 @@
-<app-menu></app-menu>
-<div class="fundo-cabecalho">
-  <div class="gradiente-texto-cabecalho">
-    <div class="conteudo-cabecalho uk-margin-medium-top">
-      <div class="uk-container header-text uk-margin-large-bottom">
-        <h4 style="color:white">Cloud</h4>
-        <h1 style="color:#fff; font-weight: bolder;">{{ 'cloud_subtitulo_pagina' | translate }}</h1>
+
+  <app-menu></app-menu>
+
+  <!-- Header -->
+  <div class="fundo-cabecalho">
+    <div class="gradiente-texto-cabecalho">
+      <div class="conteudo-cabecalho uk-margin-medium-top">
+        <div class="uk-container uk-margin-large-bottom">
+          <h1 style="color:#fff; margin-top: 20px; font-weight:800;">Cloud</h1>
+          <h2 style="color:white;">Flexible, scalable, and secure cloud infrastructure and storage services for enterprises.</h2>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <!-- Main Content -->
+  <div class="uk-container uk-margin-large-top">
 
+    <div class="uk-grid-large uk-grid-match" uk-grid>
+      <!-- Sidebar -->
+      <div class="uk-width-1-4@m uk-margin-small-top">
+        <ul
+          class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
+          style="background:#fff;"
+          uk-switcher="connect: #component-nav; animation: uk-animation-fade"
+        >
+          <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
+          <li><a href="#" class="uk-text-bold">Virtual Infrastructure (IaaS)</a></li>
+          <li><a href="#" class="uk-text-bold">Storage-as-a-Service</a></li>
+        </ul>
+      </div>
 
-<!-- Services Tabs Section -->
-<div class="fundo-cronologia-abas">
-  <div class=" uk-container ">
-    <div class="uk-container">
-      <!-- Slider Navigation -->
-      <div uk-slider>
-        <div class="uk-position-relative">
-          <!-- Navigation Arrows -->
-          <a class="uk-position-center-left-out uk-hidden-hover uk-margin-small-right" href="#" uk-slidenav-previous
-            uk-slider-item="previous"></a>
-          <a class="uk-position-center-right-out uk-hidden-hover uk-margin-small-left" href="#" uk-slidenav-next
-            uk-slider-item="next"></a>
+      <!-- Content -->
+      <div class="uk-width-expand@m">
+        <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
 
-          <!-- Slider Container -->
-          <div class="uk-slider-container">
-            <ul class="uk-slider-items uk-child-width-auto uk-grid uk-grid-small"
-              uk-switcher="connect: .timeline-content">
-              <li><a class="texto-abas-cronologia">Virtual Infrastructure (IaaS)</a></li>
-              <li><a class="texto-abas-cronologia">Cloud Backup (Backups2Africa)</a></li>
-              <li><a class="texto-abas-cronologia">Storage-as-a-Service</a></li>
+          <!-- Virtual Infrastructure (IaaS) -->
+          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
+              Virtual Infrastructure (IaaS)
+            </h1>
+            <p class="uk-margin-small-bottom">
+              On-demand virtualized computing resources over the internet, such as compute servers,
+              storage, and networking available through our B2B management portal. Flexible, scalable,
+              and built to support every B2B need.
+            </p>
+
+            <ul uk-accordion="multiple:true">
+              <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Key Benefits</a>
+                <div class="uk-accordion-content">
+                  <ul class="uk-list uk-list-bullet uk-margin-small">
+                    <li>24x7x365 expert support</li>
+                    <li>More efficient management of IT resources</li>
+                    <li>Cost reduction, availability, and data security</li>
+                    <li>Flexible and scalable infrastructure</li>
+                    <li>Integration with non-cloud environments (Hybrid)</li>
+                  </ul>
+                </div>
+              </li>
             </ul>
-          </div>
-        </div>
-      </div>
 
-
-      <div class="uk-container">
-        <img src="/img/servicos/cloud-services.png" alt="Cloud Services"
-          style="filter: brightness(50%) ; width: 100%; height: 120px;  border-radius: 10px 10px  0px 0px; object-fit: cover;">
-      </div>
-
-      <!-- Content Switcher -->
-      <div class="timeline-content uk-switcher ">
-        <!-- Internet Connections -->
-        <div id="iaas" class=" scroll-target uk-child-width-1-2@m uk-grid-divider" uk-grid>
-          <div class="uk-margin-medium-bottom">
-            <div class="uk-card uk-card-body uk-margin-small-bottom ">
-              <h2 class="service-title">Virtualized computing resources such as servers, storage, and networking
-              </h2>
-              <div class="industry-list">
-                <span class="industry-tag">Technology</span>
-                <span class="industry-tag">Energy, Oil & Gas</span>
-                <span class="industry-tag">Manufacturing</span>
-                <span class="industry-tag">Finance Sector</span>
-                <span class="industry-tag">Public Sector</span>
-                <span class="industry-tag">General Markets</span>
-              </div>
-              <ul class="benefits-list uk-margin-small-top">
-                <li>Global access to network</li>
-                <li>Guaranteed speed and Quality of service</li>
-                <li>24x7x365 support to provide upto 99.95% SLA</li>
-                <li>Flexible billing and delivery model</li>
-                <li>Service upgrade ondemand</li>
-              </ul>
-
-              <div class="uk-margin  ">
-                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                  <span style="font-weight: 600;">Talk to an expert</span>
-                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="uk-card uk-card-body uk-text-left">
-              <ul uk-accordion="collapsible: true">
-                <li class="uk-open">
-                  <a class="uk-accordion-title"><b>Virtual Infrastructure (IaaS)</b></a>
-                  <div class="uk-accordion-content">
-                    <p>On demand virtualized computing resources over the internet, such as compute servers, storage,
-                      and networking on our B2B management portal; flexible and scalable. Built to meet and support
-                      every B2B needs.</p>
-
-                  </div>
-                </li>
-
-
-              </ul>
-
-              <!-- 
-              <div class="uk-margin">
-                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                  <span style="font-weight: 600;">Talk to an expert</span>
-                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                </a>
-              </div> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Private Metro Connections -->
-        <div id="backup" class="scroll-target uk-child-width-1-2@m uk-grid-divider" uk-grid>
-          <div class="uk-margin-medium-bottom">
-            <div class="uk-card uk-card-body">
-              <h2 class="service-title">Centralized management for cloud backups and recovery strategy</h2>
-              <div class="industry-list">
-                <span class="industry-tag">Technology</span>
-                <span class="industry-tag">Finance</span>
-                <span class="industry-tag">Public Sector</span>
-                <span class="industry-tag">General Markets</span>
-              </div>
-              <ul class="benefits-list uk-margin-small-top">
-                <li>Fast data recovery </li>
-                <li>Encrypted data archiving</li>
-                <li>Continuous data protection </li>
-                <li>RTOs close to zero for a protected workloads</li>
-              </ul>
-
-              <div class="uk-margin uk-margin-small-top ">
-                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn" aria-label="Talk to an expert">
-                  <span style="font-weight: 600;">Talk to an expert</span>
-                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="uk-card uk-card-body uk-text-left">
-              <ul uk-accordion="collapsible: false">
-                <li class="uk-open">
-                  <a class="uk-accordion-title"><b>Cloud Backup (Backups2Africa)</b></a>
-                  <div class="uk-accordion-content">
-                    <p>Offers automation and the centralised management of backups and data recovery (disaster recovery)
-                      with secure cloud data storage to enable a simply and quick means to recover your data.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- International Private Circuit -->
-        <div class="scroll-target uk-child-width-1-2@m uk-grid-divider" uk-grid>
-          <div id="storage" class="scroll-target uk-margin-medium-bottom">
-            <div class="uk-card uk-card-body">
-              <h2 class="service-title">Flexible and affordable storage for large data management
-              </h2>
-              <div class="industry-list">
-                <span class="industry-tag">Technology</span>
-                <span class="industry-tag">Entertainment</span>
-                <span class="industry-tag">Finance</span>
-                <span class="industry-tag">Manufacturing</span>
-                <span class="industry-tag">Public Sector</span>
-                <span class="industry-tag">Education</span>
-                <span class="industry-tag">General Markets</span>
-
-
-
-              </div>
-              <ul class="benefits-list uk-margin-small-top">
-                <li>Reduced Capital Expenditure</li>
-                <li>Flexibile and Scalable</li>
-                <li>Zero ingress/egress/IOPs charges</li>
-                <li>Business Continuity</li>
-              </ul>
-
-
-
-              <div class="uk-margin">
-                <a routerLink="/service-contact" class="uk-button talk-to-expert-btn">
-                  <span style="font-weight: 600;">Talk to an expert</span>
-                  <span class="uk-margin-small-left" uk-icon="icon: arrow-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div class="uk-card uk-card-body uk-text-left">
-                <ul uk-accordion="collapsible: false">
-                  <li class="uk-open">
-                    <a class="uk-accordion-title"><b>Storage-as-a-Service
-                      </b></a>
-                    <div class="uk-accordion-content">
-                      <p>Provides scalable and flexible data storage capabilities to organizations to store, manage, and
-                        access their data in a secure, cost-effective, and efficient manner without the need to invest
-                        in
-                        or maintain physical storage infrastructure.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <div class="uk-margin-small-top">
+              Ideal for:
+              <span class="tag">Technology</span>
+              <span class="tag">Finance</span>
+              <span class="tag">Manufacturing</span>
+              <span class="tag">Public Sector</span>
+              <span class="tag">General Markets</span>
             </div>
           </div>
 
+          <!-- Storage-as-a-Service -->
+          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
+              Storage-as-a-Service
+            </h1>
+            <p class="uk-margin-small-bottom">
+              Provides scalable and flexible data storage capabilities to organizations to store, manage,
+              and access data securely and efficiently, without the need to invest in or maintain
+              physical storage infrastructure.
+            </p>
+
+            <ul uk-accordion="multiple:true">
+              <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Key Benefits</a>
+                <div class="uk-accordion-content">
+                  <ul class="uk-list uk-list-bullet uk-margin-small">
+                    <li>Reduced Capital Expenditure</li>
+                    <li>Flexible and Scalable</li>
+                    <li>Zero ingress/egress/IOPs charges</li>
+                    <li>Business Continuity</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <div class="uk-margin-small-top">
+              Ideal for:
+              <span class="tag">Technology</span>
+              <span class="tag">Entertainment</span>
+              <span class="tag">Finance</span>
+              <span class="tag">Manufacturing</span>
+              <span class="tag">Public Sector</span>
+              <span class="tag">Education</span>
+              <span class="tag">General Markets</span>
+            </div>
+          </div>
 
         </div>
       </div>
     </div>
   </div>
 
-  <!-- UIkit JS -->
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
 
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
 
-
-  <app-ad2></app-ad2>
-
-
-  <app-rodape></app-rodape>
+<app-ad2></app-ad2>
+<app-rodape></app-rodape>
