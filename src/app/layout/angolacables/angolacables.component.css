@@ -331,10 +331,10 @@
     background: rgb(255, 255, 255);
     backdrop-filter: blur(12px);
     border-radius: 20px;
-    padding: 80px;
+    padding: 40px;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    text-align: left;   
+    text-align: left;
     box-shadow: 0 5px 30px rgba(0, 53, 103, 0.559);
     position: relative;
 }
@@ -383,6 +383,9 @@
     object-fit: cover;
 }
 
+
+
+
 /* Responsive Design */
 @media (max-width: 767px) {
     .angola-cables-titulo {
@@ -422,6 +425,7 @@
 
 .modern-accordion li {
     margin-bottom: 1.2rem;
+
     border-radius: 14px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.145);
@@ -438,6 +442,10 @@
 
 /* Accordion Title */
 .modern-accordion .uk-accordion-title {
+
+        border:  1px solid rgba(0, 0, 0, 0.423);
+    border-radius: 14px;
+
     font-size: 1.2rem;
     font-weight: 600;
     color: #022561;
@@ -468,7 +476,7 @@
 /* Active/open state */
 .modern-accordion .uk-open .uk-accordion-title {
     background: linear-gradient(135deg, #25c0dd, #6fe0fc);
-    color: #fff;
+    color: #002561;
 }
 
 /* Accordion Content */
@@ -519,8 +527,10 @@
     font-weight: 600;
 }
 
-.bt-capacidade{
-    border-radius:20px; padding: 0px 20px; background-color: #022561;
+.bt-capacidade {
+    border-radius: 20px;
+    padding: 0px 20px;
+    background-color: #022561;
 }
 
 .fundo-switcher {
@@ -550,6 +560,9 @@
     /* Animate slight floating */
     animation: floaty 6s ease-in-out infinite;
 }
+
+
+
 
 /* Keyframes for floating / live shimmer */
 @keyframes floaty {

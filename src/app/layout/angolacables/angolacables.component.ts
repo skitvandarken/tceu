@@ -36,6 +36,7 @@ declare const UIkit: any; // To access UIkit globally
     ContadorComponent,
     CaracteristicasComponent,
     NoticiasListarComponent,
+    SlideshowComponent,
   ],
   templateUrl: './angolacables.component.html',
   styleUrl: './angolacables.component.css',

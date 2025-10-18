@@ -10,7 +10,10 @@
   </h1>
   <p class="" style="font-size: 2rem; font-weight: 00; color: #022561; ">Submarine |
     Metro | Cloud | Connected</p>
-  <img src="img/telcables-europe-mapa.png" alt="Lisbon gateway">
+  <div class="uk-padding">
+    <img src="img/telcables-europe-mapa.png" alt="Lisbon gateway">
+
+  </div>
 
 </div>
 
@@ -48,11 +51,10 @@
           <!-- Tab 1 -->
           <li>
             <div class="uk-container ">
-              <div class="uk-child-width-1-2@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
+              <div class="uk-child-width-1-2@m uk-grid-match uk-grid-medium uk-margin-large-bottom" uk-grid>
 
                 <div>
                   <div class="uk-card service-card uk-padding">
-                    <span uk-icon="icon: bolt; ratio: 1.5" class="service-icon"></span>
                     <p class="service-title">Wavelengths</p>
                     <p class="service-text">Robust, high-capacity Wavelength services supported by its extensive global
                       network and strategic submarine cable systems, SACS, WACS, and MONET. These routes ensure direct,
@@ -68,14 +70,13 @@
 
 
 
-                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn
+                    <p class="service-learnmore uk-margin-large-top"><a routerLink="/connectivity" href="#">Learn
                         more</a></p>
                   </div>
                 </div>
 
                 <div>
                   <div class="uk-card service-card">
-                    <span uk-icon="icon: server; ratio: 1.5" class="service-icon"></span>
                     <p class="service-title">Ethernet</p>
                     <p class="service-text">TelCables Europe offers L2 VPN services designed to give your business a
                       reliable, private, and high-performance network connection across multiple regions. With our
@@ -99,7 +100,7 @@
                       class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
                         style="color:#022561">400GB</b></button>
 
-                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn
+                    <p class="service-learnmore uk-margin-large-top"><a routerLink="/connectivity" href="#">Learn
                         more</a></p>
                   </div>
                 </div>
@@ -108,7 +109,6 @@
 
                 <div>
                   <div class="uk-card service-card">
-                    <span uk-icon="icon: world; ratio: 1.5" class="service-icon"></span>
                     <p class="service-title">IP Transit</p>
                     <p class="service-text">TelCables Europe IP Transit service delivers high-performance connectivity
                       to the global internet, powered by our autonomous system (AS37468), diverse Tier-1 upstream
@@ -136,7 +136,7 @@
                     <button style="border-radius:10px; padding: 0px 10px;"
                       class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
                         style="color:#022561">400GB</b></button>
-                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn
+                    <p class="service-learnmore uk-margin-large-top"><a routerLink="/connectivity" href="#">Learn
                         more</a></p>
                   </div>
                 </div>
@@ -146,7 +146,6 @@
 
                 <div>
                   <div class="uk-card service-card">
-                    <span uk-icon="icon: cloud-upload; ratio: 1.5" class="service-icon"></span>
                     <p class="service-title">Remote Peering</p>
                     <p class="service-text">We enable clients to connect to the world’s leading IX platforms with a
                       single port, offering them optimal conditions and flexibility.
@@ -221,7 +220,7 @@
 
 
                       </b></button>
-                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/cloud" href="#">Learn more</a></p>
+                    <p class="service-learnmore uk-margin-large-top"><a routerLink="/cloud" href="#">Learn more</a></p>
                   </div>
                 </div>
               </div>
@@ -288,33 +287,8 @@
   </div>
 
 
-  <!-- Service Provider Ad -->
-  <div
-    style=" border-radius: 20px; background-image: url('/img/tceu-ad.png'); background-size: cover; background-position: center;"
-    class="uk-section uk-container uk-margin-large-top">
-    <div class="uk-container uk-padding">
-      <div class="uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+  <app-slideshow></app-slideshow>
 
-        <!-- Column 1 (Left - Text) -->
-        <div class="uk-text-center uk-text-left@m">
-          <h1 class="" style="color: white; font-weight: 700;">
-            {{ 'for.service-providers' | translate }}
-          </h1>
-          <a routerLink="/contact">
-            <button class=" botao-azul uk-margin-medium-top uk-button uk-width-auto uk-button-medium uk-border-pill">
-              <span style="margin: 5px">{{ 'book.meeting' | translate }}</span>
-            </button>
-          </a>
-        </div>
-
-        <!-- Column 2 (Right - Button) -->
-        <div class="uk-flex uk-flex-center uk-flex-right@m uk-margin-top uk-margin-remove-top@m">
-
-        </div>
-
-      </div>
-    </div>
-  </div>
 
 
   <div style="border-radius: 10px;" class="uk-background-muted uk-container uk-margin-large-top">
