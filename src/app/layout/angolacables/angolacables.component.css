@@ -331,10 +331,10 @@
     background: rgb(255, 255, 255);
     backdrop-filter: blur(12px);
     border-radius: 20px;
-    padding: 30px;
+    padding: 80px;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    text-align: left;
+    text-align: left;   
     box-shadow: 0 5px 30px rgba(0, 53, 103, 0.559);
     position: relative;
 }
@@ -346,13 +346,13 @@
 
 .service-title {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 15px 0 10px;
     color: #022561;
 }
 
 .service-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #444;
     margin-bottom: 15px;
 }
@@ -519,6 +519,10 @@
     font-weight: 600;
 }
 
+.bt-capacidade{
+    border-radius:20px; padding: 0px 20px; background-color: #022561;
+}
+
 .fundo-switcher {
     background: linear-gradient(135deg, #004c5f0c, #008bae12);
     border-radius: 20px;
@@ -621,7 +625,7 @@
     border-radius: 20px;
     overflow: hidden;
     padding: 40px;
-    background-color: #fff;
+    background-color: linear-gradient(270deg, #00ddff, #00b3ff, #00ddff);
 
     /* Animated gradient */
     background-size: 300% 300%;

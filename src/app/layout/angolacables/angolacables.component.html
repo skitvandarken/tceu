@@ -1,325 +1,438 @@
+<div class="uk-container gradient-bg uk-text-center uk-margin-large-top">
+
+  <p class="" style="font-size: 2rem; font-weight: 00; color: #022561; ">Neutral |
+    Connected | Global</p>
+
+  <h1 class="uk-margin-left uk-margin-right"
+    style="font-size: 3rem; font-weight: 700; color: #022561; line-height: 1.2; ">
+    From Lisbon, Europe’s front door to the Atlantic, we accelerate your business with unmatched scale and
+    reach.
+  </h1>
+  <p class="" style="font-size: 2rem; font-weight: 00; color: #022561; ">Submarine |
+    Metro | Cloud | Connected</p>
+  <img src="img/telcables-europe-mapa.png" alt="Lisbon gateway">
+
+</div>
+
+
+
 <div class="">
   <div class="">
-    <div class="uk-container uk-margin-medium-top gradient-bg">
-      <div class="uk-grid-large uk-flex-middle uk-padding" uk-grid>
+    <div class="fundo-switcher uk-margin-large-top">
 
-        <!-- Left Column (Text) -->
-        <div class="uk-width-1-2@m">
-          <p class="uk-margin-medium-bottom" style="font-size: 1rem; font-weight: 700; color: #022561; ">Neutral |
-            Connected | Global</p>
-          <p style="font-size: 2rem; font-weight: 700; color: #022561; line-height: 1.2; ">
-            From Lisbon, Europe’s front door to the Atlantic, we accelerate your business with unmatched scale and
-            reach.
-          </p>
+      <!-- Switcher Navigation -->
+      <div class="uk-container">
+
+        <!-- Search Bar -->
+        <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-medium-bottom uk-margin-medium-top">
+          <h2 style="font-weight: 700; color:#022561;" class="">Our Services</h2>
+          <div class="uk-inline uk-width-medium">
+            <span class="uk-form-icon" uk-icon="icon: search"></span>
+            <input class="uk-input service-search uk-border-pill" type="text" placeholder="Search services...">
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-medium-bottom"
+          uk-switcher="connect: #service-switcher; animation: uk-animation-fade">
+          <li><a href="#">For Providers – Carrier & Operator</a></li>
+          <li><a href="#">For Enterprises & Governments </a></li>
+        </ul>
+      </div>
+
+
+      <div class="uk-margin-large-bottom">
+        <!-- Tab Content -->
+        <ul id="service-switcher" class="uk-switcher">
+
+          <!-- Tab 1 -->
+          <li>
+            <div class="uk-container ">
+              <div class="uk-child-width-1-2@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
+
+                <div>
+                  <div class="uk-card service-card uk-padding">
+                    <span uk-icon="icon: bolt; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">Wavelengths</p>
+                    <p class="service-text">Robust, high-capacity Wavelength services supported by its extensive global
+                      network and strategic submarine cable systems, SACS, WACS, and MONET. These routes ensure direct,
+                      low-latency connectivity between
+                      Africa, the Americas, Europe, and Asia, delivering superior performance for enterprises, carriers,
+                      and content providers.
+                    </p>
+
+                    <p style="border-radius:10px; padding: 0px 10px;" class=" uk-margin-small-right "><b
+                        style="color:#022561; font-weight: 20px; ">+33.000 Km of our own DWDM sytem <br> > Diverse
+                        Wavelength with built-in network protection </b></p>
+
+
+
+
+                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn
+                        more</a></p>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: server; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">Ethernet</p>
+                    <p class="service-text">TelCables Europe offers L2 VPN services designed to give your business a
+                      reliable, private, and high-performance network connection across multiple regions. With our
+                      extensive global infrastructure of submarine cables and interconnected PoPs, you can extend your
+                      enterprise network globally, as if all your locations were connected locally.
+                    </p>
+
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">1GB</b></button>
+                    <button style="border-radius:10px;  padding: 0px 10px; "
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">10GB</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px; "
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">40GB</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px; "
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">100GB</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">400GB</b></button>
+
+                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn
+                        more</a></p>
+                  </div>
+                </div>
+
+
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: world; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">IP Transit</p>
+                    <p class="service-text">TelCables Europe IP Transit service delivers high-performance connectivity
+                      to the global internet, powered by our autonomous system (AS37468), diverse Tier-1 upstream
+                      providers, and extensive peering with leading IXPs worldwide.
+                    </p>
+
+                    <p style="border-radius:10px; padding: 0px 10px;" class=" uk-margin-small-right "><b
+                        style="color:#022561; font-weight: 20px; ">> 99.99% uptime <br> Connection via fiber-optic
+                        cable, Ethernet and
+                        dedicated communication channels<br> > Connection via fiber-optic cable, Ethernet and
+                        dedicated communication channels <br> > Dual stack of IPV4 and IPV6 protocols
+                        <br> > Direct access to Tier-1 ISPs <br> > Connection via fiber-optic cable, Ethernet and
+                        dedicated communication channels
+                      </b></p>
+
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">10GB</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">40GB</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">100GB</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-button-large"><b
+                        style="color:#022561">400GB</b></button>
+                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn
+                        more</a></p>
+                  </div>
+                </div>
+
+
+
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: cloud-upload; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">Remote Peering</p>
+                    <p class="service-text">We enable clients to connect to the world’s leading IX platforms with a
+                      single port, offering them optimal conditions and flexibility.
+                    </p>
+
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">AMCIX</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">DE-CIX</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">LINX</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">GIGAPIX</b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">NT-IX
+                      </b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">NOTA-IX</b></button>
+
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">ASBURN-IX
+                      </b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">SG-IX
+
+                      </b></button> <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">NYIIX
+
+                      </b></button> <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">NAP-IX
+                      </b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">IX-BR
+                      </b></button> <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">ACCRA-IX
+
+                      </b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">ANGONIX
+
+                      </b></button> <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">IXPN
+
+                      </b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">ANY2WEST-IXP
+
+
+                      </b></button> <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">MEGAIX
+
+                      </b></button>
+                    <button style="border-radius:10px; padding: 0px 10px;"
+                      class="uk-button uk-button-default uk-margin-small-right uk-margin-small-top uk-button-large"><b
+                        style="color:#022561">FRANCE-IX
+
+
+                      </b></button>
+                    <p class="service-learnmore uk-margin-small-top"><a routerLink="/cloud" href="#">Learn more</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Tab 2 -->
+          <li>
+            <div class="uk-container  ">
+              <div class="uk-child-width-1-2@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: link; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">Metro Fibre</p>
+                    <p class="service-text">Reliable metropolitan Ethernet fibre networks designed for high-speed
+                      business
+                      connectivity.</p>
+                    <p class="service-learnmore"><a href="#">Learn more</a></p>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: database; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">Data Center Services & Colocation</p>
+                    <p class="service-text">Secure, scalable colocation services with world-class facilities for
+                      mission-critical workloads.</p>
+                    <p class="service-learnmore"><a href="#">Learn more</a></p>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: cog; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">On-Demand ICT Solutions</p>
+                    <p class="service-text">Flexible IaaS, productivity, and corporate cloud services tailored to your
+                      business needs.</p>
+                    <p class="service-learnmore"><a href="#">Learn more</a></p>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="uk-card service-card">
+                    <span uk-icon="icon: lifesaver; ratio: 1.5" class="service-icon"></span>
+                    <p class="service-title">Managed Services (24/7)</p>
+                    <p class="service-text">Proactive network and infrastructure management with expert support,
+                      available
+                      around the clock.</p>
+                    <p class="service-learnmore"><a href="#">Learn more</a></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <!-- Service Provider Ad -->
+  <div
+    style=" border-radius: 20px; background-image: url('/img/tceu-ad.png'); background-size: cover; background-position: center;"
+    class="uk-section uk-container uk-margin-large-top">
+    <div class="uk-container uk-padding">
+      <div class="uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
+
+        <!-- Column 1 (Left - Text) -->
+        <div class="uk-text-center uk-text-left@m">
+          <h1 class="" style="color: white; font-weight: 700;">
+            {{ 'for.service-providers' | translate }}
+          </h1>
+          <a routerLink="/contact">
+            <button class=" botao-azul uk-margin-medium-top uk-button uk-width-auto uk-button-medium uk-border-pill">
+              <span style="margin: 5px">{{ 'book.meeting' | translate }}</span>
+            </button>
+          </a>
+        </div>
+
+        <!-- Column 2 (Right - Button) -->
+        <div class="uk-flex uk-flex-center uk-flex-right@m uk-margin-top uk-margin-remove-top@m">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div style="border-radius: 10px;" class="uk-background-muted uk-container uk-margin-large-top">
+    <p class="uk-text-center uk-margin-large-top " style="font-size: 2rem; font-weight: 700; color: #022561;">
+      Why TelCables Europe?
+    </p>
+    <div class="uk-child-width-1-2@m uk-grid-large uk-grid-match" uk-grid>
+
+
+
+      <!-- Left Column (Accordion) -->
+      <div>
+        <div class="uk-card uk-card-body">
+
+
           <div class="uk-margin-medium-top">
-           <!--  <p style="font-size: 1rem; font-weight: 700; color: #022561; line-height: 1.2; "> Download our <a> <b>
-                  "Atlatic Digital Bridge 2025" </b> brochure <span class="uk-margin-xsmall-right"
-                  uk-icon="icon:  arrow-right; ratio: 1"></span> </a> </p>  -->
-
+            <ul class="modern-accordion" uk-accordion="multiple: false">
+              <li *ngFor="let item of accordionItems; let i = index" [class.uk-open]="i === 0">
+                <a class="uk-accordion-title" href (click)="onSelectImage(item.image, item.imageDesc)">
+                  <span style="margin-right: 15px;" [attr.uk-icon]="'icon: ' + item.icon + '; ratio: 1.5'"></span>
+                  {{ item.title }}
+                </a>
+                <div class="uk-accordion-content">
+                  <p>{{ item.content }}</p>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <div class="uk-meta-tags uk-margin-medium-top">
-            <p style="border-radius: 0px 0px 0px 15px" class="uk-text-meta-2">Submarine</p>
-            <p style="border-radius: 0px 0px 0px 0px" class="uk-text-meta-2">Metro</p>
-            
-            <p style="border-radius: 0px 0x 0px 0px" class="uk-text-meta-2">Cloud</p>
-            <p style="border-radius: 0px 15px 0px 0px" class="uk-text-meta-2">Interconnected</p>
-          </div>
-        </div>
-
-        <!-- Right Column -->
-        <div style="border-radius: 20px;" class="uk-width-1-2@m">
-          <img src="img/mapa-tceu.png" alt="Lisbon gateway">
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- Switcher Content -->
-
-  </div>
-
-
-  <div class="fundo-switcher uk-margin-large-top">
-
-    <!-- Switcher Navigation -->
-    <div class="uk-container">
-
-      <!-- Search Bar -->
-      <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-medium-bottom uk-margin-medium-top">
-        <h2 style="font-weight: 700; color:#022561;" class="">Services We Offer</h2>
-        <div class="uk-inline uk-width-medium">
-          <span class="uk-form-icon" uk-icon="icon: search"></span>
-          <input class="uk-input service-search uk-border-pill" type="text" placeholder="Search services...">
         </div>
       </div>
 
-      <!-- Tabs -->
-      <ul class="uk-subnav uk-subnav-pill uk-flex-center uk-margin-medium-bottom"
-        uk-switcher="connect: #service-switcher; animation: uk-animation-fade">
-        <li><a href="#">For Providers – Carrier & Operator</a></li>
-        <li><a href="#">For Enterprises & Governments </a></li>
-      </ul>
-    </div>
+      <!-- Right Column (Dynamic Image + Description) -->
+      <div>
+        <div class="uk-card uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center">
+          <ng-container *ngIf="selectedImage; else placeholder">
+            <img [src]="selectedImage" alt="accordion image" style="max-width:100%; border-radius:8px;">
 
+            <!-- Exibe descrição se existir -->
+            <p *ngIf="selectedImageDesc" class="uk-margin-small-top"
+              style="font-size: 0.9rem; color:#022561; font-weight:500; text-align:left;">
+              {{ selectedImageDesc }}
+            </p>
+          </ng-container>
 
-    <div class="uk-margin-large-bottom">
-      <!-- Tab Content -->
-      <ul id="service-switcher" class="uk-switcher">
-
-        <!-- Tab 1 -->
-        <li>
-          <div class="uk-container ">
-            <div class="uk-child-width-1-2@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: bolt; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">Wavelengths</p>
-                  <p class="service-text">High-capacity optical connectivity with dedicated fibre for maximum
-                    performance
-                    and security.</p>
-                  <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn more</a></p>
-                </div>
-              </div>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: server; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">Global Data Center Interconnect</p>
-                  <p class="service-text">Seamless interconnection between global data centers with ultra-low latency
-                    Ethernet links.</p>
-                  <p class="service-learnmore uk-margin-small-top"><a routerLink="/data-center" >Learn more</a></p>
-                </div>
-              </div>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: cloud-upload; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">Global Cloud Link</p>
-                  <p class="service-text">Direct and secure Ethernet connectivity to leading cloud providers for hybrid
-                    and multi-cloud strategies.</p>
-                  <p class="service-learnmore uk-margin-small-top"><a routerLink="/cloud" href="#">Learn more</a></p>
-                </div>
-              </div>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: world; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">International IP Transit (IPT)</p>
-                  <p class="service-text">Optimized IP Transit across Europe, the Americas, and Africa – ensuring
-                    resilient, fast global routing (Layer 3).</p>
-                  <p class="service-learnmore uk-margin-small-top"><a routerLink="/connectivity" href="#">Learn more</a></p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </li>
-
-        <!-- Tab 2 -->
-        <li>
-          <div class="uk-container  ">
-            <div class="uk-child-width-1-2@m uk-grid-match uk-grid-small uk-margin-large-bottom" uk-grid>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: link; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">Metro Fibre</p>
-                  <p class="service-text">Reliable metropolitan Ethernet fibre networks designed for high-speed business
-                    connectivity.</p>
-                  <p class="service-learnmore"><a href="#">Learn more</a></p>
-                </div>
-              </div>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: database; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">Data Center Services & Colocation</p>
-                  <p class="service-text">Secure, scalable colocation services with world-class facilities for
-                    mission-critical workloads.</p>
-                  <p class="service-learnmore"><a href="#">Learn more</a></p>
-                </div>
-              </div>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: cog; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">On-Demand ICT Solutions</p>
-                  <p class="service-text">Flexible IaaS, productivity, and corporate cloud services tailored to your
-                    business needs.</p>
-                  <p class="service-learnmore"><a href="#">Learn more</a></p>
-                </div>
-              </div>
-
-              <div>
-                <div class="uk-card service-card">
-                  <span uk-icon="icon: lifesaver; ratio: 1.5" class="service-icon"></span>
-                  <p class="service-title">Managed Services (24/7)</p>
-                  <p class="service-text">Proactive network and infrastructure management with expert support, available
-                    around the clock.</p>
-                  <p class="service-learnmore"><a href="#">Learn more</a></p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-
-
-</div>
-
-
-<!-- Service Provider Ad -->
-<div
-  style=" border-radius: 20px; background-image: url('/img/tceu-ad.png'); background-size: cover; background-position: center;"
-  class="uk-section uk-container uk-margin-large-top">
-  <div class="uk-container uk-padding">
-    <div class="uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@m uk-flex-middle" uk-grid>
-
-      <!-- Column 1 (Left - Text) -->
-      <div class="uk-text-center uk-text-left@m">
-        <h1 class="" style="color: white; font-weight: 700;">
-          {{ 'for.service-providers' | translate }}
-        </h1>
-        <a routerLink="/contact">
-          <button class=" botao-azul uk-margin-medium-top uk-button uk-width-auto uk-button-medium uk-border-pill">
-            <span style="margin: 5px">{{ 'book.meeting' | translate }}</span>
-          </button>
-        </a>
-      </div>
-
-      <!-- Column 2 (Right - Button) -->
-      <div class="uk-flex uk-flex-center uk-flex-right@m uk-margin-top uk-margin-remove-top@m">
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-<div style="border-radius: 10px;" class="uk-background-muted uk-container uk-margin-large-top">
-  <p class="uk-text-center uk-margin-large-top " style="font-size: 2rem; font-weight: 700; color: #022561;">
-    Why TelCables Europe?
-  </p>
-  <div class="uk-child-width-1-2@m uk-grid-large uk-grid-match" uk-grid>
-
-
-
-    <!-- Left Column (Accordion) -->
-    <div>
-      <div class="uk-card uk-card-body">
-
-
-        <div class="uk-margin-medium-top">
-          <ul class="modern-accordion" uk-accordion="multiple: false">
-            <li *ngFor="let item of accordionItems; let i = index" [class.uk-open]="i === 0">
-              <a class="uk-accordion-title" href (click)="onSelectImage(item.image, item.imageDesc)">
-                <span style="margin-right: 15px;" [attr.uk-icon]="'icon: ' + item.icon + '; ratio: 1.5'"></span>
-                {{ item.title }}
-              </a>
-              <div class="uk-accordion-content">
-                <p>{{ item.content }}</p>
-              </div>
-            </li>
-          </ul>
+          <ng-template #placeholder>
+            <p style="color:#999;">Select an item to see an image</p>
+          </ng-template>
         </div>
-
       </div>
+
     </div>
 
-    <!-- Right Column (Dynamic Image + Description) -->
-    <div>
-      <div class="uk-card uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center">
-        <ng-container *ngIf="selectedImage; else placeholder">
-          <img [src]="selectedImage" alt="accordion image" style="max-width:100%; border-radius:8px;">
+    <hr class="uk-margin">
 
-          <!-- Exibe descrição se existir -->
-          <p *ngIf="selectedImageDesc" class="uk-margin-small-top"
-            style="font-size: 0.9rem; color:#022561; font-weight:500; text-align:left;">
-            {{ selectedImageDesc }}
-          </p>
-        </ng-container>
 
-        <ng-template #placeholder>
-          <p style="color:#999;">Select an item to see an image</p>
-        </ng-template>
-      </div>
-    </div>
 
   </div>
 
-  <hr class="uk-margin">
+  <div class="uk-margin-large-top uk-margin-large-bottom">
+    <app-certificacoes></app-certificacoes>
+    <app-parceiros></app-parceiros>
+
+  </div>
+
+  <div style="border-radius:20px" class="uk-container uk-padding uk-background-muted uk-margin-small-top">
+    <!-- Main Grid Layout -->
+    <div class="uk-grid" uk-grid>
+      <!-- Left Column (Main Content - Events) -->
+      <div class="uk-child-width-1-1@m">
 
 
 
-</div>
+        <div class="uk-container uk-padding">
+          <!-- Main Grid Layout -->
+          <div class="uk-grid" uk-grid>
+            <!-- Left Column (Main Content - Events) -->
+            <div class="uk-width-2-3@m">
 
-<div class="uk-margin-large-top uk-margin-large-bottom">
-  <app-certificacoes></app-certificacoes>
-  <app-parceiros></app-parceiros>
-
-</div>
-
-<div style="border-radius:20px" class="uk-container uk-padding uk-background-muted uk-margin-small-top">
-  <!-- Main Grid Layout -->
-  <div class="uk-grid" uk-grid>
-    <!-- Left Column (Main Content - Events) -->
-    <div class="uk-child-width-1-1@m">
-
-
-
-      <div class="uk-container uk-padding">
-        <!-- Main Grid Layout -->
-        <div class="uk-grid" uk-grid>
-          <!-- Left Column (Main Content - Events) -->
-          <div class="uk-width-2-3@m">
-
-            <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-medium-bottom ">
-              <h2 style="color: #022561;" class="uk-heading">{{'news.and' | translate}} <b> {{'media' | translate}}</b>
-              </h2>
-              <div class="uk-inline uk-width-medium">
-                <span class="uk-form-icon" uk-icon="icon: search"></span>
-                <input class="uk-input service-search uk-border-pill" type="text" placeholder="Search news...">
-              </div>
-
-            </div>
-            <p>Find important stories on how TelCables is impacting the industry</p>
-
-            <app-noticias-listar></app-noticias-listar>
-          </div>
-
-          <!-- Right Column (Aside Panel) -->
-          <div class="uk-width-1-3@m">
-            <div class="uk-card  ">
               <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-medium-bottom ">
-                <h2 style="color: #022561;" class="uk-heading">{{'upcomming' | translate}} <b>{{'events' |
-                    translate}}</b></h2>
-
+                <h2 style="color: #022561;" class="uk-heading">{{'news.and' | translate}} <b> {{'media' |
+                    translate}}</b>
+                </h2>
+                <div class="uk-inline uk-width-medium">
+                  <span class="uk-form-icon" uk-icon="icon: search"></span>
+                  <input class="uk-input service-search uk-border-pill" type="text" placeholder="Search news...">
+                </div>
 
               </div>
-              <p></p>
+              <p>Find important stories on how TelCables is impacting the industry</p>
 
-              <app-eventos-listar></app-eventos-listar>
+              <app-noticias-listar></app-noticias-listar>
+            </div>
 
+            <!-- Right Column (Aside Panel) -->
+            <div class="uk-width-1-3@m">
+              <div class="uk-card  ">
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-margin-medium-bottom ">
+                  <h2 style="color: #022561;" class="uk-heading">{{'upcomming' | translate}} <b>{{'events' |
+                      translate}}</b></h2>
+
+
+                </div>
+                <p></p>
+
+                <app-eventos-listar></app-eventos-listar>
+
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
+      <!-- Right Column (Aside Panel) -->
+
     </div>
-
-    <!-- Right Column (Aside Panel) -->
-
   </div>
-</div>
 
 
 
@@ -327,4 +440,4 @@
 
 
 
-<app-ad2></app-ad2>
+  <app-ad2></app-ad2>
