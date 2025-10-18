@@ -1,3 +1,13 @@
+
+
+*+address,*+dl,*+fieldset,*+figure,*+ol,*+p,*+pre,*+ul {
+    margin-top: 5px
+}
+
+
+address, dl, fieldset, figure, ol, p, pre, ul {
+    margin-bottom: 5px
+}
 /* Text container – consistent centering */
 .uk-slideshow-items .uk-text-center {
   max-width: 700px;
@@ -51,37 +61,30 @@
 /* Button styles */
 .uk-slideshow-items .uk-button {
   font-size: 1rem;
-  padding: 10px 28px;
   border-radius: 50px;
-  background-color: #FAA61A;
-  color: #002561;
   font-weight: 700;
   min-width: 160px;
   text-align: center;
   white-space: nowrap;
   transition: all 0.25s ease;
+
+
+  background-color: #25c0dd;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 40px;
 }
 
 .uk-slideshow-items .uk-button:hover {
-  background-color: #ffb84d;
+  background-color: #177889;
   transform: scale(1.05);
 }
 
-/* Remove UIkit auto margins */
-.uk-slideshow-items .uk-flex-center>a {
-  margin: 0 !important;
-}
 
-/* Tablet adjustments */
-@media (max-width: 1024px) {
-  .uk-slideshow-items .hero-title {
-    font-size: clamp(1.4rem, 3vw, 2rem);
-  }
 
-  .uk-slideshow-items .hero-desc {
-    max-width: 90%;
-    margin: 0 auto 15px;
-  }
+
+.uk-h1, h1 {
+  line-height: 1px !important;
 }
 
 /* Mobile adjustments */
@@ -111,11 +114,18 @@
   }
 }
 
+
+
+
 /* Extra small devices */
 @media (max-width: 480px) {
   .uk-slideshow-items .hero-title {
+
     font-size: 1.2rem;
   }
+
+  
+
 
   .uk-slideshow-items .uk-button {
     min-width: auto;
@@ -125,29 +135,22 @@
   }
 }
 
-/* fundo cards */
+
 
 
 /* Container card */
 .glassy-card {
   border-radius: 15px;
   color: #f7fbff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  backdrop-filter: blur(8px) saturate(120%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.016));
+  backdrop-filter: blur(200px) saturate(180%);
   /* frosted effect */
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
-  box-shadow: var(--shadow);
-  border: 1px solid rgb(255, 255, 255);
-  ;
-  /* The radial gradient 'glassy' background */
-  background:
-    radial-gradient(1200px 600px at 10% 20%, var(--accent-blue) 0%, transparent 22%),
-    radial-gradient(900px 400px at 80% 80%, var(--accent-dark) 0%, transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+
+  border: 1px solid rgba(255, 255, 255, 0.276);  ;
+
   /* small soft inner-glow */
-  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s;
-  min-height: 80px;
+  min-height: 50px;
   /* ensures equal height */
 
 }
@@ -166,31 +169,137 @@
 }
 
 .glassy-card p {
-  margin: 0 0 1rem 0;
   font-size: .95rem;
-  line-height: 1.35;
   color: rgba(247, 251, 255, 0.9);
 }
 
-.glassy-card button {
-  background: rgba(255, 255, 255, 0.08);
-  color: #eaf2ff;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: .5rem .9rem;
-  border-radius: 10px;
-  cursor: pointer;
-  backdrop-filter: none;
-  transition: background .18s, transform .12s;
-}
 
 .glassy-card button:active {
   transform: translateY(1px);
 }
 
 
-.glassy-card h1, 
+.glassy-card h1,
 .glassy-card p:first-child {
   font-weight: 800;
-  font-size: 2rem; /* unify big number text */
+  font-size: 2rem;
+  /* unify big number text */
   color: white;
+}
+
+
+
+
+/* ✅ Responsive tuning for glassy cards only */
+
+
+
+
+
+/* Extra small devices (portrait phones) */
+@media (max-width: 480px) {
+
+   /* Grande margem superior antes do título */
+  .hero-title {
+    margin-top: 120px !important;
+    font-size: 1.6rem !important;
+    line-height: 1.3;
+    text-align: center !important;
+  }
+
+  /* Subtítulo menor e centralizado */
+  .hero-subtitle {
+    font-size: 0.85rem !important;
+    text-align: center !important;
+  }
+
+  /* Deixa os cartões ainda menores */
+  .glassy-card {
+    transform: scale(0.85);
+    margin: 8px auto !important;
+    width: 90%;
+  }
+
+  /* Espaço adicional entre elementos */
+  .uk-grid-small.uk-child-width-1-2\@m {
+    gap: 8px !important;
+  }
+
+  /* Garante que tudo desce um pouco mais */
+  .uk-height-1-1.uk-flex.uk-flex-middle {
+    align-items: flex-start !important;
+    padding-top: 20px;
+  }
+ 
+  /*card glassy*/
+    .uk-grid-small.uk-child-width-1-2\@m {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+
+  .glassy-card {
+    min-height: 60px;
+    padding: 0px;
+  }
+
+  .glassy-card h1,
+  .glassy-card p:first-child {
+    font-size: 1.4rem;
+  }
+
+  .glassy-card p {
+    font-size: 0.8rem;
+  }
+
+
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-desc {
+    max-width: 80% !important;
+    text-align: center !important;
+    font-size: 0.95rem !important;
+  }
+
+  .div.uk-first-column{
+    justify-content: center !important;
+    margin: auto !important;
+    align-self: center;
+
+  }
+
+    .uk-flex.uk-flex-wrap.uk-margin-medium-top {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  /* Stack buttons vertically or with small gap */
+  .uk-flex.uk-flex-wrap.uk-margin-medium-top a {
+    margin: 6px 6px !important;
+  }
+
+  /* Remove default left margin on mobile */
+  .uk-flex.uk-flex-wrap.uk-margin-medium-top a.uk-margin-left {
+    margin-left: 0 !important;
+  }
+
+  .glassy-card {
+    min-height: 55px;
+    padding: 5px 8px;
+  }
+
+  .glassy-card h1,
+  .glassy-card p:first-child {
+    font-size: 1.2rem;
+  }
+
+  .glassy-card p {
+    font-size: 0.75rem;
+  }
+
+  .uk-text-center p {
+    margin-bottom: 4px;
+  }
 }
