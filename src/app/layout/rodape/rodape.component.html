@@ -5,14 +5,14 @@
 
             <!-- Column 1: Logo and Social Media -->
             <!-- Column 1: Logo and Social Media -->
-            <div class="footer-column">
+            <div class="footer-column ">
                 <ul class="footer-links">
                     <li>
                         <img class="footer-logo" src="/img/telcableseuropa-logotipo-azul.png" alt="TelCables Cables Logo">
                     </li>
-                                        <li class="uk-margin-medium-top"><b>{{'escritorios' | translate }}</b></li>
+                                        <li class="uk-margin-small-top"><b>{{'escritorios' | translate }}</b></li>
 
-  <li style="color: #002561"><span class="uk-margin-small-right" uk-icon="location"></span>
+  <li class=" uk-padding" style="color: #002561">
                         Avenida da Liberdade, 245, 5º
 1250-143 Lisboa, Portugal</li>
 
@@ -38,15 +38,16 @@
                         <img src="img/remotepeering-map.png">
                     </div>
                 </div>
-            
+                      <ul class="footer-links uk-margin-small-top">
+                    <li><b>Contact Us</b></li>
+                    <li style="color: #002561"> Become a partner: <br>><b> partner&#64;telcableseurope.com </b></li>
 
-                <ul class="footer-links">
-                    <li class="uk-margin-small-top"><b>Terms and Conditions</b></li>
-                    <li><a routerLink="#">> Privacy Policy</a> </li>
-                    <li><a routerLink="#s">> Terms and Conditions</a> </li>
-
+                    <li style="color: #002561">Purchase products and services: <br>> <b> contacto<ng-content
+                                select="[selector]"></ng-content>&#64;telcableseurope.com
+                        </b></li>
 
                 </ul>
+
             </div>
 
 
@@ -56,15 +57,14 @@
             <div class="footer-column">
 
 
-                <ul class="footer-links uk-margin-small-top">
-                    <li><b>Contact Us</b></li>
-                    <li style="color: #002561"> Become a partner: <br>><b> partner&#64;telcableseurope.com </b></li>
+                <ul class="footer-links">
+                    <li class="uk-margin-small-top"><b>Terms and Conditions</b></li>
+                    <li><a routerLink="#">> Privacy Policy</a> </li>
+                    <li><a routerLink="#s">> Terms and Conditions</a> </li>
 
-                    <li style="color: #002561">Purchase products and services: <br>> <b> sales<ng-content
-                                select="[selector]"></ng-content>&#64;telcableseurope.com
-                        </b></li>
 
                 </ul>
+      
                 <ul class="footer-links">
 
                     <!-- 

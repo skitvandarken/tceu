@@ -3,10 +3,9 @@ import { NoticiaService } from '../../services/noticia.service';
 import { AsyncPipe, CommonModule, DatePipe, NgFor, NgIf } from '@angular/common';
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { RouterLink } from "@angular/router";
-
+import { map } from 'rxjs/operators'; // ✅ Import necessário para ordenar o Observable
 
 @Component({
   selector: 'app-noticias-listar',
@@ -18,22 +17,28 @@ import { RouterLink } from "@angular/router";
     TranslatePipe,
     NgIf,
     RouterLink
-],
+  ],
   templateUrl: './noticias-listar.component.html',
   styleUrl: './noticias-listar.component.css'
 })
 export class NoticiasListarComponent implements OnInit {
 
-
   safeContent: SafeHtml = '';
   private noticiaService = inject(NoticiaService);
   
-  noticias$ = this.noticiaService.getNoticias();
+  // ✅ Ordena as notícias por data (mais recentes primeiro)
+  noticias$ = this.noticiaService.getNoticias().pipe(
+    map(noticias =>
+      noticias.sort((a, b) =>
+        b.createdAt.toDate() - a.createdAt.toDate()
+      )
+    )
+  );
 
   constructor(
     private translate: TranslateService,
     private sanitizer: DomSanitizer
-  ) { }
+  ) {}
 
   useLanguage(language: string): void {
     this.translate.use(language);

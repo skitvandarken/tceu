@@ -10,7 +10,7 @@ import { tap, map } from 'rxjs/operators';
 })
 export class NoticiaService{
   private firestore = inject(Firestore);
-  private noticiasCollection = collection(this.firestore, 'noticias');
+  private noticiasCollection = collection(this.firestore, 'noticiasPt');
   
   noticias = signal<Noticia[]>([]);
 
@@ -26,7 +26,7 @@ export class NoticiaService{
     console.log('Fetching all noticias');
     return collectionData(this.noticiasCollection, { idField: 'id' }).pipe(
       map((noticias: any[]) => noticias.map(noticia => noticia as Noticia)),
-      tap(noticias => console.log('Posts from Firestore:', noticias))
+      tap(noticias => console.log('Noticias from Firestore:', noticias))
     ) as Observable<Noticia[]>;
   }
 
