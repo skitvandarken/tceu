@@ -29,23 +29,34 @@
 
 
 
-                                            <li><a [routerLink]="['/connectivity']" fragment="private-metro">Internet
-                                                    Acess</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="private-metro">Metro
+                                                    Ethernet (L2 VPN) </a></li>
 
 
-                                            <li class=" "><a [routerLink]="['/connectivity']" fragment="ipc">Private
-                                                    Metro Connections</a> </li>
+                                            <li class=" "><a [routerLink]="['/connectivity']" fragment="ipc">Global <br>
+                                                    Data
+                                                    Center <br> Interconnection</a> </li>
 
 
                                             <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="acloudconnect">International Private Circuit
+                                                    fragment="acloudconnect">Wavelenght (OTN/DWDM)
                                                 </a>
                                             </li>
                                             <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="acloudconnect">Public
-                                                    Cloud Acess
+                                                    fragment="acloudconnect">Dedicated Internet Acess
                                                 </a>
                                             </li>
+                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
+                                                    fragment="acloudconnect">IP Transit
+                                                </a>
+                                            </li>
+
+                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
+                                                    fragment="acloudconnect">ACloud Connect
+                                                </a>
+                                            </li>
+
+
 
 
 
@@ -58,17 +69,25 @@
                                             <li class=" uk-nav-header"><a routerLink="/cloud"> <b><span
                                                             class="uk-margin-small-right" uk-icon="cloud-upload"></span>
                                                         CLOUD </b> </a></li>
-
-                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Virtual
-                                                    Infrastructure
+                                            <li class="uk-active "><a [routerLink]="['/cloud']"
+                                                    fragment="iaas">Clouds2Europe 
+                                                </a>
+                                            </li>
+                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Backup2Europe
                                                     (IaaS)
                                                 </a>
                                             </li>
 
+                                              <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Storage as-a-Service
+                                                </a>
+                                            </li>
 
+                                             <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Kubernetes 
+                                                </a>
+                                            </li>
 
                                             <li class="uk-active "><a [routerLink]="['/cloud']" fragment="backup">
-                                                    Storage-as-a-service
+                                                    VMWare Alternative
                                                 </a>
                                             </li>
 
@@ -80,11 +99,13 @@
                                             <li class=" uk-nav-header"><a routerLink="/data-center"><b><span
                                                             class="uk-margin-small-right" uk-icon="server"></span>
                                                         DATA CENTER </b> </a> </li>
-                                            <li class="uk-active "><a routerLink="/data-center">Interconnectivity</a>
+                                            <li class="uk-active "><a routerLink="/data-center">Colocation </a>
                                             </li>
-                                            <li class="uk-active "><a routerLink="/data-center">Colocation</a></li>
-                                            <li class="uk-active "><a routerLink="/data-center">Remote Hands &
-                                                    Support</a></li>
+                                            <li class="uk-active "><a routerLink="/data-center">Cross Connect</a></li>
+                                            <li class="uk-active "><a routerLink="/data-center">Campus Connect</a></li>
+                                            <li class="uk-active "><a routerLink="/data-center">Remote Hands</a></li>
+                                            <li class="uk-active "><a routerLink="/data-center">Professional
+                                                    Services</a></li>
 
                                         </ul>
 
@@ -100,8 +121,8 @@
                                                     </b></a></li>
                                             <li class=" uk-active"><a routerLink="/security">Anti-DDoS</a>
                                             </li>
-                                            <li class="uk-active "><a routerLink="/security">Web
-                                                    Application Firewall (WAF)</a></li>
+                                            <li class="uk-active "><a routerLink="/security">Firewall-as-a-Service</a>
+                                            </li>
 
                                         </ul>
                                     </div>
@@ -111,7 +132,7 @@
                         </li>
 
                         <li>
-                            <a routerLink="/solution"  >Solutions</a>
+                            <a routerLink="/solution">Solutions</a>
 
                             <!-- 
                             <div id="solutions-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-1" hidden>
@@ -193,7 +214,7 @@
                             <a href="https://partners.angolacables.co.ao/">Partner Program</a>
                         </li>
 
-                       <!--  <li>
+                        <!--  <li>
                             <a routerLink="/company" href="#">Company</a>
                         </li> -->
                     </ul>
