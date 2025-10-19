@@ -11,7 +11,7 @@ import { tap, map } from 'rxjs/operators';
 })
 export class EventoService {
   private firestore = inject(Firestore);
-  private eventosCollection = collection(this.firestore, 'eventosNg');
+  private eventosCollection = collection(this.firestore, 'eventosPt');
   
   eventos = signal<Evento[]>([]);
 
@@ -33,7 +33,7 @@ export class EventoService {
 
   getEventoById(id: string): Observable<Evento | undefined> {
     console.log('Fetching evento with ID:', id);
-    const postDoc = doc(this.firestore, `eventosNg/${id}`); // corrigido "vagas" → "eventosNg"
+    const postDoc = doc(this.firestore, `eventosPt/${id}`); // corrigido "vagas" → "eventosNg"
     return docData(postDoc, { idField: 'id' }).pipe(
       map(evento => {
         if (!evento) {
@@ -48,7 +48,7 @@ export class EventoService {
   /** NOVO MÉTODO → Deletar evento por ID */
   async deleteEvento(id: string): Promise<void> {
     console.log('Deletando evento com ID:', id);
-    const eventoDoc = doc(this.firestore, `eventosNg/${id}`);
+    const eventoDoc = doc(this.firestore, `eventosPt/${id}`);
     return deleteDoc(eventoDoc);
   }
 

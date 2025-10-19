@@ -83,7 +83,7 @@ export class EventosPostarComponent {
     this.isSubmitting = true;
 
     try {
-      const eventosCollection = collection(this.firestore, 'eventosNg');
+      const eventosCollection = collection(this.firestore, 'eventosPt');
       await addDoc(eventosCollection, {
         title: this.newEvento.title,
         content: this.editorContent,
