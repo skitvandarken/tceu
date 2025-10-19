@@ -1,127 +1,210 @@
+<app-menu></app-menu>
 
-  <app-menu></app-menu>
-
-  <!-- Header -->
-  <div class="fundo-cabecalho">
-    <div class="gradiente-texto-cabecalho">
-      <div class="conteudo-cabecalho uk-margin-medium-top">
-        <div class="uk-container uk-margin-large-bottom">
-          <h1 style="color:#fff; margin-top:20px; font-weight:800;">Data Center</h1>
-          <h2 style="color:white;">Secure, connected, and high-performance facilities for your mission-critical infrastructure.</h2>
-        </div>
+<!-- Header -->
+<div class="fundo-cabecalho">
+  <div class="gradiente-texto-cabecalho">
+    <div class="conteudo-cabecalho uk-margin-medium-top">
+      <div class="uk-container uk-margin-large-bottom">
+        <h1 style="color:#fff; margin-top:20px; font-weight:800;">Data Center</h1>
+        <h2 style="color:white;">
+          Secure, connected, and high-performance facilities for your mission-critical infrastructure.
+        </h2>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Main Content -->
-  <div class="uk-container uk-margin-large-top">
+<!-- Main Content -->
+<div class="uk-container uk-margin-large-top">
+  <div class="uk-grid-large uk-grid-match" uk-grid>
+    <!-- Sidebar -->
+    <div class="uk-width-1-4@m uk-margin-small-top">
+      <ul
+        class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
+        style="background:#fff;"
+        uk-switcher="connect: #component-nav; animation: uk-animation-fade"
+      >
+        <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
+        <li><a href="#" class="uk-text-bold">Colocation</a></li>
+        <li><a href="#" class="uk-text-bold">Cross Connect</a></li>
+        <li><a href="#" class="uk-text-bold">Campus Connect</a></li>
+        <li><a href="#" class="uk-text-bold">Remote Hands</a></li>
+        <li><a href="#" class="uk-text-bold">Professional Services</a></li>
+      </ul>
+    </div>
 
-    <div class="uk-grid-large uk-grid-match" uk-grid>
-      <!-- Sidebar -->
-      <div class="uk-width-1-4@m uk-margin-small-top">
-        <ul
-          class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
-          style="background:#fff;"
-          uk-switcher="connect: #component-nav; animation: uk-animation-fade"
-        >
-          <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
-          <li><a href="#" class="uk-text-bold">Colocation</a></li>
-          <li><a href="#" class="uk-text-bold">Interconnectivity</a></li>
-          <li><a href="#" class="uk-text-bold">Remote Hands & Support</a></li>
-        </ul>
-      </div>
+    <!-- Content -->
+    <div class="uk-width-expand@m">
+      <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
 
-      <!-- Content -->
-      <div class="uk-width-expand@m">
-        <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
+        <!-- Colocation -->
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Colocation</h1>
+          <p class="uk-margin-small-bottom">
+            Host your infrastructure within our facilities in Lisbon, London, and Marseille — offering high availability,
+            diverse connectivity, and robust physical and network security for complete business continuity.
+          </p>
 
-          <!-- Colocation -->
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Colocation</h1>
-            <p class="uk-margin-small-bottom" >
-              Colocate your infrastructure within any of our facilities in Lisbon, London, and Marseille with high availability,
-              diverse provider choice, and strong physical and network security — ensuring full business continuity.
-            </p>
+          <ul uk-accordion="multiple:true">
+            <li class="uk-open">
+              <a class="uk-accordion-title" href="#">Key Benefits</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-list uk-list-bullet uk-margin-small">
+                  <li>Enhanced physical and network security</li>
+                  <li>Reliable power and cooling redundancy</li>
+                  <li>Direct access to IXPs, OTTs, carriers, and submarine cables</li>
+                  <li>High uptime and resilience</li>
+                  <li>24x7x365 NOC support</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
 
-            <ul uk-accordion="multiple:true">
-              <li class="uk-open">
-                <a class="uk-accordion-title" href="#">Key Benefits</a>
-                <div class="uk-accordion-content">
-                  <ul class="uk-list uk-list-bullet uk-margin-small">
-                    <li>Enhanced security and reliable power supply</li>
-                    <li>Managed and reduced operational overhead</li>
-                    <li>Direct interconnection with submarine cable systems, IXPs, OTTs, and global operators</li>
-                    <li>High uptime and resilient environment</li>
-                    <li>24x7 expert NOC support</li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-
-            <div class="uk-margin-small-top">
-              Ideal for:
-              <span class="tag">Technology</span>
-              <span class="tag">Energy</span>
-              <span class="tag">Oil & Gas</span>
-              <span class="tag">Manufacturing</span>
-              <span class="tag">Finance</span>
-              <span class="tag">Public Sector</span>
-              <span class="tag">General Markets</span>
-            </div>
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">Technology</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Energy</span>
+            <span class="tag">Oil & Gas</span>
+            <span class="tag">Manufacturing</span>
+            <span class="tag">Public Sector</span>
           </div>
-
-          <!-- Interconnectivity -->
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Interconnectivity</h1>
-            <p class="uk-margin-small-bottom">
-              Access our diverse connectivity portfolio when you colocate within our data centers and connect seamlessly with
-              other service providers and customers across our global ecosystem.
-            </p>
-
-            <ul uk-accordion="multiple:true">
-              <li class="uk-open">
-                <a class="uk-accordion-title" href="#">Key Advantages</a>
-                <div class="uk-accordion-content">
-                  <ul class="uk-list uk-list-bullet uk-margin-small">
-                    <li>Direct connections to multiple carriers and cloud providers</li>
-                    <li>High-speed inter-site and inter-customer links</li>
-                    <li>Reduced latency and improved service delivery</li>
-                    <li>Access to IXPs, submarine cables, and global peering points</li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Remote Hands & Support -->
-          <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-            <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Remote Hands & Support</h1>
-            <p class="uk-margin-small-bottom">
-              An on-demand service providing technical assistance and maintenance for hosted infrastructure at the data center,
-              ensuring smooth operation without requiring on-site presence.
-            </p>
-
-            <ul uk-accordion="multiple:true">
-              <li class="uk-open">
-                <a class="uk-accordion-title" href="#">Available Services</a>
-                <div class="uk-accordion-content">
-                  <ul class="uk-list uk-list-bullet uk-margin-small">
-                    <li>Rack installations and hardware replacement</li>
-                    <li>Power and connectivity checks</li>
-                    <li>Device reboots, diagnostics, and visual inspections</li>
-                    <li>Hands-on technical support by trained professionals</li>
-                    <li>24x7 availability for emergency interventions</li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-
         </div>
+
+        <!-- Cross Connect -->
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Cross Connect</h1>
+          <p class="uk-margin-small-bottom">
+            Establish private, high-speed, and low-latency connections between your colocated equipment
+            and other carriers, cloud providers, or partners within the same data center.
+          </p>
+
+          <ul uk-accordion="multiple:true">
+            <li class="uk-open">
+              <a class="uk-accordion-title" href="#">Key Advantages</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-list uk-list-bullet uk-margin-small">
+                  <li>Fast and secure local interconnections</li>
+                  <li>Direct access to carriers, ISPs, and cloud providers</li>
+                  <li>Lower latency and improved performance</li>
+                  <li>Scalable bandwidth options</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">ISPs</span>
+            <span class="tag">Carriers</span>
+            <span class="tag">Cloud Providers</span>
+            <span class="tag">Enterprises</span>
+            <span class="tag">Media</span>
+          </div>
+        </div>
+
+        <!-- Campus Connect -->
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Campus Connect</h1>
+          <p class="uk-margin-small-bottom">
+            Extend your network connectivity between our data centers with secure and high-capacity links,
+            enabling hybrid and multi-site architectures with minimal latency.
+          </p>
+
+          <ul uk-accordion="multiple:true">
+            <li class="uk-open">
+              <a class="uk-accordion-title" href="#">Key Advantages</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-list uk-list-bullet uk-margin-small">
+                  <li>High-speed connectivity between facilities</li>
+                  <li>Private, low-latency inter-data center links</li>
+                  <li>Improved redundancy and disaster recovery</li>
+                  <li>Seamless hybrid infrastructure integration</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">Enterprises</span>
+            <span class="tag">Cloud Providers</span>
+            <span class="tag">Financial Institutions</span>
+            <span class="tag">Telecom</span>
+            <span class="tag">Public Sector</span>
+          </div>
+        </div>
+
+        <!-- Remote Hands -->
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Remote Hands</h1>
+          <p class="uk-margin-small-bottom">
+            On-site technicians available 24x7 to provide physical assistance, maintenance, and troubleshooting
+            for your hosted equipment — no need for on-site presence.
+          </p>
+
+          <ul uk-accordion="multiple:true">
+            <li class="uk-open">
+              <a class="uk-accordion-title" href="#">Available Services</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-list uk-list-bullet uk-margin-small">
+                  <li>Rack and cable management</li>
+                  <li>Hardware swaps and power checks</li>
+                  <li>Visual inspections and diagnostics</li>
+                  <li>Reboots and connectivity testing</li>
+                  <li>Emergency interventions (24x7)</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">Technology</span>
+            <span class="tag">Enterprises</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Telecom</span>
+            <span class="tag">Public Sector</span>
+          </div>
+        </div>
+
+        <!-- Professional Services -->
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Professional Services</h1>
+          <p class="uk-margin-small-bottom">
+            Expert support for network design, migration, deployment, and optimization within our facilities —
+            ensuring your IT infrastructure performs at its best from day one.
+          </p>
+
+          <ul uk-accordion="multiple:true">
+            <li class="uk-open">
+              <a class="uk-accordion-title" href="#">Our Expertise</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-list uk-list-bullet uk-margin-small">
+                  <li>Infrastructure planning and implementation</li>
+                  <li>Migration and integration consulting</li>
+                  <li>Network and connectivity design</li>
+                  <li>Performance and cost optimization</li>
+                  <li>Ongoing managed services and audits</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">Enterprises</span>
+            <span class="tag">Telecom</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Technology</span>
+            <span class="tag">Public Sector</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-
+</div>
 
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
