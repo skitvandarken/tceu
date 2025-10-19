@@ -1,5 +1,5 @@
 .fundo-cabecalho {
-    background-image: url('/img/sobre.jpg');
+    background-image: url('/img/ponte-telcables.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,6 +60,63 @@
     font-weight: 700;
     color: #00003C;
 
+}
+
+.fundo-tbps {
+
+    background-image: url('/img/traffic.jpeg');
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    padding: 40px 20px;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.fundo-tbps {
+
+    background-image: url('/img/telcables-asn.jpg');
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    padding: 40px 20px;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.fundo-tbps:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.glass-card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 20px;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-card h1 b {
+    color: #25c0dd;
+    font-weight: 700;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.glass-card p {
+    color: white;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
 /*
@@ -140,8 +197,18 @@
 
 .fundo-contador {
 
-    background: linear-gradient(180deg, #004f5b, #002561);
+    background: linear-gradient(180deg, #002255, #0086b7);
     background-color: #002561;
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+}
+
+.fundo-team {
+
+    background-image: url('/img/team-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
 }
@@ -172,7 +239,7 @@
 }
 
 .texto-banner {
-     position: absolute;
+    position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
@@ -184,21 +251,23 @@
 
 
 .video-thumbnail {
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
-  animation: pulseGlow 2s infinite;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #25c0dd;
+    animation: pulseGlow 2s infinite;
 }
 
 @keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 10px #004f5b;
-  }
-  50% {
-    box-shadow: 0 0 20px #004f5b, 0 0 20px rgba(0, 255, 0, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 10px #004f5b;
-  }
+    0% {
+        box-shadow: 0 0 10px #0063ba;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #0063ba, 0 0 20px #25c0dd;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #0063ba;
+    }
 }
 
 /* Slider specific styles */
@@ -226,7 +295,7 @@
 
 .uk-slider-items li.uk-active a {
     background-color: rgba(40, 193, 253, 1);
-    
+
 }
 
 /* Style the close button */

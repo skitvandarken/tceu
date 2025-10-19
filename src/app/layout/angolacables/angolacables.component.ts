@@ -53,63 +53,54 @@ export class AngolacablesComponent implements AfterViewInit {
   }
 }
 
-  // Accordion data model
-  accordionItems = [{
-  title: 'Integrated Global Networks',
-  icon: 'world',
-  content: `We operate a robust and interconnected backbone, ensuring seamless global communication 
-            with high availability, redundancy, and performance for enterprises and service providers.`,
-  image: 'img/servicecoverage.png',
-  imageDesc:
-    'TelCables Europe operates international data circuit capacity and IP Transit via submarine cables of its own such as the SACS - Southern Atlantic Cables System and partner´s as West Africa Cables System - WACS and Ela Link',
-},
-{
-  title: 'Atlantic Ecosystem Aggregation',
-  icon: 'social',
-  content: `Our infrastructure aggregates strategic routes across the Atlantic, connecting 
-            data centers, operators, and cloud providers into a single, resilient ecosystem.`,
-  image: 'img/ipnetwork.png',
-  imageDesc:
-    'We connect data centers and operators across the Atlantic into a resilient ecosystem that strengthens digital transformation and cloud integration.',
-},
-{
-  title: 'Presence Across Continents',
-  icon: 'location',
-  content: `We already serve customers in Portugal, Europe, the United States, Latin America, and Africa — 
-            bridging continents with secure, low-latency connectivity.`,
-  image: 'img/globalpresence.png',
-  imageDesc:
-    'Our infrastructure bridges Europe, the Americas, and Africa with secure, low-latency connectivity, enabling true intercontinental collaboration.',
-},
-{
-  title: 'Neutral and Independent',
-  icon: 'more-vertical',
-  content: `Our neutral position allows us to interconnect with multiple partners, carriers, and ISPs, 
-            ensuring flexibility and freedom of choice for every client.`,
-  image: 'img/carrierneutral.jpg',
-  imageDesc:
-    'Being carrier-neutral, we interconnect with multiple operators and ISPs, giving customers freedom and flexibility to scale their networks.',
-},
-{
-  title: 'Main Gateway to Lisbon',
-  icon: 'sign-in',
-  content: `We are one of the leading carriers of traffic from Latin America and the US to Lisbon, providing a 
-            secure, high-capacity gateway into Europe’s digital hub.`,
-  image: 'img/lisbon-europe.png',
-  imageDesc:
-    'Lisbon serves as a secure and high-capacity gateway into Europe, powered by our transatlantic connectivity from Latin America and the US.',
-},
-{
-  title: 'Atlantic Digital Bridge',
-  icon: 'link',
-  content: `The Atlantic Digital Bridge provides carrier-grade, cloud-ready, point-to-multipoint connectivity 
-            linking Brazil, the United States, and Africa, enabling efficient digital transformation across regions.`,
-  image: 'img/digitalbridge.png',
-  imageDesc:
-    'The Atlantic Digital Bridge delivers carrier-grade connectivity between Brazil, the US, and Africa, supporting enterprise and cloud-driven growth.',
-}
-
-  ];
+ // Accordion data model
+accordionItems = [
+  {
+    title: 'Atlantic Network Integration',
+    icon: 'world',
+    content: `Integrating trustable European networks with an Atlantic submarine backbone, providing high availability,
+              redundancy, and performance for enterprises and service providers.`,
+    image: 'img/servicecoverage.png',
+    imageDesc:
+      'TelCables Europe interconnects European and Atlantic networks using its own and partner submarine cables, such as SACS, WACS, and EllaLink.',
+  },
+  {
+    title: 'Neutral Atlantic Ecosystem',
+    icon: 'social',
+    content: `A fully neutral ecosystem aggregating operators, data centers, and cloud providers across Portugal,
+              Europe, the US, LATAM, and Africa — enabling seamless digital exchange.`,
+    image: 'img/ipnetwork.png',
+    imageDesc:
+      'TelCables Europe connects a diverse base of carriers, enterprises, and cloud providers across the Atlantic ecosystem.',
+  },
+  {
+    title: 'Lisbon and Iberian Presence',
+    icon: 'location',
+    content: `Strong presence in Lisbon and the Iberian metropolitan areas with Data Center interconnectivity,
+              ensuring regional resilience and optimized access to global routes.`,
+    image: 'img/globalpresence.png',
+    imageDesc:
+      'Lisbon and Iberian network infrastructure with metropolitan and Data Center coverage strengthen local and international connectivity.',
+  },
+  {
+    title: 'Atlantic Digital Bridge',
+    icon: 'link',
+    content: `Carrier-grade, cloud-ready, and NaaS-enabled connectivity linking Europe, the US, LATAM, and Africa,
+              creating a two-way digital bridge for enterprises and carriers.`,
+    image: 'img/digitalbridge.png',
+    imageDesc:
+      'The Atlantic Digital Bridge enables point-to-multipoint connectivity and intercontinental data exchange with high performance and scalability.',
+  },
+  {
+    title: 'Strategic Global Reach',
+    icon: 'sign-in',
+    content: `With strategic partnerships spanning 1000+ Data Centers across the US, Brazil, and Europe,
+              TelCables Europe delivers extensive coverage and high-capacity IP transit up to 118 Tbps.`,
+    image: 'img/lisbon-europe.png',
+    imageDesc:
+      'A top-20 global peering network with 900+ PoPs and 118 Tbps of total capacity across Layer 1, 2, and 3.',
+  },
+];
 
   // Called when user clicks an accordion item
   onSelectImage(image: string, desc?: string) {

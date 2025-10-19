@@ -7,13 +7,15 @@ import { SlideshowComponent } from '../../layout/slideshow/slideshow.component';
 import { NoticiasListarComponent } from '../../layout/noticias-listar/noticias-listar.component';
 import { EventosListarComponent } from '../../layout/eventos-listar/eventos-listar.component';
 import { ParceirosComponent } from "../../layout/parceiros/parceiros.component";
+import { CertificacoesComponent } from '../../layout/certificacoes/certificacoes.component';
 
 @Component({
   selector: 'app-acerca',
   imports: [
     MenuComponent,
     RodapeComponent, TranslatePipe, NoticiasListarComponent, EventosListarComponent,
-    Ad2Component, SlideshowComponent,
+    Ad2Component, SlideshowComponent, CertificacoesComponent,
+
     ParceirosComponent
 ],
   templateUrl: './acerca.component.html',
