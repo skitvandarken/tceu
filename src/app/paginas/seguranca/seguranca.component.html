@@ -14,100 +14,53 @@
   </div>
 </div>
 
-<!-- Main Content -->
 <div class="uk-container uk-margin-large-top">
-
   <div class="uk-grid-large uk-grid-match" uk-grid>
-    <!-- Sidebar -->
-    <div class="uk-width-1-4@m uk-margin-small-top">
-<ul
-  class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded component-nav"
-  style="box-shadow:2px 24px 90px rgba(0,53,103,0.559); background:#fff;"
-  uk-switcher="connect: #component-nav; animation: uk-animation-fade"
->
 
-        <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
-        <li><a [routerLink]="[]" fragment="antiddos" class="uk-text-bold">Anti-DDoS</a></li>
-        <li><a [routerLink]="[]" fragment="firewall" class="uk-text-bold">Firewall-as-a-Service</a></li>
+    <!-- SIDEBAR -->
+    <div class="uk-width-1-4@m uk-margin-small-top">
+      <ul class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded component-nav"
+          style="box-shadow:2px 24px 90px rgba(0,53,103,0.559); background:#fff;"
+          uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+        <li><a [routerLink]="[]" fragment="antiddos" class="uk-text-bold" (click)="selectTab(0, $event)">Anti-DDoS</a></li>
+        <li><a [routerLink]="[]" fragment="firewall" class="uk-text-bold" (click)="selectTab(1, $event)">Firewall-as-a-Service</a></li>
       </ul>
     </div>
 
-    <!-- Content -->
+    <!-- CONTENT -->
     <div class="uk-width-expand@m">
       <div id="component-nav" class="uk-switcher">
 
         <!-- Anti-DDoS -->
         <div id="antiddos" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Anti-DDoS</h1>
-          <p>
-            <b>Shields2Europe Anti-DDoS</b> protects your network and services from volumetric, protocol,
-            and application-layer attacks. Our system continuously monitors network traffic and automatically
-            mitigates threats in real-time to ensure uptime and service reliability.
-          </p>
-
-          <ul uk-accordion="multiple:true">
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Key Benefits</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>24/7 proactive monitoring and detection</li>
-                  <li>Real-time mitigation against DDoS attacks</li>
-                  <li>Layer 3–7 protection with IPv4 and IPv6 support</li>
-                  <li>Ensures business continuity and uptime</li>
-                  <li>Integration with cloud and on-premise networks</li>
-                </ul>
-              </div>
-            </li>
+          <p>Anti-DDoS</p>
+          <h2 style="color:rgba(0,0,78,0.918);">Protect your infrastructure from distributed denial-of-service attacks.</h2>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Real-time traffic monitoring</li>
+            <li>Automatic mitigation</li>
+            <li>Global protection network</li>
           </ul>
-
-          <div class="uk-margin-small-top">
-            Ideal for:
-            <span class="tag">Technology</span>
-            <span class="tag">Finance</span>
-            <span class="tag">Public Sector</span>
-            <span class="tag">Service Providers</span>
-            <span class="tag">Enterprise Networks</span>
-          </div>
         </div>
 
-        <!-- Firewall-as-a-Service -->
+        <!-- Firewall -->
         <div id="firewall" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Firewall-as-a-Service</h1>
-          <p>
-            <b>Shields2Europe Firewall-as-a-Service (FWaaS)</b> provides centralized, cloud-delivered protection
-            for your enterprise infrastructure. It filters traffic, enforces access control policies,
-            and prevents unauthorized access to critical systems — without the need for physical appliances.
-          </p>
-
-          <ul uk-accordion="multiple:true">
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Key Benefits</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>Centralized policy management and visibility</li>
-                  <li>Advanced filtering at the network and application layers</li>
-                  <li>Scalable, multi-tenant, cloud-native architecture</li>
-                  <li>Seamless integration with hybrid and cloud environments</li>
-                  <li>Supports IPv4 and IPv6 for modern infrastructures</li>
-                </ul>
-              </div>
-            </li>
+          <p>Firewall-as-a-Service</p>
+          <h2 style="color:rgba(0,0,78,0.918);">Cloud-managed firewall for scalable security across your network.</h2>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Next-gen firewall rules</li>
+            <li>24x7 monitoring</li>
+            <li>Policy management</li>
           </ul>
-
-          <div class="uk-margin-small-top">
-            Ideal for:
-            <span class="tag">Technology</span>
-            <span class="tag">Finance</span>
-            <span class="tag">Public Sector</span>
-            <span class="tag">Telecom</span>
-            <span class="tag">Enterprise Networks</span>
-          </div>
         </div>
 
       </div>
     </div>
   </div>
 </div>
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
 
 <app-ad2></app-ad2>
 <app-rodape></app-rodape>

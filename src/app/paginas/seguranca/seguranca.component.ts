@@ -34,6 +34,7 @@ export class SegurancaComponent implements AfterViewInit, OnDestroy {
 
   private translate = inject(TranslateService);
   private route = inject(ActivatedRoute);
+
   private switcher: any;
   private fragmentSub?: Subscription;
 
@@ -46,17 +47,15 @@ export class SegurancaComponent implements AfterViewInit, OnDestroy {
     setTimeout(() => {
       this.switcher = UIkit.switcher('.component-nav');
 
-      // Watch for fragment changes
       this.fragmentSub = this.route.fragment.subscribe((fragment) => {
         if (fragment) this.scrollAndSwitch(fragment);
       });
 
-      // Handle direct access
       const currentFragment = this.route.snapshot.fragment;
       if (currentFragment) {
         this.scrollAndSwitch(currentFragment);
       } else {
-        this.updateActiveNav(0); // default highlight
+        this.updateActiveNav(0);
       }
     }, 100);
   }
@@ -65,11 +64,10 @@ export class SegurancaComponent implements AfterViewInit, OnDestroy {
     this.fragmentSub?.unsubscribe();
   }
 
-  /** Scroll and switch tab by fragment */
   private scrollAndSwitch(fragment: string): void {
     const map: Record<string, number> = {
-      antiddos: 1,
-      firewall: 2,
+      antiddos: 0,
+      firewall: 1,
     };
 
     const tabIndex = map[fragment];
@@ -80,15 +78,13 @@ export class SegurancaComponent implements AfterViewInit, OnDestroy {
     const target = document.getElementById(fragment);
     if (target) {
       const headerOffset = 160;
-      const elementPosition =
-        target.getBoundingClientRect().top + window.scrollY;
+      const elementPosition = target.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
 
       window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   }
 
-  /** Switch UIkit tab and update sidebar highlight */
   private switchTab(tabIndex: number): void {
     if (this.switcher) {
       this.switcher.show(tabIndex);
@@ -96,7 +92,6 @@ export class SegurancaComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  /** Highlight the correct sidebar item */
   private updateActiveNav(tabIndex: number): void {
     const navItems = document.querySelectorAll('.component-nav li');
     navItems.forEach((li, index) => {
@@ -109,14 +104,12 @@ export class SegurancaComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  /** Optional manual tab selection */
   selectTab(tabIndex: number, event: Event): void {
     event.preventDefault();
     this.tabSelected.emit(tabIndex);
     this.switchTab(tabIndex);
   }
 
-  /** Language toggle */
   useLanguage(language: string): void {
     this.translate.use(language);
   }

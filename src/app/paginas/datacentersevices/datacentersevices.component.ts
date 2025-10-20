@@ -4,36 +4,39 @@ import {
   inject,
   Output,
   AfterViewInit,
+  OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router'; // 👈 Needed for fragment detection
-
-import { Ad2Component } from '../../layout/ad2/ad2.component';
-
-import { TranslateService, TranslatePipe } from '@ngx-translate/core'; // Inserido
-import { RodapeComponent } from '../../layout/rodape/rodape.component';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MenuComponent } from '../../layout/menu/menu.component';
+import { RodapeComponent } from '../../layout/rodape/rodape.component';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+import { Ad2Component } from '../../layout/ad2/ad2.component';
+import { Subscription } from 'rxjs';
+
 declare const UIkit: any;
+
 @Component({
   selector: 'app-datacentersevices',
   imports: [
-    Ad2Component,
-    TranslatePipe,
+    MenuComponent,
     RodapeComponent,
-    MenuComponent, // Inserido
+    TranslatePipe,
+    Ad2Component,
     RouterLink,
   ],
   templateUrl: './datacentersevices.component.html',
-  styleUrl: './datacentersevices.component.css',
+  styleUrls: ['./datacentersevices.component.css'],
 })
-export class DatacentersevicesComponent implements AfterViewInit {
+export class DatacentersevicesComponent implements AfterViewInit, OnDestroy {
   @ViewChild('servicesTabs') servicesTabs: any;
-  private switcher: any;
-
   @Output() tabSelected = new EventEmitter<number>();
 
   private translate = inject(TranslateService);
-  private route = inject(ActivatedRoute); // 👈 Inject Angular route
+  private route = inject(ActivatedRoute);
+
+  private switcher: any;
+  private fragmentSub?: Subscription;
 
   constructor() {
     this.translate.setDefaultLang('pt');
@@ -41,54 +44,77 @@ export class DatacentersevicesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // ✅ Init UIkit switcher on the real container
-    this.switcher = UIkit.switcher('#component-nav');
+    setTimeout(() => {
+      this.switcher = UIkit.switcher('.component-nav');
 
-    this.route.fragment.subscribe((fragment) => {
-      if (!fragment) return;
+      // Watch for fragment changes
+      this.fragmentSub = this.route.fragment.subscribe((fragment) => {
+        if (fragment) this.scrollAndSwitch(fragment);
+      });
 
-      // Map fragment to switcher index
-      switch (fragment) {
-        case 'colocation':
-          this.switchTab(0);
-          break;
-        case 'cross':
-          this.switchTab(1);
-          break;
-        case 'campus':
-          this.switchTab(2);
-          break;
-        case 'remote':
-          this.switchTab(3);
-          break;
-        case 'professional':
-          this.switchTab(4);
-          break;
+      // Handle direct URL access
+      const currentFragment = this.route.snapshot.fragment;
+      if (currentFragment) {
+        this.scrollAndSwitch(currentFragment);
+      } else {
+        this.updateActiveNav(0);
       }
+    }, 100);
+  }
 
-      // Scroll to fragment target
-      const target = document.getElementById(fragment);
-      if (target) {
-        const headerOffset = 160;
-        const elementPosition =
-          target.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
+  ngOnDestroy(): void {
+    this.fragmentSub?.unsubscribe();
+  }
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
+  /** Scroll and switch based on fragment */
+  private scrollAndSwitch(fragment: string): void {
+    const map: Record<string, number> = {
+      colocation: 0,
+      cross: 1,
+      campus: 2,
+      remote: 3,
+      professional: 4,
+    };
+
+    const tabIndex = map[fragment];
+    if (tabIndex !== undefined && this.switcher) {
+      this.switchTab(tabIndex);
+    }
+
+    const target = document.getElementById(fragment);
+    if (target) {
+      const headerOffset = 160;
+      const elementPosition =
+        target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  }
+
+  /** Switch UIkit tab and highlight nav */
+  private switchTab(tabIndex: number): void {
+    if (this.switcher) {
+      this.switcher.show(tabIndex);
+      this.updateActiveNav(tabIndex);
+    }
+  }
+
+  /** Update sidebar active state */
+  private updateActiveNav(tabIndex: number): void {
+    const navItems = document.querySelectorAll('.component-nav li');
+    navItems.forEach((li, index) => {
+      if (index === tabIndex) {
+        li.classList.add('uk-active');
+        li.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      } else {
+        li.classList.remove('uk-active');
       }
     });
   }
 
-  switchTab(tabIndex: number) {
-    if (this.switcher) {
-      this.switcher.show(tabIndex);
-    }
-  }
-
-  selectTab(tabIndex: number, event: Event) {
+  /** When user manually selects a tab */
+  selectTab(tabIndex: number, event: Event): void {
     event.preventDefault();
     this.tabSelected.emit(tabIndex);
     this.switchTab(tabIndex);
