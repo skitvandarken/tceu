@@ -27,7 +27,15 @@
                                                             uk-icon="world"></span>
                                                         CONNECTIVITY</b></a></li>
 
+                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
+                                                    fragment="acloudconnect">Dedicated Internet Acess
+                                                </a>
+                                            </li>
 
+                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
+                                                    fragment="acloudconnect">IP Transit
+                                                </a>
+                                            </li>
 
                                             <li><a [routerLink]="['/connectivity']" fragment="private-metro">Metro
                                                     Ethernet (L2 VPN) </a></li>
@@ -42,14 +50,8 @@
                                                     fragment="acloudconnect">Wavelenght (OTN/DWDM)
                                                 </a>
                                             </li>
-                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="acloudconnect">Dedicated Internet Acess
-                                                </a>
-                                            </li>
-                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="acloudconnect">IP Transit
-                                                </a>
-                                            </li>
+
+
 
                                             <li class="uk-active "><a [routerLink]="['/connectivity']"
                                                     fragment="acloudconnect">ACloud Connect
@@ -70,19 +72,22 @@
                                                             class="uk-margin-small-right" uk-icon="cloud-upload"></span>
                                                         CLOUD </b> </a></li>
                                             <li class="uk-active "><a [routerLink]="['/cloud']"
-                                                    fragment="iaas">Clouds2Europe 
+                                                    fragment="iaas">Clouds2Europe
                                                 </a>
                                             </li>
-                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Backup2Europe
+                                            <li class="uk-active "><a [routerLink]="['/cloud']"
+                                                    fragment="iaas">Backup2Europe
                                                     (IaaS)
                                                 </a>
                                             </li>
 
-                                              <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Storage as-a-Service
+                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Storage
+                                                    as-a-Service
                                                 </a>
                                             </li>
 
-                                             <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Kubernetes 
+                                            <li class="uk-active "><a [routerLink]="['/cloud']"
+                                                    fragment="iaas">Kubernetes
                                                 </a>
                                             </li>
 
@@ -216,7 +221,7 @@
 
                         <li>
                             <a routerLink="/company" href="#">Company</a>
-                        </li> 
+                        </li>
                     </ul>
                 </div>
 
