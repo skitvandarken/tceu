@@ -89,7 +89,7 @@
                   <div class="uk-form-controls uk-flex uk-flex-wrap">
                     <!-- Business Lead Button -->
                     <button type="button"
-                      class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
+                      class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-top uk-margin-small-right"
                       [class.uk-button-primary]="serviceContact.get('contactType')?.value === 'businessLead'"
                       (click)="serviceContact.get('contactType')?.setValue('businessLead')">
                       {{ 'negocio' | translate }}
@@ -97,7 +97,7 @@
 
                     <!-- Service Provider Button -->
                     <button type="button"
-                      class="uk-button botao-service uk-button-default uk-border-rounded uk-margin-small-right"
+                      class="uk-button botao-service uk-button-default uk-border-rounde uk-margin-small-top uk-margin-small-right"
                       [class.uk-button-primary]="serviceContact.get('contactType')?.value === 'serviceProvider'"
                       (click)="serviceContact.get('contactType')?.setValue('serviceProvider')">
                       {{ 'provedor_servico' | translate }}
