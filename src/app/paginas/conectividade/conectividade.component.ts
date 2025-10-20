@@ -34,7 +34,7 @@ export class ConectividadeComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.switcher = UIkit.switcher('.timeline-content');
+    this.switcher = UIkit.switcher('.component-nav');
 
     this.route.fragment.subscribe(fragment => {
       if (!fragment) return;

@@ -111,4 +111,26 @@ closeDropdowns(): void {
   logout(): void {
     this.auth.logout();
   }
+
+
+scrollToSection(sectionId: string): void {
+  // Close any open dropdowns before scrolling
+  this.closeDropdowns();
+
+  // Allow time for UIkit animations to finish before scrolling
+  setTimeout(() => {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Optional: if you have multiple “panels” (like tabbed content or sections),
+    // you can emit a custom event here or call a service to tell another component to switch
+    // Example:
+    // this.panelService.switchTo(sectionId);
+  }, 200);
+}
+
+
+
 }

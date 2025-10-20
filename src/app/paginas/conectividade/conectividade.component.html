@@ -25,13 +25,16 @@
                 style="box-shadow:2px 24px 90px rgba(0,53,103,0.559); background:#fff;"
                 uk-switcher="connect: #component-nav; animation: uk-animation-fade">
 
-             
-                <li><a href="#" class="uk-text-bold">Dedicated Internet Access (DIA)</a></li>
-                <li><a href="#" class="uk-text-bold">IP Transit</a></li>
-                <li><a href="#" class="uk-text-bold">Metro Ethernet (L2 VPN)</a></li>
-                <li><a href="#" class="uk-text-bold">Wavelenght (OTN/DWDM)</a></li>
-                <li><a href="#" class="uk-text-bold">ACloud Connect</a></li>
-                <li><a href="#" class="uk-text-bold">Remote Peering (IX Connection)</a></li>
+                <li><a href="#dia" uk-scroll="offset: 100" class="uk-text-bold">Dedicated Internet Access (DIA)</a></li>
+                <li><a href="#ip" uk-scroll="offset: 100" class="uk-text-bold">IP Transit</a></li>
+                <li><a href="#metro" uk-scroll="offset: 100" class="uk-text-bold">Metro Ethernet (L2 VPN)</a></li>
+                <li><a href="#gdc" uk-scroll="offset: 100" class="uk-text-bold">Global Data Center Interconnections</a>
+                </li>
+                <li><a href="#wave" uk-scroll="offset: 100" class="uk-text-bold">Wavelenght(OTN/DWDM)</a></li>
+                <li><a href="#acloud" uk-scroll="offset: 100" class="uk-text-bold">ACloud Connect</a></li>
+                <li><a href="#peering" uk-scroll="offset: 100" class="uk-text-bold">Remote Peering (IX Connection)</a>
+                </li>
+
             </ul>
         </div>
 
@@ -40,11 +43,11 @@
             <div id="component-nav" class="uk-switcher">
 
                 <!-- DEDICATED INTERNET ACCESS -->
-                <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+                <div id="dia" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
                     <p>Dedicated Internet Access (DIA)</p>
-                    <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
+                    <h2 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
                         Internet access with flexible capacity within a global, efficient, and low-latency network.
-                    </h1>
+                    </h2>
 
                     <ul class="uk-list uk-list-bullet uk-margin-small">
                         <li>Global access to network</li>
@@ -62,15 +65,16 @@
                     </div>
                 </div>
 
-                <!-- IP TRANSIT (atualizado com setores) -->
-                <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+                <!-- IP TRANSIT -->
+                <div id="ip" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
                     <p>IP Transit</p>
-                    <h1 style="color:rgba(0,0,78,0.918);">BGP peering for B2B clients, enabling IP advertising with
-                        dedicated ASN and scalable capacity.</h1>
+                    <h2 style="color:rgba(0,0,78,0.918);">BGP peering for B2B clients, enabling IP advertising with
+                        dedicated ASN and scalable capacity.</h2>
 
-                        <div> 
-                            <img src="img/ip-network-telcables.jpg" alt="High-level design of our IP Network" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
-                        </div>
+                    <div>
+                        <img src="img/ip-network-telcables.jpg" alt="High-level design of our IP Network"
+                            style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
+                    </div>
 
                     <ul class="uk-list uk-list-bullet uk-margin-small">
                         <li>Direct access to global internet backbone</li>
@@ -91,21 +95,19 @@
                     </div>
                 </div>
 
-
                 <!-- METRO ETHERNET -->
-                <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+                <div id="metro" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
                     <p>
                         Metro Ethernet (L2 VPN)
                     </p>
-                    <h1 style="color:rgba(0,0,78,0.918);"> Private site-to-site or multisite Layer 2 connections over
+                    <h2 style="color:rgba(0,0,78,0.918);"> Private site-to-site or multisite Layer 2 connections over
                         fiber for enterprises with
-                        centralized networks.</h1>
+                        centralized networks.</h2>
 
-                        
-                        <div> 
-                            <img src="img/eu-networks.jpg" alt="Europea metropolitan network" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
-                        </div>
-
+                    <div>
+                        <img src="img/eu-networks.jpg" alt="Europea metropolitan network"
+                            style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
+                    </div>
 
                     <ul class="uk-list uk-list-bullet uk-margin-small">
                         <li>Consistent speed and reliability</li>
@@ -122,22 +124,52 @@
                     </div>
                 </div>
 
+                <!-- GLOBAL DATA CENTER INTERCONNECTIONS -->
+                <div id="gdc" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+                    <p>Global Data Center Interconnections</p>
+                    <h2 style="color:rgba(0,0,78,0.918);">
+                        High-performance, private connections between global data centers for enterprises and service
+                        providers
+                        seeking secure and scalable interconnectivity.
+                    </h2>
+
+                    <div>
+                        <img src="img/global-datacenter-telcables.jpg"
+                            alt="Global Data Center Interconnections by TelCables"
+                            style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
+                    </div>
+
+                    <ul class="uk-list uk-list-bullet uk-margin-small">
+                        <li>Private, low-latency data center-to-data center links</li>
+                        <li>Interconnections across major global hubs</li>
+                        <li>High availability with redundant backbone paths</li>
+                        <li>Flexible bandwidth and topology options</li>
+                        <li>24x7x365 proactive monitoring</li>
+                    </ul>
+
+                    <div class="uk-margin-small-top">
+                        Ideal for:
+                        <span class="tag">Cloud Providers</span>
+                        <span class="tag">Financial Institutions</span>
+                        <span class="tag">ISPs</span>
+                        <span class="tag">Content Networks</span>
+                        <span class="tag">Multinationals</span>
+                    </div>
+                </div>
+
                 <!-- INTERNATIONAL PRIVATE CIRCUIT -->
-                <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-
+                <div id="wave" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
                     <p>
-
-
                         International Private Circuit (OTN / DWDM)
-
                     </p>
-                    <h1 style="color:rgba(0,0,78,0.918);">
+                    <h2 style="color:rgba(0,0,78,0.918);">
                         Dedicated international circuits connecting global sites through a resilient submarine and
                         terrestrial backbone.
-                    </h1>
- <div> 
-                            <img src="img/angolacables-telcables-network.png" alt="Angola Cables's Global Network" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
-                        </div>
+                    </h2>
+                    <div>
+                        <img src="img/angolacables-telcables-network.png" alt="Angola Cables's Global Network"
+                            style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
+                    </div>
                     <ul class="uk-list uk-list-bullet uk-margin-small">
                         <li>Global reach through 1000+ data centers</li>
                         <li>Optimized latency between continents</li>
@@ -153,24 +185,19 @@
                 </div>
 
                 <!-- ACLOUD CONNECT -->
-                <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+                <div id="acloud" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
                     <p>
                         ACloud Connect
-
                     </p>
-                    <h1 style="color:rgba(0,0,78,0.918);">
+                    <h2 style="color:rgba(0,0,78,0.918);">
                         Secure, dedicated connections to global Cloud Service Providers across 500+ cloud zones in EMEA,
                         ROA, Americas, and Asia.
-                    </h1>
+                    </h2>
 
-                                    
-<div>
-
-
-                             <img src="img/cloud-content-telcables.png" alt="Angola Cables's Global Network" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
-             
-
-</div>
+                    <div>
+                        <img src="img/cloud-content-telcables.png" alt="Angola Cables's Global Network"
+                            style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
+                    </div>
 
                     <ul class="uk-list uk-list-bullet uk-margin-small">
                         <li>Low-latency cloud connectivity</li>
@@ -187,23 +214,18 @@
                 </div>
 
                 <!-- REMOTE PEERING -->
-                <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+                <div id="peering" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
                     <p>
-
                         Remote Peering (IX Connections)
-
                     </p>
-                    <h1 style="color:rgba(0,0,78,0.918);">
+                    <h2 style="color:rgba(0,0,78,0.918);">
                         Connect to leading Internet Exchange Points (IXPs) globally without physical presence using our
                         international backbone.
-                    </h1>
-<div>
-
-
-                             <img src="img/remote-peering-telcables.png" alt="Angola Cables's Global Network" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
-             
-
-</div>
+                    </h2>
+                    <div>
+                        <img src="img/remote-peering-telcables.png" alt="Angola Cables's Global Network"
+                            style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 20px">
+                    </div>
                     <ul class="uk-list uk-list-bullet uk-margin-small">
                         <li>Cost savings – no local infrastructure</li>
                         <li>Global reach – multiple IXPs accessible</li>
