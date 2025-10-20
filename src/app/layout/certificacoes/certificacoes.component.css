@@ -8,3 +8,16 @@
     background-color: #fff;
     border-radius: 20px;
 }
+
+
+    .tagline-certificacao {
+        font-size: 1rem;
+        color: #022561; font-size: 2rem;
+    }
+
+@media (max-width: 480px)  {
+    .tagline-certificacao {
+        font-size: 2rem;
+        color: #022561; font-size: 1rem;
+    }
+}

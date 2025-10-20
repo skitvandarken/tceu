@@ -235,6 +235,21 @@
 /* Responsive */
 @media (max-width: 480px) {
 
+
+    .modern-accordion .uk-accordion-title {
+    border: 1px solid rgba(0, 0, 0, 0.423);
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #022561;
+    padding: 1.2rem 1.5rem;
+    display: block;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
     .tag1 {
         font-size: 1rem;
     }
@@ -246,8 +261,10 @@
         line-height: 1.2;
     }
 
-
-
+.modern-accordion .uk-open .uk-accordion-title {
+    background: linear-gradient(135deg, #25c0dd, #6fe0fc);
+    color: #002561;
+}
     .angola-cables-titulo {
         font-size: 1.22rem !important;
         font-weight: bold;
@@ -278,6 +295,8 @@
         text-align: center !important;
     }
 }
+
+
 
 /* Keyframes */
 @keyframes gradientShift {

@@ -10,7 +10,7 @@
   </h1>
   <p class="tag1" >Submarine |
     Metro | Cloud | Connected</p>
-    
+
   <div class="uk-padding">
     <img src="img/telcables-europe-mapa.png" alt="Lisbon gateway">
   </div>
@@ -369,7 +369,7 @@
             <ul class="modern-accordion" uk-accordion="multiple: false">
               <li *ngFor="let item of accordionItems; let i = index" [class.uk-open]="i === 0">
                 <a class="uk-accordion-title" href (click)="onSelectImage(item.image, item.imageDesc)">
-                  <span style="margin-right: 15px;" [attr.uk-icon]="'icon: ' + item.icon + '; ratio: 1.5'"></span>
+                  <span style="margin-right: 10px;" [attr.uk-icon]="'icon: ' + item.icon + '; ratio: 1.5'"></span>
                   {{ item.title }}
                 </a>
                 <div class="uk-accordion-content">
