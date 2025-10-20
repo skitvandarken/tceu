@@ -40,8 +40,23 @@
                         </div>
 
                         <!-- Right Column (Empty for now) -->
+                        <div style="display: flex; flex-direction: row; gap: 20px; align-items: center; justify-content: center;" class="uk-hidden@s uk-center">
+                            <div class="uk-flex uk-flex-center  " >
+                                <app-contador [startValue]="10" [targetValue]="62" [interval]="30"></app-contador>
+                                <p style="color: #fff;">
+                                    <span style="color:#25c0dd;">Lisbon</span> to
+                                    <span style="color:#25c0dd;">Brazil</span>
+                                </p>
+                            </div>
 
-                        <div class=" uk-child-width-1-2@m  uk-text-center uk-margin-large-top uk-margin-medium-bottom"
+                            <div class="uk-flex uk-flex-center " >
+                                <app-contador [startValue]="140" [targetValue]="165" [interval]="80"></app-contador>
+                                <p style="color: #fff;"><span style="color:#25c0dd">Lisbon </span> to <span
+                                        style="color: #25c0dd;">New York</span>
+                            </div>
+                        </div>
+
+                        <div class="uk-visible@m	  big-numbers uk-child-width-1-2@m  uk-text-center uk-margin-large-top uk-margin-medium-bottom"
                             uk-grid>
                             <div>
                                 <div class="glassy-card">
@@ -61,7 +76,6 @@
                                             York</span>
                                     </p>
                                 </div>
-
                             </div>
                             <div>
                                 <div class="glassy-card">
@@ -87,8 +101,8 @@
 
                             </div>
                             <div>
-                               <div class="glassy-card">
-                                    <p style="font-size: 2.3rem;" >99.95%</p>
+                                <div class="glassy-card">
+                                    <p style="font-size: 2.3rem;">99.95%</p>
                                     <p style="color: #25c0dd;">Global Uptime</p>
                                 </div>
                             </div>

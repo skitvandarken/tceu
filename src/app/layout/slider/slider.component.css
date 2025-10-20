@@ -87,7 +87,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   line-height: 1px !important;
 }
 
-/* Mobile adjustments */
+/* Mobile adjustments 
 @media (max-width: 768px) {
   .uk-slideshow-items .uk-flex-center {
     flex-direction: column;
@@ -114,11 +114,11 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   }
 }
 
-
+*/
 
 
 /* Extra small devices */
-@media (max-width: 480px) {
+@media (max-width: 480px), (max-width: 390px), (max-width: 780px) {
   .uk-slideshow-items .hero-title {
 
     font-size: 1.2rem;
@@ -136,7 +136,13 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 }
 
 
-
+.glassy-2{
+   border: 1px solid rgba(255, 255, 255, 0.276);  
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.016));
+  backdrop-filter: blur(200px) saturate(180%);
+  padding: 20px 20px !important;
+  border-radius: 20px;
+}
 
 /* Container card */
 .glassy-card {
@@ -198,6 +204,8 @@ address, dl, fieldset, figure, ol, p, pre, ul {
 
 /* Extra small devices (portrait phones) */
 @media (max-width: 480px) {
+
+
 
    /* Grande margem superior antes do título */
   .hero-title {
