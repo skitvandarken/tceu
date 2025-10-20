@@ -20,23 +20,24 @@
   <div class="uk-grid-large uk-grid-match" uk-grid>
     <!-- Sidebar -->
     <div class="uk-width-1-4@m uk-margin-small-top">
-      <ul
-        class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
-        style="background:#fff;"
-        uk-switcher="connect: #component-nav; animation: uk-animation-fade"
-      >
+<ul
+  class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded component-nav"
+  style="box-shadow:2px 24px 90px rgba(0,53,103,0.559); background:#fff;"
+  uk-switcher="connect: #component-nav; animation: uk-animation-fade"
+>
+
         <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
-        <li><a href="#" class="uk-text-bold">Anti-DDoS</a></li>
-        <li><a href="#" class="uk-text-bold">Firewall-as-a-Service</a></li>
+        <li><a [routerLink]="[]" fragment="antiddos" class="uk-text-bold">Anti-DDoS</a></li>
+        <li><a [routerLink]="[]" fragment="firewall" class="uk-text-bold">Firewall-as-a-Service</a></li>
       </ul>
     </div>
 
     <!-- Content -->
     <div class="uk-width-expand@m">
-      <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
+      <div id="component-nav" class="uk-switcher">
 
         <!-- Anti-DDoS -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="antiddos" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Anti-DDoS</h1>
           <p>
             <b>Shields2Europe Anti-DDoS</b> protects your network and services from volumetric, protocol,
@@ -70,7 +71,7 @@
         </div>
 
         <!-- Firewall-as-a-Service -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="firewall" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Firewall-as-a-Service</h1>
           <p>
             <b>Shields2Europe Firewall-as-a-Service (FWaaS)</b> provides centralized, cloud-delivered protection
@@ -107,10 +108,6 @@
     </div>
   </div>
 </div>
-
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
 
 <app-ad2></app-ad2>
 <app-rodape></app-rodape>

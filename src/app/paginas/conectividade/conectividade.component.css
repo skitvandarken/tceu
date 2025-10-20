@@ -52,7 +52,7 @@
 
 .uk-nav-default>li.uk-active>a,
 .uk-nav-default>li>a:hover {
-    background: rgba(0, 0, 78, 0.918);
+    background: rgba(0, 0, 78, 0.409);
     color: #fff !important;
 }
 
@@ -117,4 +117,42 @@
 .sombra {
     box-shadow: 2px 24px 90px rgba(0, 53, 103, 0.559);
 
+}
+
+
+
+
+/* === Sidebar navigation (component-nav) active & hover states === */
+.component-nav li > a {
+  display: block;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 78, 0.918);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover highlight */
+
+
+/* Active item (synced with TypeScript) */
+.component-nav li.uk-active > a {
+  background: rgba(0, 0, 78, 0.918);
+ color: rgba(255, 255, 255, 0.918);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Optional — small divider between links */
+.component-nav li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Optional — make sure long lists scroll nicely */
+.component-nav {
+  max-height: 80vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }

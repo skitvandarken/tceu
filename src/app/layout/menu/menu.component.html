@@ -17,8 +17,7 @@
                     <ul class="uk-navbar-nav uk-text-left uk-visible@m">
                         <li>
                             <a href="#" class="uk-navbar-toggle" uk-toggle="target: #products-dropdown">Products</a>
-                            <div  id="products-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-4"
-                                hidden>
+                            <div id="products-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-4" hidden>
                                 <div class="uk-drop-grid uk-child-width-1-4" uk-grid>
                                     <div>
                                         <ul class="uk-nav uk-navbar-dropdown-nav ">
@@ -26,40 +25,18 @@
                                                     routerLink="/connectivity"><b><span class="uk-margin-small-right"
                                                             uk-icon="world"></span>
                                                         CONNECTIVITY</b></a></li>
-
-                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="dia">Dedicated Internet Acess
-                                                </a>
+                                            <li><a [routerLink]="['/connectivity']" fragment="dia">Dedicated Internet
+                                                    Access</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="ip">IP Transit</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="metro">Metro Ethernet</a>
                                             </li>
-
-                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="ip">IP Transit
-                                                </a>
-                                            </li>
-
-                                            <li><a [routerLink]="['/connectivity']" fragment="metro">Metro
-                                                    Ethernet (L2 VPN) </a></li>
-
-
-                                            <li class=" "><a [routerLink]="['/connectivity']" fragment="gdi">Global <br>
-                                                    Data
-                                                    Center <br> Interconnection</a> </li>
-
-
-                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="acloudconnect">Wavelenght (OTN/DWDM)
-                                                </a>
-                                            </li>
-
-
-
-                                            <li class="uk-active "><a [routerLink]="['/connectivity']"
-                                                    fragment="acloudconnect">ACloud Connect
-                                                </a>
-                                            </li>
-
-
-
+                                            <li><a [routerLink]="['/connectivity']" fragment="gdc">Global <br>Data
+                                                    Center<br>
+                                                    Interconnection</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="wave">Wavelength</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="acloud">AC Cloud</a></li>
+                                            <li><a [routerLink]="['/connectivity']" fragment="peering">Remote
+                                                    Peering</a></li>
 
 
                                         </ul>
@@ -72,26 +49,27 @@
                                                             class="uk-margin-small-right" uk-icon="cloud-upload"></span>
                                                         CLOUD </b> </a></li>
                                             <li class="uk-active "><a [routerLink]="['/cloud']"
-                                                    fragment="iaas">Clouds2Europe
+                                                    fragment="cloud">Clouds2Europe
                                                 </a>
                                             </li>
                                             <li class="uk-active "><a [routerLink]="['/cloud']"
-                                                    fragment="iaas">Backup2Europe
+                                                    fragment="backup">Backup2Europe
                                                     (IaaS)
                                                 </a>
                                             </li>
 
-                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="iaas">Storage
+                                            <li class="uk-active "><a [routerLink]="['/cloud']"
+                                                    fragment="storage">Storage
                                                     as-a-Service
                                                 </a>
                                             </li>
 
                                             <li class="uk-active "><a [routerLink]="['/cloud']"
-                                                    fragment="iaas">Kubernetes
+                                                    fragment="kubernetes">Kubernetes
                                                 </a>
                                             </li>
 
-                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="backup">
+                                            <li class="uk-active "><a [routerLink]="['/cloud']" fragment="vm">
                                                     VMWare Alternative
                                                 </a>
                                             </li>
@@ -104,13 +82,31 @@
                                             <li class=" uk-nav-header"><a routerLink="/data-center"><b><span
                                                             class="uk-margin-small-right" uk-icon="server"></span>
                                                         DATA CENTER </b> </a> </li>
-                                            <li class="uk-active "><a routerLink="/data-center">Colocation </a>
+
+
+
+                                            <li class="uk-active "><a [routerLink]="['/data-center']"
+                                                    fragment="colocation">Colocation
+                                                </a>
                                             </li>
-                                            <li class="uk-active "><a routerLink="/data-center">Cross Connect</a></li>
-                                            <li class="uk-active "><a routerLink="/data-center">Campus Connect</a></li>
-                                            <li class="uk-active "><a routerLink="/data-center">Remote Hands</a></li>
-                                            <li class="uk-active "><a routerLink="/data-center">Professional
-                                                    Services</a></li>
+                                            <li class="uk-active "><a [routerLink]="['/data-center']"
+                                                    fragment="cross">Cross Connect
+                                                </a>
+                                            </li>
+
+                                            <li class="uk-active "><a [routerLink]="['/data-center']"
+                                                    fragment="campus">Campus Connect
+                                                </a>
+                                            </li>
+
+                                            <li class="uk-active "><a [routerLink]="['/data-center']"
+                                                    fragment="remote">Remote Hands
+                                                </a>
+                                            </li>
+
+                                            <li class="uk-active "><a [routerLink]="['/data-center']" fragment="professional">
+                                                    Professional Services </a>
+                                            </li>
 
                                         </ul>
 
@@ -124,10 +120,15 @@
                                                             class="uk-margin-small-right" uk-icon="lock"></span>
                                                         SECURITY
                                                     </b></a></li>
-                                            <li class=" uk-active"><a routerLink="/security">Anti-DDoS</a>
+
+                                                        <li class="uk-active "><a [routerLink]="['/security']" fragment="antiddos">
+                                                    Anti-DDoS </a>
                                             </li>
-                                            <li class="uk-active "><a routerLink="/security">Firewall-as-a-Service</a>
+                                                         <li class="uk-active "><a [routerLink]="['/security']" fragment="firewall">
+                                                    Firewall-as-a-Service </a>
                                             </li>
+
+                               
 
                                         </ul>
                                     </div>
@@ -137,7 +138,7 @@
                         </li>
 
                         <li>
-                            <a routerLink="/solution">Company</a>
+                            <a routerLink="/solution">Solution</a>
 
                             <!-- 
                             <div id="solutions-dropdown" class="uk-navbar-dropdown uk-navbar-dropdown-width-1" hidden>

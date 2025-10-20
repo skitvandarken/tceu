@@ -38,6 +38,13 @@
 
 
 
+/* Ensure selected sidebar item stays highlighted */
+.component-nav > li.uk-active > a {
+  background: rgba(0, 0, 78, 0.918) !important;
+  color: #fff !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
 
 

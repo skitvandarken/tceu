@@ -14,185 +14,146 @@
   </div>
 </div>
 
-<!-- Main Content -->
+<!-- Conteúdo Principal -->
 <div class="uk-container uk-margin-large-top">
-
   <div class="uk-grid-large uk-grid-match" uk-grid>
-    <!-- Sidebar -->
+
+    <!-- SIDEBAR -->
     <div class="uk-width-1-4@m uk-margin-small-top">
-      <ul
-        class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded"
-        style="background:#fff;"
-        uk-switcher="connect: #component-nav; animation: uk-animation-fade"
-      >
-        <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
-        <li><a href="#" class="uk-text-bold">Clouds2Europe</a></li>
-        <li><a href="#" class="uk-text-bold">Backup2Europe</a></li>
-        <li><a href="#" class="uk-text-bold">Kubernetes-as-a-Service</a></li>
-        <li><a href="#" class="uk-text-bold">VMware Alternative</a></li>
+      <ul class="sombra uk-nav uk-nav-default uk-card uk-card-body uk-card-small uk-border-rounded component-nav"
+          style="box-shadow:2px 24px 90px rgba(0,53,103,0.559); background:#fff;"
+          uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+        <li>
+          <a [routerLink]="[]" fragment="cloud" class="uk-text-bold">Clouds2Europe</a>
+        </li>
+        <li>
+          <a [routerLink]="[]" fragment="backup" class="uk-text-bold">Backup2Europe</a>
+        </li>
+        <li>
+          <a [routerLink]="[]" fragment="storage" class="uk-text-bold">Storage-as-a-Service</a>
+        </li>
+        <li>
+          <a [routerLink]="[]" fragment="kubernetes" class="uk-text-bold">Kubernetes-as-a-Service</a>
+        </li>
+        <li>
+          <a [routerLink]="[]" fragment="vm" class="uk-text-bold">VMWare Alternative</a>
+        </li>
       </ul>
     </div>
 
-    <!-- Content -->
+    <!-- CONTEÚDO -->
     <div class="uk-width-expand@m">
-      <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
+      <div id="component-nav" class="uk-switcher">
 
-        <!-- Virtual Infrastructure (IaaS) -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
-            Virtual Infrastructure (IaaS)
-          </h1>
-          <p class="uk-margin-small-bottom">
-            On-demand virtualized computing resources such as compute, storage, and networking
-            available through our B2B management portal. Flexible, scalable, and built to support
-            every B2B need.
+        <!-- Clouds2Europe (kept id 'cloud') -->
+        <div id="cloud" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Clouds2Europe</h1>
+          <p>
+            Flexible and secure virtualized infrastructure hosted in European data centers, enabling scalable deployment
+            of enterprise applications with full data compliance and low latency.
           </p>
-
-          <ul uk-accordion="multiple:true">
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Key Benefits</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>24x7x365 expert support</li>
-                  <li>Efficient management of IT resources</li>
-                  <li>Cost reduction and data security</li>
-                  <li>Flexible and scalable infrastructure</li>
-                  <li>Hybrid environment integration</li>
-                </ul>
-              </div>
-            </li>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Fully managed compute instances</li>
+            <li>GDPR-compliant European cloud regions</li>
+            <li>Elastic resource scaling</li>
+            <li>API-based provisioning</li>
           </ul>
-
           <div class="uk-margin-small-top">
             Ideal for:
             <span class="tag">Technology</span>
             <span class="tag">Finance</span>
-            <span class="tag">Manufacturing</span>
             <span class="tag">Public Sector</span>
-            <span class="tag">General Markets</span>
+            <span class="tag">Startups</span>
           </div>
         </div>
 
-        <!-- Storage-as-a-Service -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
-            Storage-as-a-Service
-          </h1>
-          <p class="uk-margin-small-bottom">
-            Provides scalable and flexible data storage capabilities for organizations to store,
-            manage, and access data securely and efficiently — without the need to maintain
-            physical infrastructure.
+        <!-- Backup2Europe (kept id 'backup') -->
+        <div id="backup" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Backup2Europe</h1>
+          <p>
+            Enterprise-grade backup and disaster recovery solutions hosted in secure European facilities, ensuring
+            business continuity and data resilience.
           </p>
-
-          <ul uk-accordion="multiple:true">
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Key Benefits</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>Reduced capital expenditure</li>
-                  <li>Elastic and scalable storage</li>
-                  <li>No ingress/egress/IOPs charges</li>
-                  <li>Ensured business continuity</li>
-                </ul>
-              </div>
-            </li>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Automated incremental backups</li>
+            <li>Geo-redundant data storage</li>
+            <li>Fast recovery and restore</li>
+            <li>No hardware maintenance costs</li>
           </ul>
-
-          <div class="uk-margin-small-top">
-            Ideal for:
-            <span class="tag">Technology</span>
-            <span class="tag">Entertainment</span>
-            <span class="tag">Finance</span>
-            <span class="tag">Manufacturing</span>
-            <span class="tag">Public Sector</span>
-            <span class="tag">Education</span>
-          </div>
-        </div>
-
-        <!-- Kubernetes-as-a-Service -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
-            Kubernetes-as-a-Service
-          </h1>
-          <p class="uk-margin-small-bottom">
-            Fully managed Kubernetes clusters for deploying, scaling, and managing containerized
-            applications with simplicity and control — without the complexity of manual
-            infrastructure management.
-          </p>
-
-          <ul uk-accordion="multiple:true">
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Key Benefits</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>Automated cluster provisioning and scaling</li>
-                  <li>Built-in monitoring and alerting</li>
-                  <li>Secure multi-tenant isolation</li>
-                  <li>Optimized for high performance workloads</li>
-                  <li>Supports hybrid and multi-cloud architectures</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
-          <div class="uk-margin-small-top">
-            Ideal for:
-            <span class="tag">Technology</span>
-            <span class="tag">DevOps</span>
-            <span class="tag">SaaS Providers</span>
-            <span class="tag">Finance</span>
-            <span class="tag">Telecom</span>
-            <span class="tag">Public Sector</span>
-          </div>
-        </div>
-
-        <!-- VMware Alternative -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
-          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
-            VMware Alternative – Enterprise Virtualization Platform
-          </h1>
-          <p class="uk-margin-small-bottom">
-            A high-performance, enterprise-grade virtualization solution designed as an alternative
-            to VMware environments. Simplify VM management, reduce licensing costs, and modernize
-            your virtual infrastructure without disruption.
-          </p>
-
-          <ul uk-accordion="multiple:true">
-    
-
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Platform Highlights</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>Seamless VM import and compatibility with vSphere-based tools</li>
-                  <li>Live migration and workload balancing</li>
-                  <li>Software-defined networking and storage</li>
-                  <li>Advanced monitoring, automation, and reporting</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="uk-open">
-              <a class="uk-accordion-title" href="#">Migration & Support</a>
-              <div class="uk-accordion-content">
-                <ul class="uk-list uk-list-bullet uk-margin-small">
-                  <li>Migration assessment and compatibility validation</li>
-                  <li>Automated tools for seamless transition from VMware</li>
-                  <li>Professional services for project execution and optimization</li>
-                  <li>Continuous support and operational training</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
           <div class="uk-margin-small-top">
             Ideal for:
             <span class="tag">Enterprises</span>
             <span class="tag">Finance</span>
+            <span class="tag">Education</span>
+            <span class="tag">Healthcare</span>
+          </div>
+        </div>
+
+        <!-- Storage-as-a-Service (kept id 'storage') -->
+        <div id="storage" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Storage-as-a-Service</h1>
+          <p>
+            Scalable, flexible storage for enterprises to manage data securely and efficiently — without maintaining
+            physical infrastructure.
+          </p>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Elastic storage capacity</li>
+            <li>No ingress/egress/IOPs charges</li>
+            <li>Business continuity built-in</li>
+            <li>Cost-effective and reliable</li>
+          </ul>
+          <div class="uk-margin-small-top">
+            Ideal for:
             <span class="tag">Technology</span>
-            <span class="tag">Manufacturing</span>
+            <span class="tag">Finance</span>
             <span class="tag">Public Sector</span>
-            <span class="tag">Service Providers</span>
+            <span class="tag">Manufacturing</span>
+          </div>
+        </div>
+
+        <!-- Kubernetes-as-a-Service (kept id 'kubernetes') -->
+        <div id="kubernetes" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Kubernetes-as-a-Service</h1>
+          <p>
+            Fully managed Kubernetes clusters for deploying, scaling, and managing containerized applications with
+            simplicity and control.
+          </p>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Automated cluster provisioning</li>
+            <li>Built-in monitoring and alerting</li>
+            <li>Hybrid and multi-cloud support</li>
+            <li>Optimized performance workloads</li>
+          </ul>
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">DevOps</span>
+            <span class="tag">SaaS Providers</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Telecom</span>
+          </div>
+        </div>
+
+        <!-- VMware Alternative (kept id 'vm') -->
+        <div id="vm" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+          <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">
+            VMware Alternative – Enterprise Virtualization Platform
+          </h1>
+          <p>
+            High-performance virtualization platform as a cost-effective alternative to VMware environments. Simplify
+            VM management and modernize your infrastructure.
+          </p>
+          <ul class="uk-list uk-list-bullet uk-margin-small">
+            <li>Seamless VM import and migration</li>
+            <li>Live migration and workload balancing</li>
+            <li>Software-defined networking and storage</li>
+            <li>Comprehensive monitoring and automation</li>
+          </ul>
+          <div class="uk-margin-small-top">
+            Ideal for:
+            <span class="tag">Enterprises</span>
+            <span class="tag">Technology</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Public Sector</span>
           </div>
         </div>
 

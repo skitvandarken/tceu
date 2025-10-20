@@ -1,4 +1,11 @@
-import { Component, EventEmitter, inject, Output, AfterViewInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  inject,
+  Output,
+  AfterViewInit,
+  ViewChild,
+} from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router'; // 👈 Needed for fragment detection
 
 import { Ad2Component } from '../../layout/ad2/ad2.component';
@@ -11,15 +18,15 @@ declare const UIkit: any;
   selector: 'app-datacentersevices',
   imports: [
     Ad2Component,
-    TranslatePipe, RodapeComponent, MenuComponent // Inserido
-    ,
-    RouterLink
-],
+    TranslatePipe,
+    RodapeComponent,
+    MenuComponent, // Inserido
+    RouterLink,
+  ],
   templateUrl: './datacentersevices.component.html',
-  styleUrl: './datacentersevices.component.css'
+  styleUrl: './datacentersevices.component.css',
 })
 export class DatacentersevicesComponent implements AfterViewInit {
-
   @ViewChild('servicesTabs') servicesTabs: any;
   private switcher: any;
 
@@ -33,38 +40,43 @@ export class DatacentersevicesComponent implements AfterViewInit {
     this.translate.use(this.translate.currentLang || 'pt');
   }
 
-
   ngAfterViewInit(): void {
     // ✅ Init UIkit switcher on the real container
-    this.switcher = UIkit.switcher('.timeline-content');
+    this.switcher = UIkit.switcher('#component-nav');
 
-    this.route.fragment.subscribe(fragment => {
+    this.route.fragment.subscribe((fragment) => {
       if (!fragment) return;
 
       // Map fragment to switcher index
       switch (fragment) {
-        case 'rack-colocation':
+        case 'colocation':
           this.switchTab(0);
           break;
-        case 'interconnectivity':
+        case 'cross':
           this.switchTab(1);
           break;
-        case 'remote-hands':
+        case 'campus':
           this.switchTab(2);
+          break;
+        case 'remote':
+          this.switchTab(3);
+          break;
+        case 'professional':
+          this.switchTab(4);
           break;
       }
 
       // Scroll to fragment target
       const target = document.getElementById(fragment);
       if (target) {
-        const headerOffset = 180;
+        const headerOffset = 160;
         const elementPosition =
           target.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       }
     });
@@ -85,5 +97,4 @@ export class DatacentersevicesComponent implements AfterViewInit {
   useLanguage(language: string): void {
     this.translate.use(language);
   }
-
 }

@@ -16,6 +16,7 @@
 
 <!-- Main Content -->
 <div class="uk-container uk-margin-large-top">
+
   <div class="uk-grid-large uk-grid-match" uk-grid>
     <!-- Sidebar -->
     <div class="uk-width-1-4@m uk-margin-small-top">
@@ -25,20 +26,20 @@
         uk-switcher="connect: #component-nav; animation: uk-animation-fade"
       >
         <li class="uk-nav-header uk-text-uppercase uk-text-meta uk-margin-small-bottom"></li>
-        <li><a href="#" class="uk-text-bold">Colocation</a></li>
-        <li><a href="#" class="uk-text-bold">Cross Connect</a></li>
-        <li><a href="#" class="uk-text-bold">Campus Connect</a></li>
-        <li><a href="#" class="uk-text-bold">Remote Hands</a></li>
-        <li><a href="#" class="uk-text-bold">Professional Services</a></li>
+        <li><a [routerLink]="[]" fragment="colocation" class="uk-text-bold">Colocation</a></li>
+        <li><a [routerLink]="[]" fragment="cross" class="uk-text-bold">Cross Connect</a></li>
+        <li><a [routerLink]="[]" fragment="campus" class="uk-text-bold">Campus Connect</a></li>
+        <li><a [routerLink]="[]" fragment="remote" class="uk-text-bold">Remote Hands</a></li>
+        <li><a [routerLink]="[]" fragment="professional" class="uk-text-bold">Professional Services</a></li>
       </ul>
     </div>
 
     <!-- Content -->
     <div class="uk-width-expand@m">
-      <div id="component-nav" class="uk-switcher" uk-accordion="multiple:false; collapsible:true">
+      <div id="component-nav" class="uk-switcher">
 
         <!-- Colocation -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="colocation" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Colocation</h1>
           <p class="uk-margin-small-bottom">
             Host your infrastructure within our facilities in Lisbon, London, and Marseille — offering high availability,
@@ -72,7 +73,7 @@
         </div>
 
         <!-- Cross Connect -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="cross" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Cross Connect</h1>
           <p class="uk-margin-small-bottom">
             Establish private, high-speed, and low-latency connections between your colocated equipment
@@ -104,7 +105,7 @@
         </div>
 
         <!-- Campus Connect -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="campus" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Campus Connect</h1>
           <p class="uk-margin-small-bottom">
             Extend your network connectivity between our data centers with secure and high-capacity links,
@@ -136,7 +137,7 @@
         </div>
 
         <!-- Remote Hands -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="remote" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Remote Hands</h1>
           <p class="uk-margin-small-bottom">
             On-site technicians available 24x7 to provide physical assistance, maintenance, and troubleshooting
@@ -169,7 +170,7 @@
         </div>
 
         <!-- Professional Services -->
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
+        <div id="pro" class="uk-card uk-card-default uk-card-body uk-border-rounded uk-box-shadow-small">
           <h1 style="color:rgba(0,0,78,0.918);" class="uk-margin-bottom">Professional Services</h1>
           <p class="uk-margin-small-bottom">
             Expert support for network design, migration, deployment, and optimization within our facilities —
