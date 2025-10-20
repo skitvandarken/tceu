@@ -69,7 +69,7 @@ accordionItems = [
     icon: 'social',
     content: `A fully neutral ecosystem aggregating operators, data centers, and cloud providers across Portugal,
               Europe, the US, LATAM, and Africa — enabling seamless digital exchange.`,
-    image: 'img/ipnetwork.png',
+    image: 'img/angolacables-telcables-network.png',
     imageDesc:
       'TelCables Europe connects a diverse base of carriers, enterprises, and cloud providers across the Atlantic ecosystem.',
   },
@@ -78,7 +78,7 @@ accordionItems = [
     icon: 'location',
     content: `Strong presence in Lisbon and the Iberian metropolitan areas with Data Center interconnectivity,
               ensuring regional resilience and optimized access to global routes.`,
-    image: 'img/globalpresence.png',
+    image: 'img/eu-networks.jpg',
     imageDesc:
       'Lisbon and Iberian network infrastructure with metropolitan and Data Center coverage strengthen local and international connectivity.',
   },
@@ -87,7 +87,7 @@ accordionItems = [
     icon: 'link',
     content: `Carrier-grade, cloud-ready, and NaaS-enabled connectivity linking Europe, the US, LATAM, and Africa,
               creating a two-way digital bridge for enterprises and carriers.`,
-    image: 'img/digitalbridge.png',
+    image: 'img/telcables-europe-mapa.png',
     imageDesc:
       'The Atlantic Digital Bridge enables point-to-multipoint connectivity and intercontinental data exchange with high performance and scalability.',
   },
@@ -96,7 +96,7 @@ accordionItems = [
     icon: 'sign-in',
     content: `With strategic partnerships spanning 1000+ Data Centers across the US, Brazil, and Europe,
               TelCables Europe delivers extensive coverage and high-capacity IP transit up to 118 Tbps.`,
-    image: 'img/lisbon-europe.png',
+    image: 'img/ip-network-telcables.jpg',
     imageDesc:
       'A top-20 global peering network with 900+ PoPs and 118 Tbps of total capacity across Layer 1, 2, and 3.',
   },
