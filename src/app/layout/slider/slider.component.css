@@ -87,7 +87,7 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   line-height: 1px !important;
 }
 
-/* Mobile adjustments 
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .uk-slideshow-items .uk-flex-center {
     flex-direction: column;
@@ -114,11 +114,11 @@ address, dl, fieldset, figure, ol, p, pre, ul {
   }
 }
 
-*/
+
 
 
 /* Extra small devices */
-@media (max-width: 480px), (max-width: 390px), (max-width: 780px) {
+@media (max-width: 480px) {
   .uk-slideshow-items .hero-title {
 
     font-size: 1.2rem;

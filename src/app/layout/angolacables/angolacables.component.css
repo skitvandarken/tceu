@@ -68,9 +68,7 @@
 
 .uk-subnav>* {
     flex: none;
-    padding-left: 20px;
     position: relative;
-    margin-left: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -233,7 +231,7 @@
 
 
 /* Responsive */
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
 
     .modern-accordion .uk-accordion-title {
@@ -255,7 +253,7 @@
     }
 
     .title1 {
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: 700;
         color: #022561;
         line-height: 1.2;
