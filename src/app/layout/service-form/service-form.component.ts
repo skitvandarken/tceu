@@ -96,8 +96,8 @@ export class ServiceFormComponent {
 };
     console.log('Submitting form data:', formData);
 
-    emailjs.send('service_9il6xco', 'template_m8oz3tg', formData, {
-      publicKey: 'F-p5Ny3ufMaRfCSgR'
+    emailjs.send('service_9il6xco', 'template_32deeft', formData, {
+      publicKey: 'YXh3SEpHsrETbUcfB'
     })
       .then(() => {
         console.log('SUCCESS');
