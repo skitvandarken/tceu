@@ -1,313 +1,249 @@
-
-
-*+address,*+dl,*+fieldset,*+figure,*+ol,*+p,*+pre,*+ul {
-    margin-top: 5px
+/* Base spacing for common elements */
+* + address, * + dl, * + fieldset, * + figure, * + ol, * + p, * + pre, * + ul {
+    margin-top: 5px;
 }
-
 
 address, dl, fieldset, figure, ol, p, pre, ul {
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
+
 /* Text container – consistent centering */
 .uk-slideshow-items .uk-text-center {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 5vw;
-  /* relative padding for small screens */
-  text-align: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 5vw;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Titles & text – smoother scaling */
 .uk-slideshow-items .hero-title {
-  font-size: clamp(1.3rem, 4vw, 2.6rem);
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 12px;
-  line-height: 1.25;
-  max-width: 100%;
-  /* safeguard so it doesn’t overshoot container */
-
-
+    font-size: clamp(1.3rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.25;
+    max-width: 100%;
 }
 
 .uk-slideshow-items .hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  color: #fff;
-  margin-bottom: 8px;
-  line-height: 1.3;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
 .uk-slideshow-items .hero-desc {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: #f1f1f1;
-  line-height: 1.4;
-  margin-bottom: 15px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #f1f1f1;
+    line-height: 1.4;
+    margin-bottom: 15px;
 }
 
 /* Button container */
 .uk-slideshow-items .uk-flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 20px auto 0;
-  max-width: 100%;
-  padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px auto 0;
+    max-width: 100%;
+    padding: 0;
 }
 
 /* Button styles */
 .uk-slideshow-items .uk-button {
-  font-size: 1rem;
-  border-radius: 50px;
-  font-weight: 700;
-  min-width: 160px;
-  text-align: center;
-  white-space: nowrap;
-  transition: all 0.25s ease;
-
-
-  background-color: #25c0dd;
-  color: #fff;
-  font-weight: 700;
-  padding: 8px 40px;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    min-width: 160px;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    background-color: #25c0dd;
+    color: #fff;
+    padding: 8px 40px;
 }
 
 .uk-slideshow-items .uk-button:hover {
-  background-color: #177889;
-  transform: scale(1.05);
+    background-color: #177889;
+    transform: scale(1.05);
 }
-
-
-
 
 .uk-h1, h1 {
-  line-height: 1px !important;
+    line-height: 1px !important;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .uk-slideshow-items .uk-flex-center {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .uk-slideshow-items .uk-button {
-    font-size: 0.9rem;
-    min-width: 140px;
-    padding: 8px 22px;
-  }
-
-  .uk-slideshow-items .hero-title {
-    font-size: 1.4rem;
-    line-height: 1.2;
-  }
-
-  .uk-slideshow-items .hero-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .uk-slideshow-items .hero-desc {
-    font-size: 0.9rem;
-  }
-}
-
-
-
-
-/* Extra small devices */
-@media (max-width: 480px) {
-  .uk-slideshow-items .hero-title {
-
-    font-size: 1.2rem;
-  }
-
-  
-
-
-  .uk-slideshow-items .uk-button {
-    min-width: auto;
-    width: 100%;
-    max-width: 260px;
-    /* prevent oversized buttons */
-  }
-}
-
-
-.glassy-2{
-   border: 1px solid rgba(255, 255, 255, 0.276);  
+/* Glassy card styles */
+.glassy-card, .glassy-2 {
+    border-radius: 15px;
+    color: #f7fbff;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.016));
-  backdrop-filter: blur(200px) saturate(180%);
-  padding: 20px 20px !important;
-  border-radius: 20px;
+    backdrop-filter: blur(200px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.276);
+    transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s;
 }
 
-/* Container card */
-.glassy-card {
-  border-radius: 15px;
-  color: #f7fbff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.016));
-  backdrop-filter: blur(200px) saturate(180%);
-  /* frosted effect */
-
-  border: 1px solid rgba(255, 255, 255, 0.276);  ;
-
-  /* small soft inner-glow */
-  transition: transform .28s cubic-bezier(.2, .9, .3, 1), box-shadow .28s;
-  min-height: 50px;
-  /* ensures equal height */
-
-}
-
-/* Slight hover/active lift */
 .glassy-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 48px rgba(18, 30, 54, 0.34);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(18, 30, 54, 0.34);
 }
 
-/* Content styling (optional) */
 .glassy-card h3 {
-  margin: 0 0 .5rem 0;
-  font-size: 1.2rem;
-  letter-spacing: -0.01em;
+    margin: 0 0 .5rem 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
 }
 
 .glassy-card p {
-  font-size: .95rem;
-  color: rgba(247, 251, 255, 0.9);
+    font-size: .95rem;
+    color: rgba(247, 251, 255, 0.9);
 }
-
 
 .glassy-card button:active {
-  transform: translateY(1px);
+    transform: translateY(1px);
 }
-
 
 .glassy-card h1,
 .glassy-card p:first-child {
-  font-weight: 800;
-  font-size: 2rem;
-  /* unify big number text */
-  color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    color: white;
 }
 
 
+.margem-superior{
+  margin-top: 20px;
+}
+/* ===== Responsive adjustments ===== */
 
+/* General small devices */
+@media (max-width: 768px) {
+    .uk-slideshow-items .uk-flex-center {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
 
-/* ✅ Responsive tuning for glassy cards only */
+    .uk-slideshow-items .uk-button {
+        font-size: 0.9rem;
+        min-width: 140px;
+        padding: 8px 22px;
+    }
 
+    .uk-slideshow-items .hero-title {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
 
+    .uk-slideshow-items .hero-subtitle {
+        font-size: 0.95rem;
+    }
 
+    .uk-slideshow-items .hero-desc {
+        font-size: 0.9rem;
+    }
+}
 
-
-/* Extra small devices (portrait phones) */
+/* Extra small devices (up to 480px) */
 @media (max-width: 480px) {
 
 
-
-   /* Grande margem superior antes do título */
-  .hero-title {
-    margin-top: 120px !important;
-    font-size: 1.6rem !important;
-    line-height: 1.3;
-    text-align: center !important;
+  .uk-margin-medium-top{
+    margin-top: 10px !important;
   }
 
-  /* Subtítulo menor e centralizado */
-  .hero-subtitle {
-    font-size: 0.85rem !important;
-    text-align: center !important;
+  .uk-slideshow-items  .uk-button{
+    padding: 6px 18px !important;
   }
 
-  /* Deixa os cartões ainda menores */
-  .glassy-card {
-    transform: scale(0.85);
-    margin: 8px auto !important;
-    width: 90%;
-  }
+    .hero-title {
+        margin-top: 110px !important;
+        font-size: 1.4rem !important;
+        line-height: 1.3;
+        text-align: center !important;
+    }
 
-  /* Espaço adicional entre elementos */
-  .uk-grid-small.uk-child-width-1-2\@m {
-    gap: 8px !important;
-  }
+    .hero-subtitle {
+        font-size: 0.85rem !important;
+        text-align: center !important;
+        margin-top: 20px !important;
+    }
 
-  /* Garante que tudo desce um pouco mais */
-  .uk-height-1-1.uk-flex.uk-flex-middle {
-    align-items: flex-start !important;
-    padding-top: 20px;
-  }
- 
-  /*card glassy*/
-    .uk-grid-small.uk-child-width-1-2\@m {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px;
-  }
-
-  .glassy-card {
-    min-height: 60px;
-    padding: 0px;
-  }
-
-  .glassy-card h1,
-  .glassy-card p:first-child {
-    font-size: 1.4rem;
-  }
-
-  .glassy-card p {
-    font-size: 0.8rem;
-  }
-
-
-
-  .hero-title {
-    font-size: 2rem !important;
-  }
-
-  .hero-desc {
-    max-width: 80% !important;
-    text-align: center !important;
-    font-size: 0.95rem !important;
-  }
-
-  .div.uk-first-column{
-    justify-content: center !important;
-    margin: auto !important;
-    align-self: center;
-
-  }
+    .hero-desc {
+        max-width: 80% !important;
+        text-align: center !important;
+        font-size: 0.95rem !important;
+    }
 
     .uk-flex.uk-flex-wrap.uk-margin-medium-top {
-    justify-content: center !important;
-    text-align: center;
-  }
+        justify-content: center !important;
+        text-align: center;
+    }
 
-  /* Stack buttons vertically or with small gap */
-  .uk-flex.uk-flex-wrap.uk-margin-medium-top a {
-    margin: 6px 6px !important;
-  }
+    .uk-flex.uk-flex-wrap.uk-margin-medium-top a {
+        margin: 6px 6px !important;
+    }
 
-  /* Remove default left margin on mobile */
-  .uk-flex.uk-flex-wrap.uk-margin-medium-top a.uk-margin-left {
-    margin-left: 0 !important;
-  }
+    .uk-flex.uk-flex-wrap.uk-margin-medium-top a.uk-margin-left {
+        margin-left: 0 !important;
+    }
 
-  .glassy-card {
-    min-height: 55px;
-    padding: 5px 8px;
-  }
+    .glassy-card {
+        transform: scale(0.85);
+        margin: 8px auto !important;
+        width: 90%;
+        min-height: 55px;
+        padding: 5px 8px;
+    }
 
-  .glassy-card h1,
-  .glassy-card p:first-child {
-    font-size: 1.2rem;
-  }
+    .glassy-card h1,
+    .glassy-card p:first-child {
+        font-size: 1.2rem !important;
+    }
 
-  .glassy-card p {
-    font-size: 0.75rem;
-  }
+    .glassy-card p {
+        font-size: 0.75rem;
+    }
 
-  .uk-text-center p {
-    margin-bottom: 4px;
-  }
+    .uk-text-center p {
+        margin-bottom: 4px;
+    }
+
+    .uk-grid-small.uk-child-width-1-2\@m {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .div.uk-first-column {
+        justify-content: center !important;
+        margin: auto !important;
+        align-self: center;
+    }
+}
+
+/* Very small devices (up to 320px) */
+@media (max-width: 320px) {
+    .uk-slideshow-items .hero-title {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+
+/* iPhone 6/7/8 (portrait 375x667) */
+@media (width: 375px) and (orientation: portrait) {
+    .uk-slideshow-items .hero-title {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+
+/* iPhone 6/7/8, X/11 Plus (376-414px) */
+@media (min-width: 376px) and (max-width: 414px) {
+    .uk-slideshow-items .hero-title {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
 }
