@@ -189,6 +189,20 @@
 
 }
 
+.texto-cabecalho {
+    color: white !important;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.titulo-company {
+    color: white !important;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
 .missao-imagem {
     height: 40vh;
     width: 100%;
@@ -319,6 +333,15 @@
 
 
 @media (max-width: 640px) {
+
+    .texto-cabecalho {
+        color: white !important;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+
     .uk-slider-container {
         padding: 0 30px;
     }
@@ -386,6 +409,15 @@
 
 /* Small mobile screens (up to 480px) */
 @media (max-width: 480px) {
+
+    .texto-cabecalho {
+        color: white !important;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+
     .responsive-title {
         font-size: 1rem;
     }

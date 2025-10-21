@@ -5,7 +5,7 @@
             <div class="uk-container uk-margin-large-bottom">
                 <!--  <img class="logo-cabecalho-pagina" src="img/layout/logo-cabecalho-pagina.png"> -->
                 <h4 style="font-size: 1.1rem; color:white">{{ 'empresa.page_title' | translate }}</h4>
-                <h1 style="color:white; font-size: 2.4rem; font-weight: 800; margin-top: 20px;">
+                <h1 class="texto-cabecalho" >
                     From Lisbon to the Atlantic, we accelerate your business with unmatched scale and reach</h1>
             </div>
         </div>
@@ -16,17 +16,17 @@
 <!-- 2 Colunas | Presença Global & Vídeo Institucional AC -->
 
 <div class="uk-container uk-margin-small-bottom uk-margin-large-top">
-    <div class=" uk-child-width-1-2@m uk-grid-medium uk-child-width-1-2@s uk-grid-match-height uk-grid uk-text-left">
+    <div class=" uk-child-width-1-1@m uk-grid-medium uk-child-width-1-2@s uk-grid-match-height uk-grid uk-text-left">
 
         <!--Lado esquerdo-->
-        <div class=" uk-width-1-2@m  uk-margin-small-bottom ">
+        <div class=" uk-width-1-1@m  uk-margin-small-bottom ">
             <div class="uk-text-left ">
                 <div class=" uk-border-rounded fundo-forma  ">
-                    <div style="color: #000026; font-size: 1.7rem; " class=" presenca-global ">
-                       <h1> <b>We are TelCables Europe</b> </h1>
+                    <div class=" presenca-global ">
+                        <h1> <b style="color: #002561; font-size: 2.4rem; font-weight: 800;">We are TelCables Europe</b> </h1>
                     </div>
                 </div>
-                <p style="color: #000026; font-size: 1.1rem;"
+                <p 
                     class=" sobre-angola-cables uk-margin-small-right uk-margin-medium-top">TelCables Europe, part of
                     the Angola Cables Group, provides low-latency submarine connectivity, secure cloud, IP transit, and
                     peering solutions from Lisbon, Marseille, and London — connecting enterprises to 1,000 global data
@@ -54,11 +54,11 @@
         <div class="uk-width-1-2@m uk-margin-small-bottom uk-margin-small-top uk-flex uk-flex-center uk-flex-top">
             <div class="uk-text-center">
 
-                <!-- Button to toggle the modal -->
-                <a href="#modal-video" uk-toggle>
+                <!-- Button to toggle the modal 
+                <a href="" uk-toggle>
                     <img class="video-thumbnail" src="img/video-miniatura.png" alt="Video Thumbnail" height="100px"
                         width="auto">
-                </a>
+                </a> -->
 
                 <!-- Modal -->
                 <div id="modal-video" uk-modal>
@@ -66,8 +66,7 @@
                         <button class="uk-modal-close-default" type="button" uk-close></button>
 
                         <video controls loop muted id="promoVideo" class="promo-video uk-border-rounded">
-                            <source
-                                src="" />
+                            <source src="" />
                             Seu navegador não suporta o vídeo em falta.
                         </video>
                     </div>
@@ -79,37 +78,40 @@
 </div>
 
 
-<div class="uk-container uk-margin-large-top  ">
+<div class="uk-container uk-margin-small-top  ">
 
-    <h1 class="uk-heading" >International traffic exchange network between internet service providers and content generators.
-</h1>
+    <h2 style="color: rgba(26, 184, 221, 1); font-weight: 700 ;  " class="uk-heading">We operate an international traffic exchange network enabling
+        efficient interconnection between ISPs and content delivery networks for optimized data flow.</h2>
 
-  <div
-    class="uk-child-width-1-3@m uk-grid-match uk-grid-medium uk-margin-large-top uk-margin-large-bottom uk-text-center"
-    uk-grid
-  >
-    <div  >
-      <div style="background-image: url('/img/traffic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat ;" class=" fundo-tbps ">
-        <h1><b style="color:#fff" >18,448 <br> Tbps</b></h1>
-        <p style="color:#25c0dd" >Peak load of network</p>
-      </div>
+    <div class="uk-child-width-1-3@m uk-grid-match uk-grid-medium uk-margin-large-top uk-margin-large-bottom uk-text-center"
+        uk-grid>
+        <div>
+            <div style="background-image: url('/img/traffic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat ;"
+                class=" fundo-tbps ">
+                <h1><b style="color:#fff">18,448 <br> Tbps</b></h1>
+                <p style="color:#25c0dd">Peak load of network</p>
+            </div>
+        </div>
+
+        <div>
+            <div style="background-image: url('/img/telcables-asn.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat ;"
+                class=" fundo-tbps ">
+                <h1><b style="color:#fff">3,154 <br> ASNs</b></h1>
+                <p style="color:#25c0dd">Connected</p>
+            </div>
+        </div>
+
+        <div>
+            <div style="background-image: url('/img/sacs2.png'); background-size: cover; background-position: center; background-repeat: no-repeat ;"
+                class=" fundo-tbps ">
+                <h1><b style="color:#fff">+30 <br> PoPs</b></h1>
+                <p style="color:#25c0dd">in 20+ countries</p>
+            </div>
+        </div>
     </div>
 
-    <div>
-      <div style="background-image: url('/img/telcables-asn.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat ;" class=" fundo-tbps ">
-        <h1><b style="color:#fff" >3,154 <br> ASNs</b></h1>
-        <p style="color:#25c0dd" >Connected</p>
-      </div>
-    </div>
-
-    <div>
-      <div style="background-image: url('/img/sacs2.png'); background-size: cover; background-position: center; background-repeat: no-repeat ;" class=" fundo-tbps ">
-        <h1><b style="color:#fff"  >+30 <br> PoPs</b></h1>
-        <p style="color:#25c0dd" >in 20+ countries</p>
-      </div>
-    </div>
-  </div>
 </div>
+
 
 
 
@@ -153,7 +155,8 @@
 <div id="modal-ariete" uk-modal>
     <div style="border-radius: 20px" class="uk-modal-dialog uk-modal-body">
         <h2 class="uk-modal-title"><b>{{ "equipa.ariete_pereira.name" | translate }}</b></h2>
-        <p class="uk-margin-small-top" style="text-align: justify;" [innerHTML]="'equipa.ariete_pereira.bio' | translate">
+        <p class="uk-margin-small-top" style="text-align: justify;"
+            [innerHTML]="'equipa.ariete_pereira.bio' | translate">
         </p>
         <p class="uk-text-right">
             <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -237,7 +240,8 @@
                     data-src="img/equipa/artur-telcables.png" uk-img>
                     <div style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
                         class="uk-padding gradiente-nome-equipa">
-                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.artur_mendes.name"
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{
+                            "equipa.artur_mendes.name"
                             |
                             translate }}</b>
                         <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{
@@ -259,7 +263,8 @@
                     data-src="img/equipa/ariete-telcables.png" uk-img>
                     <div style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
                         class="uk-padding gradiente-nome-equipa uk-border-rounded">
-                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{ "equipa.ariete_pereira.name"
+                        <b style="font-size: 18px; color: white; border-radius: 30px;">{{
+                            "equipa.ariete_pereira.name"
                             |
                             translate }}</b>
                         <p style="color:rgba(40, 193, 253, 1); border-radius: 30px" class="uk-text-left">{{
@@ -288,7 +293,8 @@
 
 
 
-<div style="border: 1px solid #000026; border-radius: 20px " class="uk-container uk-background-muted uk-margin-medium-top">
+<div style="border: 1px solid #000026; border-radius: 20px "
+    class="uk-container uk-background-muted uk-margin-medium-top">
     <app-certificacoes></app-certificacoes>
 
 </div>
