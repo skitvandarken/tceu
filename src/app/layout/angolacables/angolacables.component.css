@@ -233,20 +233,34 @@
 /* Responsive */
 @media (max-width: 480px) {
 
+    .uk-subnav-pill>.uk-active>a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+
+    .uk-subnav>* {
+        padding-left: 0px !important;
+    }
+
+    .uk-subnav-pill>*>:first-child {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
 
     .modern-accordion .uk-accordion-title {
-    border: 1px solid rgba(0, 0, 0, 0.423);
-    border-radius: 14px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #022561;
-    padding: 1.2rem 1.5rem;
-    display: block;
-    position: relative;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
+        border: 1px solid rgba(0, 0, 0, 0.423);
+        border-radius: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #022561;
+        padding: 1.2rem 1.5rem;
+        display: block;
+        position: relative;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
 
     .tag1 {
         font-size: 1rem;
@@ -259,17 +273,19 @@
         line-height: 1.2;
     }
 
-.modern-accordion .uk-open .uk-accordion-title {
-    background: linear-gradient(135deg, #25c0dd, #6fe0fc);
-    color: #002561;
-}
+    .modern-accordion .uk-open .uk-accordion-title {
+        background: linear-gradient(135deg, #25c0dd, #6fe0fc);
+        color: #002561;
+    }
+
     .angola-cables-titulo {
         font-size: 1.22rem !important;
         font-weight: bold;
     }
 
-     .gradient-bg .uk-padding {
-        padding: 0 !important; /* remove all padding */
+    .gradient-bg .uk-padding {
+        padding: 0 !important;
+        /* remove all padding */
     }
 
 
@@ -298,23 +314,23 @@
 
 /* Small mobile devices (up to 320px width, e.g., iPhone SE) */
 @media only screen and (max-width: 320px) {
-  /* Styles for very small phones */
+    /* Styles for very small phones */
 
 
-  
+
     .modern-accordion .uk-accordion-title {
-    border: 1px solid rgba(0, 0, 0, 0.423);
-    border-radius: 14px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #022561;
-    padding: 1.2rem 1.5rem;
-    display: block;
-    position: relative;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
+        border: 1px solid rgba(0, 0, 0, 0.423);
+        border-radius: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #022561;
+        padding: 1.2rem 1.5rem;
+        display: block;
+        position: relative;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
 
     .tag1 {
         font-size: 1rem;
@@ -327,17 +343,19 @@
         line-height: 1.2;
     }
 
-.modern-accordion .uk-open .uk-accordion-title {
-    background: linear-gradient(135deg, #25c0dd, #6fe0fc);
-    color: #002561;
-}
+    .modern-accordion .uk-open .uk-accordion-title {
+        background: linear-gradient(135deg, #25c0dd, #6fe0fc);
+        color: #002561;
+    }
+
     .angola-cables-titulo {
         font-size: 1.22rem !important;
         font-weight: bold;
     }
 
-     .gradient-bg .uk-padding {
-        padding: 0 !important; /* remove all padding */
+    .gradient-bg .uk-padding {
+        padding: 0 !important;
+        /* remove all padding */
     }
 
 
@@ -364,21 +382,21 @@
 
 /* iPhone 6/7/8, iPhone X/11 Pro (portrait) */
 @media only screen and (min-width: 375px) and (max-width: 375px) and (orientation: portrait) {
-  /* Styles for iPhone 6/7/8 */
-  
+    /* Styles for iPhone 6/7/8 */
+
     .modern-accordion .uk-accordion-title {
-    border: 1px solid rgba(0, 0, 0, 0.423);
-    border-radius: 14px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #022561;
-    padding: 1.2rem 1.5rem;
-    display: block;
-    position: relative;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
+        border: 1px solid rgba(0, 0, 0, 0.423);
+        border-radius: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #022561;
+        padding: 1.2rem 1.5rem;
+        display: block;
+        position: relative;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
 
     .tag1 {
         font-size: 1rem;
@@ -391,17 +409,19 @@
         line-height: 1.2;
     }
 
-.modern-accordion .uk-open .uk-accordion-title {
-    background: linear-gradient(135deg, #25c0dd, #6fe0fc);
-    color: #002561;
-}
+    .modern-accordion .uk-open .uk-accordion-title {
+        background: linear-gradient(135deg, #25c0dd, #6fe0fc);
+        color: #002561;
+    }
+
     .angola-cables-titulo {
         font-size: 1.22rem !important;
         font-weight: bold;
     }
 
-     .gradient-bg .uk-padding {
-        padding: 0 !important; /* remove all padding */
+    .gradient-bg .uk-padding {
+        padding: 0 !important;
+        /* remove all padding */
     }
 
 
@@ -428,7 +448,7 @@
 
 /* iPhone 6/7/8, iPhone X/11 Pro (landscape) */
 @media only screen and (min-width: 667px) and (max-width: 667px) and (orientation: landscape) {
-  /* Styles for landscape mode */
+    /* Styles for landscape mode */
 }
 
 
