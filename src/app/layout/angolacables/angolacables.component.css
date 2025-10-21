@@ -228,10 +228,24 @@
     line-height: 1.2;
 }
 
+.section-title {
+    font-weight: 700;
+    color: #022561;
+}
+
 
 
 /* Responsive */
 @media (max-width: 480px) {
+
+    .section-title {
+        font-weight: 700;
+        color: #022561;
+        font-size: 1.5rem;
+        text-align: center !important;
+    }
+
+
 
     .uk-subnav-pill>.uk-active>a {
         padding: 6px 12px;
@@ -316,6 +330,12 @@
 @media only screen and (max-width: 320px) {
     /* Styles for very small phones */
 
+    .section-title {
+        font-weight: 700;
+        color: #022561;
+        font-size: 1.5rem;
+        text-align: center !important;
+    }
 
 
     .modern-accordion .uk-accordion-title {

@@ -50,6 +50,33 @@
     animation: float 8s ease-in-out infinite;
 }
 
+
+.ad-imag {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 204, 255, 0.368);
+}
+
+@media (max-width: 768px) {
+
+    .ad-title {
+        font-size: 1.2rem !important;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .ad-title {
+        font-size: 1.2rem !important;
+    }
+
+}
+
+
+
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
@@ -101,47 +128,59 @@
 
 
 .modern-gradient-bg .uk-text-left {
-    max-width: 600px;       /* prevents text from going too wide */
-    word-wrap: break-word;  /* breaks very long words if needed */
+    max-width: 600px;
+    /* prevents text from going too wide */
+    word-wrap: break-word;
+    /* breaks very long words if needed */
 }
 
 @media (max-width: 960px) {
     .modern-gradient-bg .uk-text-left {
-        max-width: 90%;     /* keep good padding on smaller screens */
+        max-width: 90%;
+        /* keep good padding on smaller screens */
     }
 }
 
 @media (max-width: 640px) {
     .modern-gradient-bg .uk-text-left {
         max-width: 100%;
-        padding-right: 20px; /* ensures space on right edge */
+        padding-right: 20px;
+        /* ensures space on right edge */
     }
 }
 
 
 .uk-button {
-    white-space: nowrap; /* keeps text on one line when possible */
+    white-space: nowrap;
+    /* keeps text on one line when possible */
 }
 
 .uk-button span {
-    font-size: 1rem; /* base size */
+    font-size: 1rem;
+    /* base size */
 }
 
 @media (max-width: 960px) {
     .uk-button span {
-        font-size: 0.9rem;  /* slightly smaller */
+        font-size: 0.9rem;
+        /* slightly smaller */
     }
+
     .uk-button {
-        padding: 6px 30px; /* reduce horizontal padding */
+        padding: 6px 30px;
+        /* reduce horizontal padding */
     }
 }
 
 @media (max-width: 640px) {
     .uk-button span {
-        font-size: 0.8rem;  /* smaller on phones */
+        font-size: 0.8rem;
+        /* smaller on phones */
     }
+
     .uk-button {
-        padding: 5px 20px; /* more compact */
+        padding: 5px 20px;
+        /* more compact */
     }
 }
 
@@ -168,38 +207,39 @@
 
 /* Ensure buttons are clickable and above other elements */
 .uk-button {
-  position: relative;
-  z-index: 100;
-  cursor: pointer !important;
+    position: relative;
+    z-index: 100;
+    cursor: pointer !important;
 }
 
 /* Make sure links are clickable */
 a {
-  position: relative;
-  z-index: 100;
-  cursor: pointer;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
 }
 
 /* Prevent any overlay from blocking clicks */
-.uk-panel, .modern-gradient-bg {
-  position: relative;
+.uk-panel,
+.modern-gradient-bg {
+    position: relative;
 }
 
 /* Ensure the pseudo-elements don't block clicks */
 .modern-gradient-bg::before,
 .modern-gradient-bg::after {
-  pointer-events: none;
-  z-index: 1;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* Content should be above the background effects */
-.modern-gradient-bg > * {
-  position: relative;
-  z-index: 2;
+.modern-gradient-bg>* {
+    position: relative;
+    z-index: 2;
 }
 
 /* Specific fix for slider items */
-.uk-slider-items > * {
-  position: relative;
-  z-index: 10;
+.uk-slider-items>* {
+    position: relative;
+    z-index: 10;
 }
