@@ -1,3 +1,13 @@
+/* Force navbar to collapse below 1024px */
+@media (max-width: 1200px) {
+  .uk-visible\@m {
+    display: none !important;
+  }
+  .uk-hidden\@m {
+    display: block !important;
+  }
+}
+
 .uk-navbar-container {
     z-index: 1000;
     position: fixed;
