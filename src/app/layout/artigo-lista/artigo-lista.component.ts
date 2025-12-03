@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { AsyncPipe, CommonModule, DatePipe, NgFor, NgIf } from '@angular/common';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import {  TranslateService } from '@ngx-translate/core';
 
 import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -15,7 +15,6 @@ import { RouterLink } from '@angular/router';
     CommonModule,
     DatePipe,
     NgIf,
-    TranslatePipe,
     TruncatePipe,
     RouterLink
   ],
